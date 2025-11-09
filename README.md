@@ -4,15 +4,19 @@ KenPom-style efficiency ratings for Texas high school basketball.
 
 ## Features
 
+- **Real rankings** from Texas Association of Basketball Coaches (TABC)
 - Rankings for all Texas classifications (6A, 5A, 4A, 3A, 2A, 1A, Private)
+- Web scraper to fetch latest rankings from TABC
+- Clean, responsive web interface
+- API endpoint to refresh data on demand
+
+### Coming Soon
 - Advanced analytics including:
   - Net Rating
   - Offensive Efficiency
   - Defensive Efficiency
   - Adjusted Tempo
   - Strength of Schedule
-- Clean, responsive web interface
-- Real-time data updates
 
 ## Quick Start
 
@@ -23,12 +27,17 @@ KenPom-style efficiency ratings for Texas high school basketball.
    source venv/bin/activate
    ```
 
-2. **Start the application:**
+2. **Fetch the latest rankings (first time):**
+   ```bash
+   python scraper.py
+   ```
+
+3. **Start the application:**
    ```bash
    python app.py
    ```
 
-3. **Open your browser:**
+4. **Open your browser:**
    ```
    http://localhost:5000
    ```
@@ -94,13 +103,33 @@ For production deployments:
 - `FLASK_DEBUG=False`
 - `PORT` (set automatically by most platforms)
 
+## Updating Rankings
+
+### Manual Update
+Run the scraper to fetch the latest rankings from TABC:
+```bash
+source venv/bin/activate
+python scraper.py
+```
+
+### API Endpoint
+Visit `/refresh` in your browser or use curl:
+```bash
+curl http://localhost:5000/refresh
+```
+
+Rankings are sourced from:
+- TABC UIL Rankings: https://tabchoops.org/uil-boys-rankings/
+- TABC Private School Rankings: https://tabchoops.org/private-school-boys-rankings/
+
 ## Development
 
 To add new features or modify rankings:
 
 1. Edit `app.py` for backend logic
-2. Modify templates in `templates/` for UI changes
-3. Update styles in `static/css/` if needed
+2. Modify `scraper.py` to add new data sources
+3. Update templates in `templates/` for UI changes
+4. Add styles in `static/css/` if needed
 
 ## Support
 
