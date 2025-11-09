@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ classification_name }} - Top 40 Rankings</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Team</th>
+            <th>District</th>
+            <th>Record</th>
+            <th>Net Rating</th>
+            <th>Off Rtg</th>
+            <th>Def Rtg</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for team in teams %}
+        <tr>
+            <td>{{ team.rank }}</td>
+            <td>{{ team.team_name }}</td>
+            <td>{{ team.district }}</td>
+            <td>{{ team.record }}</td>
+            <td>{{ team.net_rating }}</td>
+            <td>{{ team.adj_offensive_eff }}</td>
+            <td>{{ team.adj_defensive_eff }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

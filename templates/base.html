@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TBBAS - Texas Basketball Analytics</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; }
+        .header { background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 20px; }
+        .nav { background: #2c3e50; }
+        .nav a { color: white; text-decoration: none; padding: 15px 20px; display: inline-block; }
+        .nav a:hover { background: #34495e; }
+        .container { max-width: 1400px; margin: 20px auto; padding: 0 20px; }
+        table { width: 100%; background: white; border-radius: 8px; margin-top: 20px; }
+        th { background: #f8f9fa; padding: 12px; text-align: left; }
+        td { padding: 10px; border-bottom: 1px solid #e9ecef; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Texas Boys Basketball Analytics System</h1>
+        <div>KenPom-Style Ratings for Texas High School Basketball</div>
+    </div>
+    <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/rankings/AAAAAA">6A</a>
+        <a href="/rankings/AAAAA">5A</a>
+        <a href="/rankings/AAAA">4A</a>
+        <a href="/rankings/AAA">3A</a>
+        <a href="/rankings/AA">2A</a>
+        <a href="/rankings/A">1A</a>
+        <a href="/rankings/Private">Private</a>
+        <a href="/methodology">Methodology</a>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

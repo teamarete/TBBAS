@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>2024-25 Season Rankings</h2>
+<p>Select a classification above to view the Top 40 rankings.</p>
+<div style="margin-top: 30px;">
+    <h3>Available Classifications:</h3>
+    {% for class_code, class_name in classifications.items() %}
+    <div style="margin: 10px 0;">
+        <a href="/rankings/{{ class_code }}" style="text-decoration: none; color: #3498db; font-size: 1.1em;">
+            {{ class_name }}
+        </a>
+    </div>
+    {% endfor %}
+</div>
+<p style="margin-top: 20px; color: #666;">Last Updated: {{ last_update }}</p>
+{% endblock %}
