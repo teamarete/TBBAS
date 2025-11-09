@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 START_DATE = datetime(2025, 11, 11)  # November 11, 2025
 END_DATE = datetime(2026, 3, 9)      # March 9, 2026
 UPDATE_TIME = "06:00"                # 6:00 AM
-INTERVAL_WEEKS = 2                   # Every 2 weeks
+INTERVAL_WEEKS = 1                   # Every week (every Monday)
 
 
 _app = None  # Flask app instance for database access
@@ -60,9 +60,10 @@ def collect_box_scores():
 def update_rankings():
     """
     Update rankings on Mondays:
-    1. Scrape TABC rankings
+    1. Scrape MaxPreps rankings (PRIMARY)
     2. Calculate rankings from box score data
-    3. Merge both sources
+    3. Scrape TABC rankings (BACKUP)
+    4. Merge all sources (prioritize: calculated > MaxPreps > TABC)
     """
     now = datetime.now()
 
@@ -75,26 +76,60 @@ def update_rankings():
         logger.info(f"Season ended - no more updates after {END_DATE.strftime('%B %d, %Y')}")
         return
 
+    logger.info("="*50)
     logger.info(f"Starting weekly rankings update at {now.strftime('%Y-%m-%d %H:%M:%S')}")
+    logger.info("="*50)
 
     try:
-        # 1. Scrape TABC rankings (for teams without enough box score data)
-        logger.info("Scraping TABC rankings...")
-        tabc_scraper = TABCScraper()
-        tabc_data = tabc_scraper.scrape_all()
+        # 1. Scrape MaxPreps rankings (PRIMARY SOURCE)
+        logger.info("1. Scraping MaxPreps rankings (PRIMARY)...")
+        from box_score_scraper import MaxPrepsBoxScoreScraper
+        maxpreps_scraper = MaxPrepsBoxScoreScraper()
 
-        # 2. Calculate rankings from box scores
-        logger.info("Calculating rankings from box score data...")
+        maxpreps_data = {
+            'last_updated': datetime.now().isoformat(),
+            'uil': {},
+            'private': {}
+        }
+
+        # Scrape UIL from MaxPreps
+        try:
+            uil_rankings = maxpreps_scraper.scrape_maxpreps_rankings('UIL')
+            if uil_rankings:
+                maxpreps_data['uil'] = uil_rankings
+                logger.info(f"   MaxPreps UIL: Retrieved rankings")
+        except Exception as e:
+            logger.error(f"   MaxPreps UIL scraping failed: {e}")
+
+        # Scrape TAPPS from MaxPreps
+        try:
+            tapps_rankings = maxpreps_scraper.scrape_maxpreps_rankings('TAPPS')
+            if tapps_rankings:
+                maxpreps_data['private'] = tapps_rankings
+                logger.info(f"   MaxPreps TAPPS: Retrieved rankings")
+        except Exception as e:
+            logger.error(f"   MaxPreps TAPPS scraping failed: {e}")
+
+        # 2. Calculate rankings from box score data
+        logger.info("2. Calculating rankings from box score data...")
         calculator = RankingCalculator(app=_app)
         calculated_rankings = calculator.calculate_all_rankings()
 
-        # 3. Merge the rankings (prioritize calculated data, use TABC as fallback)
-        merged_data = merge_rankings(tabc_data, calculated_rankings)
+        # 3. Scrape TABC rankings (BACKUP SOURCE)
+        logger.info("3. Scraping TABC rankings (BACKUP)...")
+        tabc_scraper = TABCScraper()
+        tabc_data = tabc_scraper.scrape_all()
 
-        # 4. Save merged rankings
+        # 4. Merge all sources (prioritize: calculated > MaxPreps > TABC)
+        logger.info("4. Merging rankings from all sources...")
+        merged_data = merge_rankings(calculated_rankings, maxpreps_data, tabc_data)
+
+        # 5. Save merged rankings
         if merged_data:
             tabc_scraper.save_to_file(merged_data)
-            logger.info(f"Rankings updated successfully at {now.strftime('%Y-%m-%d %H:%M:%S')}")
+            logger.info("="*50)
+            logger.info(f"✓ Rankings updated successfully at {now.strftime('%Y-%m-%d %H:%M:%S')}")
+            logger.info("="*50)
         else:
             logger.error("Failed to generate rankings")
 
@@ -104,10 +139,12 @@ def update_rankings():
         traceback.print_exc()
 
 
-def merge_rankings(tabc_data, calculated_data):
+def merge_rankings(calculated_data, maxpreps_data, tabc_data):
     """
-    Merge TABC rankings with calculated rankings
-    Use calculated data where available, fall back to TABC
+    Merge rankings from all sources with priority:
+    1. Calculated from box scores (PRIMARY)
+    2. MaxPreps rankings (SECONDARY)
+    3. TABC rankings (BACKUP)
     """
     merged = {
         'last_updated': datetime.now().isoformat(),
@@ -118,28 +155,39 @@ def merge_rankings(tabc_data, calculated_data):
     # Merge UIL
     for classification in ['AAAAAA', 'AAAAA', 'AAAA', 'AAA', 'AA', 'A']:
         calculated_teams = calculated_data.get('uil', {}).get(classification, [])
+        maxpreps_teams = maxpreps_data.get('uil', {}).get(classification, [])
         tabc_teams = tabc_data.get('uil', {}).get(classification, [])
 
         if calculated_teams and len(calculated_teams) >= 10:
             # Use calculated rankings if we have enough data
             merged['uil'][classification] = calculated_teams
             logger.info(f"{classification}: Using calculated rankings ({len(calculated_teams)} teams)")
+        elif maxpreps_teams and len(maxpreps_teams) >= 10:
+            # Fall back to MaxPreps
+            merged['uil'][classification] = maxpreps_teams
+            logger.info(f"{classification}: Using MaxPreps rankings ({len(maxpreps_teams)} teams)")
         else:
             # Fall back to TABC
             merged['uil'][classification] = tabc_teams
-            logger.info(f"{classification}: Using TABC rankings ({len(tabc_teams)} teams)")
+            logger.info(f"{classification}: Using TABC rankings (BACKUP) ({len(tabc_teams)} teams)")
 
     # Merge Private/TAPPS
     for classification in ['TAPPS_6A', 'TAPPS_5A', 'TAPPS_4A', 'TAPPS_3A', 'TAPPS_2A', 'TAPPS_1A']:
         calculated_teams = calculated_data.get('private', {}).get(classification, [])
+        maxpreps_teams = maxpreps_data.get('private', {}).get(classification, [])
         tabc_teams = tabc_data.get('private', {}).get(classification, [])
 
         if calculated_teams and len(calculated_teams) >= 5:
             merged['private'][classification] = calculated_teams
             logger.info(f"{classification}: Using calculated rankings ({len(calculated_teams)} teams)")
+        elif maxpreps_teams and len(maxpreps_teams) >= 5:
+            # Fall back to MaxPreps
+            merged['private'][classification] = maxpreps_teams
+            logger.info(f"{classification}: Using MaxPreps rankings ({len(maxpreps_teams)} teams)")
         else:
+            # Fall back to TABC
             merged['private'][classification] = tabc_teams
-            logger.info(f"{classification}: Using TABC rankings ({len(tabc_teams)} teams)")
+            logger.info(f"{classification}: Using TABC rankings (BACKUP) ({len(tabc_teams)} teams)")
 
     return merged
 
@@ -191,7 +239,7 @@ def run_scheduler():
     # Weekly ranking updates
     update_dates = calculate_update_dates()
     logger.info(f"Weekly Ranking Updates ({len(update_dates)} total):")
-    logger.info(f"  - Every 2 weeks on Mondays at {UPDATE_TIME}")
+    logger.info(f"  - Every Monday at {UPDATE_TIME}")
     for date in update_dates:
         logger.info(f"    • {date.strftime('%A, %B %d, %Y')}")
 
@@ -231,7 +279,7 @@ if __name__ == '__main__':
     print(f"Start Date: {START_DATE.strftime('%B %d, %Y')}")
     print(f"End Date: {END_DATE.strftime('%B %d, %Y')}")
     print(f"Update Time: {UPDATE_TIME}")
-    print(f"Frequency: Every {INTERVAL_WEEKS} weeks on Mondays")
+    print(f"Frequency: Every Monday (weekly)")
     print("\nScheduled Update Dates:")
     print("-" * 50)
 

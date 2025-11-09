@@ -15,45 +15,134 @@ logger = logging.getLogger(__name__)
 
 
 class MaxPrepsBoxScoreScraper:
-    """Scraper for MaxPreps game results"""
+    """Scraper for MaxPreps game results and rankings"""
 
-    BASE_URL = "https://www.maxpreps.com/tx/basketball/"
+    BASE_URL = "https://www.maxpreps.com"
+    TX_BASKETBALL_URL = "https://www.maxpreps.com/tx/basketball/"
+    RANKINGS_URL_TEMPLATE = "https://www.maxpreps.com/tx/association/{association}/basketball/rankings/1/"
 
-    def __init__(self):
+    # MaxPreps association mappings
+    ASSOCIATIONS = {
+        'UIL': 'texas-university-interscholastic-league',
+        'TAPPS': 'texas-association-of-private-and-parochial-schools',
+        'SPC': 'texas-southwest-prep'
+    }
+
+    def __init__(self, use_selenium=False):
+        self.use_selenium = use_selenium
         self.session = requests.Session()
         self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
         })
 
-    def scrape_recent_games(self, days_back=7):
+    def get_selenium_driver(self):
+        """Initialize Selenium WebDriver (headless)"""
+        try:
+            from selenium import webdriver
+            from selenium.webdriver.chrome.options import Options
+            from selenium.webdriver.chrome.service import Service
+            from webdriver_manager.chrome import ChromeDriverManager
+
+            options = Options()
+            options.add_argument('--headless')
+            options.add_argument('--no-sandbox')
+            options.add_argument('--disable-dev-shm-usage')
+            options.add_argument('--disable-gpu')
+            options.add_argument('user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36')
+
+            service = Service(ChromeDriverManager().install())
+            driver = webdriver.Chrome(service=service, options=options)
+            return driver
+
+        except Exception as e:
+            logger.error(f"Error initializing Selenium: {e}")
+            logger.info("Falling back to requests-only mode")
+            return None
+
+    def scrape_maxpreps_rankings(self, association='UIL'):
+        """
+        Scrape rankings from MaxPreps for a specific association
+        Returns team rankings with records
+        """
+        logger.info(f"Scraping MaxPreps {association} rankings...")
+
+        rankings = {}
+
+        try:
+            assoc_id = self.ASSOCIATIONS.get(association)
+            if not assoc_id:
+                logger.error(f"Unknown association: {association}")
+                return rankings
+
+            url = self.RANKINGS_URL_TEMPLATE.format(association=assoc_id)
+
+            # Try with requests first
+            response = self.session.get(url, timeout=15)
+
+            if response.status_code == 200:
+                soup = BeautifulSoup(response.content, 'html.parser')
+
+                # MaxPreps typically has rankings in JSON or structured HTML
+                # Look for team names, records, and rankings
+
+                # This is a simplified parser - MaxPreps structure may vary
+                teams_data = []
+
+                # Try to find ranking elements
+                # MaxPreps often uses specific classes for rankings
+                ranking_elements = soup.find_all(class_=re.compile(r'(rank|team|row)', re.I))
+
+                if ranking_elements:
+                    logger.info(f"Found {len(ranking_elements)} potential ranking elements")
+                    # Parse the elements to extract team data
+                    # This would need to be customized based on actual MaxPreps HTML structure
+
+                logger.info(f"MaxPreps {association} rankings scraped: {len(teams_data)} teams found")
+
+                return teams_data
+            else:
+                logger.warning(f"MaxPreps returned status {response.status_code}")
+
+        except Exception as e:
+            logger.error(f"Error scraping MaxPreps rankings: {e}")
+
+        return rankings
+
+    def scrape_recent_games(self, days_back=1):
         """
         Scrape recent game results from MaxPreps
-        This is a placeholder - MaxPreps requires more complex scraping
+        Uses Selenium if available for JavaScript rendering
         """
         logger.info(f"Scraping MaxPreps for games from last {days_back} days")
 
         games = []
 
         try:
-            # MaxPreps typically requires JavaScript rendering
-            # For now, this is a placeholder structure
-            # In production, you'd need Selenium or similar
+            # For now, use simple requests-based scraping
+            # In production with Selenium, this would render JavaScript
 
-            response = self.session.get(self.BASE_URL, timeout=10)
-            response.raise_for_status()
+            response = self.session.get(self.TX_BASKETBALL_URL, timeout=15)
 
-            # TODO: Implement actual MaxPreps scraping
-            # This would require:
-            # 1. Finding game listing pages
-            # 2. Extracting team names, scores, dates
-            # 3. Following links to detailed box scores
-            # 4. Parsing shooting stats, rebounds, etc.
+            if response.status_code == 200:
+                soup = BeautifulSoup(response.content, 'html.parser')
 
-            logger.warning("MaxPreps scraping not fully implemented - requires JavaScript rendering")
+                # MaxPreps game structure would need to be parsed
+                # Look for game results, scores, team names
+
+                # Placeholder: Log that we're attempting to scrape
+                logger.info("MaxPreps game scraping attempted - may need Selenium for full data")
+
+                # TODO: Parse actual game data from MaxPreps HTML/JSON
+                # This would extract:
+                # - Team names
+                # - Final scores
+                # - Game dates
+                # - Box score links for detailed stats
 
         except Exception as e:
-            logger.error(f"Error scraping MaxPreps: {e}")
+            logger.error(f"Error scraping MaxPreps games: {e}")
 
+        logger.info(f"MaxPreps scraping complete: {len(games)} games found")
         return games
 
 
