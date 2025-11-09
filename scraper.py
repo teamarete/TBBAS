@@ -93,32 +93,51 @@ class TABCScraper:
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
 
-            teams = []
-            headers = soup.find_all(['h4', 'h3', 'strong'])
+            # Get all text content
+            text_content = soup.get_text()
 
-            for header in headers:
-                header_text = header.get_text().strip()
+            # Private school classifications
+            classifications = {
+                'TAPPS 6A/SPC 4A': 'TAPPS_6A',
+                'TAPPS 5A/SPC 3A': 'TAPPS_5A',
+                'TAPPS 4A': 'TAPPS_4A',
+                'TAPPS 3A': 'TAPPS_3A',
+                'TAPPS 2A': 'TAPPS_2A',
+                'TAPPS 1A': 'TAPPS_1A'
+            }
 
-                # Look for TAPPS/SPC headers
-                if 'TAPPS' in header_text or 'SPC' in header_text:
-                    next_elem = header.find_next_sibling()
-                    if next_elem:
-                        text = next_elem.get_text()
-                        parsed_teams = self._parse_team_list(text)
-                        teams.extend(parsed_teams)
+            private_rankings = {}
 
-            # Remove duplicates while preserving order
-            seen = set()
-            unique_teams = []
-            for team in teams:
-                if team['team_name'] not in seen:
-                    seen.add(team['team_name'])
-                    unique_teams.append(team)
+            for class_name, class_code in classifications.items():
+                # Find the classification section
+                pattern_pos = text_content.find(class_name)
+                if pattern_pos == -1:
+                    continue
 
-            return unique_teams[:40]  # Top 40
+                # Extract text after the classification header
+                section_start = pattern_pos + len(class_name)
+
+                # Find the next classification or end
+                section_end = len(text_content)
+                for other_class in classifications.keys():
+                    if other_class == class_name:
+                        continue
+                    next_pos = text_content.find(other_class, section_start)
+                    if next_pos != -1 and next_pos < section_end:
+                        section_end = next_pos
+
+                section_text = text_content[section_start:section_end]
+                teams = self._parse_team_list(section_text)
+
+                if teams:
+                    private_rankings[class_code] = teams[:10]  # Top 10 per classification
+
+            return private_rankings
 
         except Exception as e:
             print(f"Error scraping private rankings: {e}")
+            import traceback
+            traceback.print_exc()
             return None
 
     def _parse_team_list(self, text):
@@ -164,7 +183,7 @@ class TABCScraper:
         data = {
             'last_updated': datetime.now().isoformat(),
             'uil': uil_rankings,
-            'private': private_rankings
+            'private': private_rankings  # Now a dict with TAPPS classifications
         }
 
         return data
@@ -189,12 +208,15 @@ if __name__ == '__main__':
 
         # Print summary
         if data.get('uil'):
+            print("\nUIL Rankings:")
             for classification, teams in data['uil'].items():
-                print(f"\n{classification}: {len(teams)} teams")
+                print(f"  {classification}: {len(teams)} teams")
                 if teams:
-                    print(f"  #1: {teams[0]['team_name']}")
+                    print(f"    #1: {teams[0]['team_name']}")
 
         if data.get('private'):
-            print(f"\nPrivate: {len(data['private'])} teams")
-            if data['private']:
-                print(f"  #1: {data['private'][0]['team_name']}")
+            print("\nPrivate School Rankings:")
+            for classification, teams in data['private'].items():
+                print(f"  {classification}: {len(teams)} teams")
+                if teams:
+                    print(f"    #1: {teams[0]['team_name']}")

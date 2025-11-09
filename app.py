@@ -19,13 +19,18 @@ if os.getenv('FLASK_ENV') != 'development':
     start_scheduler()
 
 CLASSIFICATIONS = {
-    'AAAAAA': 'Class 6A',
-    'AAAAA': 'Class 5A',
-    'AAAA': 'Class 4A',
-    'AAA': 'Class 3A',
-    'AA': 'Class 2A',
-    'A': 'Class 1A',
-    'Private': 'Private Schools (TAPPS/SPC)'
+    'AAAAAA': 'Class 6A (UIL)',
+    'AAAAA': 'Class 5A (UIL)',
+    'AAAA': 'Class 4A (UIL)',
+    'AAA': 'Class 3A (UIL)',
+    'AA': 'Class 2A (UIL)',
+    'A': 'Class 1A (UIL)',
+    'TAPPS_6A': 'TAPPS 6A / SPC 4A',
+    'TAPPS_5A': 'TAPPS 5A / SPC 3A',
+    'TAPPS_4A': 'TAPPS 4A',
+    'TAPPS_3A': 'TAPPS 3A',
+    'TAPPS_2A': 'TAPPS 2A',
+    'TAPPS_1A': 'TAPPS 1A'
 }
 
 
@@ -67,9 +72,10 @@ def classification_rankings(classification):
     teams = []
 
     if data:
-        if classification == 'Private':
-            # Get private school rankings
-            raw_teams = data.get('private', [])
+        # Determine if this is a TAPPS or UIL classification
+        if classification.startswith('TAPPS_'):
+            # Get TAPPS classification rankings
+            raw_teams = data.get('private', {}).get(classification, [])
         else:
             # Get UIL classification rankings
             raw_teams = data.get('uil', {}).get(classification, [])
