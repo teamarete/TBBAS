@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>{{ classification_name }} - Top 40 Rankings</h2>
+<h2>{{ classification_name }} - TABC Rankings</h2>
+<p style="color: #666; margin-bottom: 20px;">
+    Rankings from Texas Association of Basketball Coaches (TABC).
+    <strong>Advanced analytics coming soon</strong> - currently showing official TABC rankings.
+</p>
 <table>
     <thead>
         <tr>
@@ -16,15 +20,18 @@
     <tbody>
         {% for team in teams %}
         <tr>
-            <td>{{ team.rank }}</td>
-            <td>{{ team.team_name }}</td>
-            <td>{{ team.district }}</td>
-            <td>{{ team.record }}</td>
-            <td>{{ team.net_rating }}</td>
-            <td>{{ team.adj_offensive_eff }}</td>
-            <td>{{ team.adj_defensive_eff }}</td>
+            <td>{% if team.rank > 0 %}{{ team.rank }}{% endif %}</td>
+            <td><strong>{{ team.team_name }}</strong></td>
+            <td>{{ team.district if team.district else '-' }}</td>
+            <td>{{ team.record if team.record else '-' }}</td>
+            <td>{{ team.net_rating if team.net_rating is not none else '-' }}</td>
+            <td>{{ team.adj_offensive_eff if team.adj_offensive_eff is not none else '-' }}</td>
+            <td>{{ team.adj_defensive_eff if team.adj_defensive_eff is not none else '-' }}</td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
+<p style="margin-top: 20px; color: #666; font-size: 0.9em;">
+    Last Updated: {{ last_update }}
+</p>
 {% endblock %}

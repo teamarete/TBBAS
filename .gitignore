@@ -15,6 +15,9 @@ build/
 .env
 .venv
 
+# Data
+data/
+
 # IDE
 .vscode/
 .idea/
