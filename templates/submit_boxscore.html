@@ -12,6 +12,20 @@
   {% endif %}
 {% endwith %}
 
+<div style="background: #fff3cd; border: 2px solid #ffc107; padding: 20px; border-radius: 8px; margin-bottom: 20px; max-width: 900px;">
+    <h3 style="margin-top: 0; color: #856404;">⚠️ Important Instructions for Coaches</h3>
+    <p style="margin-bottom: 10px;"><strong>Please enter school names EXACTLY as they appear in official listings:</strong></p>
+    <ul style="margin: 0; padding-left: 20px;">
+        <li><strong>UIL Schools:</strong> Use official name from <a href="https://www.uiltexas.org/athletics/basketball" target="_blank" style="color: #0066cc;">UIL Basketball Directory</a></li>
+        <li><strong>TAPPS Schools:</strong> Use official name from <a href="https://www.tapps.net" target="_blank" style="color: #0066cc;">TAPPS Directory</a></li>
+        <li><strong>SPC Schools:</strong> Use official name from <a href="https://www.swprep.org" target="_blank" style="color: #0066cc;">SPC Directory</a></li>
+    </ul>
+    <p style="margin: 10px 0 0 0; font-size: 14px; color: #856404;">
+        <strong>Example:</strong> "Houston Westside" (correct) not "Westside HS" or "Westside High School"<br>
+        Accurate team names ensure your data is included in official rankings calculations.
+    </p>
+</div>
+
 <p>Coaches: Submit your game box scores here. Data is posted immediately.</p>
 
 <form method="POST" style="max-width: 900px; background: white; padding: 30px; border-radius: 8px; margin-top: 20px;">
@@ -39,7 +53,8 @@
 
             <div style="margin-bottom: 15px;">
                 <label><strong>Team Name:</strong></label>
-                <input type="text" name="team1_name" required style="padding: 8px; border: 1px solid #ddd; border-radius: 4px; width: 100%; margin-top: 5px;">
+                <input type="text" name="team1_name" required placeholder="Enter official school name (see instructions above)" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px; width: 100%; margin-top: 5px;">
+                <small style="color: #666; display: block; margin-top: 3px;">Use exact name from UIL/TAPPS/SPC directory</small>
             </div>
 
             <div style="margin-bottom: 15px;">
@@ -108,7 +123,8 @@
 
             <div style="margin-bottom: 15px;">
                 <label><strong>Team Name:</strong></label>
-                <input type="text" name="team2_name" required style="padding: 8px; border: 1px solid #ddd; border-radius: 4px; width: 100%; margin-top: 5px;">
+                <input type="text" name="team2_name" required placeholder="Enter official school name (see instructions above)" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px; width: 100%; margin-top: 5px;">
+                <small style="color: #666; display: block; margin-top: 3px;">Use exact name from UIL/TAPPS/SPC directory</small>
             </div>
 
             <div style="margin-bottom: 15px;">
