@@ -12,6 +12,12 @@ app.config['DEBUG'] = os.getenv('FLASK_DEBUG', 'False') == 'True'
 # Data file path
 DATA_FILE = Path(__file__).parent / 'data' / 'rankings.json'
 
+# Start automatic scheduler
+if os.getenv('FLASK_ENV') != 'development':
+    # Only run scheduler in production (not during debug reloads)
+    from scheduler import start_scheduler
+    start_scheduler()
+
 CLASSIFICATIONS = {
     'AAAAAA': 'Class 6A',
     'AAAAA': 'Class 5A',
