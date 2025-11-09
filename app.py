@@ -35,7 +35,7 @@ DATA_FILE = Path(__file__).parent / 'data' / 'rankings.json'
 if os.getenv('FLASK_ENV') != 'development':
     # Only run scheduler in production (not during debug reloads)
     from scheduler import start_scheduler
-    start_scheduler()
+    start_scheduler(app)
 
 CLASSIFICATIONS = {
     'AAAAAA': 'Class 6A (UIL)',
