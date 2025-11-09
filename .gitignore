@@ -17,6 +17,7 @@ build/
 
 # Data
 data/
+instance/
 
 # IDE
 .vscode/

@@ -1,13 +1,32 @@
-from flask import Flask, render_template, jsonify, redirect, url_for
+from flask import Flask, render_template, jsonify, redirect, url_for, request, flash
 import numpy as np
 from datetime import datetime
 import os
 import json
 from pathlib import Path
+from models import db, BoxScore
 
 app = Flask(__name__)
 app.config['ENV'] = os.getenv('FLASK_ENV', 'production')
 app.config['DEBUG'] = os.getenv('FLASK_DEBUG', 'False') == 'True'
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev-secret-key-change-in-production')
+
+# Database configuration
+instance_path = Path(__file__).parent / 'instance'
+instance_path.mkdir(exist_ok=True)  # Create instance directory if it doesn't exist
+
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
+    'DATABASE_URL',
+    'sqlite:///' + str(instance_path / 'tbbas.db')
+)
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Initialize database
+db.init_app(app)
+
+# Create tables
+with app.app_context():
+    db.create_all()
 
 # Data file path
 DATA_FILE = Path(__file__).parent / 'data' / 'rankings.json'
@@ -152,6 +171,99 @@ def refresh_data():
             'status': 'error',
             'message': str(e)
         }), 500
+
+
+@app.route('/submit-boxscore', methods=['GET', 'POST'])
+def submit_boxscore():
+    """Submit a box score"""
+    if request.method == 'POST':
+        try:
+            # Create new box score
+            box_score = BoxScore(
+                game_date=datetime.strptime(request.form['game_date'], '%Y-%m-%d').date(),
+                classification=request.form['classification'],
+
+                # Team 1
+                team1_name=request.form['team1_name'],
+                team1_score=int(request.form['team1_score']),
+                team1_fg=int(request.form.get('team1_fg', 0) or 0),
+                team1_fga=int(request.form.get('team1_fga', 0) or 0),
+                team1_3pt=int(request.form.get('team1_3pt', 0) or 0),
+                team1_3pta=int(request.form.get('team1_3pta', 0) or 0),
+                team1_ft=int(request.form.get('team1_ft', 0) or 0),
+                team1_fta=int(request.form.get('team1_fta', 0) or 0),
+                team1_reb=int(request.form.get('team1_reb', 0) or 0),
+                team1_ast=int(request.form.get('team1_ast', 0) or 0),
+                team1_stl=int(request.form.get('team1_stl', 0) or 0),
+                team1_blk=int(request.form.get('team1_blk', 0) or 0),
+                team1_to=int(request.form.get('team1_to', 0) or 0),
+
+                # Team 2
+                team2_name=request.form['team2_name'],
+                team2_score=int(request.form['team2_score']),
+                team2_fg=int(request.form.get('team2_fg', 0) or 0),
+                team2_fga=int(request.form.get('team2_fga', 0) or 0),
+                team2_3pt=int(request.form.get('team2_3pt', 0) or 0),
+                team2_3pta=int(request.form.get('team2_3pta', 0) or 0),
+                team2_ft=int(request.form.get('team2_ft', 0) or 0),
+                team2_fta=int(request.form.get('team2_fta', 0) or 0),
+                team2_reb=int(request.form.get('team2_reb', 0) or 0),
+                team2_ast=int(request.form.get('team2_ast', 0) or 0),
+                team2_stl=int(request.form.get('team2_stl', 0) or 0),
+                team2_blk=int(request.form.get('team2_blk', 0) or 0),
+                team2_to=int(request.form.get('team2_to', 0) or 0),
+
+                submitted_by=request.form.get('submitted_by', '')
+            )
+
+            db.session.add(box_score)
+            db.session.commit()
+
+            flash('Box score submitted successfully!', 'success')
+            return redirect(url_for('submit_boxscore'))
+
+        except Exception as e:
+            db.session.rollback()
+            flash(f'Error submitting box score: {str(e)}', 'error')
+
+    return render_template('submit_boxscore.html', classifications=CLASSIFICATIONS)
+
+
+@app.route('/boxscores')
+def view_boxscores():
+    """View all box scores"""
+    # Get filter parameters
+    classification = request.args.get('classification')
+    team = request.args.get('team')
+
+    query = BoxScore.query.order_by(BoxScore.game_date.desc())
+
+    if classification:
+        query = query.filter_by(classification=classification)
+
+    if team:
+        query = query.filter(
+            (BoxScore.team1_name.ilike(f'%{team}%')) |
+            (BoxScore.team2_name.ilike(f'%{team}%'))
+        )
+
+    boxscores = query.limit(100).all()
+
+    return render_template('boxscores.html',
+                         boxscores=boxscores,
+                         classifications=CLASSIFICATIONS)
+
+
+@app.route('/api/boxscores/<classification>')
+def api_boxscores(classification):
+    """API endpoint to get box scores for a classification"""
+    boxscores = BoxScore.query.filter_by(classification=classification)\
+        .order_by(BoxScore.game_date.desc())\
+        .limit(50)\
+        .all()
+
+    return jsonify([bs.to_dict() for bs in boxscores])
+
 
 if __name__ == '__main__':
     print("\n" + "="*50)

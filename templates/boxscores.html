@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Submitted Box Scores</h2>
+
+<p><a href="/submit-boxscore" style="background: #27ae60; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">Submit New Box Score</a></p>
+
+<div style="margin: 20px 0;">
+    <form method="GET" style="display: flex; gap: 10px; align-items: flex-end;">
+        <div>
+            <label style="display: block; margin-bottom: 5px;">Filter by Classification:</label>
+            <select name="classification" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                <option value="">All Classifications</option>
+                {% for code, name in classifications.items() %}
+                <option value="{{ code }}" {% if request.args.get('classification') == code %}selected{% endif %}>{{ name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label style="display: block; margin-bottom: 5px;">Search by Team:</label>
+            <input type="text" name="team" placeholder="Team name" value="{{ request.args.get('team', '') }}" style="padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+        </div>
+        <button type="submit" style="padding: 8px 20px; background: #3498db; color: white; border: none; border-radius: 4px; cursor: pointer;">Filter</button>
+        <a href="/boxscores" style="padding: 8px 20px; background: #95a5a6; color: white; text-decoration: none; border-radius: 4px;">Clear</a>
+    </form>
+</div>
+
+{% if boxscores %}
+<p style="color: #666;">Showing {{ boxscores|length }} games (most recent first)</p>
+
+{% for bs in boxscores %}
+<div style="background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <div>
+            <strong>{{ bs.game_date.strftime('%B %d, %Y') }}</strong>
+            <span style="margin-left: 15px; color: #666;">{{ classifications[bs.classification] }}</span>
+        </div>
+        <div style="color: #999; font-size: 0.9em;">
+            {% if bs.submitted_by %}Submitted by: {{ bs.submitted_by }}{% endif %}
+        </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 2fr 1fr 2fr; gap: 20px; align-items: center;">
+        <!-- Team 1 -->
+        <div style="text-align: right;">
+            <h3 style="margin: 0 0 10px 0;">{{ bs.team1_name }}</h3>
+            <div style="font-size: 0.9em; color: #666;">
+                {% if bs.team1_fg and bs.team1_fga %}
+                <div>FG: {{ bs.team1_fg }}/{{ bs.team1_fga }} ({{ '%.1f'|format((bs.team1_fg / bs.team1_fga * 100) if bs.team1_fga > 0 else 0) }}%)</div>
+                {% endif %}
+                {% if bs.team1_3pt and bs.team1_3pta %}
+                <div>3PT: {{ bs.team1_3pt }}/{{ bs.team1_3pta }}</div>
+                {% endif %}
+                {% if bs.team1_ft and bs.team1_fta %}
+                <div>FT: {{ bs.team1_ft }}/{{ bs.team1_fta }}</div>
+                {% endif %}
+                {% if bs.team1_reb %}<div>REB: {{ bs.team1_reb }}</div>{% endif %}
+                {% if bs.team1_ast %}<div>AST: {{ bs.team1_ast }}</div>{% endif %}
+                {% if bs.team1_stl %}<div>STL: {{ bs.team1_stl }}</div>{% endif %}
+                {% if bs.team1_blk %}<div>BLK: {{ bs.team1_blk }}</div>{% endif %}
+                {% if bs.team1_to %}<div>TO: {{ bs.team1_to }}</div>{% endif %}
+            </div>
+        </div>
+
+        <!-- Score -->
+        <div style="text-align: center; background: #f8f9fa; padding: 20px; border-radius: 8px;">
+            <div style="font-size: 2em; font-weight: bold; color: {% if bs.team1_score > bs.team2_score %}#27ae60{% elif bs.team1_score < bs.team2_score %}#e74c3c{% else %}#95a5a6{% endif %};">
+                {{ bs.team1_score }}
+            </div>
+            <div style="font-size: 1.2em; color: #95a5a6; margin: 5px 0;">-</div>
+            <div style="font-size: 2em; font-weight: bold; color: {% if bs.team2_score > bs.team1_score %}#27ae60{% elif bs.team2_score < bs.team1_score %}#e74c3c{% else %}#95a5a6{% endif %};">
+                {{ bs.team2_score }}
+            </div>
+            <div style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                {% if bs.team1_score > bs.team2_score %}
+                {{ bs.team1_name[:20] }} wins
+                {% elif bs.team2_score > bs.team1_score %}
+                {{ bs.team2_name[:20] }} wins
+                {% else %}
+                Tie
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Team 2 -->
+        <div>
+            <h3 style="margin: 0 0 10px 0;">{{ bs.team2_name }}</h3>
+            <div style="font-size: 0.9em; color: #666;">
+                {% if bs.team2_fg and bs.team2_fga %}
+                <div>FG: {{ bs.team2_fg }}/{{ bs.team2_fga }} ({{ '%.1f'|format((bs.team2_fg / bs.team2_fga * 100) if bs.team2_fga > 0 else 0) }}%)</div>
+                {% endif %}
+                {% if bs.team2_3pt and bs.team2_3pta %}
+                <div>3PT: {{ bs.team2_3pt }}/{{ bs.team2_3pta }}</div>
+                {% endif %}
+                {% if bs.team2_ft and bs.team2_fta %}
+                <div>FT: {{ bs.team2_ft }}/{{ bs.team2_fta }}</div>
+                {% endif %}
+                {% if bs.team2_reb %}<div>REB: {{ bs.team2_reb }}</div>{% endif %}
+                {% if bs.team2_ast %}<div>AST: {{ bs.team2_ast }}</div>{% endif %}
+                {% if bs.team2_stl %}<div>STL: {{ bs.team2_stl }}</div>{% endif %}
+                {% if bs.team2_blk %}<div>BLK: {{ bs.team2_blk }}</div>{% endif %}
+                {% if bs.team2_to %}<div>TO: {{ bs.team2_to }}</div>{% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% else %}
+<div style="text-align: center; padding: 40px; background: white; border-radius: 8px;">
+    <p style="color: #666; font-size: 1.2em;">No box scores found.</p>
+    <p><a href="/submit-boxscore" style="color: #3498db;">Be the first to submit one!</a></p>
+</div>
+{% endif %}
+
+{% endblock %}
