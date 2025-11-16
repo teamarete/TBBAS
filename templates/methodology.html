@@ -1,12 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>TBBAS Methodology</h2>
+
 <h3>Overview</h3>
-<p>KenPom-style efficiency ratings for Texas high school basketball.</p>
+<p>Texas Boys Basketball Analytics System (TBBAS) provides KenPom-style efficiency ratings for Texas high school basketball teams across UIL, TAPPS, and SPC classifications.</p>
+
+<h3>Data Sources</h3>
+<p>Rankings are calculated from multiple data sources to ensure comprehensive coverage:</p>
+<ul>
+    <li><strong>MaxPreps:</strong> Daily automated scraping of game scores</li>
+    <li><strong>TABC:</strong> Official Texas Association of Basketball Coaches rankings</li>
+    <li><strong>GASO:</strong> Georgia Association of Scholarship Officials rankings</li>
+    <li><strong>Coach Submissions:</strong> Box scores submitted directly by coaches via our online form</li>
+</ul>
+<p style="background: #fff3cd; padding: 15px; border-radius: 5px; margin: 20px 0;">
+    <strong>Note for Coaches:</strong> Your submitted box scores are automatically included in rankings calculations!
+    The more detailed stats you provide (FG%, 3PT%, rebounds, etc.), the more accurate the efficiency ratings will be.
+</p>
+
 <h3>Core Metrics</h3>
 <ul>
-    <li><strong>Net Rating:</strong> Offensive - Defensive efficiency</li>
-    <li><strong>Offensive Efficiency:</strong> Points per 100 possessions</li>
-    <li><strong>Defensive Efficiency:</strong> Points allowed per 100 possessions</li>
+    <li><strong>Net Rating:</strong> Offensive Efficiency - Defensive Efficiency (higher is better)</li>
+    <li><strong>Offensive Efficiency:</strong> Points scored per 100 possessions</li>
+    <li><strong>Defensive Efficiency:</strong> Points allowed per 100 possessions (lower is better)</li>
+    <li><strong>Adjusted Tempo:</strong> Possessions per game (estimated from available stats)</li>
 </ul>
+
+<h3>Calculation Method</h3>
+<p>Rankings are calculated using efficiency-based metrics similar to KenPom college basketball ratings:</p>
+<ol>
+    <li>Possessions are estimated using: <code>FGA + 0.44 × FTA + TO</code></li>
+    <li>Offensive efficiency = (Points Scored / Possessions) × 100</li>
+    <li>Defensive efficiency = (Points Allowed / Possessions) × 100</li>
+    <li>Net Rating = Offensive Efficiency - Defensive Efficiency</li>
+    <li>Teams are ranked by Net Rating within their classification</li>
+</ol>
+
+<h3>Update Schedule</h3>
+<ul>
+    <li><strong>Daily:</strong> Box scores collected from MaxPreps and coach submissions</li>
+    <li><strong>Weekly:</strong> Rankings recalculated every Monday combining all data sources</li>
+    <li><strong>Season:</strong> November 11, 2025 - March 9, 2026</li>
+</ul>
+
+<h3>About TBBAS</h3>
+<p>TBBAS was created to provide data-driven analytics for Texas high school basketball, helping coaches, players, and fans better understand team performance beyond traditional win-loss records.</p>
+
+<p style="margin-top: 30px;">
+    <a href="/submit-boxscore" style="background: #27ae60; color: white; padding: 12px 24px; border-radius: 5px; text-decoration: none; display: inline-block;">
+        Submit Your Game Box Score
+    </a>
+</p>
+
 {% endblock %}
