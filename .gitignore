@@ -16,7 +16,8 @@ build/
 .venv
 
 # Data
-data/
+data/*
+!data/rankings.json
 instance/
 
 # IDE
