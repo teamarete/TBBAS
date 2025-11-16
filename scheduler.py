@@ -11,10 +11,15 @@ from datetime import datetime, timedelta
 from scraper import TABCScraper
 from box_score_scraper import BoxScoreCollector
 from ranking_calculator import RankingCalculator
+from email_notifier import EmailNotifier
 import logging
+import traceback
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+# Initialize email notifier
+email_notifier = EmailNotifier()
 
 # Schedule configuration
 START_DATE = datetime(2025, 11, 11)  # November 11, 2025
@@ -47,14 +52,41 @@ def collect_box_scores():
 
     logger.info(f"Starting daily box score collection at {now.strftime('%Y-%m-%d %H:%M:%S')}")
 
+    errors = []
+    games_collected = 0
+    sources_summary = {}
+
     try:
         collector = BoxScoreCollector(app=_app)
         games = collector.collect_daily_box_scores()
-        logger.info(f"Box score collection complete: {len(games)} games processed")
+        games_collected = len(games)
+
+        # Build sources summary
+        for game in games:
+            source = game.get('source', 'Unknown')
+            sources_summary[source] = sources_summary.get(source, 0) + 1
+
+        logger.info(f"Box score collection complete: {games_collected} games processed")
+
+        # Send success notification
+        email_notifier.notify_daily_collection(
+            games_collected=games_collected,
+            sources_summary=sources_summary,
+            errors=None
+        )
+
     except Exception as e:
-        logger.error(f"Error collecting box scores: {e}")
-        import traceback
-        traceback.print_exc()
+        error_msg = f"Error collecting box scores: {e}"
+        logger.error(error_msg)
+        tb = traceback.format_exc()
+        logger.error(tb)
+
+        # Send error notification
+        email_notifier.notify_error(
+            error_type="Daily Box Score Collection",
+            error_message=str(e),
+            traceback_info=tb
+        )
 
 
 def update_rankings():
@@ -80,6 +112,9 @@ def update_rankings():
     logger.info(f"Starting weekly rankings update at {now.strftime('%Y-%m-%d %H:%M:%S')}")
     logger.info("="*50)
 
+    errors = []
+    rankings_summary = {'uil': {}, 'private': {}}
+
     try:
         # 1. Scrape MaxPreps rankings (PRIMARY SOURCE)
         logger.info("1. Scraping MaxPreps rankings (PRIMARY)...")
@@ -99,7 +134,9 @@ def update_rankings():
                 maxpreps_data['uil'] = uil_rankings
                 logger.info(f"   MaxPreps UIL: Retrieved rankings")
         except Exception as e:
-            logger.error(f"   MaxPreps UIL scraping failed: {e}")
+            error_msg = f"MaxPreps UIL scraping failed: {e}"
+            logger.error(f"   {error_msg}")
+            errors.append(error_msg)
 
         # Scrape TAPPS from MaxPreps
         try:
@@ -108,7 +145,9 @@ def update_rankings():
                 maxpreps_data['private'] = tapps_rankings
                 logger.info(f"   MaxPreps TAPPS: Retrieved rankings")
         except Exception as e:
-            logger.error(f"   MaxPreps TAPPS scraping failed: {e}")
+            error_msg = f"MaxPreps TAPPS scraping failed: {e}"
+            logger.error(f"   {error_msg}")
+            errors.append(error_msg)
 
         # 2. Calculate rankings from box score data
         logger.info("2. Calculating rankings from box score data...")
@@ -124,19 +163,48 @@ def update_rankings():
         logger.info("4. Merging rankings from all sources...")
         merged_data = merge_rankings(calculated_rankings, maxpreps_data, tabc_data)
 
+        # Build rankings summary for email
+        for classification, teams in merged_data.get('uil', {}).items():
+            rankings_summary['uil'][classification] = len(teams)
+        for classification, teams in merged_data.get('private', {}).items():
+            rankings_summary['private'][classification] = len(teams)
+
         # 5. Save merged rankings
         if merged_data:
             tabc_scraper.save_to_file(merged_data)
             logger.info("="*50)
             logger.info(f"✓ Rankings updated successfully at {now.strftime('%Y-%m-%d %H:%M:%S')}")
             logger.info("="*50)
+
+            # Send success notification
+            email_notifier.notify_weekly_rankings_update(
+                rankings_summary=rankings_summary,
+                errors=errors if errors else None
+            )
         else:
-            logger.error("Failed to generate rankings")
+            error_msg = "Failed to generate rankings"
+            logger.error(error_msg)
+            errors.append(error_msg)
+
+            # Send error notification
+            email_notifier.notify_error(
+                error_type="Weekly Rankings Update",
+                error_message="Failed to generate merged rankings",
+                traceback_info=None
+            )
 
     except Exception as e:
-        logger.error(f"Error updating rankings: {e}")
-        import traceback
-        traceback.print_exc()
+        error_msg = f"Error updating rankings: {e}"
+        logger.error(error_msg)
+        tb = traceback.format_exc()
+        logger.error(tb)
+
+        # Send error notification
+        email_notifier.notify_error(
+            error_type="Weekly Rankings Update",
+            error_message=str(e),
+            traceback_info=tb
+        )
 
 
 def merge_rankings(calculated_data, maxpreps_data, tabc_data):
