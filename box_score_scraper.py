@@ -9,6 +9,7 @@ from datetime import datetime, timedelta
 import re
 import logging
 from models import db, BoxScore
+from school_name_normalizer import SchoolNameNormalizer
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -34,6 +35,7 @@ class MaxPrepsBoxScoreScraper:
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
         })
+        self.normalizer = SchoolNameNormalizer()
 
     def get_selenium_driver(self):
         """Initialize Selenium WebDriver (headless)"""
@@ -108,42 +110,90 @@ class MaxPrepsBoxScoreScraper:
 
         return rankings
 
-    def scrape_recent_games(self, days_back=1):
+    def scrape_daily_scores(self, target_date=None):
         """
-        Scrape recent game results from MaxPreps
-        Uses Selenium if available for JavaScript rendering
-        """
-        logger.info(f"Scraping MaxPreps for games from last {days_back} days")
+        Scrape game scores for a specific date from MaxPreps
+        URL format: https://www.maxpreps.com/tx/basketball/scores/?date=MM/DD/YYYY
 
+        Args:
+            target_date: datetime object or None (uses yesterday if None)
+
+        Returns:
+            List of game dictionaries
+        """
+        if target_date is None:
+            target_date = datetime.now() - timedelta(days=1)
+
+        date_str = target_date.strftime('%m/%d/%Y')
+        url = f"https://www.maxpreps.com/tx/basketball/scores/?date={date_str}"
+
+        logger.info(f"Scraping MaxPreps scores for {date_str}")
         games = []
 
         try:
-            # For now, use simple requests-based scraping
-            # In production with Selenium, this would render JavaScript
-
-            response = self.session.get(self.TX_BASKETBALL_URL, timeout=15)
+            response = self.session.get(url, timeout=15)
 
             if response.status_code == 200:
                 soup = BeautifulSoup(response.content, 'html.parser')
 
-                # MaxPreps game structure would need to be parsed
-                # Look for game results, scores, team names
+                # Parse MaxPreps score listings
+                # Look for game containers (structure may vary)
+                game_elements = soup.find_all(class_=re.compile(r'(game|score|contest)', re.I))
 
-                # Placeholder: Log that we're attempting to scrape
-                logger.info("MaxPreps game scraping attempted - may need Selenium for full data")
+                for element in game_elements:
+                    try:
+                        # Extract team names and scores
+                        # This is a template - actual structure depends on MaxPreps HTML
+                        team_elements = element.find_all(class_=re.compile(r'team', re.I))
+                        score_elements = element.find_all(class_=re.compile(r'score', re.I))
 
-                # TODO: Parse actual game data from MaxPreps HTML/JSON
-                # This would extract:
-                # - Team names
-                # - Final scores
-                # - Game dates
-                # - Box score links for detailed stats
+                        if len(team_elements) >= 2 and len(score_elements) >= 2:
+                            team1_name = team_elements[0].get_text(strip=True)
+                            team2_name = team_elements[1].get_text(strip=True)
+                            team1_score = score_elements[0].get_text(strip=True)
+                            team2_score = score_elements[1].get_text(strip=True)
+
+                            # Normalize team names
+                            team1_name = self.normalizer.find_canonical_name([team1_name]) or team1_name
+                            team2_name = self.normalizer.find_canonical_name([team2_name]) or team2_name
+
+                            game = {
+                                'date': target_date.date(),
+                                'team1_name': team1_name,
+                                'team1_score': int(team1_score) if team1_score.isdigit() else 0,
+                                'team2_name': team2_name,
+                                'team2_score': int(team2_score) if team2_score.isdigit() else 0,
+                                'source': 'MaxPreps'
+                            }
+                            games.append(game)
+
+                    except Exception as e:
+                        logger.debug(f"Error parsing game element: {e}")
+                        continue
+
+                logger.info(f"Found {len(games)} games from MaxPreps for {date_str}")
 
         except Exception as e:
-            logger.error(f"Error scraping MaxPreps games: {e}")
+            logger.error(f"Error scraping MaxPreps daily scores: {e}")
 
-        logger.info(f"MaxPreps scraping complete: {len(games)} games found")
         return games
+
+    def scrape_recent_games(self, days_back=1):
+        """
+        Scrape recent game results from MaxPreps
+        Uses the daily scores endpoint for each day
+        """
+        logger.info(f"Scraping MaxPreps for games from last {days_back} days")
+
+        all_games = []
+
+        for days_ago in range(days_back):
+            target_date = datetime.now() - timedelta(days=days_ago+1)
+            games = self.scrape_daily_scores(target_date)
+            all_games.extend(games)
+
+        logger.info(f"MaxPreps scraping complete: {len(all_games)} games found")
+        return all_games
 
 
 class TexasNewspaperScraper:
@@ -202,6 +252,77 @@ class TexasNewspaperScraper:
         return all_games
 
 
+class GASONRankingsScraper:
+    """Scraper for GASO (Georgia Association of Scholarship Officials) rankings"""
+
+    GASO_URL = "https://gasofastbreak.substack.com/p/gaso-2027-rankings-refresh-top-150"
+
+    def __init__(self):
+        self.session = requests.Session()
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+        })
+        self.normalizer = SchoolNameNormalizer()
+
+    def scrape_gaso_rankings(self):
+        """
+        Scrape GASO 2027 rankings from Substack
+        Returns: List of ranked teams
+        """
+        logger.info("Scraping GASO rankings from Substack...")
+
+        teams = []
+
+        try:
+            response = self.session.get(self.GASO_URL, timeout=15)
+
+            if response.status_code == 200:
+                soup = BeautifulSoup(response.content, 'html.parser')
+
+                # Substack posts are in article containers
+                article = soup.find('article') or soup.find('div', class_='post')
+
+                if article:
+                    # Look for numbered lists or ranking structures
+                    # Rankings are often in ordered lists or paragraphs with numbers
+                    text_content = article.get_text()
+
+                    # Parse rankings from text
+                    # Pattern: "1. Team Name" or "1) Team Name" or "#1 Team Name"
+                    ranking_patterns = [
+                        r'(\d+)[.)]\s+([A-Za-z\s\-\']+)',  # 1. Team Name or 1) Team Name
+                        r'#(\d+)\s+([A-Za-z\s\-\']+)',     # #1 Team Name
+                        r'(\d+)\.\s+([A-Za-z\s\-\']+)\s+\(', # 1. Team Name (record)
+                    ]
+
+                    for pattern in ranking_patterns:
+                        matches = re.findall(pattern, text_content)
+                        if matches and len(matches) >= 10:  # Valid if we find at least 10 rankings
+                            for rank_str, team_name in matches:
+                                rank = int(rank_str)
+                                team_name = team_name.strip()
+
+                                # Normalize team name
+                                team_name = self.normalizer.find_canonical_name([team_name]) or team_name
+
+                                teams.append({
+                                    'rank': rank,
+                                    'team_name': team_name,
+                                    'source': 'GASO'
+                                })
+
+                            logger.info(f"Found {len(teams)} teams from GASO rankings")
+                            break
+
+                if not teams:
+                    logger.warning("Could not parse GASO rankings from page")
+
+        except Exception as e:
+            logger.error(f"Error scraping GASO rankings: {e}")
+
+        return teams
+
+
 class BoxScoreCollector:
     """Main collector that orchestrates all scrapers"""
 
@@ -209,9 +330,11 @@ class BoxScoreCollector:
         self.app = app
         self.maxpreps_scraper = MaxPrepsBoxScoreScraper()
         self.newspaper_scraper = TexasNewspaperScraper()
+        self.gaso_scraper = GASONRankingsScraper()
+        self.normalizer = SchoolNameNormalizer()
 
     def collect_daily_box_scores(self):
-        """Collect box scores from all sources"""
+        """Collect box scores from all sources with deduplication"""
         logger.info("="*50)
         logger.info("Starting daily box score collection")
         logger.info("="*50)
@@ -219,7 +342,7 @@ class BoxScoreCollector:
         all_games = []
 
         # Scrape MaxPreps
-        logger.info("Scraping MaxPreps...")
+        logger.info("Scraping MaxPreps daily scores...")
         maxpreps_games = self.maxpreps_scraper.scrape_recent_games(days_back=1)
         all_games.extend(maxpreps_games)
         logger.info(f"Found {len(maxpreps_games)} games from MaxPreps")
@@ -230,16 +353,76 @@ class BoxScoreCollector:
         all_games.extend(newspaper_games)
         logger.info(f"Found {len(newspaper_games)} games from newspapers")
 
+        # Scrape GASO rankings (weekly, not daily - check day of week)
+        today = datetime.now()
+        if today.weekday() == 0:  # Monday
+            logger.info("Scraping GASO rankings (weekly)...")
+            gaso_teams = self.gaso_scraper.scrape_gaso_rankings()
+            logger.info(f"Found {len(gaso_teams)} teams from GASO rankings")
+            # GASO rankings are stored separately, not as games
+
+        # Deduplicate games before saving
+        logger.info(f"Deduplicating {len(all_games)} games...")
+        all_games = self.deduplicate_games(all_games)
+        logger.info(f"After deduplication: {len(all_games)} unique games")
+
         # Save to database
         if self.app and all_games:
             with self.app.app_context():
                 saved_count = self.save_games_to_db(all_games)
                 logger.info(f"Saved {saved_count} new games to database")
 
-        logger.info(f"Total games collected: {len(all_games)}")
+        logger.info(f"Total unique games collected: {len(all_games)}")
         logger.info("Daily box score collection complete")
 
         return all_games
+
+    def deduplicate_games(self, games):
+        """
+        Deduplicate games by checking for duplicate team matchups
+        Handles school name variations (Arlington vs Arl, etc.)
+        """
+        if not games:
+            return []
+
+        unique_games = []
+        seen_matchups = set()
+
+        for game in games:
+            team1 = game.get('team1_name', '')
+            team2 = game.get('team2_name', '')
+            date = game.get('date')
+
+            # Normalize team names
+            norm_team1 = self.normalizer.normalize(team1)
+            norm_team2 = self.normalizer.normalize(team2)
+
+            # Create matchup key (alphabetically sorted to catch A vs B and B vs A)
+            teams_sorted = tuple(sorted([norm_team1, norm_team2]))
+            matchup_key = (date, teams_sorted)
+
+            # Check for duplicates
+            if matchup_key in seen_matchups:
+                logger.debug(f"Duplicate found: {team1} vs {team2} on {date}")
+                continue
+
+            # Check if similar teams already exist
+            is_duplicate = False
+            for existing_key in seen_matchups:
+                if existing_key[0] == date:  # Same date
+                    existing_teams = existing_key[1]
+                    # Check if teams are similar enough to be duplicates
+                    if (self.normalizer.are_duplicates(teams_sorted[0], existing_teams[0]) and
+                        self.normalizer.are_duplicates(teams_sorted[1], existing_teams[1])):
+                        is_duplicate = True
+                        logger.debug(f"Similar matchup found: {team1} vs {team2} ~ existing game")
+                        break
+
+            if not is_duplicate:
+                seen_matchups.add(matchup_key)
+                unique_games.append(game)
+
+        return unique_games
 
     def save_games_to_db(self, games):
         """Save scraped games to database"""
