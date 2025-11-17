@@ -293,7 +293,8 @@ def debug_info():
         'data_file_exists': DATA_FILE.exists(),
         'files_in_current_dir': os.listdir('.'),
         'files_in_data_dir': os.listdir('data') if os.path.exists('data') else 'data/ not found',
-        'rankings_file_size': os.path.getsize(DATA_FILE) if DATA_FILE.exists() else 'N/A'
+        'rankings_file_size': os.path.getsize(DATA_FILE) if DATA_FILE.exists() else 'N/A',
+        'games_in_database': BoxScore.query.count()
     }
     if DATA_FILE.exists():
         with open(DATA_FILE, 'r') as f:
@@ -306,6 +307,28 @@ def debug_info():
                 sample = data['uil']['AAAAAA'][1]  # North Crowley
                 info['sample_team'] = sample
     return jsonify(info)
+
+
+@app.route('/import-games-now', methods=['POST'])
+def import_games_now():
+    """One-time endpoint to import MaxPreps games to database"""
+    try:
+        from box_score_scraper import BoxScoreCollector
+        collector = BoxScoreCollector(app=app)
+
+        target_dates = ["11/14/2025", "11/15/2025"]
+        games = collector.collect_daily_box_scores(target_dates=target_dates)
+
+        return jsonify({
+            'success': True,
+            'games_collected': len(games),
+            'total_games_in_db': BoxScore.query.count()
+        })
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
 
 
 if __name__ == '__main__':
