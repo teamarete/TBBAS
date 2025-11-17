@@ -31,6 +31,10 @@ with app.app_context():
 # Data file path
 DATA_FILE = Path(__file__).parent / 'data' / 'rankings.json'
 
+# Ensure data directory and rankings file exist
+from init_rankings import ensure_rankings_file
+ensure_rankings_file()
+
 # Start automatic scheduler
 if os.getenv('FLASK_ENV') != 'development':
     # Only run scheduler in production (not during debug reloads)
