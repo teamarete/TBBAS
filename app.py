@@ -361,8 +361,7 @@ def import_games_from_json():
                 team1_score=game_dict['team1_score'],
                 team2_name=game_dict['team2_name'],
                 team2_score=game_dict['team2_score'],
-                classification=game_dict.get('classification', ''),
-                source=game_dict.get('source', 'imported')
+                classification=game_dict.get('classification', '')
             )
             db.session.add(game)
             imported += 1
