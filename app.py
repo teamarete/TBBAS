@@ -386,6 +386,25 @@ def import_games_from_json():
         }), 500
 
 
+@app.route('/update-rankings-now', methods=['POST'])
+def update_rankings_now():
+    """Manually trigger rankings update with game records"""
+    try:
+        from update_rankings_with_records import update_rankings_with_records
+        result = update_rankings_with_records()
+
+        return jsonify({
+            'success': True,
+            'message': 'Rankings updated with game records',
+            'total_games': BoxScore.query.count()
+        })
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+
 if __name__ == '__main__':
     print("\n" + "="*50)
     print("TBBAS Server Starting...")
