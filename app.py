@@ -120,6 +120,9 @@ def classification_rankings(classification):
                 'losses': team_data.get('losses'),
                 'record': '',
                 'district': team_data.get('district', ''),
+                'ppg': team_data.get('ppg'),
+                'opp_ppg': team_data.get('opp_ppg'),
+                'games': team_data.get('games'),
                 # Placeholder analytics - will be calculated from game data later
                 'net_rating': None,
                 'adj_offensive_eff': None,
