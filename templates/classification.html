@@ -12,9 +12,9 @@
             <th>Team</th>
             <th>District</th>
             <th>Record</th>
-            <th>Net Rating</th>
-            <th>Off Rtg</th>
-            <th>Def Rtg</th>
+            <th>PPG</th>
+            <th>Opp PPG</th>
+            <th>Margin</th>
         </tr>
     </thead>
     <tbody>
@@ -22,11 +22,11 @@
         <tr>
             <td>{% if team.rank > 0 %}{{ team.rank }}{% endif %}</td>
             <td><strong>{{ team.team_name }}</strong></td>
-            <td>{{ team.district if team.district else '-' }}</td>
-            <td>{{ team.record if team.record else '-' }}</td>
-            <td>{{ team.net_rating if team.net_rating is not none else '-' }}</td>
-            <td>{{ team.adj_offensive_eff if team.adj_offensive_eff is not none else '-' }}</td>
-            <td>{{ team.adj_defensive_eff if team.adj_defensive_eff is not none else '-' }}</td>
+            <td>{{ team.district if team.district else '—' }}</td>
+            <td>{% if team.wins is not none and team.losses is not none %}{{ team.wins }}-{{ team.losses }}{% elif team.record %}{{ team.record }}{% else %}—{% endif %}</td>
+            <td>{% if team.ppg %}{{ "%.1f"|format(team.ppg) }}{% else %}—{% endif %}</td>
+            <td>{% if team.opp_ppg %}{{ "%.1f"|format(team.opp_ppg) }}{% else %}—{% endif %}</td>
+            <td>{% if team.ppg and team.opp_ppg %}{{ "%+.1f"|format(team.ppg - team.opp_ppg) }}{% else %}—{% endif %}</td>
         </tr>
         {% endfor %}
     </tbody>
