@@ -331,6 +331,62 @@ def import_games_now():
         }), 500
 
 
+@app.route('/import-games-from-json', methods=['POST'])
+def import_games_from_json():
+    """Import games from JSON data"""
+    try:
+        games_data = request.get_json()
+        if not games_data:
+            return jsonify({'success': False, 'error': 'No data provided'}), 400
+
+        imported = 0
+        skipped = 0
+
+        for game_dict in games_data:
+            # Check if game already exists
+            existing = BoxScore.query.filter_by(
+                game_date=datetime.fromisoformat(game_dict['game_date']).date(),
+                team1_name=game_dict['team1_name'],
+                team2_name=game_dict['team2_name']
+            ).first()
+
+            if existing:
+                skipped += 1
+                continue
+
+            # Create new game
+            game = BoxScore(
+                game_date=datetime.fromisoformat(game_dict['game_date']).date(),
+                team1_name=game_dict['team1_name'],
+                team1_score=game_dict['team1_score'],
+                team2_name=game_dict['team2_name'],
+                team2_score=game_dict['team2_score'],
+                classification=game_dict.get('classification', ''),
+                source=game_dict.get('source', 'imported')
+            )
+            db.session.add(game)
+            imported += 1
+
+        db.session.commit()
+
+        # Update rankings with the new games
+        from update_rankings_with_records import update_rankings_with_records
+        update_rankings_with_records()
+
+        return jsonify({
+            'success': True,
+            'imported': imported,
+            'skipped': skipped,
+            'total_games_in_db': BoxScore.query.count()
+        })
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+
 if __name__ == '__main__':
     print("\n" + "="*50)
     print("TBBAS Server Starting...")
