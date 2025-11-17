@@ -56,11 +56,19 @@ CLASSIFICATIONS = {
 def load_rankings_data():
     """Load rankings from JSON file"""
     try:
+        print(f"Looking for rankings file at: {DATA_FILE}")
+        print(f"File exists: {DATA_FILE.exists()}")
         if DATA_FILE.exists():
             with open(DATA_FILE, 'r') as f:
-                return json.load(f)
+                data = json.load(f)
+                print(f"Successfully loaded rankings data with {len(data.get('uil', {}))} UIL classifications")
+                return data
+        else:
+            print(f"Rankings file not found at {DATA_FILE}")
     except Exception as e:
         print(f"Error loading rankings: {e}")
+        import traceback
+        traceback.print_exc()
     return None
 
 
