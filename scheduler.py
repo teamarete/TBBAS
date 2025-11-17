@@ -31,7 +31,7 @@ INTERVAL_WEEKS = 1                   # Every week (every Monday)
 # Scrape scores from yesterday by default, but can specify additional dates
 # Format: list of date strings in MM/DD/YYYY format
 # Example: ["11/14/2024", "11/15/2024"] to scrape specific dates
-SCRAPE_DATES = []  # Empty = scrape yesterday only
+SCRAPE_DATES = ["11/14/2025", "11/15/2025"]  # Scrape these specific dates daily
 
 
 _app = None  # Flask app instance for database access
