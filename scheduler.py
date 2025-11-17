@@ -27,6 +27,12 @@ END_DATE = datetime(2026, 3, 9)      # March 9, 2026
 UPDATE_TIME = "06:00"                # 6:00 AM
 INTERVAL_WEEKS = 1                   # Every week (every Monday)
 
+# MaxPreps scraping configuration
+# Scrape scores from yesterday by default, but can specify additional dates
+# Format: list of date strings in MM/DD/YYYY format
+# Example: ["11/14/2024", "11/15/2024"] to scrape specific dates
+SCRAPE_DATES = []  # Empty = scrape yesterday only
+
 
 _app = None  # Flask app instance for database access
 
@@ -58,7 +64,13 @@ def collect_box_scores():
 
     try:
         collector = BoxScoreCollector(app=_app)
-        games = collector.collect_daily_box_scores()
+
+        # Use configured dates if specified, otherwise collect yesterday's games
+        target_dates = SCRAPE_DATES if SCRAPE_DATES else None
+        if target_dates:
+            logger.info(f"Using configured dates: {', '.join(target_dates)}")
+
+        games = collector.collect_daily_box_scores(target_dates=target_dates)
         games_collected = len(games)
 
         # Build sources summary
