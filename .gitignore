@@ -18,7 +18,8 @@ build/
 # Data
 data/*
 !data/rankings.json
-instance/
+instance/*
+!instance/tbbas.db
 
 # IDE
 .vscode/
@@ -32,7 +33,6 @@ instance/
 Thumbs.db
 
 # Flask
-instance/
 .webassets-cache
 
 # Logs
