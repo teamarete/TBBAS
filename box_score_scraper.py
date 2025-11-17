@@ -317,7 +317,7 @@ class TexasNewspaperScraper:
 class GASONRankingsScraper:
     """Scraper for GASO (Georgia Association of Scholarship Officials) rankings"""
 
-    GASO_URL = "https://gasofastbreak.substack.com/p/gaso-2027-rankings-refresh-top-150"
+    GASO_URL = "https://gasofastbreak.substack.com/p/gaso-rankings-refresh-2026-top-160"
 
     def __init__(self):
         self.session = requests.Session()
@@ -385,6 +385,71 @@ class GASONRankingsScraper:
         return teams
 
 
+class HoopInsiderScraper:
+    """Scraper for HoopInsider TABC Top 25 rankings"""
+
+    HOOPINSIDER_URL = "https://www.hoopinsider.net/post/tabc-top-25-nov-17-11122667"
+
+    def __init__(self):
+        self.session = requests.Session()
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+        })
+        self.normalizer = SchoolNameNormalizer()
+
+    def scrape_hoopinsider_rankings(self):
+        """
+        Scrape HoopInsider TABC Top 25 rankings
+        Returns: List of ranked teams
+        """
+        logger.info("Scraping HoopInsider TABC rankings...")
+
+        teams = []
+
+        try:
+            response = self.session.get(self.HOOPINSIDER_URL, timeout=15)
+
+            if response.status_code == 200:
+                soup = BeautifulSoup(response.content, 'html.parser')
+
+                # Parse the page content
+                article = soup.find('article') or soup.find('div', class_='blog-post')
+
+                if article:
+                    text_content = article.get_text()
+
+                    # Parse rankings from text
+                    # Pattern: "1. Team Name" or "#1 Team Name"
+                    ranking_patterns = [
+                        r'(\d+)[.)]\s+([A-Za-z\s\-\']+)',  # 1. Team Name or 1) Team Name
+                        r'#(\d+)\s+([A-Za-z\s\-\']+)',     # #1 Team Name
+                        r'(\d+)\.\s+([A-Za-z\s\-\']+)\s+\(', # 1. Team Name (record)
+                    ]
+
+                    for pattern in ranking_patterns:
+                        matches = re.findall(pattern, text_content)
+                        if matches:
+                            for rank_str, team_name in matches:
+                                rank = int(rank_str)
+                                if rank <= 25:  # Top 25 only
+                                    teams.append({
+                                        'rank': rank,
+                                        'team_name': team_name.strip(),
+                                        'source': 'HoopInsider'
+                                    })
+
+                            logger.info(f"Found {len(teams)} teams from HoopInsider rankings")
+                            break
+
+                if not teams:
+                    logger.warning("Could not parse HoopInsider rankings from page")
+
+        except Exception as e:
+            logger.error(f"Error scraping HoopInsider rankings: {e}")
+
+        return teams
+
+
 class BoxScoreCollector:
     """Main collector that orchestrates all scrapers"""
 
@@ -393,6 +458,7 @@ class BoxScoreCollector:
         self.maxpreps_scraper = MaxPrepsBoxScoreScraper()
         self.newspaper_scraper = TexasNewspaperScraper()
         self.gaso_scraper = GASONRankingsScraper()
+        self.hoopinsider_scraper = HoopInsiderScraper()
         self.normalizer = SchoolNameNormalizer()
 
     def collect_daily_box_scores(self, target_dates=None):
@@ -446,13 +512,17 @@ class BoxScoreCollector:
         all_games.extend(newspaper_games)
         logger.info(f"Found {len(newspaper_games)} games from newspapers")
 
-        # Scrape GASO rankings (weekly, not daily - check day of week)
-        today = datetime.now()
-        if today.weekday() == 0:  # Monday
-            logger.info("Scraping GASO rankings (weekly)...")
-            gaso_teams = self.gaso_scraper.scrape_gaso_rankings()
-            logger.info(f"Found {len(gaso_teams)} teams from GASO rankings")
-            # GASO rankings are stored separately, not as games
+        # Scrape GASO rankings (check daily for updates)
+        logger.info("Checking GASO rankings...")
+        gaso_teams = self.gaso_scraper.scrape_gaso_rankings()
+        logger.info(f"Found {len(gaso_teams)} teams from GASO rankings")
+        # GASO rankings are stored separately, not as games
+
+        # Scrape HoopInsider rankings (check daily for updates)
+        logger.info("Checking HoopInsider TABC Top 25...")
+        hoopinsider_teams = self.hoopinsider_scraper.scrape_hoopinsider_rankings()
+        logger.info(f"Found {len(hoopinsider_teams)} teams from HoopInsider")
+        # HoopInsider rankings are stored separately, not as games
 
         # Deduplicate games before saving
         logger.info(f"Deduplicating {len(all_games)} games...")

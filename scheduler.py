@@ -31,7 +31,8 @@ INTERVAL_WEEKS = 1                   # Every week (every Monday)
 # Scrape scores from yesterday by default, but can specify additional dates
 # Format: list of date strings in MM/DD/YYYY format
 # Example: ["11/14/2024", "11/15/2024"] to scrape specific dates
-SCRAPE_DATES = ["11/14/2025", "11/15/2025"]  # Scrape these specific dates daily
+# Leave empty [] to scrape yesterday's games automatically
+SCRAPE_DATES = []  # Empty = scrape yesterday's games daily
 
 
 _app = None  # Flask app instance for database access
@@ -80,15 +81,37 @@ def collect_box_scores():
 
         logger.info(f"Box score collection complete: {games_collected} games processed")
 
-        # Update rankings with records from collected games
-        if games_collected > 0:
-            logger.info("Updating rankings with game records...")
-            try:
-                from update_rankings_with_records import update_rankings_with_records
-                update_rankings_with_records()
-                logger.info("Rankings updated with game records")
-            except Exception as e:
-                logger.error(f"Error updating rankings with records: {e}")
+        # Check rankings from all sources daily
+        logger.info("Checking rankings from all sources...")
+        try:
+            from scraper import TABCScraper
+            scraper = TABCScraper()
+
+            # Scrape TABC rankings (UIL and Private)
+            logger.info("  - Checking TABC UIL rankings...")
+            tabc_uil = scraper.scrape_uil_rankings()
+
+            logger.info("  - Checking TABC Private rankings...")
+            tabc_private = scraper.scrape_private_rankings()
+
+            logger.info("  - Checking GASO rankings...")
+            # GASO is already checked in box_score_scraper as part of collector
+
+            logger.info("  - Checking HoopInsider rankings...")
+            # HoopInsider check can be added if needed
+
+            logger.info("Rankings check complete")
+        except Exception as e:
+            logger.error(f"Error checking rankings: {e}")
+
+        # Update rankings with records from collected games (including coach submissions)
+        logger.info("Updating rankings with game records (including coach submissions)...")
+        try:
+            from update_rankings_with_records import update_rankings_with_records
+            update_rankings_with_records()
+            logger.info("Rankings updated with all game records")
+        except Exception as e:
+            logger.error(f"Error updating rankings with records: {e}")
 
         # Send success notification
         email_notifier.notify_daily_collection(
