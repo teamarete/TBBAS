@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-17T08:31:59.488506",
+  "last_updated": "2025-11-17T08:35:07.356150",
   "uil": {
     "AAAAAA": [
       {
@@ -12,9 +12,12 @@
       {
         "rank": 2,
         "team_name": "North Crowley",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 2,
+        "losses": 0,
+        "district": null,
+        "games": 2,
+        "ppg": 74.0,
+        "opp_ppg": 61.0
       },
       {
         "rank": 3,
@@ -33,23 +36,32 @@
       {
         "rank": 5,
         "team_name": "Atascocita",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 2,
+        "district": null,
+        "games": 2,
+        "ppg": 57.0,
+        "opp_ppg": 58.0
       },
       {
         "rank": 6,
         "team_name": "Lancaster",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 2,
+        "losses": 1,
+        "district": null,
+        "games": 3,
+        "ppg": 64.0,
+        "opp_ppg": 52.3
       },
       {
         "rank": 7,
         "team_name": "Allen",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 2,
+        "losses": 0,
+        "district": null,
+        "games": 2,
+        "ppg": 73.0,
+        "opp_ppg": 62.0
       },
       {
         "rank": 8,
@@ -68,9 +80,12 @@
       {
         "rank": 10,
         "team_name": "Steele",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 2,
+        "losses": 0,
+        "district": null,
+        "games": 2,
+        "ppg": 81.5,
+        "opp_ppg": 49.0
       },
       {
         "rank": 11,
@@ -96,9 +111,12 @@
       {
         "rank": 14,
         "team_name": "Little Elm",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 2,
+        "losses": 0,
+        "district": null,
+        "games": 2,
+        "ppg": 79.0,
+        "opp_ppg": 67.5
       },
       {
         "rank": 15,
@@ -124,16 +142,22 @@
       {
         "rank": 18,
         "team_name": "College Park",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 1,
+        "district": null,
+        "games": 2,
+        "ppg": 55.5,
+        "opp_ppg": 58.5
       },
       {
         "rank": 19,
         "team_name": "Pearland",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 53.0,
+        "opp_ppg": 42.0
       },
       {
         "rank": 20,
@@ -145,16 +169,22 @@
       {
         "rank": 21,
         "team_name": "Vandegrift",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 1,
+        "district": null,
+        "games": 1,
+        "ppg": 58.0,
+        "opp_ppg": 62.0
       },
       {
         "rank": 22,
         "team_name": "Summer Creek",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 1,
+        "district": null,
+        "games": 2,
+        "ppg": 66.0,
+        "opp_ppg": 52.5
       },
       {
         "rank": 23,
@@ -166,9 +196,12 @@
       {
         "rank": 24,
         "team_name": "Waxahachie",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 1,
+        "district": null,
+        "games": 1,
+        "ppg": 67.0,
+        "opp_ppg": 72.0
       },
       {
         "rank": 25,
@@ -196,9 +229,12 @@
       {
         "rank": 3,
         "team_name": "Birdville",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 2,
+        "losses": 0,
+        "district": null,
+        "games": 2,
+        "ppg": 72.5,
+        "opp_ppg": 49.5
       },
       {
         "rank": 4,
@@ -217,9 +253,12 @@
       {
         "rank": 6,
         "team_name": "Red Oak",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 1,
+        "district": null,
+        "games": 2,
+        "ppg": 61.5,
+        "opp_ppg": 66.5
       },
       {
         "rank": 7,
@@ -245,23 +284,32 @@
       {
         "rank": 10,
         "team_name": "Ellison",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 2,
+        "losses": 0,
+        "district": null,
+        "games": 2,
+        "ppg": 69.0,
+        "opp_ppg": 36.5
       },
       {
         "rank": 11,
         "team_name": "The Colony",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 1,
+        "district": null,
+        "games": 1,
+        "ppg": 56.0,
+        "opp_ppg": 65.0
       },
       {
         "rank": 12,
         "team_name": "Friendswood",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 1,
+        "district": null,
+        "games": 2,
+        "ppg": 44.0,
+        "opp_ppg": 43.0
       },
       {
         "rank": 13,
@@ -280,16 +328,22 @@
       {
         "rank": 15,
         "team_name": "Amarillo",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 87.0,
+        "opp_ppg": 44.0
       },
       {
         "rank": 16,
         "team_name": "Highland Park",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 61.0,
+        "opp_ppg": 56.0
       },
       {
         "rank": 17,
@@ -308,30 +362,42 @@
       {
         "rank": 19,
         "team_name": "Melissa",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 1,
+        "district": null,
+        "games": 1,
+        "ppg": 39.0,
+        "opp_ppg": 67.0
       },
       {
         "rank": 20,
         "team_name": "Alamo Heights",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 62.0,
+        "opp_ppg": 50.0
       },
       {
         "rank": 21,
         "team_name": "Iowa Colony",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 74.0,
+        "opp_ppg": 54.0
       },
       {
         "rank": 22,
         "team_name": "Denton",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 2,
+        "losses": 0,
+        "district": null,
+        "games": 2,
+        "ppg": 66.0,
+        "opp_ppg": 38.0
       },
       {
         "rank": 23,
@@ -343,9 +409,12 @@
       {
         "rank": 24,
         "team_name": "Palo Duro",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 73.0,
+        "opp_ppg": 44.0
       },
       {
         "rank": 25,
@@ -387,9 +456,12 @@
       {
         "rank": 5,
         "team_name": "Kennedale",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 89.0,
+        "opp_ppg": 33.0
       },
       {
         "rank": 6,
@@ -415,23 +487,32 @@
       {
         "rank": 9,
         "team_name": "Panther Creek",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 3,
+        "district": null,
+        "games": 3,
+        "ppg": 57.3,
+        "opp_ppg": 78.0
       },
       {
         "rank": 10,
         "team_name": "Krum",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 93.0,
+        "opp_ppg": 83.0
       },
       {
         "rank": 11,
         "team_name": "Wimberley",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 82.0,
+        "opp_ppg": 45.0
       },
       {
         "rank": 12,
@@ -443,23 +524,32 @@
       {
         "rank": 13,
         "team_name": "Paris",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 1,
+        "district": null,
+        "games": 1,
+        "ppg": 62.0,
+        "opp_ppg": 64.0
       },
       {
         "rank": 14,
         "team_name": "Randall",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 1,
+        "district": null,
+        "games": 2,
+        "ppg": 58.0,
+        "opp_ppg": 75.0
       },
       {
         "rank": 15,
         "team_name": "Brock",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 86.0,
+        "opp_ppg": 42.0
       },
       {
         "rank": 16,
@@ -478,23 +568,32 @@
       {
         "rank": 18,
         "team_name": "Burkburnett",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 1,
+        "district": null,
+        "games": 1,
+        "ppg": 70.0,
+        "opp_ppg": 76.0
       },
       {
         "rank": 19,
         "team_name": "Somerset",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 1,
+        "district": null,
+        "games": 1,
+        "ppg": 50.0,
+        "opp_ppg": 52.0
       },
       {
         "rank": 20,
         "team_name": "Chapel Hill",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 64.0,
+        "opp_ppg": 62.0
       },
       {
         "rank": 21,
@@ -513,23 +612,32 @@
       {
         "rank": 23,
         "team_name": "West Plains",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 55.0,
+        "opp_ppg": 40.0
       },
       {
         "rank": 24,
         "team_name": "Bridge City",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 1,
+        "district": null,
+        "games": 1,
+        "ppg": 45.0,
+        "opp_ppg": 57.0
       },
       {
         "rank": 25,
         "team_name": "Davenport",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 73.0,
+        "opp_ppg": 53.0
       }
     ],
     "AAA": [
@@ -543,16 +651,22 @@
       {
         "rank": 2,
         "team_name": "Paradise",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 70.0,
+        "opp_ppg": 50.0
       },
       {
         "rank": 3,
         "team_name": "Cole",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 81.0,
+        "opp_ppg": 39.0
       },
       {
         "rank": 4,
@@ -585,16 +699,22 @@
       {
         "rank": 8,
         "team_name": "Onalaska",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 71.0,
+        "opp_ppg": 57.0
       },
       {
         "rank": 9,
         "team_name": "Iowa Park",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 1,
+        "district": null,
+        "games": 1,
+        "ppg": 58.0,
+        "opp_ppg": 65.0
       },
       {
         "rank": 10,
@@ -606,9 +726,12 @@
       {
         "rank": 11,
         "team_name": "London",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 72.0,
+        "opp_ppg": 35.0
       },
       {
         "rank": 12,
@@ -620,9 +743,12 @@
       {
         "rank": 13,
         "team_name": "Jefferson",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 2,
+        "losses": 1,
+        "district": null,
+        "games": 3,
+        "ppg": 35.7,
+        "opp_ppg": 46.7
       },
       {
         "rank": 14,
@@ -641,9 +767,12 @@
       {
         "rank": 16,
         "team_name": "Ponder",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 72.0,
+        "opp_ppg": 69.0
       },
       {
         "rank": 17,
@@ -720,9 +849,12 @@
       {
         "rank": 2,
         "team_name": "Lipan",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 1,
+        "district": null,
+        "games": 1,
+        "ppg": 37.0,
+        "opp_ppg": 40.0
       },
       {
         "rank": 3,
@@ -741,9 +873,12 @@
       {
         "rank": 5,
         "team_name": "Graford",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 91.0,
+        "opp_ppg": 29.0
       },
       {
         "rank": 6,
@@ -790,9 +925,12 @@
       {
         "rank": 12,
         "team_name": "Mumford",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 1,
+        "district": null,
+        "games": 1,
+        "ppg": 40.0,
+        "opp_ppg": 43.0
       },
       {
         "rank": 13,
@@ -818,16 +956,22 @@
       {
         "rank": 16,
         "team_name": "Slidell",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 70.0,
+        "opp_ppg": 62.0
       },
       {
         "rank": 17,
         "team_name": "Gary",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 69.0,
+        "opp_ppg": 23.0
       },
       {
         "rank": 18,
@@ -860,9 +1004,12 @@
       {
         "rank": 22,
         "team_name": "Plains",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 72.0,
+        "opp_ppg": 15.0
       },
       {
         "rank": 23,
@@ -881,9 +1028,12 @@
       {
         "rank": 25,
         "team_name": "Big Sandy",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 1,
+        "district": null,
+        "games": 1,
+        "ppg": 40.0,
+        "opp_ppg": 55.0
       }
     ],
     "A": [
@@ -911,16 +1061,22 @@
       {
         "rank": 4,
         "team_name": "Brookeland",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 1,
+        "district": null,
+        "games": 1,
+        "ppg": 70.0,
+        "opp_ppg": 77.0
       },
       {
         "rank": 5,
         "team_name": "Huckabay",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 69.0,
+        "opp_ppg": 55.0
       },
       {
         "rank": 6,
@@ -932,9 +1088,12 @@
       {
         "rank": 7,
         "team_name": "Fayetteville",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 43.0,
+        "opp_ppg": 40.0
       },
       {
         "rank": 8,
@@ -953,16 +1112,22 @@
       {
         "rank": 10,
         "team_name": "Wells",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 65.0,
+        "opp_ppg": 55.0
       },
       {
         "rank": 11,
         "team_name": "Kennard",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 53.0,
+        "opp_ppg": 46.0
       },
       {
         "rank": 12,
@@ -974,16 +1139,22 @@
       {
         "rank": 13,
         "team_name": "Slocum",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 59.0,
+        "opp_ppg": 51.0
       },
       {
         "rank": 14,
         "team_name": "Lorenzo",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 2,
+        "losses": 0,
+        "district": null,
+        "games": 2,
+        "ppg": 60.0,
+        "opp_ppg": 45.0
       },
       {
         "rank": 15,
@@ -1023,9 +1194,12 @@
       {
         "rank": 20,
         "team_name": "Richards",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 1,
+        "district": null,
+        "games": 1,
+        "ppg": 46.0,
+        "opp_ppg": 53.0
       },
       {
         "rank": 21,
@@ -1051,9 +1225,12 @@
       {
         "rank": 24,
         "team_name": "Avery",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 68.0,
+        "opp_ppg": 39.0
       },
       {
         "rank": 25,
@@ -1090,9 +1267,12 @@
       {
         "rank": 4,
         "team_name": "Houston Christian",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 2,
+        "losses": 0,
+        "district": null,
+        "games": 2,
+        "ppg": 90.0,
+        "opp_ppg": 55.0
       },
       {
         "rank": 5,
@@ -1162,9 +1342,12 @@
       {
         "rank": 4,
         "team_name": "Episcopal School of Dallas",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 0,
+        "losses": 2,
+        "district": null,
+        "games": 2,
+        "ppg": 54.5,
+        "opp_ppg": 76.5
       },
       {
         "rank": 5,
@@ -1183,9 +1366,12 @@
       {
         "rank": 7,
         "team_name": "Midland Christian",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 64.0,
+        "opp_ppg": 16.0
       },
       {
         "rank": 8,
@@ -1255,9 +1441,12 @@
       {
         "rank": 7,
         "team_name": "Midland Christian",
-        "wins": null,
-        "losses": null,
-        "district": null
+        "wins": 1,
+        "losses": 0,
+        "district": null,
+        "games": 1,
+        "ppg": 64.0,
+        "opp_ppg": 16.0
       },
       {
         "rank": 8,
@@ -1497,5 +1686,7 @@
         "district": null
       }
     ]
-  }
+  },
+  "records_from_games": true,
+  "games_analyzed": 864
 }
