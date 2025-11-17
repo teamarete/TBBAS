@@ -198,6 +198,15 @@ def update_rankings():
             logger.info(f"✓ Rankings updated successfully at {now.strftime('%Y-%m-%d %H:%M:%S')}")
             logger.info("="*50)
 
+            # 6. Update rankings with game records
+            logger.info("Updating rankings with game records...")
+            try:
+                from update_rankings_with_records import update_rankings_with_records
+                update_rankings_with_records()
+                logger.info("Rankings updated with game records")
+            except Exception as e:
+                logger.error(f"Error updating rankings with records: {e}")
+
             # Send success notification
             email_notifier.notify_weekly_rankings_update(
                 rankings_summary=rankings_summary,
