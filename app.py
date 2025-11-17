@@ -280,6 +280,30 @@ def api_boxscores(classification):
     return jsonify([bs.to_dict() for bs in boxscores])
 
 
+@app.route('/debug')
+def debug_info():
+    """Debug endpoint to check file system"""
+    info = {
+        'current_dir': os.getcwd(),
+        'data_file_path': str(DATA_FILE),
+        'data_file_exists': DATA_FILE.exists(),
+        'files_in_current_dir': os.listdir('.'),
+        'files_in_data_dir': os.listdir('data') if os.path.exists('data') else 'data/ not found',
+        'rankings_file_size': os.path.getsize(DATA_FILE) if DATA_FILE.exists() else 'N/A'
+    }
+    if DATA_FILE.exists():
+        with open(DATA_FILE, 'r') as f:
+            data = json.load(f)
+            info['rankings_has_data'] = 'uil' in data
+            info['uil_6a_count'] = len(data.get('uil', {}).get('AAAAAA', []))
+            info['last_updated'] = data.get('last_updated', 'N/A')
+            # Sample team
+            if data.get('uil', {}).get('AAAAAA'):
+                sample = data['uil']['AAAAAA'][1]  # North Crowley
+                info['sample_team'] = sample
+    return jsonify(info)
+
+
 if __name__ == '__main__':
     print("\n" + "="*50)
     print("TBBAS Server Starting...")
