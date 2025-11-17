@@ -80,6 +80,16 @@ def collect_box_scores():
 
         logger.info(f"Box score collection complete: {games_collected} games processed")
 
+        # Update rankings with records from collected games
+        if games_collected > 0:
+            logger.info("Updating rankings with game records...")
+            try:
+                from update_rankings_with_records import update_rankings_with_records
+                update_rankings_with_records()
+                logger.info("Rankings updated with game records")
+            except Exception as e:
+                logger.error(f"Error updating rankings with records: {e}")
+
         # Send success notification
         email_notifier.notify_daily_collection(
             games_collected=games_collected,
