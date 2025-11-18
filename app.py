@@ -387,22 +387,25 @@ def import_games_from_json():
         }), 500
 
 
-@app.route('/update-rankings-now', methods=['POST'])
+@app.route('/update-rankings-now', methods=['GET', 'POST'])
 def update_rankings_now():
-    """Manually trigger rankings update with game records"""
+    """Manually trigger rankings update with game records and districts"""
     try:
         from update_rankings_with_records import update_rankings_with_records
         result = update_rankings_with_records()
 
         return jsonify({
             'success': True,
-            'message': 'Rankings updated with game records',
-            'total_games': BoxScore.query.count()
+            'message': 'Rankings updated with game records and districts',
+            'total_games': BoxScore.query.count(),
+            'timestamp': result.get('last_updated', 'unknown')
         })
     except Exception as e:
+        import traceback
         return jsonify({
             'success': False,
-            'error': str(e)
+            'error': str(e),
+            'traceback': traceback.format_exc()
         }), 500
 
 
