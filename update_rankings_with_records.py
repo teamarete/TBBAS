@@ -9,6 +9,7 @@ from models import BoxScore
 from collections import defaultdict
 from datetime import datetime
 from school_name_normalizer import SchoolNameNormalizer
+from school_abbreviations import expand_abbreviations, get_search_variations
 from pathlib import Path
 
 def load_uil_districts():
@@ -145,24 +146,36 @@ def update_rankings_with_records():
 
                 # Add district for UIL schools (skip if already has district)
                 if category == 'uil' and not team.get('district'):
-                    # Try multiple matching strategies
+                    # Get all search variations (including abbreviation expansions)
+                    search_variations = get_search_variations(team_name)
                     normalized = normalizer.normalize(team_name).lower()
 
-                    district = (
-                        district_lookup.get((team_name, classification)) or
-                        district_lookup.get((normalized, classification)) or
-                        district_lookup.get((team_name.lower(), classification))
-                    )
+                    district = None
 
-                    # If no exact match, try fuzzy matching (team name appears in UIL name)
+                    # Try exact matches with all variations first
+                    for variation in search_variations:
+                        district = (
+                            district_lookup.get((variation, classification)) or
+                            district_lookup.get((variation.lower(), classification)) or
+                            district_lookup.get((normalizer.normalize(variation).lower(), classification))
+                        )
+                        if district:
+                            break
+
+                    # If no exact match, try fuzzy matching (variation appears in UIL name)
                     if not district:
-                        team_lower = team_name.lower()
-                        for (uil_name, class_code), dist in district_lookup.items():
-                            if class_code == classification and isinstance(uil_name, str):
-                                # Check if ranking team name appears in UIL name
-                                if team_lower in uil_name.lower() and len(team_lower) > 4:
-                                    district = dist
-                                    break
+                        for variation in search_variations:
+                            if len(variation) <= 4:  # Skip very short variations
+                                continue
+                            variation_lower = variation.lower()
+                            for (uil_name, class_code), dist in district_lookup.items():
+                                if class_code == classification and isinstance(uil_name, str):
+                                    # Check if variation appears in UIL name
+                                    if variation_lower in uil_name.lower():
+                                        district = dist
+                                        break
+                            if district:
+                                break
 
                     if district:
                         team['district'] = district

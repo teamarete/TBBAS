@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-18T13:09:16.874588",
+  "last_updated": "2025-11-18T17:21:12.027348",
   "uil": {
     "AAAAAA": [
       {
@@ -321,7 +321,7 @@
         "team_name": "FB Marshall",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "22",
         "uil_verified": false
       },
       {
@@ -362,7 +362,7 @@
         "team_name": "Mans Summit",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "8",
         "uil_verified": false
       },
       {
@@ -464,7 +464,7 @@
         "team_name": "PA Memorial",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "4",
         "uil_verified": false
       },
       {
@@ -557,7 +557,7 @@
         "team_name": "Hou Washington",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "20",
         "uil_verified": false
       },
       {
