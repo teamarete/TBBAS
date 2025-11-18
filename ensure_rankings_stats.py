@@ -27,8 +27,9 @@ def ensure_rankings_have_stats():
     with open(rankings_file, 'r') as f:
         data = json.load(f)
 
-    # Check multiple teams to ensure stats are present
+    # Check multiple teams to ensure stats AND districts are present
     teams_with_stats = 0
+    teams_with_districts = 0
     total_teams_checked = 0
 
     if data.get('uil', {}).get('AAAAAA'):
@@ -36,23 +37,30 @@ def ensure_rankings_have_stats():
             total_teams_checked += 1
             if team.get('ppg') is not None:
                 teams_with_stats += 1
+            if team.get('district') is not None:
+                teams_with_districts += 1
 
-    # If more than half have stats, consider it already updated
-    if total_teams_checked > 0 and teams_with_stats > total_teams_checked / 2:
-        print(f"Rankings already have game statistics ({teams_with_stats}/{total_teams_checked} teams)")
+    print(f"Stats check: {teams_with_stats}/{total_teams_checked} teams have PPG")
+    print(f"District check: {teams_with_districts}/{total_teams_checked} teams have districts")
+
+    # If more than half have stats AND districts, consider it already updated
+    if total_teams_checked > 0 and teams_with_stats > total_teams_checked / 2 and teams_with_districts > total_teams_checked / 2:
+        print(f"Rankings already have game statistics and districts - skipping update")
         return
 
-    # Rankings need stats - run the update
-    print("Rankings missing game statistics - updating now...")
+    # Rankings need stats/districts - run the update
+    print("Rankings missing game statistics or districts - updating now...")
     try:
         from app import app
         from update_rankings_with_records import update_rankings_with_records
 
         with app.app_context():
             update_rankings_with_records()
-            print("✓ Rankings updated with game statistics")
+            print("✓ Rankings updated with game statistics and districts")
     except Exception as e:
         print(f"Error updating rankings with stats: {e}")
+        import traceback
+        traceback.print_exc()
 
 if __name__ == "__main__":
     ensure_rankings_have_stats()
