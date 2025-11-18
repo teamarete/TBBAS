@@ -11,6 +11,7 @@ from datetime import datetime
 from school_name_normalizer import SchoolNameNormalizer
 from school_abbreviations import expand_abbreviations, get_search_variations
 from manual_district_mappings import get_manual_district
+from tapps_district_mappings import get_tapps_district
 from pathlib import Path
 
 def load_uil_districts():
@@ -188,6 +189,15 @@ def update_rankings_with_records():
                                     break
 
                     # Add district if found (count as added only if it was missing)
+                    if district:
+                        if not team.get('district'):
+                            districts_added += 1
+                        team['district'] = district
+
+                # Add district for TAPPS/Private schools
+                elif category == 'private':
+                    district = get_tapps_district(team_name, classification)
+
                     if district:
                         if not team.get('district'):
                             districts_added += 1
