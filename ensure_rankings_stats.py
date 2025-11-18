@@ -7,7 +7,15 @@ import json
 from pathlib import Path
 
 def ensure_rankings_have_stats():
-    """Check if rankings need game stats and update them"""
+    """Check if rankings need game stats and update them
+
+    This should be called AFTER scheduler initialization to ensure
+    that any scheduler updates have game statistics merged in.
+    """
+    # Import here to avoid circular dependency
+    import time
+    time.sleep(2)  # Wait 2 seconds for scheduler to initialize
+
     data_dir = Path(__file__).parent / 'data'
     rankings_file = data_dir / 'rankings.json'
 
@@ -19,16 +27,19 @@ def ensure_rankings_have_stats():
     with open(rankings_file, 'r') as f:
         data = json.load(f)
 
-    # Check a sample team to see if it has ppg data
-    sample_has_stats = False
-    if data.get('uil', {}).get('AAAAAA'):
-        for team in data['uil']['AAAAAA']:
-            if team.get('ppg') is not None:
-                sample_has_stats = True
-                break
+    # Check multiple teams to ensure stats are present
+    teams_with_stats = 0
+    total_teams_checked = 0
 
-    if sample_has_stats:
-        print("Rankings already have game statistics")
+    if data.get('uil', {}).get('AAAAAA'):
+        for team in data['uil']['AAAAAA'][:10]:  # Check first 10 teams
+            total_teams_checked += 1
+            if team.get('ppg') is not None:
+                teams_with_stats += 1
+
+    # If more than half have stats, consider it already updated
+    if total_teams_checked > 0 and teams_with_stats > total_teams_checked / 2:
+        print(f"Rankings already have game statistics ({teams_with_stats}/{total_teams_checked} teams)")
         return
 
     # Rankings need stats - run the update

@@ -35,15 +35,16 @@ DATA_FILE = Path(__file__).parent / 'data' / 'rankings.json'
 from init_rankings import ensure_rankings_file
 ensure_rankings_file()
 
-# Ensure rankings have game statistics
-from ensure_rankings_stats import ensure_rankings_have_stats
-ensure_rankings_have_stats()
-
 # Start automatic scheduler
 if os.getenv('FLASK_ENV') != 'development':
     # Only run scheduler in production (not during debug reloads)
     from scheduler import start_scheduler
     start_scheduler(app)
+
+# Ensure rankings have game statistics (AFTER scheduler starts)
+# This catches cases where scheduler ran an update on startup
+from ensure_rankings_stats import ensure_rankings_have_stats
+ensure_rankings_have_stats()
 
 CLASSIFICATIONS = {
     'AAAAAA': 'Class 6A (UIL)',
