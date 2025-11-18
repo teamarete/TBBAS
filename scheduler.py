@@ -267,12 +267,57 @@ def merge_rankings(calculated_data, maxpreps_data, tabc_data):
     1. Calculated from box scores (PRIMARY)
     2. MaxPreps rankings (SECONDARY)
     3. TABC rankings (BACKUP)
+
+    IMPORTANT: Preserves existing game statistics from previous updates
     """
+    import json
+    from pathlib import Path
+
+    # Load existing rankings to preserve game stats
+    existing_stats = {}
+    rankings_file = Path('data/rankings.json')
+    if rankings_file.exists():
+        try:
+            with open(rankings_file, 'r') as f:
+                existing_data = json.load(f)
+
+            # Build a lookup of existing stats by team name and classification
+            for category in ['uil', 'private']:
+                if category in existing_data:
+                    for classification, teams in existing_data[category].items():
+                        for team in teams:
+                            key = (category, classification, team.get('team_name'))
+                            existing_stats[key] = {
+                                'wins': team.get('wins'),
+                                'losses': team.get('losses'),
+                                'games': team.get('games'),
+                                'ppg': team.get('ppg'),
+                                'opp_ppg': team.get('opp_ppg'),
+                                'district': team.get('district'),
+                                'uil_verified': team.get('uil_verified'),
+                                'uil_official_name': team.get('uil_official_name')
+                            }
+            logger.info(f"Loaded {len(existing_stats)} existing team stats to preserve")
+        except Exception as e:
+            logger.warning(f"Could not load existing stats: {e}")
+
     merged = {
         'last_updated': datetime.now().isoformat(),
         'uil': {},
         'private': {}
     }
+
+    def preserve_stats(teams, category, classification):
+        """Add existing game stats to teams"""
+        for team in teams:
+            key = (category, classification, team.get('team_name'))
+            if key in existing_stats:
+                stats = existing_stats[key]
+                # Only preserve if not None (don't overwrite with None)
+                for field in ['wins', 'losses', 'games', 'ppg', 'opp_ppg', 'district', 'uil_verified', 'uil_official_name']:
+                    if stats.get(field) is not None:
+                        team[field] = stats[field]
+        return teams
 
     # Merge UIL
     for classification in ['AAAAAA', 'AAAAA', 'AAAA', 'AAA', 'AA', 'A']:
@@ -282,15 +327,15 @@ def merge_rankings(calculated_data, maxpreps_data, tabc_data):
 
         if calculated_teams and len(calculated_teams) >= 10:
             # Use calculated rankings if we have enough data
-            merged['uil'][classification] = calculated_teams
+            merged['uil'][classification] = preserve_stats(calculated_teams, 'uil', classification)
             logger.info(f"{classification}: Using calculated rankings ({len(calculated_teams)} teams)")
         elif maxpreps_teams and len(maxpreps_teams) >= 10:
             # Fall back to MaxPreps
-            merged['uil'][classification] = maxpreps_teams
+            merged['uil'][classification] = preserve_stats(maxpreps_teams, 'uil', classification)
             logger.info(f"{classification}: Using MaxPreps rankings ({len(maxpreps_teams)} teams)")
         else:
             # Fall back to TABC
-            merged['uil'][classification] = tabc_teams
+            merged['uil'][classification] = preserve_stats(tabc_teams, 'uil', classification)
             logger.info(f"{classification}: Using TABC rankings (BACKUP) ({len(tabc_teams)} teams)")
 
     # Merge Private/TAPPS
@@ -300,15 +345,15 @@ def merge_rankings(calculated_data, maxpreps_data, tabc_data):
         tabc_teams = tabc_data.get('private', {}).get(classification, [])
 
         if calculated_teams and len(calculated_teams) >= 5:
-            merged['private'][classification] = calculated_teams
+            merged['private'][classification] = preserve_stats(calculated_teams, 'private', classification)
             logger.info(f"{classification}: Using calculated rankings ({len(calculated_teams)} teams)")
         elif maxpreps_teams and len(maxpreps_teams) >= 5:
             # Fall back to MaxPreps
-            merged['private'][classification] = maxpreps_teams
+            merged['private'][classification] = preserve_stats(maxpreps_teams, 'private', classification)
             logger.info(f"{classification}: Using MaxPreps rankings ({len(maxpreps_teams)} teams)")
         else:
             # Fall back to TABC
-            merged['private'][classification] = tabc_teams
+            merged['private'][classification] = preserve_stats(tabc_teams, 'private', classification)
             logger.info(f"{classification}: Using TABC rankings (BACKUP) ({len(tabc_teams)} teams)")
 
     return merged
