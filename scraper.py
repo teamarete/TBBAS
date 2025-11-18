@@ -75,7 +75,7 @@ class TABCScraper:
                     teams = self._parse_team_list(section_text)
 
                     if teams:
-                        rankings[class_code] = teams[:40]  # Top 40
+                        rankings[class_code] = teams[:25]  # Top 25
                         break  # Found data for this classification
 
             return rankings

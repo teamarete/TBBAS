@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-18T12:13:18.718330",
+  "last_updated": "2025-11-18T13:04:59.968199",
   "uil": {
     "AAAAAA": [
       {
@@ -7,7 +7,7 @@
         "team_name": "Duncanville",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "11",
         "uil_verified": false
       },
       {
@@ -15,7 +15,7 @@
         "team_name": "North Crowley",
         "wins": 2,
         "losses": 0,
-        "district": null,
+        "district": "3",
         "games": 2,
         "ppg": 74.0,
         "opp_ppg": 61.0,
@@ -42,7 +42,7 @@
         "team_name": "Atascocita",
         "wins": 0,
         "losses": 2,
-        "district": null,
+        "district": "23",
         "games": 2,
         "ppg": 57.0,
         "opp_ppg": 58.0,
@@ -53,7 +53,7 @@
         "team_name": "Lancaster",
         "wins": 2,
         "losses": 1,
-        "district": null,
+        "district": "11",
         "games": 3,
         "ppg": 64.0,
         "opp_ppg": 52.3,
@@ -166,7 +166,7 @@
         "team_name": "College Park",
         "wins": 1,
         "losses": 1,
-        "district": null,
+        "district": "13",
         "games": 2,
         "ppg": 55.5,
         "opp_ppg": 58.5,
@@ -177,7 +177,7 @@
         "team_name": "Pearland",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "22",
         "games": 1,
         "ppg": 53.0,
         "opp_ppg": 42.0,
@@ -226,7 +226,7 @@
         "team_name": "Waxahachie",
         "wins": 0,
         "losses": 1,
-        "district": null,
+        "district": "11",
         "games": 1,
         "ppg": 67.0,
         "opp_ppg": 72.0,
@@ -293,7 +293,7 @@
         "team_name": "Red Oak",
         "wins": 1,
         "losses": 1,
-        "district": null,
+        "district": "15",
         "games": 2,
         "ppg": 61.5,
         "opp_ppg": 66.5,
@@ -340,7 +340,7 @@
         "team_name": "The Colony",
         "wins": 0,
         "losses": 1,
-        "district": null,
+        "district": "12",
         "games": 1,
         "ppg": 56.0,
         "opp_ppg": 65.0,
@@ -351,7 +351,7 @@
         "team_name": "Friendswood",
         "wins": 1,
         "losses": 1,
-        "district": null,
+        "district": "20",
         "games": 2,
         "ppg": 44.0,
         "opp_ppg": 43.0,
@@ -441,7 +441,7 @@
         "team_name": "Iowa Colony",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "20",
         "games": 1,
         "ppg": 74.0,
         "opp_ppg": 54.0,
@@ -529,7 +529,7 @@
         "team_name": "Kennedale",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "12",
         "games": 1,
         "ppg": 89.0,
         "opp_ppg": 33.0,
@@ -565,7 +565,7 @@
         "team_name": "Panther Creek",
         "wins": 0,
         "losses": 3,
-        "district": null,
+        "district": "9",
         "games": 3,
         "ppg": 57.3,
         "opp_ppg": 78.0,
@@ -598,7 +598,7 @@
         "team_name": "Stafford",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "21",
         "uil_verified": false
       },
       {
@@ -618,7 +618,7 @@
         "team_name": "Randall",
         "wins": 1,
         "losses": 1,
-        "district": null,
+        "district": "4",
         "games": 2,
         "ppg": 58.0,
         "opp_ppg": 75.0,
@@ -641,7 +641,7 @@
         "team_name": "Dallas Lincoln",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "11",
         "uil_verified": false
       },
       {
@@ -668,7 +668,7 @@
         "team_name": "Somerset",
         "wins": 0,
         "losses": 1,
-        "district": null,
+        "district": "27",
         "games": 1,
         "ppg": 50.0,
         "opp_ppg": 52.0,
@@ -679,7 +679,7 @@
         "team_name": "Chapel Hill",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "16",
         "games": 1,
         "ppg": 64.0,
         "opp_ppg": 62.0,
@@ -690,7 +690,7 @@
         "team_name": "La Vega",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "23",
         "uil_verified": false
       },
       {
@@ -698,7 +698,7 @@
         "team_name": "Dallas Roosevelt",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "11",
         "uil_verified": false
       },
       {
@@ -706,7 +706,7 @@
         "team_name": "West Plains",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "4",
         "games": 1,
         "ppg": 55.0,
         "opp_ppg": 40.0,
@@ -742,7 +742,7 @@
         "team_name": "Westwood",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "20",
         "uil_verified": false
       },
       {
@@ -773,7 +773,7 @@
         "team_name": "Slaton",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "2",
         "uil_verified": false
       },
       {
@@ -781,7 +781,7 @@
         "team_name": "Mexia",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "20",
         "uil_verified": false
       },
       {
@@ -805,7 +805,7 @@
         "team_name": "Onalaska",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "23",
         "games": 1,
         "ppg": 71.0,
         "opp_ppg": 57.0,
@@ -816,7 +816,7 @@
         "team_name": "Iowa Park",
         "wins": 0,
         "losses": 1,
-        "district": null,
+        "district": "7",
         "games": 1,
         "ppg": 58.0,
         "opp_ppg": 65.0,
@@ -827,7 +827,7 @@
         "team_name": "Hitchcock",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "24",
         "uil_verified": false
       },
       {
@@ -846,7 +846,7 @@
         "team_name": "Shallowater",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "2",
         "uil_verified": false
       },
       {
@@ -873,7 +873,7 @@
         "team_name": "Palmer",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "18",
         "uil_verified": false
       },
       {
@@ -881,7 +881,7 @@
         "team_name": "Ponder",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "10",
         "games": 1,
         "ppg": 72.0,
         "opp_ppg": 69.0,
@@ -925,7 +925,7 @@
         "team_name": "East Chambers",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "22",
         "uil_verified": false
       },
       {
@@ -977,7 +977,7 @@
         "team_name": "Lipan",
         "wins": 0,
         "losses": 1,
-        "district": null,
+        "district": "11",
         "games": 1,
         "ppg": 37.0,
         "opp_ppg": 40.0,
@@ -1018,7 +1018,7 @@
         "team_name": "Tom Bean",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "14",
         "uil_verified": false
       },
       {
@@ -1062,7 +1062,7 @@
         "team_name": "Abernathy",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "4",
         "uil_verified": false
       },
       {
@@ -1108,7 +1108,7 @@
         "team_name": "Slidell",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "13",
         "games": 1,
         "ppg": 70.0,
         "opp_ppg": 62.0,
@@ -1300,7 +1300,7 @@
         "team_name": "Wells",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "27",
         "games": 1,
         "ppg": 65.0,
         "opp_ppg": 55.0,
@@ -1912,5 +1912,6 @@
     },
     "unmatched_count": 88,
     "ambiguous_count": 0
-  }
+  },
+  "districts_from_uil": 0
 }
