@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-18T17:21:12.027348",
+  "last_updated": "2025-11-18T17:28:30.686412",
   "uil": {
     "AAAAAA": [
       {
@@ -26,7 +26,7 @@
         "team_name": "Katy Seven Lakes",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "1",
         "uil_verified": false
       },
       {
@@ -34,7 +34,7 @@
         "team_name": "SA Brennan",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "27",
         "uil_verified": false
       },
       {
@@ -94,7 +94,7 @@
         "team_name": "Steele",
         "wins": 2,
         "losses": 0,
-        "district": null,
+        "district": "27",
         "games": 2,
         "ppg": 81.5,
         "opp_ppg": 49.0,
@@ -114,7 +114,7 @@
         "team_name": "Conroe Grand Oaks",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "13",
         "uil_verified": false
       },
       {
@@ -122,7 +122,7 @@
         "team_name": "Austin Westlake",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "26",
         "uil_verified": false
       },
       {
@@ -130,7 +130,7 @@
         "team_name": "Little Elm",
         "wins": 2,
         "losses": 0,
-        "district": null,
+        "district": "5",
         "games": 2,
         "ppg": 79.0,
         "opp_ppg": 67.5,
@@ -141,7 +141,7 @@
         "team_name": "Converse Judson",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "27",
         "uil_verified": false
       },
       {
@@ -149,7 +149,7 @@
         "team_name": "Arl Martin",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "4",
         "uil_verified": false
       },
       {
@@ -188,7 +188,7 @@
         "team_name": "Mesquite Horn",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "6",
         "uil_verified": false
       },
       {
@@ -196,7 +196,7 @@
         "team_name": "Vandegrift",
         "wins": 0,
         "losses": 1,
-        "district": null,
+        "district": "25",
         "games": 1,
         "ppg": 58.0,
         "opp_ppg": 62.0,
@@ -207,7 +207,7 @@
         "team_name": "Summer Creek",
         "wins": 1,
         "losses": 1,
-        "district": null,
+        "district": "21",
         "games": 2,
         "ppg": 66.0,
         "opp_ppg": 52.5,
@@ -218,7 +218,7 @@
         "team_name": "SA Harlan",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "28",
         "uil_verified": false
       },
       {
@@ -276,7 +276,7 @@
         "team_name": "CC Veterans Memorial",
         "wins": null,
         "losses": null,
-        "district": "29",
+        "district": "30",
         "uil_verified": true,
         "uil_official_name": "CC Veterans Mem"
       },

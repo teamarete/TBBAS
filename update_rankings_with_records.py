@@ -10,6 +10,7 @@ from collections import defaultdict
 from datetime import datetime
 from school_name_normalizer import SchoolNameNormalizer
 from school_abbreviations import expand_abbreviations, get_search_variations
+from manual_district_mappings import get_manual_district
 from pathlib import Path
 
 def load_uil_districts():
@@ -144,42 +145,53 @@ def update_rankings_with_records():
                     team['opp_ppg'] = round(record['points_against'] / record['games'], 1) if record['games'] > 0 else 0
                     updated_count += 1
 
-                # Add district for UIL schools (skip if already has district)
-                if category == 'uil' and not team.get('district'):
-                    # Get all search variations (including abbreviation expansions)
-                    search_variations = get_search_variations(team_name)
-                    normalized = normalizer.normalize(team_name).lower()
-
+                # Add district for UIL schools (always try, even if already has one - ensures data integrity)
+                if category == 'uil':
                     district = None
 
-                    # Try exact matches with all variations first
-                    for variation in search_variations:
-                        district = (
-                            district_lookup.get((variation, classification)) or
-                            district_lookup.get((variation.lower(), classification)) or
-                            district_lookup.get((normalizer.normalize(variation).lower(), classification))
-                        )
-                        if district:
-                            break
+                    # Try manual mapping first (highest priority)
+                    district = get_manual_district(team_name, classification)
 
-                    # If no exact match, try fuzzy matching (variation appears in UIL name)
                     if not district:
+                        # Get all search variations (including abbreviation expansions)
+                        search_variations = get_search_variations(team_name)
+                        normalized = normalizer.normalize(team_name).lower()
+
+                        # Try exact matches with all variations
                         for variation in search_variations:
-                            if len(variation) <= 4:  # Skip very short variations
-                                continue
-                            variation_lower = variation.lower()
-                            for (uil_name, class_code), dist in district_lookup.items():
-                                if class_code == classification and isinstance(uil_name, str):
-                                    # Check if variation appears in UIL name
-                                    if variation_lower in uil_name.lower():
-                                        district = dist
-                                        break
+                            # Also try manual mapping with variations
+                            district = get_manual_district(variation, classification)
                             if district:
                                 break
 
+                            district = (
+                                district_lookup.get((variation, classification)) or
+                                district_lookup.get((variation.lower(), classification)) or
+                                district_lookup.get((normalizer.normalize(variation).lower(), classification))
+                            )
+                            if district:
+                                break
+
+                        # If no exact match, try fuzzy matching (variation appears in UIL name)
+                        if not district:
+                            for variation in search_variations:
+                                if len(variation) <= 4:  # Skip very short variations
+                                    continue
+                                variation_lower = variation.lower()
+                                for (uil_name, class_code), dist in district_lookup.items():
+                                    if class_code == classification and isinstance(uil_name, str):
+                                        # Check if variation appears in UIL name
+                                        if variation_lower in uil_name.lower():
+                                            district = dist
+                                            break
+                                if district:
+                                    break
+
+                    # Add district if found (count as added only if it was missing)
                     if district:
+                        if not team.get('district'):
+                            districts_added += 1
                         team['district'] = district
-                        districts_added += 1
 
     # Update timestamp
     rankings['last_updated'] = datetime.now().isoformat()
