@@ -132,7 +132,7 @@ COMMON_PATTERNS = {
     'Brennan': ['San Antonio Brennan', 'SA Brennan', 'Brennan'],
     'Harlan': ['San Antonio Harlan', 'SA Harlan', 'Harlan'],
     'Wagner': ['San Antonio Wagner', 'SA Wagner', 'Wagner'],
-    'Jay': ['San Antonio Jay', 'SA Jay', 'Jay'],
+    'Jay': ['San Antonio Jay', 'SA Jay', 'Northside Jay', 'Jay'],
     'Marshall': ['Fort Bend Marshall', 'FB Marshall', 'Marshall'],
     'Travis': ['Fort Bend Travis', 'FB Travis', 'Travis'],
     'Martin': ['Arlington Martin', 'Arl Martin', 'Martin'],
@@ -140,6 +140,10 @@ COMMON_PATTERNS = {
     'Summit': ['Mansfield Summit', 'Mans Summit', 'Summit'],
     'Timberview': ['Mansfield Timberview', 'Mans Timberview', 'Timberview'],
     'Legacy': ['Mansfield Legacy', 'Mans Legacy', 'Legacy'],
+    'Veterans Memorial': ['Corpus Christi Veterans Memorial', 'CC Veterans Memorial', 'Veterans Memorial'],
+    'Alamo Heights': ['San Antonio Alamo Heights', 'SA Alamo Heights', 'Alamo Heights'],
+    'Highland Park': ['Dallas Highland Park', 'Highland Park'],
+    'West Brook': ['Beaumont West Brook', 'Bmt West Brook', 'West Brook'],
 }
 
 def find_uil_match(tabc_name, uil_schools, classification_code):

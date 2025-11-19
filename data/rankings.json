@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-18T18:04:33.262445",
+  "last_updated": "2025-11-18T18:42:45.576167",
   "uil": {
     "AAAAAA": [
       {
@@ -248,7 +248,7 @@
         "team_name": "Bmt United",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "19",
         "uil_verified": false
       },
       {
@@ -256,7 +256,7 @@
         "team_name": "Frisco Memorial",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "11",
         "uil_verified": false
       },
       {
@@ -276,7 +276,7 @@
         "team_name": "CC Veterans Memorial",
         "wins": null,
         "losses": null,
-        "district": "30",
+        "district": "29",
         "uil_verified": true,
         "uil_official_name": "CC Veterans Mem"
       },
@@ -285,7 +285,7 @@
         "team_name": "Bmt West Brook",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "19",
         "uil_verified": false
       },
       {
@@ -313,7 +313,7 @@
         "team_name": "SA Wagner",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "26",
         "uil_verified": false
       },
       {
@@ -329,7 +329,7 @@
         "team_name": "Ellison",
         "wins": 2,
         "losses": 0,
-        "district": null,
+        "district": "16",
         "games": 2,
         "ppg": 69.0,
         "opp_ppg": 36.5,
@@ -370,7 +370,7 @@
         "team_name": "SA Jay",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "28",
         "uil_verified": false
       },
       {
@@ -390,7 +390,7 @@
         "team_name": "Highland Park",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "12",
         "games": 1,
         "ppg": 61.0,
         "opp_ppg": 56.0,
@@ -410,7 +410,7 @@
         "team_name": "Frisco Heritage",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "11",
         "uil_verified": false
       },
       {
@@ -430,7 +430,7 @@
         "team_name": "Alamo Heights",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "26",
         "games": 1,
         "ppg": 62.0,
         "opp_ppg": 50.0,
@@ -464,7 +464,7 @@
         "team_name": "PA Memorial",
         "wins": null,
         "losses": null,
-        "district": "4",
+        "district": "19",
         "uil_verified": false
       },
       {
@@ -1913,5 +1913,5 @@
     "unmatched_count": 88,
     "ambiguous_count": 0
   },
-  "districts_from_uil": 0
+  "districts_from_uil": 9
 }

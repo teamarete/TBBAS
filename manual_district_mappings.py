@@ -64,7 +64,45 @@ MANUAL_DISTRICTS = {
 
     ('Vandegrift', 'AAAAAA'): '25',  # Vandegrift (Austin area)
 
-    # 5A Schools (add as needed)
+    # 5A Schools (AAAAA)
+    ('Frisco Heritage', 'AAAAA'): '11',  # Frisco Heritage
+    ('Heritage', 'AAAAA'): '11',
+
+    ('Frisco Memorial', 'AAAAA'): '11',  # Frisco Memorial
+    ('Memorial', 'AAAAA'): '11',
+
+    ('Dallas Highland Park', 'AAAAA'): '12',  # Dallas Highland Park
+    ('Highland Park', 'AAAAA'): '12',
+
+    ('Killeen Ellison', 'AAAAA'): '16',  # Killeen Ellison
+    ('Ellison', 'AAAAA'): '16',
+
+    ('Beaumont United', 'AAAAA'): '19',  # Beaumont United
+    ('Bmt United', 'AAAAA'): '19',
+
+    ('Beaumont West Brook', 'AAAAA'): '19',  # Beaumont West Brook
+    ('West Brook', 'AAAAA'): '19',
+    ('Bmt West Brook', 'AAAAA'): '19',
+
+    ('Port Arthur Memorial', 'AAAAA'): '19',  # Port Arthur Memorial
+    ('PA Memorial', 'AAAAA'): '19',
+
+    ('San Antonio Alamo Heights', 'AAAAA'): '26',  # San Antonio Alamo Heights
+    ('SA Alamo Heights', 'AAAAA'): '26',
+    ('Alamo Heights', 'AAAAA'): '26',
+
+    ('San Antonio Wagner', 'AAAAA'): '26',  # San Antonio Wagner
+    ('SA Wagner', 'AAAAA'): '26',
+    ('Wagner', 'AAAAA'): '26',
+
+    ('Northside Jay', 'AAAAA'): '28',  # Northside Jay (San Antonio)
+    ('SA Jay', 'AAAAA'): '28',
+    ('San Antonio Jay', 'AAAAA'): '28',
+    ('Jay', 'AAAAA'): '28',
+
+    ('Corpus Christi Veterans Memorial', 'AAAAA'): '29',  # Corpus Christi Veterans Memorial
+    ('CC Veterans Memorial', 'AAAAA'): '29',
+    ('Veterans Memorial', 'AAAAA'): '29',
 
     # 4A Schools (add as needed)
 
