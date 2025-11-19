@@ -14,7 +14,7 @@ def ensure_rankings_have_stats():
     """
     # Import here to avoid circular dependency
     import time
-    time.sleep(2)  # Wait 2 seconds for scheduler to initialize
+    time.sleep(5)  # Wait 5 seconds for scheduler to initialize (increased from 2 for reliability)
 
     data_dir = Path(__file__).parent / 'data'
     rankings_file = data_dir / 'rankings.json'
@@ -43,9 +43,12 @@ def ensure_rankings_have_stats():
     print(f"Stats check: {teams_with_stats}/{total_teams_checked} teams have PPG")
     print(f"District check: {teams_with_districts}/{total_teams_checked} teams have districts")
 
-    # If more than half have stats AND districts, consider it already updated
-    if total_teams_checked > 0 and teams_with_stats > total_teams_checked / 2 and teams_with_districts > total_teams_checked / 2:
-        print(f"Rankings already have game statistics and districts - skipping update")
+    # Check if we have MOST districts (80% threshold)
+    # More lenient than before to prevent unnecessary updates
+    districts_threshold = total_teams_checked * 0.8
+
+    if total_teams_checked > 0 and teams_with_districts >= districts_threshold:
+        print(f"Rankings have sufficient districts ({teams_with_districts}/{total_teams_checked} >= {districts_threshold:.0f}) - skipping update")
         return
 
     # Rankings need stats/districts - run the update
