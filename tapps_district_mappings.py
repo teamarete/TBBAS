@@ -15,16 +15,34 @@ TAPPS_DISTRICTS = {
     # ('Houston Christian', 'TAPPS_6A'): '2',
 
     # TAPPS 6A Schools (fill in from PDF pages 35-36)
-    ('Dallas Parish Episcopal', 'TAPPS_6A'): None,  # TODO: Add district from PDF
-    ('Addison Greenhill School', 'TAPPS_6A'): None,
-    ('Dallas St. Mark\'s School of Texas', 'TAPPS_6A'): None,
-    ('Houston Christian', 'TAPPS_6A'): None,
-    ('San Antonio TMI Episcopal', 'TAPPS_6A'): None,
-    ('Austin St. Michael\'s', 'TAPPS_6A'): None,
-    ('San Antonio Antonian Prep', 'TAPPS_6A'): None,
-    ('Plano John Paul II', 'TAPPS_6A'): None,
-    ('Dallas Bishop Lynch', 'TAPPS_6A'): None,
-    ('Houston The Kinkaid School', 'TAPPS_6A'): None,
+    ('Dallas Parish Episcopal', 'TAPPS_6A'): '1',  # TAPPS District 1
+    ('Addison Greenhill School', 'TAPPS_6A'): 'SPC North',  # SPC North District
+    ('Addison Greenhill', 'TAPPS_6A'): 'SPC North',
+    ('Dallas St. Mark\'s School of Texas', 'TAPPS_6A'): 'SPC North',  # SPC North District
+    ("Dallas St. Mark's School of Texas", 'TAPPS_6A'): 'SPC North',  # With curly apostrophe
+    ('Dallas St. Mark\'s', 'TAPPS_6A'): 'SPC North',
+    ("Dallas St. Mark's", 'TAPPS_6A'): 'SPC North',
+    ('St. Mark\'s School of Texas', 'TAPPS_6A'): 'SPC North',
+    ("St. Mark's School of Texas", 'TAPPS_6A'): 'SPC North',
+    ('Dallas St. Mark’s School of Texas', 'TAPPS_6A'): 'SPC North',  # EXACT match with curly apostrophe
+    ('Houston Christian', 'TAPPS_6A'): 'SPC South',  # SPC South District
+    ('San Antonio TMI Episcopal', 'TAPPS_6A'): '3',  # TAPPS District 3
+    ('TMI Episcopal', 'TAPPS_6A'): '3',
+    ('Austin St. Michael\'s', 'TAPPS_6A'): '3',  # TAPPS District 3
+    ("Austin St. Michael's", 'TAPPS_6A'): '3',  # With curly apostrophe
+    ('St. Michael\'s', 'TAPPS_6A'): '3',
+    ("St. Michael's", 'TAPPS_6A'): '3',
+    ('Austin St. Michael’s', 'TAPPS_6A'): '3',  # EXACT match with curly apostrophe
+    ('San Antonio Antonian Prep', 'TAPPS_6A'): '3',  # TAPPS District 3
+    ('Antonian Prep', 'TAPPS_6A'): '3',
+    ('Plano John Paul II', 'TAPPS_6A'): '2',  # TAPPS District 2
+    ('John Paul II', 'TAPPS_6A'): '2',
+    ('Dallas Bishop Lynch', 'TAPPS_6A'): '2',  # TAPPS District 2
+    ('Bishop Lynch', 'TAPPS_6A'): '2',
+    ('Houston The Kinkaid School', 'TAPPS_6A'): 'SPC South',  # SPC South District
+    ('The Kinkaid School', 'TAPPS_6A'): 'SPC South',
+    ('Kinkaid School', 'TAPPS_6A'): 'SPC South',
+    ('Kinkaid', 'TAPPS_6A'): 'SPC South',
 
     # TAPPS 5A Schools (fill in from PDF pages 36-37)
     ('Houston Second Baptist', 'TAPPS_5A'): None,

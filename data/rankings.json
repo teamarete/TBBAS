@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-18T19:27:31.296019",
+  "last_updated": "2025-11-18T19:50:56.760969",
   "uil": {
     "AAAAAA": [
       {
@@ -1460,28 +1460,28 @@
         "team_name": "Dallas Parish Episcopal",
         "wins": null,
         "losses": null,
-        "district": null
+        "district": "1"
       },
       {
         "rank": 2,
         "team_name": "Addison Greenhill School",
         "wins": null,
         "losses": null,
-        "district": null
+        "district": "SPC North"
       },
       {
         "rank": 3,
         "team_name": "Dallas St. Mark\u2019s School of Texas",
         "wins": null,
         "losses": null,
-        "district": null
+        "district": "SPC North"
       },
       {
         "rank": 4,
         "team_name": "Houston Christian",
         "wins": 2,
         "losses": 0,
-        "district": null,
+        "district": "SPC South",
         "games": 2,
         "ppg": 90.0,
         "opp_ppg": 55.0
@@ -1491,42 +1491,42 @@
         "team_name": "San Antonio TMI Episcopal",
         "wins": null,
         "losses": null,
-        "district": null
+        "district": "3"
       },
       {
         "rank": 6,
         "team_name": "Austin St. Michael\u2019s",
         "wins": null,
         "losses": null,
-        "district": null
+        "district": "3"
       },
       {
         "rank": 7,
         "team_name": "San Antonio Antonian Prep",
         "wins": null,
         "losses": null,
-        "district": null
+        "district": "3"
       },
       {
         "rank": 8,
         "team_name": "Plano John Paul II",
         "wins": null,
         "losses": null,
-        "district": null
+        "district": "2"
       },
       {
         "rank": 9,
         "team_name": "Dallas Bishop Lynch",
         "wins": null,
         "losses": null,
-        "district": null
+        "district": "2"
       },
       {
         "rank": 10,
         "team_name": "Houston The Kinkaid School",
         "wins": null,
         "losses": null,
-        "district": null
+        "district": "SPC South"
       }
     ],
     "TAPPS_5A": [
@@ -1913,5 +1913,5 @@
     "unmatched_count": 88,
     "ambiguous_count": 0
   },
-  "districts_from_uil": 6
+  "districts_from_uil": 2
 }
