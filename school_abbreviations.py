@@ -144,6 +144,11 @@ COMMON_PATTERNS = {
     'Alamo Heights': ['San Antonio Alamo Heights', 'SA Alamo Heights', 'Alamo Heights'],
     'Highland Park': ['Dallas Highland Park', 'Highland Park'],
     'West Brook': ['Beaumont West Brook', 'Bmt West Brook', 'West Brook'],
+    'Carter': ['Dallas Carter', 'Carter'],
+    'Kimball': ['Dallas Kimball', 'Kimball'],
+    'LBJ': ['Austin Johnson', 'Austin LBJ', 'LBJ', 'Johnson'],
+    'Davenport': ['Comal Davenport', 'Davenport'],
+    'Wimberley': ['Wimberley', 'Wimberly'],  # Common misspelling
 }
 
 def find_uil_match(tabc_name, uil_schools, classification_code):

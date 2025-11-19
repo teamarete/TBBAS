@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-18T18:42:45.576167",
+  "last_updated": "2025-11-18T18:57:28.393223",
   "uil": {
     "AAAAAA": [
       {
@@ -495,7 +495,7 @@
         "team_name": "Dallas Kimball",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "11",
         "uil_verified": false
       },
       {
@@ -512,7 +512,7 @@
         "team_name": "Estacado",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "5",
         "uil_verified": false
       },
       {
@@ -549,7 +549,7 @@
         "team_name": "Dallas Carter",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "11",
         "uil_verified": false
       },
       {
@@ -576,7 +576,7 @@
         "team_name": "Krum",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "7",
         "games": 1,
         "ppg": 93.0,
         "opp_ppg": 83.0,
@@ -587,7 +587,7 @@
         "team_name": "Wimberley",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "26",
         "games": 1,
         "ppg": 82.0,
         "opp_ppg": 45.0,
@@ -649,7 +649,7 @@
         "team_name": "Austin LBJ",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "25",
         "uil_verified": false
       },
       {
@@ -657,7 +657,7 @@
         "team_name": "Burkburnett",
         "wins": 0,
         "losses": 1,
-        "district": null,
+        "district": "7",
         "games": 1,
         "ppg": 70.0,
         "opp_ppg": 76.0,
@@ -729,7 +729,7 @@
         "team_name": "Davenport",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "26",
         "games": 1,
         "ppg": 73.0,
         "opp_ppg": 53.0,
@@ -1913,5 +1913,5 @@
     "unmatched_count": 88,
     "ambiguous_count": 0
   },
-  "districts_from_uil": 9
+  "districts_from_uil": 8
 }

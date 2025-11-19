@@ -104,7 +104,30 @@ MANUAL_DISTRICTS = {
     ('CC Veterans Memorial', 'AAAAA'): '29',
     ('Veterans Memorial', 'AAAAA'): '29',
 
-    # 4A Schools (add as needed)
+    # 4A Schools (AAAA)
+    ('Lubbock Estacado', 'AAAA'): '5',  # Lubbock Estacado
+    ('Estacado', 'AAAA'): '5',
+
+    ('Burkburnett', 'AAAA'): '7',  # Burkburnett
+
+    ('Krum', 'AAAA'): '7',  # Krum
+
+    ('Dallas Carter', 'AAAA'): '11',  # Dallas Carter
+    ('Carter', 'AAAA'): '11',
+
+    ('Dallas Kimball', 'AAAA'): '11',  # Dallas Kimball
+    ('Kimball', 'AAAA'): '11',
+
+    ('Austin Johnson', 'AAAA'): '25',  # Austin Johnson (LBJ)
+    ('Austin LBJ', 'AAAA'): '25',
+    ('LBJ', 'AAAA'): '25',
+    ('Johnson', 'AAAA'): '25',
+
+    ('Comal Davenport', 'AAAA'): '26',  # Comal Davenport
+    ('Davenport', 'AAAA'): '26',
+
+    ('Wimberley', 'AAAA'): '26',  # Wimberley
+    ('Wimberly', 'AAAA'): '26',  # Common misspelling
 
     # 3A Schools (add as needed)
 
