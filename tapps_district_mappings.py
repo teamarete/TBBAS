@@ -44,6 +44,53 @@ TAPPS_DISTRICTS = {
     ('Kinkaid School', 'TAPPS_6A'): 'SPC South',
     ('Kinkaid', 'TAPPS_6A'): 'SPC South',
 
+    # Additional SPC North Schools
+    ('Episcopal Dallas', 'TAPPS_6A'): 'SPC North',
+    ('Dallas Episcopal', 'TAPPS_6A'): 'SPC North',
+    ('Episcopal School of Dallas', 'TAPPS_6A'): 'SPC North',
+
+    ("St. Andrew's Episcopal", 'TAPPS_6A'): 'SPC North',
+    ("St. Andrew's", 'TAPPS_6A'): 'SPC North',
+    ('St. Andrew\'s Episcopal', 'TAPPS_6A'): 'SPC North',
+    ('St. Andrew\'s', 'TAPPS_6A'): 'SPC North',
+
+    ('Cistercian Preparatory', 'TAPPS_6A'): 'SPC North',
+    ('Cistercian', 'TAPPS_6A'): 'SPC North',
+
+    ('Fort Worth Country Day', 'TAPPS_6A'): 'SPC North',
+    ('FWCD', 'TAPPS_6A'): 'SPC North',
+    ('FW Country Day', 'TAPPS_6A'): 'SPC North',
+
+    ("St. Stephen's Episcopal", 'TAPPS_6A'): 'SPC North',
+    ("St. Stephen's", 'TAPPS_6A'): 'SPC North',
+    ('St. Stephen\'s Episcopal', 'TAPPS_6A'): 'SPC North',
+    ('St. Stephen\'s', 'TAPPS_6A'): 'SPC North',
+    ('Austin St. Stephen\'s', 'TAPPS_6A'): 'SPC North',
+
+    ('Trinity Valley School', 'TAPPS_6A'): 'SPC North',
+    ('Trinity Valley', 'TAPPS_6A'): 'SPC North',
+
+    ('Oakridge School', 'TAPPS_6A'): 'SPC North',
+    ('Oakridge', 'TAPPS_6A'): 'SPC North',
+
+    # Additional SPC South Schools
+    ("St. John's School", 'TAPPS_6A'): 'SPC South',
+    ("St. John's", 'TAPPS_6A'): 'SPC South',
+    ('St. John\'s School', 'TAPPS_6A'): 'SPC South',
+    ('St. John\'s', 'TAPPS_6A'): 'SPC South',
+    ('Houston St. John\'s', 'TAPPS_6A'): 'SPC South',
+
+    ('Episcopal High School', 'TAPPS_6A'): 'SPC South',
+    ('Houston Episcopal', 'TAPPS_6A'): 'SPC South',
+
+    ('Awty International School', 'TAPPS_6A'): 'SPC South',
+    ('The Awty School', 'TAPPS_6A'): 'SPC South',
+    ('Awty', 'TAPPS_6A'): 'SPC South',
+
+    ('John Cooper School', 'TAPPS_6A'): 'SPC South',
+    ('The John Cooper School', 'TAPPS_6A'): 'SPC South',
+    ('John Cooper', 'TAPPS_6A'): 'SPC South',
+
     # TAPPS 5A Schools (fill in from PDF pages 36-37)
     ('Houston Second Baptist', 'TAPPS_5A'): None,
     ('Arlington Grace Prep', 'TAPPS_5A'): None,
