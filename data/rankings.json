@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-18T19:09:45.593390",
+  "last_updated": "2025-11-18T19:19:04.122286",
   "uil": {
     "AAAAAA": [
       {
@@ -1100,7 +1100,7 @@
         "team_name": "Thorndale",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "27",
         "uil_verified": false
       },
       {

@@ -162,7 +162,8 @@ MANUAL_DISTRICTS = {
     ('CC London', 'AAA'): '29',
     ('London', 'AAA'): '29',
 
-    # 2A Schools (add as needed)
+    # 2A Schools (AA)
+    ('Thorndale', 'AA'): '27',  # Thorndale
 
     # 1A Schools (add as needed)
 }
