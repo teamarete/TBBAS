@@ -165,7 +165,20 @@ MANUAL_DISTRICTS = {
     # 2A Schools (AA)
     ('Thorndale', 'AA'): '27',  # Thorndale
 
-    # 1A Schools (add as needed)
+    # 1A Schools (A)
+    ('Wildorado', 'A'): '3',  # Wildorado
+
+    ('Water Valley', 'A'): '11',  # Water Valley
+
+    ('Benjamin', 'A'): '16',  # Benjamin
+
+    ('Avery', 'A'): '20',  # Avery
+
+    ('Coolidge', 'A'): '24',  # Coolidge
+
+    ('Tilden McMullen County', 'A'): '32',  # Tilden McMullen County
+    ('McMullen County', 'A'): '32',
+    ('Tilden', 'A'): '32',
 }
 
 def get_manual_district(team_name, classification):

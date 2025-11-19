@@ -154,6 +154,7 @@ COMMON_PATTERNS = {
     'Liberty-Eylau': ['Texarkana Liberty-Eylau', 'Liberty-Eylau'],
     'Cole': ['San Antonio Cole', 'SA Cole', 'Cole'],
     'London': ['Corpus Christi London', 'CC London', 'London'],
+    'McMullen County': ['Tilden McMullen County', 'McMullen County', 'Tilden'],
 }
 
 def find_uil_match(tabc_name, uil_schools, classification_code):

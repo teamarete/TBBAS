@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-18T19:19:04.122286",
+  "last_updated": "2025-11-18T19:27:31.296019",
   "uil": {
     "AAAAAA": [
       {
@@ -1283,7 +1283,7 @@
         "team_name": "Coolidge",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "24",
         "uil_verified": false
       },
       {
@@ -1356,7 +1356,7 @@
         "team_name": "Water Valley",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "11",
         "uil_verified": false
       },
       {
@@ -1391,7 +1391,7 @@
         "team_name": "Wildorado",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "3",
         "uil_verified": false
       },
       {
@@ -1429,7 +1429,7 @@
         "team_name": "McMullen County",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "32",
         "uil_verified": false
       },
       {
@@ -1437,7 +1437,7 @@
         "team_name": "Avery",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "20",
         "games": 1,
         "ppg": 68.0,
         "opp_ppg": 39.0,
@@ -1448,7 +1448,7 @@
         "team_name": "Benjamin",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "16",
         "uil_verified": false
       }
     ]
@@ -1913,5 +1913,5 @@
     "unmatched_count": 88,
     "ambiguous_count": 0
   },
-  "districts_from_uil": 1
+  "districts_from_uil": 6
 }
