@@ -45,8 +45,10 @@ SPECIAL_CASES = {
     'Atascocita': 'Atascocita',        # Could be in "Humble Humble Atascocita"
     'Katy Seven Lakes': 'Seven Lakes',
     'Katy Jordan': 'Jordan',
-    'Steele': 'Steele',                # Could be "Cibolo Steele"
+    'Steele': 'Cibolo Steele',         # Cibolo Steele
     'Little Elm': 'Little Elm',
+    'Summer Creek': 'Alvin Shadow Creek',  # Summer Creek is actually Alvin Shadow Creek
+    'Cy Falls': 'Cypress Falls',       # Cy Falls is Cypress Falls
 }
 
 def expand_abbreviations(school_name):

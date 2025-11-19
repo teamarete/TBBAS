@@ -31,20 +31,38 @@ MANUAL_DISTRICTS = {
     ('Austin Westlake', 'AAAAAA'): '26',  # Austin Westlake
     ('Westlake', 'AAAAAA'): '26',
 
-    ('Converse Judson', 'AAAAAA'): '27',  # Converse Judson
-    ('Judson', 'AAAAAA'): '27',
+    ('Arl Martin', 'AAAAAA'): '8',  # Arlington Martin
+    ('Arlington Martin', 'AAAAAA'): '8',
+    ('Martin', 'AAAAAA'): '8',
 
-    ('Arl Martin', 'AAAAAA'): '4',  # Arlington Martin
-    ('Arlington Martin', 'AAAAAA'): '4',
-    ('Martin', 'AAAAAA'): '4',
+    ('Mesquite Horn', 'AAAAAA'): '11',  # Mesquite Horn
+    ('Horn', 'AAAAAA'): '11',
 
-    ('Mesquite Horn', 'AAAAAA'): '6',  # Mesquite Horn
-    ('Horn', 'AAAAAA'): '6',
+    ('Cy Falls', 'AAAAAA'): '17',  # Cypress Falls
+    ('Cypress Falls', 'AAAAAA'): '17',
+
+    ('Katy Jordan', 'AAAAAA'): '19',  # Katy Jordan
+    ('Jordan', 'AAAAAA'): '19',
+
+    ('Katy Seven Lakes', 'AAAAAA'): '19',  # Katy Seven Lakes
+    ('Seven Lakes', 'AAAAAA'): '19',
+
+    ('Summer Creek', 'AAAAAA'): '22',  # Alvin Shadow Creek
+    ('Alvin Shadow Creek', 'AAAAAA'): '22',
+    ('Humble Summer Creek', 'AAAAAA'): '22',
+
+    ('SA Brennan', 'AAAAAA'): '28',  # Northside Brennan (San Antonio)
+    ('San Antonio Brennan', 'AAAAAA'): '28',
+    ('Brennan', 'AAAAAA'): '28',
+    ('Northside Brennan', 'AAAAAA'): '28',
+
+    ('Steele', 'AAAAAA'): '29',  # Cibolo Steele
+    ('Cibolo Steele', 'AAAAAA'): '29',
+
+    ('Converse Judson', 'AAAAAA'): '29',  # Converse Judson
+    ('Judson', 'AAAAAA'): '29',
 
     ('Vandegrift', 'AAAAAA'): '25',  # Vandegrift (Austin area)
-
-    ('Summer Creek', 'AAAAAA'): '21',  # Humble Summer Creek
-    ('Humble Summer Creek', 'AAAAAA'): '21',
 
     # 5A Schools (add as needed)
 

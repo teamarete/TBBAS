@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-18T17:28:30.686412",
+  "last_updated": "2025-11-18T18:00:48.085375",
   "uil": {
     "AAAAAA": [
       {
@@ -26,7 +26,7 @@
         "team_name": "Katy Seven Lakes",
         "wins": null,
         "losses": null,
-        "district": "1",
+        "district": "19",
         "uil_verified": false
       },
       {
@@ -34,7 +34,7 @@
         "team_name": "SA Brennan",
         "wins": null,
         "losses": null,
-        "district": "27",
+        "district": "28",
         "uil_verified": false
       },
       {
@@ -76,7 +76,7 @@
         "team_name": "Katy Jordan",
         "wins": null,
         "losses": null,
-        "district": "1",
+        "district": "19",
         "uil_verified": true,
         "uil_official_name": "Katy Jordan"
       },
@@ -94,7 +94,7 @@
         "team_name": "Steele",
         "wins": 2,
         "losses": 0,
-        "district": "27",
+        "district": "29",
         "games": 2,
         "ppg": 81.5,
         "opp_ppg": 49.0,
@@ -141,7 +141,7 @@
         "team_name": "Converse Judson",
         "wins": null,
         "losses": null,
-        "district": "27",
+        "district": "29",
         "uil_verified": false
       },
       {
@@ -149,7 +149,7 @@
         "team_name": "Arl Martin",
         "wins": null,
         "losses": null,
-        "district": "4",
+        "district": "8",
         "uil_verified": false
       },
       {
@@ -157,7 +157,7 @@
         "team_name": "Cy Falls",
         "wins": null,
         "losses": null,
-        "district": "1",
+        "district": "17",
         "uil_verified": true,
         "uil_official_name": "Cyp. Falls"
       },
@@ -188,7 +188,7 @@
         "team_name": "Mesquite Horn",
         "wins": null,
         "losses": null,
-        "district": "6",
+        "district": "11",
         "uil_verified": false
       },
       {
@@ -207,7 +207,7 @@
         "team_name": "Summer Creek",
         "wins": 1,
         "losses": 1,
-        "district": "21",
+        "district": "22",
         "games": 2,
         "ppg": 66.0,
         "opp_ppg": 52.5,
