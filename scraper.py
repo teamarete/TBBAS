@@ -189,14 +189,63 @@ class TABCScraper:
         return data
 
     def save_to_file(self, data, filename='data/rankings.json'):
-        """Save rankings to JSON file"""
+        """Save rankings to JSON file while preserving existing stats and districts"""
         import os
         os.makedirs(os.path.dirname(filename), exist_ok=True)
 
-        with open(filename, 'w') as f:
-            json.dump(data, f, indent=2)
+        # Load existing rankings to preserve stats and districts
+        existing_data = {}
+        if os.path.exists(filename):
+            try:
+                with open(filename, 'r') as f:
+                    existing_data = json.load(f)
+                print(f"Loaded existing rankings to preserve stats/districts")
+            except Exception as e:
+                print(f"Could not load existing rankings: {e}")
 
-        print(f"Rankings saved to {filename}")
+        # Merge new rankings with existing stats/districts
+        merged_data = self._preserve_stats(data, existing_data)
+
+        with open(filename, 'w') as f:
+            json.dump(merged_data, f, indent=2)
+
+        print(f"Rankings saved to {filename} (stats and districts preserved)")
+
+    def _preserve_stats(self, new_data, old_data):
+        """Preserve stats and districts from old rankings when updating with new rankings"""
+        if not old_data:
+            return new_data
+
+        # Create lookup for old teams by name and classification
+        old_teams_lookup = {}
+        for category in ['uil', 'private']:
+            if category in old_data:
+                for classification, teams in old_data[category].items():
+                    for team in teams:
+                        key = (category, classification, team['team_name'])
+                        old_teams_lookup[key] = team
+
+        # Preserve stats/districts in new data
+        for category in ['uil', 'private']:
+            if category not in new_data:
+                continue
+
+            for classification, teams in new_data[category].items():
+                for team in teams:
+                    key = (category, classification, team['team_name'])
+                    old_team = old_teams_lookup.get(key)
+
+                    if old_team:
+                        # Preserve game stats if they exist
+                        for field in ['wins', 'losses', 'games', 'ppg', 'opp_ppg']:
+                            if field in old_team:
+                                team[field] = old_team[field]
+
+                        # Preserve district if it exists
+                        if 'district' in old_team:
+                            team['district'] = old_team['district']
+
+        return new_data
 
 
 if __name__ == '__main__':
