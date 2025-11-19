@@ -129,7 +129,38 @@ MANUAL_DISTRICTS = {
     ('Wimberley', 'AAAA'): '26',  # Wimberley
     ('Wimberly', 'AAAA'): '26',  # Common misspelling
 
-    # 3A Schools (add as needed)
+    # 3A Schools (AAA)
+    ('Tuscola Jim Ned', 'AAA'): '6',  # Tuscola Jim Ned
+    ('Jim Ned', 'AAA'): '6',
+
+    ('Wichita Falls City View', 'AAA'): '7',  # Wichita Falls City View
+    ('City View', 'AAA'): '7',
+
+    ('Jefferson', 'AAA'): '13',  # Jefferson
+
+    ('Hooks', 'AAA'): '14',  # Hooks
+
+    ('Texarkana Liberty-Eylau', 'AAA'): '14',  # Texarkana Liberty-Eylau
+    ('Liberty-Eylau', 'AAA'): '14',
+    ('Liberty Eylau', 'AAA'): '14',  # Without hyphen
+
+    ('Tatum', 'AAA'): '16',  # Tatum
+
+    ('Poth', 'AAA'): '26',  # Poth
+
+    ('San Antonio Cole', 'AAA'): '27',  # San Antonio Cole
+    ('SA Cole', 'AAA'): '27',
+    ('Cole', 'AAA'): '27',
+
+    ('Crystal City', 'AAA'): '28',  # Crystal City
+
+    ('Lytle', 'AAA'): '28',  # Lytle
+
+    ('Aransas Pass', 'AAA'): '29',  # Aransas Pass
+
+    ('Corpus Christi London', 'AAA'): '29',  # Corpus Christi London
+    ('CC London', 'AAA'): '29',
+    ('London', 'AAA'): '29',
 
     # 2A Schools (add as needed)
 

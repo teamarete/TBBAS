@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-18T18:57:28.393223",
+  "last_updated": "2025-11-18T19:09:45.593390",
   "uil": {
     "AAAAAA": [
       {
@@ -762,7 +762,7 @@
         "team_name": "Cole",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "27",
         "games": 1,
         "ppg": 81.0,
         "opp_ppg": 39.0,
@@ -789,7 +789,7 @@
         "team_name": "Liberty Eylau",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "14",
         "uil_verified": false
       },
       {
@@ -797,7 +797,7 @@
         "team_name": "Crystal City",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "28",
         "uil_verified": false
       },
       {
@@ -835,7 +835,7 @@
         "team_name": "London",
         "wins": 1,
         "losses": 0,
-        "district": null,
+        "district": "29",
         "games": 1,
         "ppg": 72.0,
         "opp_ppg": 35.0,
@@ -854,7 +854,7 @@
         "team_name": "Jefferson",
         "wins": 2,
         "losses": 1,
-        "district": null,
+        "district": "13",
         "games": 3,
         "ppg": 35.7,
         "opp_ppg": 46.7,
@@ -865,7 +865,7 @@
         "team_name": "Poth",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "26",
         "uil_verified": false
       },
       {
@@ -892,7 +892,7 @@
         "team_name": "City View",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "7",
         "uil_verified": false
       },
       {
@@ -900,7 +900,7 @@
         "team_name": "Aransas Pass",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "29",
         "uil_verified": false
       },
       {
@@ -908,7 +908,7 @@
         "team_name": "Hooks",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "14",
         "uil_verified": false
       },
       {
@@ -933,7 +933,7 @@
         "team_name": "Jim Ned",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "6",
         "uil_verified": false
       },
       {
@@ -950,7 +950,7 @@
         "team_name": "Lytle",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "28",
         "uil_verified": false
       },
       {
@@ -958,7 +958,7 @@
         "team_name": "Tatum",
         "wins": null,
         "losses": null,
-        "district": null,
+        "district": "16",
         "uil_verified": false
       }
     ],
@@ -1913,5 +1913,5 @@
     "unmatched_count": 88,
     "ambiguous_count": 0
   },
-  "districts_from_uil": 8
+  "districts_from_uil": 1
 }
