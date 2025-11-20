@@ -239,7 +239,15 @@ def submit_boxscore():
             db.session.add(box_score)
             db.session.commit()
 
-            flash('Box score submitted successfully!', 'success')
+            # Update rankings with the new game immediately
+            try:
+                from update_rankings_with_records import update_rankings_with_records
+                update_rankings_with_records()
+                flash('Box score submitted and rankings updated successfully!', 'success')
+            except Exception as e:
+                print(f"Warning: Could not update rankings: {e}")
+                flash('Box score submitted successfully! Rankings will update on next scheduled update.', 'success')
+
             return redirect(url_for('submit_boxscore'))
 
         except Exception as e:
