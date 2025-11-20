@@ -5,15 +5,22 @@
 <h3>Overview</h3>
 <p>Texas Boys Basketball Analytics System (TBBAS) provides KenPom-style efficiency ratings for Texas high school basketball teams across UIL, TAPPS, and SPC classifications.</p>
 
-<h3>Data Sources</h3>
-<p>Rankings are calculated from multiple data sources with the following priority:</p>
-<ol>
-    <li><strong>Calculated Rankings (Primary):</strong> Efficiency ratings computed from game data</li>
-    <li><strong>TABC (Fallback 1):</strong> Official Texas Association of Basketball Coaches rankings</li>
-    <li><strong>MaxPreps (Fallback 2):</strong> Daily automated scraping of game scores and rankings</li>
-    <li><strong>GASO (Fallback 3):</strong> Great American Shoot Out pre-season rankings</li>
-</ol>
-<p><strong>Coach Submissions:</strong> Box scores submitted directly by coaches via our online form are used in calculating the primary efficiency ratings.</p>
+<h3>Data Sources & Weighted Average System</h3>
+<p>Rankings are calculated using a <strong>weighted average</strong> of multiple data sources:</p>
+<ul>
+    <li><strong>25% Calculated Rankings:</strong> Efficiency ratings computed from game data</li>
+    <li><strong>25% TABC:</strong> Official Texas Association of Basketball Coaches rankings</li>
+    <li><strong>25% MaxPreps:</strong> Daily automated scraping of game scores and rankings</li>
+    <li><strong>25% GASO:</strong> Great American Shoot Out pre-season rankings</li>
+</ul>
+<p><strong>How it works:</strong></p>
+<ul>
+    <li>When all 4 sources are available: Each contributes 25% to final rank</li>
+    <li>When 3 sources are available: Each contributes 33.3%</li>
+    <li>When 2 sources are available: Each contributes 50%</li>
+    <li>When only 1 source (TABC): 100% TABC</li>
+</ul>
+<p><strong>Coach Submissions:</strong> Box scores submitted directly by coaches via our online form are used in calculating the primary efficiency ratings (25% weight).</p>
 <p style="background: #fff3cd; padding: 15px; border-radius: 5px; margin: 20px 0;">
     <strong>Note for Coaches:</strong> Your submitted box scores are automatically included in rankings calculations!
     The more detailed stats you provide (FG%, 3PT%, rebounds, etc.), the more accurate the efficiency ratings will be.

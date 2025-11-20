@@ -142,7 +142,11 @@ def update_rankings():
     2. Scrape MaxPreps rankings
     3. Scrape GASO rankings
     4. Calculate rankings from box score data
-    5. Merge all sources (priority: calculated > TABC > MaxPreps > GASO)
+    5. Merge all sources (weighted average: 25% each source)
+       - If all 4 sources available: 25% each
+       - If 3 sources: 33.3% each
+       - If 2 sources: 50% each
+       - If 1 source (TABC only): 100% TABC
     """
     now = datetime.now()
 
@@ -270,13 +274,17 @@ def update_rankings():
 
 def merge_rankings(calculated_data, tabc_data, maxpreps_data, gaso_data):
     """
-    Merge rankings from all sources with priority:
-    1. Calculated from box scores (PRIMARY)
-    2. TABC rankings (FALLBACK 1)
-    3. MaxPreps rankings (FALLBACK 2)
-    4. GASO rankings (FALLBACK 3)
+    Merge rankings from all sources using weighted average:
+    - 25% Calculated from box scores
+    - 25% TABC rankings
+    - 25% MaxPreps rankings
+    - 25% GASO rankings
 
-    IMPORTANT: Preserves ALL schools and game statistics from previous updates
+    If not enough data, combines available sources (auto-normalized weights).
+    Final fallback: TABC only.
+
+    IMPORTANT: Preserves ALL schools and game statistics from previous updates.
+    Always ensures top 25 (UIL) or top 10 (TAPPS) teams are ranked.
     """
     import json
     from pathlib import Path
@@ -339,36 +347,52 @@ def merge_rankings(calculated_data, tabc_data, maxpreps_data, gaso_data):
         maxpreps_teams = maxpreps_data.get('uil', {}).get(classification, [])
         gaso_teams = gaso_data.get('uil', {}).get(classification, [])
 
-        # ENSURE WE ALWAYS HAVE TOP 25 RANKINGS
-        # First, update existing teams with ranks
+        # WEIGHTED AVERAGE RANKING SYSTEM
+        # 25% Calculated, 25% TABC, 25% MaxPreps, 25% GASO
         for team in existing_teams:
             team_name = team['team_name']
 
-            # Try to find rank from calculated (highest priority)
+            # Collect ranks from all sources
             calc_team = next((t for t in calculated_teams if t.get('team_name') == team_name), None)
-            if calc_team:
-                team['rank'] = calc_team.get('rank')
-                continue
-
-            # Try TABC (fallback 1)
             tabc_team = next((t for t in tabc_teams if t.get('team_name') == team_name), None)
-            if tabc_team:
-                team['rank'] = tabc_team.get('rank')
-                continue
-
-            # Try MaxPreps (fallback 2)
             maxprep_team = next((t for t in maxpreps_teams if t.get('team_name') == team_name), None)
-            if maxprep_team:
-                team['rank'] = maxprep_team.get('rank')
-                continue
-
-            # Try GASO (fallback 3)
             gaso_team = next((t for t in gaso_teams if t.get('team_name') == team_name), None)
-            if gaso_team:
-                team['rank'] = gaso_team.get('rank')
-                continue
 
-            # Not ranked in any source - keep as unranked (rank = None)
+            ranks = []
+            weights = []
+
+            # Add calculated rank if available (25% weight)
+            if calc_team and calc_team.get('rank'):
+                ranks.append(calc_team.get('rank'))
+                weights.append(0.25)
+
+            # Add TABC rank if available (25% weight)
+            if tabc_team and tabc_team.get('rank'):
+                ranks.append(tabc_team.get('rank'))
+                weights.append(0.25)
+
+            # Add MaxPreps rank if available (25% weight)
+            if maxprep_team and maxprep_team.get('rank'):
+                ranks.append(maxprep_team.get('rank'))
+                weights.append(0.25)
+
+            # Add GASO rank if available (25% weight)
+            if gaso_team and gaso_team.get('rank'):
+                ranks.append(gaso_team.get('rank'))
+                weights.append(0.25)
+
+            # Calculate weighted average rank
+            if ranks:
+                # Normalize weights to sum to 1.0
+                total_weight = sum(weights)
+                normalized_weights = [w / total_weight for w in weights]
+
+                # Calculate weighted average
+                weighted_rank = sum(r * w for r, w in zip(ranks, normalized_weights))
+                team['rank'] = round(weighted_rank)
+            else:
+                # Not ranked in any source - keep as unranked (rank = None)
+                team['rank'] = None
 
         # GUARANTEE TOP 25: Add any TABC top 25 teams that aren't in existing_teams
         for tabc_team in tabc_teams[:25]:  # Ensure we get top 25 from TABC
@@ -405,36 +429,52 @@ def merge_rankings(calculated_data, tabc_data, maxpreps_data, gaso_data):
         maxpreps_teams = maxpreps_data.get('private', {}).get(classification, [])
         gaso_teams = gaso_data.get('private', {}).get(classification, [])
 
-        # ENSURE WE ALWAYS HAVE TOP 10 RANKINGS
-        # First, update existing teams with ranks
+        # WEIGHTED AVERAGE RANKING SYSTEM
+        # 25% Calculated, 25% TABC, 25% MaxPreps, 25% GASO
         for team in existing_teams:
             team_name = team['team_name']
 
-            # Try to find rank from calculated (highest priority)
+            # Collect ranks from all sources
             calc_team = next((t for t in calculated_teams if t.get('team_name') == team_name), None)
-            if calc_team:
-                team['rank'] = calc_team.get('rank')
-                continue
-
-            # Try TABC (fallback 1)
             tabc_team = next((t for t in tabc_teams if t.get('team_name') == team_name), None)
-            if tabc_team:
-                team['rank'] = tabc_team.get('rank')
-                continue
-
-            # Try MaxPreps (fallback 2)
             maxprep_team = next((t for t in maxpreps_teams if t.get('team_name') == team_name), None)
-            if maxprep_team:
-                team['rank'] = maxprep_team.get('rank')
-                continue
-
-            # Try GASO (fallback 3)
             gaso_team = next((t for t in gaso_teams if t.get('team_name') == team_name), None)
-            if gaso_team:
-                team['rank'] = gaso_team.get('rank')
-                continue
 
-            # Not ranked in any source - keep as unranked (rank = None)
+            ranks = []
+            weights = []
+
+            # Add calculated rank if available (25% weight)
+            if calc_team and calc_team.get('rank'):
+                ranks.append(calc_team.get('rank'))
+                weights.append(0.25)
+
+            # Add TABC rank if available (25% weight)
+            if tabc_team and tabc_team.get('rank'):
+                ranks.append(tabc_team.get('rank'))
+                weights.append(0.25)
+
+            # Add MaxPreps rank if available (25% weight)
+            if maxprep_team and maxprep_team.get('rank'):
+                ranks.append(maxprep_team.get('rank'))
+                weights.append(0.25)
+
+            # Add GASO rank if available (25% weight)
+            if gaso_team and gaso_team.get('rank'):
+                ranks.append(gaso_team.get('rank'))
+                weights.append(0.25)
+
+            # Calculate weighted average rank
+            if ranks:
+                # Normalize weights to sum to 1.0
+                total_weight = sum(weights)
+                normalized_weights = [w / total_weight for w in weights]
+
+                # Calculate weighted average
+                weighted_rank = sum(r * w for r, w in zip(ranks, normalized_weights))
+                team['rank'] = round(weighted_rank)
+            else:
+                # Not ranked in any source - keep as unranked (rank = None)
+                team['rank'] = None
 
         # GUARANTEE TOP 10: Add any TABC top 10 teams that aren't in existing_teams
         for tabc_team in tabc_teams[:10]:  # Ensure we get top 10 from TABC
