@@ -339,7 +339,8 @@ def merge_rankings(calculated_data, tabc_data, maxpreps_data, gaso_data):
         maxpreps_teams = maxpreps_data.get('uil', {}).get(classification, [])
         gaso_teams = gaso_data.get('uil', {}).get(classification, [])
 
-        # Update ranks from ranking sources (priority: calculated > TABC > MaxPreps > GASO)
+        # ENSURE WE ALWAYS HAVE TOP 25 RANKINGS
+        # First, update existing teams with ranks
         for team in existing_teams:
             team_name = team['team_name']
 
@@ -369,11 +370,28 @@ def merge_rankings(calculated_data, tabc_data, maxpreps_data, gaso_data):
 
             # Not ranked in any source - keep as unranked (rank = None)
 
+        # GUARANTEE TOP 25: Add any TABC top 25 teams that aren't in existing_teams
+        for tabc_team in tabc_teams[:25]:  # Ensure we get top 25 from TABC
+            team_name = tabc_team.get('team_name')
+            if team_name and team_name not in existing_by_name:
+                # This team is in TABC top 25 but not in our existing data - add it
+                existing_teams.append({
+                    'team_name': team_name,
+                    'rank': tabc_team.get('rank'),
+                    'district': tabc_team.get('district'),
+                    'wins': None,
+                    'losses': None,
+                    'games': None,
+                    'ppg': None,
+                    'opp_ppg': None
+                })
+                existing_by_name[team_name] = existing_teams[-1]
+
         # Preserve stats for all teams
         merged['uil'][classification] = preserve_stats(existing_teams, 'uil', classification)
 
-        ranked_count = sum(1 for t in existing_teams if t.get('rank') is not None)
-        logger.info(f"{classification}: {ranked_count} ranked / {len(existing_teams)} total teams")
+        ranked_count = sum(1 for t in existing_teams if t.get('rank') is not None and t.get('rank') <= 25)
+        logger.info(f"{classification}: {ranked_count} ranked (top 25) / {len(existing_teams)} total teams")
 
     # Merge Private/TAPPS
     for classification in ['TAPPS_6A', 'TAPPS_5A', 'TAPPS_4A', 'TAPPS_3A', 'TAPPS_2A', 'TAPPS_1A']:
@@ -387,7 +405,8 @@ def merge_rankings(calculated_data, tabc_data, maxpreps_data, gaso_data):
         maxpreps_teams = maxpreps_data.get('private', {}).get(classification, [])
         gaso_teams = gaso_data.get('private', {}).get(classification, [])
 
-        # Update ranks from ranking sources (priority: calculated > TABC > MaxPreps > GASO)
+        # ENSURE WE ALWAYS HAVE TOP 10 RANKINGS
+        # First, update existing teams with ranks
         for team in existing_teams:
             team_name = team['team_name']
 
@@ -417,11 +436,28 @@ def merge_rankings(calculated_data, tabc_data, maxpreps_data, gaso_data):
 
             # Not ranked in any source - keep as unranked (rank = None)
 
+        # GUARANTEE TOP 10: Add any TABC top 10 teams that aren't in existing_teams
+        for tabc_team in tabc_teams[:10]:  # Ensure we get top 10 from TABC
+            team_name = tabc_team.get('team_name')
+            if team_name and team_name not in existing_by_name:
+                # This team is in TABC top 10 but not in our existing data - add it
+                existing_teams.append({
+                    'team_name': team_name,
+                    'rank': tabc_team.get('rank'),
+                    'district': tabc_team.get('district'),
+                    'wins': None,
+                    'losses': None,
+                    'games': None,
+                    'ppg': None,
+                    'opp_ppg': None
+                })
+                existing_by_name[team_name] = existing_teams[-1]
+
         # Preserve stats for all teams
         merged['private'][classification] = preserve_stats(existing_teams, 'private', classification)
 
-        ranked_count = sum(1 for t in existing_teams if t.get('rank') is not None)
-        logger.info(f"{classification}: {ranked_count} ranked / {len(existing_teams)} total teams")
+        ranked_count = sum(1 for t in existing_teams if t.get('rank') is not None and t.get('rank') <= 10)
+        logger.info(f"{classification}: {ranked_count} ranked (top 10) / {len(existing_teams)} total teams")
 
     return merged
 

@@ -116,15 +116,18 @@ def classification_rankings(classification):
             # Get UIL classification rankings
             raw_teams = data.get('uil', {}).get(classification, [])
 
-        # Filter to only ranked teams
-        # UIL: Top 25, TAPPS: Top 10
+        # Always show complete rankings: UIL Top 25, TAPPS Top 10
         max_rank = 10 if classification.startswith('TAPPS_') else 25
 
-        # Process teams
-        for team_data in raw_teams:
-            # Only include teams with a valid rank within the limit
+        # Sort teams by rank (None ranks go to end)
+        sorted_teams = sorted(raw_teams, key=lambda x: x.get('rank') if x.get('rank') is not None else 9999)
+
+        # Process teams - take only those with ranks 1 through max_rank
+        for team_data in sorted_teams:
             team_rank = team_data.get('rank')
-            if team_rank is None or team_rank > max_rank:
+
+            # Only include teams with valid rank within limit (1-25 or 1-10)
+            if team_rank is None or team_rank < 1 or team_rank > max_rank:
                 continue
 
             team = {
@@ -150,6 +153,9 @@ def classification_rankings(classification):
                 team['record'] = f"{team['wins']}-{team['losses']}"
 
             teams.append(team)
+
+        # Ensure teams are sorted by rank for display
+        teams.sort(key=lambda x: x['rank'])
 
     # If no data, show message
     if not teams:
