@@ -1,8 +1,8 @@
 # 🚀 TBBAS - What's Deployed to Railway
 
 **Deployment Date:** November 20, 2025
-**Latest Commit:** `61a0895` - Ranking display limits + documentation
-**Previous Commits:** `995981e` (display limits), `a592e97` (error fix), `b26e350` (multi-source)
+**Latest Commit:** `21ff6ac` - Fix ranking priority order
+**Previous Commits:** `7e175d8` (docs), `995981e` (display limits), `a592e97` (error fix)
 **Status:** ✅ Successfully pushed to Railway (auto-deploying now)
 
 ---
@@ -30,15 +30,15 @@
 ### 2. Multi-Source Rankings
 **Priority System:**
 1. **Calculated** (from game data) - PRIMARY
-2. **GASO** (130 pre-season teams) - SECONDARY
-3. **MaxPreps** (scraper) - TERTIARY
-4. **TABC** (scraper) - BACKUP
+2. **TABC** (scraper) - FALLBACK 1
+3. **MaxPreps** (scraper) - FALLBACK 2
+4. **GASO** (130 pre-season teams) - FALLBACK 3
 
 Every Monday at 6 AM, the system:
-- Scrapes MaxPreps rankings
-- Calculates rankings from all 686 games
-- Integrates GASO pre-season rankings
-- Scrapes TABC rankings as backup
+- Scrapes TABC rankings (fallback 1)
+- Scrapes MaxPreps rankings (fallback 2)
+- Scrapes GASO rankings (fallback 3)
+- Calculates rankings from all 686+ games (primary)
 - Merges all sources with priority order
 
 ### 3. Real-Time Record Updates
