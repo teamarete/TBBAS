@@ -12,6 +12,7 @@ from scraper import TABCScraper
 from box_score_scraper import BoxScoreCollector
 from ranking_calculator import RankingCalculator
 from email_notifier import EmailNotifier
+from gaso_scraper import GASOScraper
 import logging
 import traceback
 
@@ -137,10 +138,11 @@ def collect_box_scores():
 def update_rankings():
     """
     Update rankings on Mondays:
-    1. Scrape MaxPreps rankings (PRIMARY)
+    1. Scrape MaxPreps rankings
     2. Calculate rankings from box score data
-    3. Scrape TABC rankings (BACKUP)
-    4. Merge all sources (prioritize: calculated > MaxPreps > TABC)
+    3. Scrape GASO rankings
+    4. Scrape TABC rankings (BACKUP)
+    5. Merge all sources (priority: calculated > GASO > MaxPreps > TABC)
     """
     now = datetime.now()
 
@@ -199,14 +201,19 @@ def update_rankings():
         calculator = RankingCalculator(app=_app)
         calculated_rankings = calculator.calculate_all_rankings()
 
-        # 3. Scrape TABC rankings (BACKUP SOURCE)
-        logger.info("3. Scraping TABC rankings (BACKUP)...")
+        # 3. Scrape GASO rankings
+        logger.info("3. Scraping GASO rankings...")
+        gaso_scraper = GASOScraper()
+        gaso_data = gaso_scraper.scrape_all()
+
+        # 4. Scrape TABC rankings (BACKUP SOURCE)
+        logger.info("4. Scraping TABC rankings (BACKUP)...")
         tabc_scraper = TABCScraper()
         tabc_data = tabc_scraper.scrape_all()
 
-        # 4. Merge all sources (prioritize: calculated > MaxPreps > TABC)
-        logger.info("4. Merging rankings from all sources...")
-        merged_data = merge_rankings(calculated_rankings, maxpreps_data, tabc_data)
+        # 5. Merge all sources (priority: calculated > GASO > MaxPreps > TABC)
+        logger.info("5. Merging rankings from all sources...")
+        merged_data = merge_rankings(calculated_rankings, gaso_data, maxpreps_data, tabc_data)
 
         # Build rankings summary for email
         for classification, teams in merged_data.get('uil', {}).items():
@@ -261,14 +268,15 @@ def update_rankings():
         )
 
 
-def merge_rankings(calculated_data, maxpreps_data, tabc_data):
+def merge_rankings(calculated_data, gaso_data, maxpreps_data, tabc_data):
     """
     Merge rankings from all sources with priority:
     1. Calculated from box scores (PRIMARY)
-    2. MaxPreps rankings (SECONDARY)
-    3. TABC rankings (BACKUP)
+    2. GASO rankings (SECONDARY)
+    3. MaxPreps rankings (TERTIARY)
+    4. TABC rankings (BACKUP)
 
-    IMPORTANT: Preserves existing game statistics from previous updates
+    IMPORTANT: Preserves ALL schools and game statistics from previous updates
     """
     import json
     from pathlib import Path
@@ -321,40 +329,99 @@ def merge_rankings(calculated_data, maxpreps_data, tabc_data):
 
     # Merge UIL
     for classification in ['AAAAAA', 'AAAAA', 'AAAA', 'AAA', 'AA', 'A']:
+        # Get ALL existing teams (ranked + unranked)
+        existing_teams = existing_data.get('uil', {}).get(classification, [])
+        existing_by_name = {team['team_name']: team for team in existing_teams}
+
+        # Get new ranking sources
         calculated_teams = calculated_data.get('uil', {}).get(classification, [])
+        gaso_teams = gaso_data.get('uil', {}).get(classification, [])
         maxpreps_teams = maxpreps_data.get('uil', {}).get(classification, [])
         tabc_teams = tabc_data.get('uil', {}).get(classification, [])
 
-        if calculated_teams and len(calculated_teams) >= 10:
-            # Use calculated rankings if we have enough data
-            merged['uil'][classification] = preserve_stats(calculated_teams, 'uil', classification)
-            logger.info(f"{classification}: Using calculated rankings ({len(calculated_teams)} teams)")
-        elif maxpreps_teams and len(maxpreps_teams) >= 10:
-            # Fall back to MaxPreps
-            merged['uil'][classification] = preserve_stats(maxpreps_teams, 'uil', classification)
-            logger.info(f"{classification}: Using MaxPreps rankings ({len(maxpreps_teams)} teams)")
-        else:
-            # Fall back to TABC
-            merged['uil'][classification] = preserve_stats(tabc_teams, 'uil', classification)
-            logger.info(f"{classification}: Using TABC rankings (BACKUP) ({len(tabc_teams)} teams)")
+        # Update ranks from ranking sources (priority: calculated > GASO > MaxPreps > TABC)
+        for team in existing_teams:
+            team_name = team['team_name']
+
+            # Try to find rank from calculated (highest priority)
+            calc_team = next((t for t in calculated_teams if t.get('team_name') == team_name), None)
+            if calc_team:
+                team['rank'] = calc_team.get('rank')
+                continue
+
+            # Try GASO
+            gaso_team = next((t for t in gaso_teams if t.get('team_name') == team_name), None)
+            if gaso_team:
+                team['rank'] = gaso_team.get('rank')
+                continue
+
+            # Try MaxPreps
+            maxprep_team = next((t for t in maxpreps_teams if t.get('team_name') == team_name), None)
+            if maxprep_team:
+                team['rank'] = maxprep_team.get('rank')
+                continue
+
+            # Try TABC
+            tabc_team = next((t for t in tabc_teams if t.get('team_name') == team_name), None)
+            if tabc_team:
+                team['rank'] = tabc_team.get('rank')
+                continue
+
+            # Not ranked in any source - keep as unranked (rank = None)
+
+        # Preserve stats for all teams
+        merged['uil'][classification] = preserve_stats(existing_teams, 'uil', classification)
+
+        ranked_count = sum(1 for t in existing_teams if t.get('rank') is not None)
+        logger.info(f"{classification}: {ranked_count} ranked / {len(existing_teams)} total teams")
 
     # Merge Private/TAPPS
     for classification in ['TAPPS_6A', 'TAPPS_5A', 'TAPPS_4A', 'TAPPS_3A', 'TAPPS_2A', 'TAPPS_1A']:
+        # Get ALL existing teams (ranked + unranked)
+        existing_teams = existing_data.get('private', {}).get(classification, [])
+        existing_by_name = {team['team_name']: team for team in existing_teams}
+
+        # Get new ranking sources
         calculated_teams = calculated_data.get('private', {}).get(classification, [])
+        gaso_teams = gaso_data.get('private', {}).get(classification, [])
         maxpreps_teams = maxpreps_data.get('private', {}).get(classification, [])
         tabc_teams = tabc_data.get('private', {}).get(classification, [])
 
-        if calculated_teams and len(calculated_teams) >= 5:
-            merged['private'][classification] = preserve_stats(calculated_teams, 'private', classification)
-            logger.info(f"{classification}: Using calculated rankings ({len(calculated_teams)} teams)")
-        elif maxpreps_teams and len(maxpreps_teams) >= 5:
-            # Fall back to MaxPreps
-            merged['private'][classification] = preserve_stats(maxpreps_teams, 'private', classification)
-            logger.info(f"{classification}: Using MaxPreps rankings ({len(maxpreps_teams)} teams)")
-        else:
-            # Fall back to TABC
-            merged['private'][classification] = preserve_stats(tabc_teams, 'private', classification)
-            logger.info(f"{classification}: Using TABC rankings (BACKUP) ({len(tabc_teams)} teams)")
+        # Update ranks from ranking sources (priority: calculated > GASO > MaxPreps > TABC)
+        for team in existing_teams:
+            team_name = team['team_name']
+
+            # Try to find rank from calculated (highest priority)
+            calc_team = next((t for t in calculated_teams if t.get('team_name') == team_name), None)
+            if calc_team:
+                team['rank'] = calc_team.get('rank')
+                continue
+
+            # Try GASO
+            gaso_team = next((t for t in gaso_teams if t.get('team_name') == team_name), None)
+            if gaso_team:
+                team['rank'] = gaso_team.get('rank')
+                continue
+
+            # Try MaxPreps
+            maxprep_team = next((t for t in maxpreps_teams if t.get('team_name') == team_name), None)
+            if maxprep_team:
+                team['rank'] = maxprep_team.get('rank')
+                continue
+
+            # Try TABC
+            tabc_team = next((t for t in tabc_teams if t.get('team_name') == team_name), None)
+            if tabc_team:
+                team['rank'] = tabc_team.get('rank')
+                continue
+
+            # Not ranked in any source - keep as unranked (rank = None)
+
+        # Preserve stats for all teams
+        merged['private'][classification] = preserve_stats(existing_teams, 'private', classification)
+
+        ranked_count = sum(1 for t in existing_teams if t.get('rank') is not None)
+        logger.info(f"{classification}: {ranked_count} ranked / {len(existing_teams)} total teams")
 
     return merged
 

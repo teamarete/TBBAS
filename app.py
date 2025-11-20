@@ -311,10 +311,39 @@ def debug_info():
             info['rankings_has_data'] = 'uil' in data
             info['uil_6a_count'] = len(data.get('uil', {}).get('AAAAAA', []))
             info['last_updated'] = data.get('last_updated', 'N/A')
-            # Sample team
-            if data.get('uil', {}).get('AAAAAA'):
-                sample = data['uil']['AAAAAA'][1]  # North Crowley
-                info['sample_team'] = sample
+
+            # Count teams with records
+            teams_with_records = sum(
+                1 for classification in data['uil'].values()
+                for team in classification
+                if team.get('wins') is not None
+            )
+            info['teams_with_records'] = teams_with_records
+
+            # Sample teams with records
+            sample_teams = []
+            for classification in data['uil'].values():
+                for team in classification:
+                    if team.get('wins') is not None and len(sample_teams) < 5:
+                        sample_teams.append({
+                            'name': team['team_name'],
+                            'record': f"{team.get('wins', 0)}-{team.get('losses', 0)}",
+                            'ppg': team.get('ppg'),
+                            'district': team.get('district')
+                        })
+            info['sample_teams_with_records'] = sample_teams
+
+            # Check TAPPS districts
+            tapps_with_districts = 0
+            tapps_total = 0
+            for classification in data['private'].values():
+                for team in classification:
+                    tapps_total += 1
+                    if team.get('district'):
+                        tapps_with_districts += 1
+            info['tapps_teams_total'] = tapps_total
+            info['tapps_teams_with_districts'] = tapps_with_districts
+
     return jsonify(info)
 
 
