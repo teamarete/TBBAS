@@ -411,6 +411,25 @@ def merge_rankings(calculated_data, tabc_data, maxpreps_data, gaso_data):
                 })
                 existing_by_name[team_name] = existing_teams[-1]
 
+        # RE-RANK: Sort teams by their calculated rank and assign clean 1-25 rankings
+        # This ensures we have sequential 1, 2, 3... rankings after weighted averaging
+        ranked_teams = [t for t in existing_teams if t.get('rank') is not None]
+        unranked_teams = [t for t in existing_teams if t.get('rank') is None]
+
+        # Sort by weighted rank (lower is better)
+        ranked_teams.sort(key=lambda x: x['rank'])
+
+        # Assign clean sequential ranks 1-25 to top teams
+        for i, team in enumerate(ranked_teams[:25], start=1):
+            team['rank'] = i
+
+        # Teams beyond top 25 become unranked
+        for team in ranked_teams[25:]:
+            team['rank'] = None
+
+        # Combine ranked and unranked teams
+        existing_teams = ranked_teams + unranked_teams
+
         # Preserve stats for all teams
         merged['uil'][classification] = preserve_stats(existing_teams, 'uil', classification)
 
@@ -492,6 +511,25 @@ def merge_rankings(calculated_data, tabc_data, maxpreps_data, gaso_data):
                     'opp_ppg': None
                 })
                 existing_by_name[team_name] = existing_teams[-1]
+
+        # RE-RANK: Sort teams by their calculated rank and assign clean 1-10 rankings
+        # This ensures we have sequential 1, 2, 3... rankings after weighted averaging
+        ranked_teams = [t for t in existing_teams if t.get('rank') is not None]
+        unranked_teams = [t for t in existing_teams if t.get('rank') is None]
+
+        # Sort by weighted rank (lower is better)
+        ranked_teams.sort(key=lambda x: x['rank'])
+
+        # Assign clean sequential ranks 1-10 to top teams
+        for i, team in enumerate(ranked_teams[:10], start=1):
+            team['rank'] = i
+
+        # Teams beyond top 10 become unranked
+        for team in ranked_teams[10:]:
+            team['rank'] = None
+
+        # Combine ranked and unranked teams
+        existing_teams = ranked_teams + unranked_teams
 
         # Preserve stats for all teams
         merged['private'][classification] = preserve_stats(existing_teams, 'private', classification)
