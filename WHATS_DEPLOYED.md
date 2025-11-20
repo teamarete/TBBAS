@@ -1,7 +1,8 @@
 # 🚀 TBBAS - What's Deployed to Railway
 
 **Deployment Date:** November 20, 2025
-**Latest Commit:** `b26e350` - Complete multi-source ranking system
+**Latest Commit:** `61a0895` - Ranking display limits + documentation
+**Previous Commits:** `995981e` (display limits), `a592e97` (error fix), `b26e350` (multi-source)
 **Status:** ✅ Successfully pushed to Railway (auto-deploying now)
 
 ---
@@ -21,9 +22,10 @@
 ## ✅ What's Working Now
 
 ### 1. Complete School Coverage
-- **1,019 UIL schools** (all 6A, 5A, 4A, 3A, 2A, 1A)
-- **285 TAPPS schools** (all 6A, 5A, 4A, 3A, 2A, 1A)
+- **1,019 UIL schools** tracked in backend (all 6A, 5A, 4A, 3A, 2A, 1A)
+- **285 TAPPS schools** tracked in backend (all 6A, 5A, 4A, 3A, 2A, 1A)
 - **100% district coverage** - every school has district assigned
+- **Display:** Top 25 UIL / Top 10 TAPPS ranked teams per classification
 
 ### 2. Multi-Source Rankings
 **Priority System:**
