@@ -116,10 +116,19 @@ def classification_rankings(classification):
             # Get UIL classification rankings
             raw_teams = data.get('uil', {}).get(classification, [])
 
+        # Filter to only ranked teams
+        # UIL: Top 25, TAPPS: Top 10
+        max_rank = 10 if classification.startswith('TAPPS_') else 25
+
         # Process teams
         for team_data in raw_teams:
+            # Only include teams with a valid rank within the limit
+            team_rank = team_data.get('rank')
+            if team_rank is None or team_rank > max_rank:
+                continue
+
             team = {
-                'rank': team_data.get('rank', 0),
+                'rank': team_rank,
                 'team_name': team_data.get('team_name', 'Unknown'),
                 'wins': team_data.get('wins'),
                 'losses': team_data.get('losses'),
