@@ -20,7 +20,7 @@
     <tbody>
         {% for team in teams %}
         <tr>
-            <td>{% if team.rank > 0 %}{{ team.rank }}{% endif %}</td>
+            <td>{% if team.rank and team.rank > 0 %}{{ team.rank }}{% else %}—{% endif %}</td>
             <td><strong>{{ team.team_name }}</strong></td>
             <td>{{ team.district if team.district else '—' }}</td>
             <td>{% if team.wins is not none and team.losses is not none %}{{ team.wins }}-{{ team.losses }}{% elif team.record %}{{ team.record }}{% else %}—{% endif %}</td>
