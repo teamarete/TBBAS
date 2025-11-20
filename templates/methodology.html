@@ -6,13 +6,14 @@
 <p>Texas Boys Basketball Analytics System (TBBAS) provides KenPom-style efficiency ratings for Texas high school basketball teams across UIL, TAPPS, and SPC classifications.</p>
 
 <h3>Data Sources</h3>
-<p>Rankings are calculated from multiple data sources to ensure comprehensive coverage:</p>
-<ul>
-    <li><strong>MaxPreps:</strong> Daily automated scraping of game scores</li>
-    <li><strong>TABC:</strong> Official Texas Association of Basketball Coaches rankings</li>
-    <li><strong>GASO:</strong> Georgia Association of Scholarship Officials rankings</li>
-    <li><strong>Coach Submissions:</strong> Box scores submitted directly by coaches via our online form</li>
-</ul>
+<p>Rankings are calculated from multiple data sources with the following priority:</p>
+<ol>
+    <li><strong>Calculated Rankings (Primary):</strong> Efficiency ratings computed from game data</li>
+    <li><strong>TABC (Fallback 1):</strong> Official Texas Association of Basketball Coaches rankings</li>
+    <li><strong>MaxPreps (Fallback 2):</strong> Daily automated scraping of game scores and rankings</li>
+    <li><strong>GASO (Fallback 3):</strong> Great American Shoot Out pre-season rankings</li>
+</ol>
+<p><strong>Coach Submissions:</strong> Box scores submitted directly by coaches via our online form are used in calculating the primary efficiency ratings.</p>
 <p style="background: #fff3cd; padding: 15px; border-radius: 5px; margin: 20px 0;">
     <strong>Note for Coaches:</strong> Your submitted box scores are automatically included in rankings calculations!
     The more detailed stats you provide (FG%, 3PT%, rebounds, etc.), the more accurate the efficiency ratings will be.
