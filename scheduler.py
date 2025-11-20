@@ -138,11 +138,11 @@ def collect_box_scores():
 def update_rankings():
     """
     Update rankings on Mondays:
-    1. Scrape MaxPreps rankings
-    2. Calculate rankings from box score data
+    1. Scrape TABC rankings
+    2. Scrape MaxPreps rankings
     3. Scrape GASO rankings
-    4. Scrape TABC rankings (BACKUP)
-    5. Merge all sources (priority: calculated > GASO > MaxPreps > TABC)
+    4. Calculate rankings from box score data
+    5. Merge all sources (priority: calculated > TABC > MaxPreps > GASO)
     """
     now = datetime.now()
 
@@ -163,8 +163,13 @@ def update_rankings():
     rankings_summary = {'uil': {}, 'private': {}}
 
     try:
-        # 1. Scrape MaxPreps rankings (PRIMARY SOURCE)
-        logger.info("1. Scraping MaxPreps rankings (PRIMARY)...")
+        # 1. Scrape TABC rankings (FALLBACK 1)
+        logger.info("1. Scraping TABC rankings (FALLBACK 1)...")
+        tabc_scraper = TABCScraper()
+        tabc_data = tabc_scraper.scrape_all()
+
+        # 2. Scrape MaxPreps rankings (FALLBACK 2)
+        logger.info("2. Scraping MaxPreps rankings (FALLBACK 2)...")
         from box_score_scraper import MaxPrepsBoxScoreScraper
         maxpreps_scraper = MaxPrepsBoxScoreScraper()
 
@@ -196,24 +201,19 @@ def update_rankings():
             logger.error(f"   {error_msg}")
             errors.append(error_msg)
 
-        # 2. Calculate rankings from box score data
-        logger.info("2. Calculating rankings from box score data...")
-        calculator = RankingCalculator(app=_app)
-        calculated_rankings = calculator.calculate_all_rankings()
-
-        # 3. Scrape GASO rankings
-        logger.info("3. Scraping GASO rankings...")
+        # 3. Scrape GASO rankings (FALLBACK 3)
+        logger.info("3. Scraping GASO rankings (FALLBACK 3)...")
         gaso_scraper = GASOScraper()
         gaso_data = gaso_scraper.scrape_all()
 
-        # 4. Scrape TABC rankings (BACKUP SOURCE)
-        logger.info("4. Scraping TABC rankings (BACKUP)...")
-        tabc_scraper = TABCScraper()
-        tabc_data = tabc_scraper.scrape_all()
+        # 4. Calculate rankings from box score data (PRIMARY)
+        logger.info("4. Calculating rankings from box score data (PRIMARY)...")
+        calculator = RankingCalculator(app=_app)
+        calculated_rankings = calculator.calculate_all_rankings()
 
-        # 5. Merge all sources (priority: calculated > GASO > MaxPreps > TABC)
+        # 5. Merge all sources (priority: calculated > TABC > MaxPreps > GASO)
         logger.info("5. Merging rankings from all sources...")
-        merged_data = merge_rankings(calculated_rankings, gaso_data, maxpreps_data, tabc_data)
+        merged_data = merge_rankings(calculated_rankings, tabc_data, maxpreps_data, gaso_data)
 
         # Build rankings summary for email
         for classification, teams in merged_data.get('uil', {}).items():
@@ -268,13 +268,13 @@ def update_rankings():
         )
 
 
-def merge_rankings(calculated_data, gaso_data, maxpreps_data, tabc_data):
+def merge_rankings(calculated_data, tabc_data, maxpreps_data, gaso_data):
     """
     Merge rankings from all sources with priority:
     1. Calculated from box scores (PRIMARY)
-    2. GASO rankings (SECONDARY)
-    3. MaxPreps rankings (TERTIARY)
-    4. TABC rankings (BACKUP)
+    2. TABC rankings (FALLBACK 1)
+    3. MaxPreps rankings (FALLBACK 2)
+    4. GASO rankings (FALLBACK 3)
 
     IMPORTANT: Preserves ALL schools and game statistics from previous updates
     """
@@ -335,11 +335,11 @@ def merge_rankings(calculated_data, gaso_data, maxpreps_data, tabc_data):
 
         # Get new ranking sources
         calculated_teams = calculated_data.get('uil', {}).get(classification, [])
-        gaso_teams = gaso_data.get('uil', {}).get(classification, [])
-        maxpreps_teams = maxpreps_data.get('uil', {}).get(classification, [])
         tabc_teams = tabc_data.get('uil', {}).get(classification, [])
+        maxpreps_teams = maxpreps_data.get('uil', {}).get(classification, [])
+        gaso_teams = gaso_data.get('uil', {}).get(classification, [])
 
-        # Update ranks from ranking sources (priority: calculated > GASO > MaxPreps > TABC)
+        # Update ranks from ranking sources (priority: calculated > TABC > MaxPreps > GASO)
         for team in existing_teams:
             team_name = team['team_name']
 
@@ -349,22 +349,22 @@ def merge_rankings(calculated_data, gaso_data, maxpreps_data, tabc_data):
                 team['rank'] = calc_team.get('rank')
                 continue
 
-            # Try GASO
-            gaso_team = next((t for t in gaso_teams if t.get('team_name') == team_name), None)
-            if gaso_team:
-                team['rank'] = gaso_team.get('rank')
+            # Try TABC (fallback 1)
+            tabc_team = next((t for t in tabc_teams if t.get('team_name') == team_name), None)
+            if tabc_team:
+                team['rank'] = tabc_team.get('rank')
                 continue
 
-            # Try MaxPreps
+            # Try MaxPreps (fallback 2)
             maxprep_team = next((t for t in maxpreps_teams if t.get('team_name') == team_name), None)
             if maxprep_team:
                 team['rank'] = maxprep_team.get('rank')
                 continue
 
-            # Try TABC
-            tabc_team = next((t for t in tabc_teams if t.get('team_name') == team_name), None)
-            if tabc_team:
-                team['rank'] = tabc_team.get('rank')
+            # Try GASO (fallback 3)
+            gaso_team = next((t for t in gaso_teams if t.get('team_name') == team_name), None)
+            if gaso_team:
+                team['rank'] = gaso_team.get('rank')
                 continue
 
             # Not ranked in any source - keep as unranked (rank = None)
@@ -383,11 +383,11 @@ def merge_rankings(calculated_data, gaso_data, maxpreps_data, tabc_data):
 
         # Get new ranking sources
         calculated_teams = calculated_data.get('private', {}).get(classification, [])
-        gaso_teams = gaso_data.get('private', {}).get(classification, [])
-        maxpreps_teams = maxpreps_data.get('private', {}).get(classification, [])
         tabc_teams = tabc_data.get('private', {}).get(classification, [])
+        maxpreps_teams = maxpreps_data.get('private', {}).get(classification, [])
+        gaso_teams = gaso_data.get('private', {}).get(classification, [])
 
-        # Update ranks from ranking sources (priority: calculated > GASO > MaxPreps > TABC)
+        # Update ranks from ranking sources (priority: calculated > TABC > MaxPreps > GASO)
         for team in existing_teams:
             team_name = team['team_name']
 
@@ -397,22 +397,22 @@ def merge_rankings(calculated_data, gaso_data, maxpreps_data, tabc_data):
                 team['rank'] = calc_team.get('rank')
                 continue
 
-            # Try GASO
-            gaso_team = next((t for t in gaso_teams if t.get('team_name') == team_name), None)
-            if gaso_team:
-                team['rank'] = gaso_team.get('rank')
+            # Try TABC (fallback 1)
+            tabc_team = next((t for t in tabc_teams if t.get('team_name') == team_name), None)
+            if tabc_team:
+                team['rank'] = tabc_team.get('rank')
                 continue
 
-            # Try MaxPreps
+            # Try MaxPreps (fallback 2)
             maxprep_team = next((t for t in maxpreps_teams if t.get('team_name') == team_name), None)
             if maxprep_team:
                 team['rank'] = maxprep_team.get('rank')
                 continue
 
-            # Try TABC
-            tabc_team = next((t for t in tabc_teams if t.get('team_name') == team_name), None)
-            if tabc_team:
-                team['rank'] = tabc_team.get('rank')
+            # Try GASO (fallback 3)
+            gaso_team = next((t for t in gaso_teams if t.get('team_name') == team_name), None)
+            if gaso_team:
+                team['rank'] = gaso_team.get('rank')
                 continue
 
             # Not ranked in any source - keep as unranked (rank = None)
