@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-20T10:17:39.225557",
-  "source": "expanded_all_schools",
+  "last_updated": "2025-11-20T21:06:02.736513",
+  "source": "TABC rankings (forced complete top 25/10)",
   "uil": {
     "AAAAAA": [
       {
@@ -20,7 +20,7 @@
         "uil_verified": false
       },
       {
-        "rank": 8,
+        "rank": null,
         "team_name": "Katy Jordan",
         "wins": null,
         "losses": null,
@@ -38,7 +38,7 @@
         "uil_official_name": "Katy Jordan"
       },
       {
-        "rank": 10,
+        "rank": 9,
         "team_name": "Steele",
         "wins": 3,
         "losses": 0,
@@ -57,7 +57,7 @@
         "uil_verified": false
       },
       {
-        "rank": 13,
+        "rank": 10,
         "team_name": "Austin Westlake",
         "wins": null,
         "losses": null,
@@ -65,7 +65,7 @@
         "uil_verified": false
       },
       {
-        "rank": 14,
+        "rank": 11,
         "team_name": "Little Elm",
         "wins": 2,
         "losses": 1,
@@ -84,7 +84,7 @@
         "uil_verified": false
       },
       {
-        "rank": 16,
+        "rank": 21,
         "team_name": "Arl Martin",
         "wins": 1,
         "losses": 0,
@@ -95,7 +95,7 @@
         "opp_ppg": 45.0
       },
       {
-        "rank": 17,
+        "rank": 13,
         "team_name": "Cy Falls",
         "wins": 1,
         "losses": 0,
@@ -107,7 +107,7 @@
         "opp_ppg": 21.0
       },
       {
-        "rank": 20,
+        "rank": 16,
         "team_name": "Mesquite Horn",
         "wins": null,
         "losses": null,
@@ -115,7 +115,7 @@
         "uil_verified": false
       },
       {
-        "rank": 21,
+        "rank": null,
         "team_name": "Vandegrift",
         "wins": 1,
         "losses": 1,
@@ -126,7 +126,7 @@
         "uil_verified": false
       },
       {
-        "rank": 22,
+        "rank": 20,
         "team_name": "Summer Creek",
         "wins": 1,
         "losses": 1,
@@ -137,7 +137,7 @@
         "uil_verified": false
       },
       {
-        "rank": 23,
+        "rank": 17,
         "team_name": "SA Harlan",
         "wins": null,
         "losses": null,
@@ -317,7 +317,7 @@
       {
         "team_name": "Allen",
         "district": "6",
-        "rank": null,
+        "rank": 7,
         "wins": 3,
         "losses": 0,
         "games": 3,
@@ -707,7 +707,7 @@
       {
         "team_name": "Duncanville",
         "district": "11",
-        "rank": null,
+        "rank": 1,
         "wins": 1,
         "losses": 0,
         "games": 1,
@@ -1647,7 +1647,7 @@
       {
         "team_name": "Odessa Permian",
         "district": "2",
-        "rank": null,
+        "rank": 25,
         "wins": null,
         "losses": null,
         "games": null,
@@ -1973,6 +1973,96 @@
         "games": 1,
         "ppg": 57.0,
         "opp_ppg": 66.0
+      },
+      {
+        "team_name": "North Crowley",
+        "rank": 2,
+        "district": "3",
+        "wins": 3,
+        "losses": 0,
+        "games": 3,
+        "ppg": 81.3,
+        "opp_ppg": 63.0
+      },
+      {
+        "team_name": "Atascocita",
+        "rank": 5,
+        "district": "23",
+        "wins": 1,
+        "losses": 2,
+        "games": 3,
+        "ppg": 62.7,
+        "opp_ppg": 48.7
+      },
+      {
+        "team_name": "Lancaster",
+        "rank": 6,
+        "district": "11",
+        "wins": 3,
+        "losses": 1,
+        "games": 4,
+        "ppg": 66.5,
+        "opp_ppg": 56.5
+      },
+      {
+        "team_name": "Pearland",
+        "rank": 14,
+        "district": "22",
+        "wins": 1,
+        "losses": 1,
+        "games": 2,
+        "ppg": 47.0,
+        "opp_ppg": 43.0
+      },
+      {
+        "team_name": "Plano",
+        "rank": 18,
+        "district": "6",
+        "wins": 2,
+        "losses": 1,
+        "games": 3,
+        "ppg": 71.0,
+        "opp_ppg": 66.3
+      },
+      {
+        "team_name": "Grand Prairie",
+        "rank": 19,
+        "district": "7",
+        "wins": 2,
+        "losses": 0,
+        "games": 2,
+        "ppg": 57.0,
+        "opp_ppg": 47.0
+      },
+      {
+        "team_name": "Waxahachie",
+        "rank": 22,
+        "district": "11",
+        "wins": 0,
+        "losses": 1,
+        "games": 1,
+        "ppg": 67.0,
+        "opp_ppg": 72.0
+      },
+      {
+        "team_name": "Mans Lake Ridge",
+        "rank": 23,
+        "district": "3",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Lake Travis",
+        "rank": 24,
+        "district": "26",
+        "wins": 3,
+        "losses": 0,
+        "games": 3,
+        "ppg": 67.0,
+        "opp_ppg": 56.0
       }
     ],
     "AAAAA": [
@@ -2019,7 +2109,7 @@
         "uil_verified": false
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team_name": "SA Wagner",
         "wins": null,
         "losses": null,
@@ -2038,7 +2128,7 @@
         "uil_verified": false
       },
       {
-        "rank": 14,
+        "rank": 22,
         "team_name": "SA Jay",
         "wins": null,
         "losses": null,
@@ -2057,7 +2147,7 @@
         "uil_verified": false
       },
       {
-        "rank": 18,
+        "rank": 17,
         "team_name": "Frisco Heritage",
         "wins": 1,
         "losses": 0,
@@ -2068,7 +2158,7 @@
         "opp_ppg": 47.0
       },
       {
-        "rank": 20,
+        "rank": 18,
         "team_name": "Alamo Heights",
         "wins": 2,
         "losses": 0,
@@ -2079,7 +2169,7 @@
         "uil_verified": false
       },
       {
-        "rank": 23,
+        "rank": null,
         "team_name": "PA Memorial",
         "wins": 1,
         "losses": 0,
@@ -2312,7 +2402,7 @@
       {
         "team_name": "Amarillo",
         "district": "3",
-        "rank": null,
+        "rank": 15,
         "wins": 2,
         "losses": 0,
         "games": 2,
@@ -2412,7 +2502,7 @@
       {
         "team_name": "Birdville",
         "district": "6",
-        "rank": null,
+        "rank": 3,
         "wins": 3,
         "losses": 0,
         "games": 3,
@@ -2812,7 +2902,7 @@
       {
         "team_name": "Denton",
         "district": "6",
-        "rank": null,
+        "rank": 20,
         "wins": 2,
         "losses": 0,
         "games": 2,
@@ -2822,7 +2912,7 @@
       {
         "team_name": "Denton Ryan",
         "district": "6",
-        "rank": null,
+        "rank": 21,
         "wins": null,
         "losses": null,
         "games": null,
@@ -3352,7 +3442,7 @@
       {
         "team_name": "Lufkin",
         "district": "10",
-        "rank": null,
+        "rank": 14,
         "wins": 1,
         "losses": 0,
         "games": 1,
@@ -3392,7 +3482,7 @@
       {
         "team_name": "Melissa",
         "district": "9",
-        "rank": null,
+        "rank": 23,
         "wins": 0,
         "losses": 2,
         "games": 2,
@@ -3532,7 +3622,7 @@
       {
         "team_name": "Palo Duro",
         "district": "3",
-        "rank": null,
+        "rank": 24,
         "wins": 1,
         "losses": 0,
         "games": 1,
@@ -3838,11 +3928,91 @@
         "games": null,
         "ppg": null,
         "opp_ppg": null
+      },
+      {
+        "team_name": "Mans Timberview",
+        "rank": 6,
+        "district": "8",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Red Oak",
+        "rank": 7,
+        "district": "15",
+        "wins": 1,
+        "losses": 2,
+        "games": 3,
+        "ppg": 56.7,
+        "opp_ppg": 62.0
+      },
+      {
+        "team_name": "FB Marshall",
+        "rank": 8,
+        "district": "22",
+        "wins": 1,
+        "losses": 0,
+        "games": 1,
+        "ppg": 64.0,
+        "opp_ppg": 51.0
+      },
+      {
+        "team_name": "Mans Summit",
+        "rank": 11,
+        "district": "8",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Friendswood",
+        "rank": 12,
+        "district": "20",
+        "wins": 2,
+        "losses": 1,
+        "games": 3,
+        "ppg": 44.0,
+        "opp_ppg": 42.3
+      },
+      {
+        "team_name": "The Colony",
+        "rank": 13,
+        "district": "12",
+        "wins": 0,
+        "losses": 1,
+        "games": 1,
+        "ppg": 56.0,
+        "opp_ppg": 65.0
+      },
+      {
+        "team_name": "Iowa Colony",
+        "rank": 19,
+        "district": "20",
+        "wins": 2,
+        "losses": 0,
+        "games": 2,
+        "ppg": 69.0,
+        "opp_ppg": 54.0
+      },
+      {
+        "team_name": "Leander Glenn",
+        "rank": 25,
+        "district": "25",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
       }
     ],
     "AAAA": [
       {
-        "rank": 1,
+        "rank": 2,
         "team_name": "Dallas Kimball",
         "wins": null,
         "losses": null,
@@ -3850,7 +4020,7 @@
         "uil_verified": false
       },
       {
-        "rank": 3,
+        "rank": 4,
         "team_name": "Estacado",
         "wins": 1,
         "losses": 0,
@@ -3861,7 +4031,7 @@
         "opp_ppg": 44.0
       },
       {
-        "rank": 7,
+        "rank": 1,
         "team_name": "Dallas Carter",
         "wins": null,
         "losses": null,
@@ -4126,7 +4296,7 @@
       {
         "team_name": "Bridge City",
         "district": "18",
-        "rank": null,
+        "rank": 24,
         "wins": 1,
         "losses": 1,
         "games": 2,
@@ -4136,7 +4306,7 @@
       {
         "team_name": "Brock",
         "district": "6",
-        "rank": null,
+        "rank": 15,
         "wins": 1,
         "losses": 1,
         "games": 2,
@@ -4996,7 +5166,7 @@
       {
         "team_name": "Paris",
         "district": "14",
-        "rank": null,
+        "rank": 13,
         "wins": 1,
         "losses": 1,
         "games": 2,
@@ -5302,6 +5472,146 @@
         "games": null,
         "ppg": null,
         "opp_ppg": null
+      },
+      {
+        "team_name": "Hou Wheatley",
+        "rank": 3,
+        "district": "20",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "LaMarque",
+        "rank": 5,
+        "district": "24",
+        "wins": 1,
+        "losses": 0,
+        "games": 1,
+        "ppg": 70.0,
+        "opp_ppg": 27.0
+      },
+      {
+        "team_name": "Kennedale",
+        "rank": 6,
+        "district": "12",
+        "wins": 2,
+        "losses": 0,
+        "games": 2,
+        "ppg": 83.0,
+        "opp_ppg": 54.5
+      },
+      {
+        "team_name": "Hou Yates",
+        "rank": 7,
+        "district": "20",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Hou Washington",
+        "rank": 8,
+        "district": "20",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Panther Creek",
+        "rank": 9,
+        "district": "9",
+        "wins": 1,
+        "losses": 3,
+        "games": 4,
+        "ppg": 62.2,
+        "opp_ppg": 72.5
+      },
+      {
+        "team_name": "Stafford",
+        "rank": 12,
+        "district": "21",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Randall",
+        "rank": 14,
+        "district": "4",
+        "wins": 1,
+        "losses": 2,
+        "games": 3,
+        "ppg": 52.7,
+        "opp_ppg": 77.3
+      },
+      {
+        "team_name": "Dallas Lincoln",
+        "rank": 16,
+        "district": "11",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Somerset",
+        "rank": 19,
+        "district": "27",
+        "wins": 0,
+        "losses": 1,
+        "games": 1,
+        "ppg": 50.0,
+        "opp_ppg": 52.0
+      },
+      {
+        "team_name": "Chapel Hill",
+        "rank": 20,
+        "district": "16",
+        "wins": 2,
+        "losses": 0,
+        "games": 2,
+        "ppg": 74.5,
+        "opp_ppg": 68.0
+      },
+      {
+        "team_name": "FB Crawford",
+        "rank": 21,
+        "district": "21",
+        "wins": 1,
+        "losses": 0,
+        "games": 1,
+        "ppg": 62.0,
+        "opp_ppg": 43.0
+      },
+      {
+        "team_name": "Dallas Roosevelt",
+        "rank": 22,
+        "district": "11",
+        "wins": 0,
+        "losses": 1,
+        "games": 1,
+        "ppg": 43.0,
+        "opp_ppg": 61.0
+      },
+      {
+        "team_name": "West Plains",
+        "rank": 23,
+        "district": "4",
+        "wins": 2,
+        "losses": 0,
+        "games": 2,
+        "ppg": 69.5,
+        "opp_ppg": 34.5
       }
     ],
     "AAA": [
@@ -5412,7 +5722,7 @@
         "uil_verified": false
       },
       {
-        "rank": 25,
+        "rank": null,
         "team_name": "Tatum",
         "wins": null,
         "losses": null,
@@ -6112,7 +6422,7 @@
       {
         "team_name": "Orangefield",
         "district": "22",
-        "rank": null,
+        "rank": 20,
         "wins": 0,
         "losses": 1,
         "games": 1,
@@ -6122,7 +6432,7 @@
       {
         "team_name": "Paradise",
         "district": "10",
-        "rank": null,
+        "rank": 2,
         "wins": 2,
         "losses": 0,
         "games": 2,
@@ -6142,7 +6452,7 @@
       {
         "team_name": "Peaster",
         "district": "8",
-        "rank": null,
+        "rank": 23,
         "wins": 0,
         "losses": 1,
         "games": 1,
@@ -6338,6 +6648,116 @@
         "games": null,
         "ppg": null,
         "opp_ppg": null
+      },
+      {
+        "team_name": "Westwood",
+        "rank": 1,
+        "district": "20",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Slaton",
+        "rank": 4,
+        "district": "2",
+        "wins": 1,
+        "losses": 0,
+        "games": 1,
+        "ppg": 76.0,
+        "opp_ppg": 72.0
+      },
+      {
+        "team_name": "Mexia",
+        "rank": 5,
+        "district": "20",
+        "wins": 0,
+        "losses": 1,
+        "games": 1,
+        "ppg": 65.0,
+        "opp_ppg": 80.0
+      },
+      {
+        "team_name": "Onalaska",
+        "rank": 8,
+        "district": "23",
+        "wins": 2,
+        "losses": 0,
+        "games": 2,
+        "ppg": 75.5,
+        "opp_ppg": 61.0
+      },
+      {
+        "team_name": "Dallas Madison",
+        "rank": 9,
+        "district": "9",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Hitchcock",
+        "rank": 10,
+        "district": "24",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Shallowater",
+        "rank": 12,
+        "district": "2",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Palmer",
+        "rank": 15,
+        "district": "18",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Ponder",
+        "rank": 16,
+        "district": "10",
+        "wins": 1,
+        "losses": 1,
+        "games": 2,
+        "ppg": 54.5,
+        "opp_ppg": 57.5
+      },
+      {
+        "team_name": "East Chambers",
+        "rank": 21,
+        "district": "22",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Iowa Park",
+        "rank": 25,
+        "district": "7",
+        "wins": 0,
+        "losses": 1,
+        "games": 1,
+        "ppg": 58.0,
+        "opp_ppg": 65.0
       }
     ],
     "AA": [
@@ -6612,7 +7032,7 @@
       {
         "team_name": "Clarksville",
         "district": "16",
-        "rank": null,
+        "rank": 24,
         "wins": null,
         "losses": null,
         "games": null,
@@ -6852,7 +7272,7 @@
       {
         "team_name": "Frankston",
         "district": "19",
-        "rank": null,
+        "rank": 21,
         "wins": 0,
         "losses": 1,
         "games": 1,
@@ -6902,7 +7322,7 @@
       {
         "team_name": "Gary",
         "district": "23",
-        "rank": null,
+        "rank": 17,
         "wins": 1,
         "losses": 1,
         "games": 2,
@@ -6922,7 +7342,7 @@
       {
         "team_name": "Goldthwaite",
         "district": "29",
-        "rank": null,
+        "rank": 18,
         "wins": null,
         "losses": null,
         "games": null,
@@ -6932,7 +7352,7 @@
       {
         "team_name": "Graford",
         "district": "11",
-        "rank": null,
+        "rank": 5,
         "wins": 2,
         "losses": 0,
         "games": 2,
@@ -6962,7 +7382,7 @@
       {
         "team_name": "Gruver",
         "district": "1",
-        "rank": null,
+        "rank": 13,
         "wins": null,
         "losses": null,
         "games": null,
@@ -7032,7 +7452,7 @@
       {
         "team_name": "Hawkins",
         "district": "21",
-        "rank": null,
+        "rank": 23,
         "wins": 1,
         "losses": 0,
         "games": 1,
@@ -7042,7 +7462,7 @@
       {
         "team_name": "Hearne",
         "district": "26",
-        "rank": null,
+        "rank": 3,
         "wins": 0,
         "losses": 1,
         "games": 1,
@@ -7262,7 +7682,7 @@
       {
         "team_name": "Lindsay",
         "district": "13",
-        "rank": null,
+        "rank": 19,
         "wins": null,
         "losses": null,
         "games": null,
@@ -7272,7 +7692,7 @@
       {
         "team_name": "Lipan",
         "district": "11",
-        "rank": null,
+        "rank": 2,
         "wins": 1,
         "losses": 1,
         "games": 2,
@@ -7322,7 +7742,7 @@
       {
         "team_name": "Marlin",
         "district": "17",
-        "rank": null,
+        "rank": 7,
         "wins": null,
         "losses": null,
         "games": null,
@@ -7342,7 +7762,7 @@
       {
         "team_name": "Martins Mill",
         "district": "19",
-        "rank": null,
+        "rank": 1,
         "wins": 1,
         "losses": 0,
         "games": 1,
@@ -7502,7 +7922,7 @@
       {
         "team_name": "Mumford",
         "district": "26",
-        "rank": null,
+        "rank": 12,
         "wins": 1,
         "losses": 1,
         "games": 2,
@@ -7512,7 +7932,7 @@
       {
         "team_name": "New Home",
         "district": "4",
-        "rank": null,
+        "rank": 9,
         "wins": 1,
         "losses": 0,
         "games": 1,
@@ -7562,7 +7982,7 @@
       {
         "team_name": "Olton",
         "district": "3",
-        "rank": null,
+        "rank": 20,
         "wins": 1,
         "losses": 0,
         "games": 1,
@@ -7632,7 +8052,7 @@
       {
         "team_name": "Plains",
         "district": "5",
-        "rank": null,
+        "rank": 22,
         "wins": 1,
         "losses": 1,
         "games": 2,
@@ -7642,7 +8062,7 @@
       {
         "team_name": "Port Aransas",
         "district": "31",
-        "rank": null,
+        "rank": 8,
         "wins": 1,
         "losses": 0,
         "games": 1,
@@ -7732,7 +8152,7 @@
       {
         "team_name": "Ropes",
         "district": "5",
-        "rank": null,
+        "rank": 4,
         "wins": null,
         "losses": null,
         "games": null,
@@ -7792,7 +8212,7 @@
       {
         "team_name": "San Augustine",
         "district": "24",
-        "rank": null,
+        "rank": 14,
         "wins": null,
         "losses": null,
         "games": null,
@@ -8082,7 +8502,7 @@
       {
         "team_name": "Waco Meyer",
         "district": "12",
-        "rank": null,
+        "rank": 10,
         "wins": null,
         "losses": null,
         "games": null,
@@ -8198,6 +8618,46 @@
         "games": null,
         "ppg": null,
         "opp_ppg": null
+      },
+      {
+        "team_name": "Tom Bean",
+        "rank": 6,
+        "district": "14",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Abernathy",
+        "rank": 11,
+        "district": "4",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Slidell",
+        "rank": 16,
+        "district": "13",
+        "wins": 1,
+        "losses": 1,
+        "games": 2,
+        "ppg": 64.5,
+        "opp_ppg": 70.0
+      },
+      {
+        "team_name": "Poolville",
+        "rank": 25,
+        "district": "11",
+        "wins": 2,
+        "losses": 0,
+        "games": 2,
+        "ppg": 66.5,
+        "opp_ppg": 49.5
       }
     ],
     "A": [
@@ -8218,7 +8678,7 @@
         "uil_verified": false
       },
       {
-        "rank": 19,
+        "rank": 21,
         "team_name": "Wildorado",
         "wins": null,
         "losses": null,
@@ -8545,7 +9005,7 @@
       {
         "team_name": "Brookeland",
         "district": "28",
-        "rank": null,
+        "rank": 4,
         "wins": 0,
         "losses": 2,
         "games": 2,
@@ -8855,7 +9315,7 @@
       {
         "team_name": "Fayetteville",
         "district": "29",
-        "rank": null,
+        "rank": 7,
         "wins": 2,
         "losses": 0,
         "games": 2,
@@ -8935,7 +9395,7 @@
       {
         "team_name": "Gordon",
         "district": "13",
-        "rank": null,
+        "rank": 2,
         "wins": null,
         "losses": null,
         "games": null,
@@ -8975,7 +9435,7 @@
       {
         "team_name": "Groveton Centerville",
         "district": "27",
-        "rank": null,
+        "rank": 12,
         "wins": 0,
         "losses": 1,
         "games": 1,
@@ -9075,7 +9535,7 @@
       {
         "team_name": "Huckabay",
         "district": "22",
-        "rank": null,
+        "rank": 5,
         "wins": 2,
         "losses": 0,
         "games": 2,
@@ -9125,7 +9585,7 @@
       {
         "team_name": "Jayton",
         "district": "15",
-        "rank": null,
+        "rank": 1,
         "wins": null,
         "losses": null,
         "games": null,
@@ -9145,7 +9605,7 @@
       {
         "team_name": "Kennard",
         "district": "27",
-        "rank": null,
+        "rank": 11,
         "wins": 1,
         "losses": 0,
         "games": 1,
@@ -9325,7 +9785,7 @@
       {
         "team_name": "Lorenzo",
         "district": "7",
-        "rank": null,
+        "rank": 14,
         "wins": 2,
         "losses": 0,
         "games": 2,
@@ -9375,7 +9835,7 @@
       {
         "team_name": "May",
         "district": "21",
-        "rank": null,
+        "rank": 17,
         "wins": null,
         "losses": null,
         "games": null,
@@ -9385,7 +9845,7 @@
       {
         "team_name": "McLean",
         "district": "2",
-        "rank": null,
+        "rank": 19,
         "wins": 1,
         "losses": 0,
         "games": 1,
@@ -9465,7 +9925,7 @@
       {
         "team_name": "Munday",
         "district": "16",
-        "rank": null,
+        "rank": 16,
         "wins": 0,
         "losses": 1,
         "games": 1,
@@ -9475,7 +9935,7 @@
       {
         "team_name": "Nazareth",
         "district": "4",
-        "rank": null,
+        "rank": 18,
         "wins": null,
         "losses": null,
         "games": null,
@@ -9685,7 +10145,7 @@
       {
         "team_name": "Richards",
         "district": "29",
-        "rank": null,
+        "rank": 20,
         "wins": 0,
         "losses": 1,
         "games": 1,
@@ -9715,7 +10175,7 @@
       {
         "team_name": "Robert Lee",
         "district": "11",
-        "rank": null,
+        "rank": 22,
         "wins": null,
         "losses": null,
         "games": null,
@@ -9895,7 +10355,7 @@
       {
         "team_name": "Slocum",
         "district": "24",
-        "rank": null,
+        "rank": 13,
         "wins": 2,
         "losses": 0,
         "games": 2,
@@ -9955,7 +10415,7 @@
       {
         "team_name": "Texline",
         "district": "3",
-        "rank": null,
+        "rank": 3,
         "wins": null,
         "losses": null,
         "games": null,
@@ -10145,7 +10605,7 @@
       {
         "team_name": "Whitharral",
         "district": "5",
-        "rank": null,
+        "rank": 9,
         "wins": null,
         "losses": null,
         "games": null,
@@ -10181,6 +10641,26 @@
         "games": null,
         "ppg": null,
         "opp_ppg": null
+      },
+      {
+        "team_name": "Perrin Whitt",
+        "rank": 6,
+        "district": "17",
+        "wins": 1,
+        "losses": 0,
+        "games": 1,
+        "ppg": 57.0,
+        "opp_ppg": 53.0
+      },
+      {
+        "team_name": "Wells",
+        "rank": 10,
+        "district": "27",
+        "wins": 1,
+        "losses": 1,
+        "games": 2,
+        "ppg": 59.0,
+        "opp_ppg": 60.0
       }
     ]
   },
@@ -10194,21 +10674,21 @@
         "district": "1"
       },
       {
-        "rank": 2,
+        "rank": 10,
         "team_name": "Addison Greenhill School",
         "wins": null,
         "losses": null,
         "district": "SPC North"
       },
       {
-        "rank": 3,
+        "rank": 2,
         "team_name": "Dallas St. Mark\u2019s School of Texas",
         "wins": null,
         "losses": null,
         "district": "SPC North"
       },
       {
-        "rank": 4,
+        "rank": 3,
         "team_name": "Houston Christian",
         "wins": 2,
         "losses": 0,
@@ -10218,42 +10698,42 @@
         "opp_ppg": 55.0
       },
       {
-        "rank": 5,
+        "rank": 7,
         "team_name": "San Antonio TMI Episcopal",
         "wins": null,
         "losses": null,
         "district": "3"
       },
       {
-        "rank": 6,
+        "rank": 8,
         "team_name": "Austin St. Michael\u2019s",
         "wins": null,
         "losses": null,
         "district": "3"
       },
       {
-        "rank": 7,
+        "rank": 5,
         "team_name": "San Antonio Antonian Prep",
         "wins": null,
         "losses": null,
         "district": "3"
       },
       {
-        "rank": 8,
+        "rank": 6,
         "team_name": "Plano John Paul II",
         "wins": null,
         "losses": null,
         "district": "2"
       },
       {
-        "rank": 9,
+        "rank": null,
         "team_name": "Dallas Bishop Lynch",
         "wins": null,
         "losses": null,
         "district": "2"
       },
       {
-        "rank": 10,
+        "rank": 9,
         "team_name": "Houston The Kinkaid School",
         "wins": null,
         "losses": null,
@@ -10828,6 +11308,16 @@
         "games": null,
         "ppg": null,
         "opp_ppg": null
+      },
+      {
+        "team_name": "San Antonio Central Catholic",
+        "rank": 4,
+        "district": "2",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
       }
     ],
     "TAPPS_5A": [
@@ -10853,7 +11343,7 @@
         "district": "1"
       },
       {
-        "rank": 4,
+        "rank": null,
         "team_name": "Episcopal School of Dallas",
         "wins": 0,
         "losses": 2,
@@ -10863,21 +11353,21 @@
         "opp_ppg": 76.5
       },
       {
-        "rank": 5,
+        "rank": 7,
         "team_name": "The Woodlands Christian Academy",
         "wins": null,
         "losses": null,
         "district": "5"
       },
       {
-        "rank": 6,
+        "rank": 5,
         "team_name": "Bullard The Brook Hill School",
         "wins": null,
         "losses": null,
         "district": "2"
       },
       {
-        "rank": 7,
+        "rank": 6,
         "team_name": "Midland Christian",
         "wins": 1,
         "losses": 0,
@@ -10887,21 +11377,21 @@
         "opp_ppg": 16.0
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team_name": "Sugar Land Fort Bend Christian Academy",
         "wins": null,
         "losses": null,
         "district": "4"
       },
       {
-        "rank": 9,
+        "rank": null,
         "team_name": "Brownsville St. Joseph Academy",
         "wins": null,
         "losses": null,
         "district": "3"
       },
       {
-        "rank": 10,
+        "rank": null,
         "team_name": "San Antonio St. Anthony Catholic",
         "wins": null,
         "losses": null,
@@ -11030,7 +11520,7 @@
       {
         "team_name": "Austin Hyde Park",
         "district": "2",
-        "rank": null,
+        "rank": 10,
         "wins": null,
         "losses": null,
         "games": null,
@@ -11180,12 +11670,22 @@
       {
         "team_name": "Fort Worth Southwest Christian",
         "district": "1",
-        "rank": null,
+        "rank": 8,
         "wins": null,
         "losses": null,
         "games": null,
         "ppg": null,
         "opp_ppg": null
+      },
+      {
+        "team_name": "Grapevine Faith Christian",
+        "rank": 4,
+        "district": "1",
+        "wins": 0,
+        "losses": 1,
+        "games": 1,
+        "ppg": 47.0,
+        "opp_ppg": 92.0
       }
     ],
     "TAPPS_4A": [
@@ -11249,7 +11749,7 @@
         "district": "5"
       },
       {
-        "rank": 9,
+        "rank": null,
         "team_name": "Colleyville Covenenat Christian",
         "wins": null,
         "losses": null,
@@ -11566,6 +12066,16 @@
         "team_name": "Tyler All Saints",
         "district": "3",
         "rank": null,
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Colleyville Covenant Christian",
+        "rank": 9,
+        "district": "2",
         "wins": null,
         "losses": null,
         "games": null,
@@ -11891,14 +12401,14 @@
         "district": "1"
       },
       {
-        "rank": 3,
+        "rank": 4,
         "team_name": "All Saints Episcopal School-Lubbock",
         "wins": null,
         "losses": null,
         "district": "1"
       },
       {
-        "rank": 4,
+        "rank": 3,
         "team_name": "O\u2019Connell College Preparatory School-Galveston",
         "wins": null,
         "losses": null,
@@ -11926,21 +12436,21 @@
         "district": "3"
       },
       {
-        "rank": 8,
+        "rank": null,
         "team_name": "Calvary Baptist School-Conroe",
         "wins": null,
         "losses": null,
         "district": "7"
       },
       {
-        "rank": 9,
+        "rank": 8,
         "team_name": "Legacy Christian Academy-Beaumont",
         "wins": null,
         "losses": null,
         "district": "8"
       },
       {
-        "rank": 10,
+        "rank": 9,
         "team_name": "Victory Christian Academy-Decatur",
         "wins": null,
         "losses": null,
@@ -12395,6 +12905,16 @@
         "games": null,
         "ppg": null,
         "opp_ppg": null
+      },
+      {
+        "team_name": "Faith Academy-Victoria",
+        "rank": 10,
+        "district": "7",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
       }
     ],
     "TAPPS_1A": [
@@ -12420,35 +12940,35 @@
         "district": "6"
       },
       {
-        "rank": 4,
+        "rank": 8,
         "team_name": "The Covenant Preparatory School-Kingwood",
         "wins": null,
         "losses": null,
         "district": "7"
       },
       {
-        "rank": 5,
+        "rank": 4,
         "team_name": "Harvest Christian Academy-Edinburgh",
         "wins": null,
         "losses": null,
         "district": "5"
       },
       {
-        "rank": 6,
+        "rank": 7,
         "team_name": "Macedonian Christian Academy-Alamo",
         "wins": null,
         "losses": null,
         "district": "5"
       },
       {
-        "rank": 7,
+        "rank": 5,
         "team_name": "Regents Academy-Nacogdoches",
         "wins": null,
         "losses": null,
         "district": "4"
       },
       {
-        "rank": 8,
+        "rank": 6,
         "team_name": "Founders Christian School-Spring",
         "wins": null,
         "losses": null,
@@ -12462,7 +12982,7 @@
         "district": "2"
       },
       {
-        "rank": 10,
+        "rank": null,
         "team_name": "Azle Christian School",
         "wins": null,
         "losses": null,
@@ -12877,11 +13397,21 @@
         "games": null,
         "ppg": null,
         "opp_ppg": null
+      },
+      {
+        "team_name": "Robert M Beren Academy-Houston",
+        "rank": 10,
+        "district": "7",
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
       }
     ]
   },
   "records_from_games": true,
   "games_analyzed": 969,
-  "districts_from_uil": 0,
+  "districts_from_uil": 46,
   "name_fix_applied": true
 }
