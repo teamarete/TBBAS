@@ -137,16 +137,17 @@ def collect_box_scores():
 
 def update_rankings():
     """
-    Update rankings on Mondays:
-    1. Scrape TABC rankings
-    2. Scrape MaxPreps rankings
-    3. Scrape GASO rankings
-    4. Calculate rankings from box score data
-    5. Merge all sources (weighted average: 25% each source)
-       - If all 4 sources available: 25% each
-       - If 3 sources: 33.3% each
-       - If 2 sources: 50% each
-       - If 1 source (TABC only): 100% TABC
+    Update rankings on Mondays using weighted average from multiple sources:
+    1. Scrape TABC rankings (25% weight when available)
+    2. Scrape MaxPreps rankings (25% weight when available)
+    3. Scrape GASO rankings (25% weight when available)
+    4. Calculate efficiency rankings from box score data (25% weight)
+    5. Merge all sources via weighted average
+       - Each team gets average rank from all available sources
+       - Top 25 (UIL) or top 10 (TAPPS) teams receive sequential ranks
+       - Weights auto-adjust: 4 sources = 25% each, 3 = 33.3%, 2 = 50%, 1 (TABC) = 100%
+
+    Note: TABC is one of four sources, not a guarantee. Teams can rank without being in TABC.
     """
     now = datetime.now()
 
@@ -276,15 +277,20 @@ def merge_rankings(calculated_data, tabc_data, maxpreps_data, gaso_data):
     """
     Merge rankings from all sources using weighted average:
     - 25% Calculated from box scores
-    - 25% TABC rankings
-    - 25% MaxPreps rankings
-    - 25% GASO rankings
+    - 25% TABC rankings (when available)
+    - 25% MaxPreps rankings (when available)
+    - 25% GASO rankings (when available)
 
-    If not enough data, combines available sources (auto-normalized weights).
-    Final fallback: TABC only.
+    How it works:
+    1. Each team gets a weighted average rank from all available sources
+    2. Teams are sorted by this average
+    3. Top 25 (UIL) or top 10 (TAPPS) teams receive sequential ranks 1-25 or 1-10
+    4. TABC is ONE of four sources, not a guarantee - teams can rank without being in TABC
+
+    If sources unavailable, weights auto-adjust (4 sources = 25% each, 3 = 33.3%, etc.)
+    Final fallback: TABC only (100%) if it's the only source available.
 
     IMPORTANT: Preserves ALL schools and game statistics from previous updates.
-    Always ensures top 25 (UIL) or top 10 (TAPPS) teams are ranked.
     """
     import json
     from pathlib import Path
@@ -394,23 +400,6 @@ def merge_rankings(calculated_data, tabc_data, maxpreps_data, gaso_data):
                 # Not ranked in any source - keep as unranked (rank = None)
                 team['rank'] = None
 
-        # GUARANTEE TOP 25: Add any TABC top 25 teams that aren't in existing_teams
-        for tabc_team in tabc_teams[:25]:  # Ensure we get top 25 from TABC
-            team_name = tabc_team.get('team_name')
-            if team_name and team_name not in existing_by_name:
-                # This team is in TABC top 25 but not in our existing data - add it
-                existing_teams.append({
-                    'team_name': team_name,
-                    'rank': tabc_team.get('rank'),
-                    'district': tabc_team.get('district'),
-                    'wins': None,
-                    'losses': None,
-                    'games': None,
-                    'ppg': None,
-                    'opp_ppg': None
-                })
-                existing_by_name[team_name] = existing_teams[-1]
-
         # RE-RANK: Sort teams by their calculated rank and assign clean 1-25 rankings
         # This ensures we have sequential 1, 2, 3... rankings after weighted averaging
         ranked_teams = [t for t in existing_teams if t.get('rank') is not None]
@@ -494,23 +483,6 @@ def merge_rankings(calculated_data, tabc_data, maxpreps_data, gaso_data):
             else:
                 # Not ranked in any source - keep as unranked (rank = None)
                 team['rank'] = None
-
-        # GUARANTEE TOP 10: Add any TABC top 10 teams that aren't in existing_teams
-        for tabc_team in tabc_teams[:10]:  # Ensure we get top 10 from TABC
-            team_name = tabc_team.get('team_name')
-            if team_name and team_name not in existing_by_name:
-                # This team is in TABC top 10 but not in our existing data - add it
-                existing_teams.append({
-                    'team_name': team_name,
-                    'rank': tabc_team.get('rank'),
-                    'district': tabc_team.get('district'),
-                    'wins': None,
-                    'losses': None,
-                    'games': None,
-                    'ppg': None,
-                    'opp_ppg': None
-                })
-                existing_by_name[team_name] = existing_teams[-1]
 
         # RE-RANK: Sort teams by their calculated rank and assign clean 1-10 rankings
         # This ensures we have sequential 1, 2, 3... rankings after weighted averaging

@@ -6,21 +6,25 @@
 <p>Texas Boys Basketball Analytics System (TBBAS) provides KenPom-style efficiency ratings for Texas high school basketball teams across UIL, TAPPS, and SPC classifications.</p>
 
 <h3>Data Sources & Weighted Average System</h3>
-<p>Rankings are calculated using a <strong>weighted average</strong> of multiple data sources:</p>
+<p>TBBAS rankings use a <strong>weighted average</strong> combining multiple data sources. The final top 25 (UIL) or top 10 (TAPPS) teams are determined by this consensus approach:</p>
 <ul>
-    <li><strong>25% Calculated Rankings:</strong> Efficiency ratings computed from game data</li>
-    <li><strong>25% TABC:</strong> Official Texas Association of Basketball Coaches rankings</li>
-    <li><strong>25% MaxPreps:</strong> Daily automated scraping of game scores and rankings</li>
-    <li><strong>25% GASO:</strong> Great American Shoot Out pre-season rankings</li>
+    <li><strong>25% Calculated Rankings:</strong> Efficiency ratings computed from game box scores</li>
+    <li><strong>25% TABC:</strong> Texas Association of Basketball Coaches rankings (when available)</li>
+    <li><strong>25% MaxPreps:</strong> Daily updated rankings from MaxPreps</li>
+    <li><strong>25% GASO:</strong> Great American Shoot Out pre-season power rankings</li>
 </ul>
-<p><strong>How it works:</strong></p>
+
+<p><strong>Important:</strong> TABC rankings serve as ONE of four data sources (25% weight), not a guarantee. A team ranked in TABC's top 25/10 may not appear in TBBAS top 25/10 if other sources rank them lower. Conversely, teams not ranked by TABC can still make TBBAS top 25/10 based on strong performance in other sources.</p>
+
+<p><strong>How the weighted average works:</strong></p>
 <ul>
-    <li>When all 4 sources are available: Each contributes 25% to final rank</li>
-    <li>When 3 sources are available: Each contributes 33.3%</li>
-    <li>When 2 sources are available: Each contributes 50%</li>
-    <li>When only 1 source (TABC): 100% TABC</li>
+    <li>Each team receives a weighted average rank from all available sources</li>
+    <li>Teams are sorted by this average, and the top 25 (UIL) or top 10 (TAPPS) receive sequential ranks 1-25 or 1-10</li>
+    <li>When sources are unavailable, weights auto-adjust: 4 sources = 25% each, 3 sources = 33.3% each, 2 sources = 50% each</li>
+    <li>If only TABC is available, it receives 100% weight as a fallback</li>
 </ul>
-<p><strong>Coach Submissions:</strong> Box scores submitted directly by coaches via our online form are used in calculating the primary efficiency ratings (25% weight).</p>
+
+<p><strong>Coach Submissions:</strong> Box scores submitted directly by coaches via our online form contribute to the calculated efficiency ratings (25% weight in the overall system).</p>
 <p style="background: #fff3cd; padding: 15px; border-radius: 5px; margin: 20px 0;">
     <strong>Note for Coaches:</strong> Your submitted box scores are automatically included in rankings calculations!
     The more detailed stats you provide (FG%, 3PT%, rebounds, etc.), the more accurate the efficiency ratings will be.
