@@ -25,7 +25,7 @@ email_notifier = EmailNotifier()
 # Schedule configuration
 START_DATE = datetime(2025, 11, 11)  # November 11, 2025
 END_DATE = datetime(2026, 3, 9)      # March 9, 2026
-UPDATE_TIME = "06:00"                # 6:00 AM
+UPDATE_TIME = "12:00"                # 12:00 PM UTC = 6:00 AM CST (UTC-6)
 INTERVAL_WEEKS = 1                   # Every week (every Monday)
 
 # MaxPreps scraping configuration
