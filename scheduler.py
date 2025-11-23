@@ -25,7 +25,8 @@ email_notifier = EmailNotifier()
 # Schedule configuration
 START_DATE = datetime(2025, 11, 11)  # November 11, 2025
 END_DATE = datetime(2026, 3, 9)      # March 9, 2026
-UPDATE_TIME = "12:00"                # 12:00 PM UTC = 6:00 AM CST (UTC-6)
+DAILY_BOX_SCORE_TIME = "12:00"       # 12:00 PM UTC = 6:00 AM CST (daily scraping)
+WEEKLY_RANKING_TIME = "18:00"        # 18:00 PM UTC = 12:00 PM CST (Monday rankings)
 INTERVAL_WEEKS = 1                   # Every week (every Monday)
 
 # MaxPreps scraping configuration
@@ -551,20 +552,20 @@ def run_scheduler():
 
     # Daily box score collection
     logger.info("Daily Box Score Collection:")
-    logger.info(f"  - Every day at {UPDATE_TIME}")
+    logger.info(f"  - Every day at {DAILY_BOX_SCORE_TIME} UTC (6:00 AM CST)")
     logger.info(f"  - Sources: MaxPreps, Texas newspapers, coach submissions")
-    schedule.every().day.at(UPDATE_TIME).do(collect_box_scores)
+    schedule.every().day.at(DAILY_BOX_SCORE_TIME).do(collect_box_scores)
     logger.info("")
 
     # Weekly ranking updates
     update_dates = calculate_update_dates()
     logger.info(f"Weekly Ranking Updates ({len(update_dates)} total):")
-    logger.info(f"  - Every Monday at {UPDATE_TIME}")
+    logger.info(f"  - Every Monday at {WEEKLY_RANKING_TIME} UTC (12:00 PM CST)")
     for date in update_dates:
         logger.info(f"    • {date.strftime('%A, %B %d, %Y')}")
 
-    # Schedule the job for every Monday at 6:00 AM
-    schedule.every().monday.at(UPDATE_TIME).do(lambda: update_rankings() if is_update_day() else None)
+    # Schedule the job for every Monday at 12:00 PM CST (18:00 UTC)
+    schedule.every().monday.at(WEEKLY_RANKING_TIME).do(lambda: update_rankings() if is_update_day() else None)
 
     logger.info("")
     logger.info("Scheduler is now running...")
@@ -573,7 +574,7 @@ def run_scheduler():
     # Also check at startup if we need to update
     if is_update_day():
         current_time = datetime.now().strftime("%H:%M")
-        if current_time >= UPDATE_TIME:
+        if current_time >= WEEKLY_RANKING_TIME:
             logger.info("Update scheduled for today and time has passed - running now")
             update_rankings()
 
@@ -594,17 +595,22 @@ def start_scheduler(app=None):
 
 if __name__ == '__main__':
     # Test: show all scheduled dates
-    print("TBBAS Rankings Update Schedule")
+    print("TBBAS Schedule")
     print("=" * 50)
-    print(f"Start Date: {START_DATE.strftime('%B %d, %Y')}")
-    print(f"End Date: {END_DATE.strftime('%B %d, %Y')}")
-    print(f"Update Time: {UPDATE_TIME}")
-    print(f"Frequency: Every Monday (weekly)")
-    print("\nScheduled Update Dates:")
+    print(f"Season: {START_DATE.strftime('%B %d, %Y')} to {END_DATE.strftime('%B %d, %Y')}")
+    print()
+    print("Daily Box Score Collection:")
+    print(f"  Time: {DAILY_BOX_SCORE_TIME} UTC (6:00 AM CST)")
+    print(f"  Frequency: Every day")
+    print()
+    print("Weekly Ranking Updates:")
+    print(f"  Time: {WEEKLY_RANKING_TIME} UTC (12:00 PM CST)")
+    print(f"  Frequency: Every Monday")
+    print("\nScheduled Monday Update Dates:")
     print("-" * 50)
 
     update_dates = calculate_update_dates()
     for i, date in enumerate(update_dates, 1):
-        print(f"{i}. {date.strftime('%A, %B %d, %Y at {UPDATE_TIME}')}")
+        print(f"{i}. {date.strftime('%A, %B %d, %Y')} at 12:00 PM CST")
 
-    print(f"\nTotal updates: {len(update_dates)}")
+    print(f"\nTotal Monday updates: {len(update_dates)}")
