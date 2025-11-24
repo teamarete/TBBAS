@@ -232,6 +232,36 @@
         "games": 3,
         "ppg": 55.3,
         "opp_ppg": 57.0
+      },
+      {
+        "team_name": "SA Brennan",
+        "district": null,
+        "rank": 23,
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Desoto",
+        "district": null,
+        "rank": 24,
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Strake Jesuit",
+        "district": null,
+        "rank": 25,
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
       }
     ],
     "AAAAA": [
@@ -1498,6 +1528,16 @@
         "ppg": 58.2,
         "opp_ppg": 50.8,
         "uil_verified": false
+      },
+      {
+        "team_name": "Benjamin",
+        "district": null,
+        "rank": 25,
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
       }
     ]
   },
@@ -1580,6 +1620,16 @@
         "wins": null,
         "losses": null,
         "district": "3"
+      },
+      {
+        "team_name": "Plano John Paul II",
+        "district": null,
+        "rank": 10,
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
       }
     ],
     "TAPPS_5A": [
@@ -1657,6 +1707,16 @@
         "games": 7,
         "ppg": 58.0,
         "opp_ppg": 52.9
+      },
+      {
+        "team_name": "Arlington Oakridge",
+        "district": null,
+        "rank": 10,
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
       }
     ],
     "TAPPS_4A": [
@@ -1920,6 +1980,16 @@
         "wins": null,
         "losses": null,
         "district": "6"
+      },
+      {
+        "team_name": "Faith West Academy-Katy",
+        "district": null,
+        "rank": 10,
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
       }
     ],
     "TAPPS_1A": [
@@ -1981,6 +2051,26 @@
         "wins": null,
         "losses": null,
         "district": "7"
+      },
+      {
+        "team_name": "Covenant Academy-Cypress",
+        "district": null,
+        "rank": 9,
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "team_name": "Macedonian Christian Academy",
+        "district": null,
+        "rank": 10,
+        "wins": null,
+        "losses": null,
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
       }
     ]
   },

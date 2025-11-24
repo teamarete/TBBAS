@@ -99,6 +99,7 @@ SPECIAL_CASES = {
     'Canyon West Plains': 'West Plains',      # Canyon West Plains -> West Plains in database
     'Tyler Chapel Hill': 'Chapel Hill',       # Tyler Chapel Hill -> Chapel Hill in database
     'San Antonio Cole': 'Cole',               # San Antonio Cole -> Cole in database
+    'Perrin Whitt': 'Perrin-Whitt',           # Perrin Whitt -> Perrin-Whitt (with hyphen)
 }
 
 def expand_abbreviations(school_name):
