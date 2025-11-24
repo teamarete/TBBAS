@@ -100,6 +100,11 @@ SPECIAL_CASES = {
     'Tyler Chapel Hill': 'Chapel Hill',       # Tyler Chapel Hill -> Chapel Hill in database
     'San Antonio Cole': 'Cole',               # San Antonio Cole -> Cole in database
     'Perrin Whitt': 'Perrin-Whitt',           # Perrin Whitt -> Perrin-Whitt (with hyphen)
+    # Additional city abbreviation mappings for duplicate resolution
+    'Cy Falls': 'Cypress Falls',              # Cy Falls -> Cypress Falls
+    'Bmt United': 'Beaumont United',          # Bmt United -> Beaumont United
+    'Mans Timberview': 'Mansfield Timberview', # Mans Timberview -> Mansfield Timberview
+    'FB Marshall': 'Fort Bend Marshall',      # FB Marshall -> Fort Bend Marshall
 }
 
 def expand_abbreviations(school_name):
