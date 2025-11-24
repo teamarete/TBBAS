@@ -56,6 +56,33 @@ SPECIAL_CASES = {
     'Conroe Grand Oaks': 'Grand Oaks', # Conroe Grand Oaks -> Grand Oaks in database
     'Converse Judson': 'Judson',       # Converse Judson -> Judson in database
     'Mesquite Horn': 'Horn',           # Mesquite Horn -> Horn in database
+    # UIL teams
+    'Leander Glenn': 'Glenn',          # Leander Glenn -> Glenn in database
+    'Dallas Kimball': 'Kimball',       # Dallas Kimball -> Kimball in database
+    'Dallas Carter': 'Carter',         # Dallas Carter -> Carter in database
+    'Dallas Lincoln': 'Juarez-Lincoln', # Dallas Lincoln -> Juarez-Lincoln in database
+    'Liberty Eylau': 'Liberty-Eylau',  # Liberty Eylau -> Liberty-Eylau in database
+    'Westwood': 'Round Rock Westwood', # Westwood (3A) -> Round Rock Westwood in database
+    'Dallas Madison': 'Madison',       # Dallas Madison -> Madison in database
+    'San Augustine': 'St. Augustine',  # San Augustine -> St. Augustine in database
+    'Waco Meyer': 'Meyer',             # Waco Meyer -> Meyer in database
+    # TAPPS teams
+    'Dallas Parish Episcopal': 'Episcopal School of Dallas',  # 7 games
+    'Plano John Paul II': 'John Paul II',  # 11 games
+    'Mckinney Christian': 'McKinney Christian Academy',  # 5 games
+    'Houston St. Francis': 'St. Francis Episcopal',  # 2 games
+    'Tyler Bishop Gorman': 'Bishop Gorman',  # 2 games
+    'Houston Westbury': 'Westbury',  # 3 games
+    'San Antonio Holy Cross': 'Holy Cross',  # 5 games
+    'Boerne Geneva': 'Geneva',  # 1 games
+    'Dallas Yavneh': 'Yavneh Academy',  # 1 games
+    'Waco Live Oak': 'Live Oak Classical',  # 1 games
+    'Faith Academy of Marble Falls': 'Marble Falls',  # 5 games (WARNING: Could conflict with UIL Marble Falls)
+    'Huntsville Alpha Omega': 'Alpha Omega Academy',  # 1 games
+    'Keene Chisholm Trail': 'Chisholm Trail',  # 3 games
+    'Fort Worth Covenant': 'Covenant Classical',  # 4 games
+    'Denton Calvary': 'Calvary Academy',  # 3 games
+    'Austin San Juan Diego': 'San Juan Diego Catholic',  # 4 games
 }
 
 def expand_abbreviations(school_name):
