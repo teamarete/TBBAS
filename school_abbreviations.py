@@ -49,6 +49,13 @@ SPECIAL_CASES = {
     'Little Elm': 'Little Elm',
     'Summer Creek': 'Alvin Shadow Creek',  # Summer Creek is actually Alvin Shadow Creek
     'Cy Falls': 'Cypress Falls',       # Cy Falls is Cypress Falls
+    'SA Harlan': 'Harlan',             # San Antonio Harlan -> Harlan in database
+    'Mans Lake Ridge': 'Lake Ridge',   # Mansfield Lake Ridge -> Lake Ridge in database
+    'Odessa Permian': 'Permian',       # Odessa Permian -> Permian in database
+    'Austin Westlake': 'Westlake',     # Austin Westlake -> Westlake in database
+    'Conroe Grand Oaks': 'Grand Oaks', # Conroe Grand Oaks -> Grand Oaks in database
+    'Converse Judson': 'Judson',       # Converse Judson -> Judson in database
+    'Mesquite Horn': 'Horn',           # Mesquite Horn -> Horn in database
 }
 
 def expand_abbreviations(school_name):
@@ -155,6 +162,7 @@ COMMON_PATTERNS = {
     'Cole': ['San Antonio Cole', 'SA Cole', 'Cole'],
     'London': ['Corpus Christi London', 'CC London', 'London'],
     'McMullen County': ['Tilden McMullen County', 'McMullen County', 'Tilden'],
+    'Permian': ['Odessa Permian', 'Permian'],
 }
 
 def find_uil_match(tabc_name, uil_schools, classification_code):

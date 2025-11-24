@@ -129,11 +129,19 @@ def update_rankings_with_records():
             for team in teams:
                 team_name = team['team_name']
 
-                # Try to find record (exact match first, then normalized)
+                # Try to find record (exact match first, then variations, then normalized)
                 record = team_records.get(team_name)
 
                 if not record:
-                    # Try normalized matching
+                    # Try all search variations (including abbreviation expansions and special cases)
+                    search_variations = get_search_variations(team_name)
+                    for variation in search_variations:
+                        record = team_records.get(variation)
+                        if record:
+                            break
+
+                if not record:
+                    # Try normalized matching as last resort
                     canonical_name = normalizer.find_canonical_name([team_name])
                     if canonical_name:
                         record = team_records.get(canonical_name)
