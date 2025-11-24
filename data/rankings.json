@@ -1,16 +1,16 @@
 {
-  "last_updated": "2025-11-24T12:32:38.240713",
+  "last_updated": "2025-11-24T12:40:55.906397",
   "uil": {
     "AAAAAA": [
       {
         "team_name": "Humble Atascocita",
         "district": "23",
         "rank": 1,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "wins": 7,
+        "losses": 3,
+        "games": 10,
+        "ppg": 70.3,
+        "opp_ppg": 47.6
       },
       {
         "rank": 2,
@@ -27,11 +27,11 @@
         "team_name": "San Antonio Brennan",
         "district": "28",
         "rank": 3,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "wins": 7,
+        "losses": 0,
+        "games": 7,
+        "ppg": 66.3,
+        "opp_ppg": 53.1
       },
       {
         "rank": 4,
@@ -89,11 +89,11 @@
         "team_name": "Cibolo Steele",
         "district": "29",
         "rank": 9,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "wins": 6,
+        "losses": 2,
+        "games": 8,
+        "ppg": 68.9,
+        "opp_ppg": 55.0
       },
       {
         "rank": 10,
@@ -176,11 +176,11 @@
         "team_name": "Humble Summer Creek",
         "district": "22",
         "rank": 17,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "wins": 3,
+        "losses": 3,
+        "games": 6,
+        "ppg": 63.0,
+        "opp_ppg": 58.2
       },
       {
         "team_name": "Lancaster",
@@ -196,11 +196,11 @@
         "team_name": "San Antonio Harlan",
         "district": "28",
         "rank": 19,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "wins": 2,
+        "losses": 1,
+        "games": 3,
+        "ppg": 55.3,
+        "opp_ppg": 57.0
       },
       {
         "team_name": "Pearland",
@@ -2118,11 +2118,11 @@
         "team_name": "Beaumont West Brook",
         "district": "19",
         "rank": 3,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "wins": 1,
+        "losses": 0,
+        "games": 1,
+        "ppg": 60.0,
+        "opp_ppg": 57.0
       },
       {
         "team_name": "Birdville",
@@ -2242,11 +2242,11 @@
         "team_name": "San Antonio Wagner",
         "district": "26",
         "rank": 15,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "wins": 1,
+        "losses": 1,
+        "games": 2,
+        "ppg": 60.0,
+        "opp_ppg": 42.0
       },
       {
         "team_name": "Mans Summit",
@@ -2312,11 +2312,11 @@
         "team_name": "Killeen Ellison",
         "district": "16",
         "rank": 22,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "wins": 2,
+        "losses": 0,
+        "games": 2,
+        "ppg": 69.0,
+        "opp_ppg": 36.5
       },
       {
         "rank": 23,
@@ -2333,11 +2333,11 @@
         "team_name": "Dallas Highland Park",
         "district": "12",
         "rank": 24,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "wins": 2,
+        "losses": 4,
+        "games": 6,
+        "ppg": 46.5,
+        "opp_ppg": 57.2
       },
       {
         "rank": 25,
@@ -4072,11 +4072,11 @@
         "team_name": "Lubbock Estacado",
         "district": "5",
         "rank": 3,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "wins": 1,
+        "losses": 0,
+        "games": 1,
+        "ppg": 70.0,
+        "opp_ppg": 44.0
       },
       {
         "team_name": "Hou Wheatley",
@@ -4113,11 +4113,11 @@
         "team_name": "Frisco Panther Creek",
         "district": "9",
         "rank": 7,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "wins": 2,
+        "losses": 5,
+        "games": 7,
+        "ppg": 57.1,
+        "opp_ppg": 68.0
       },
       {
         "team_name": "LaMarque",
@@ -4266,21 +4266,21 @@
         "team_name": "Canyon West Plains",
         "district": "4",
         "rank": 22,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "wins": 2,
+        "losses": 0,
+        "games": 2,
+        "ppg": 69.5,
+        "opp_ppg": 34.5
       },
       {
         "team_name": "Tyler Chapel Hill",
         "district": "16",
         "rank": 23,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "wins": 8,
+        "losses": 2,
+        "games": 10,
+        "ppg": 62.2,
+        "opp_ppg": 50.1
       },
       {
         "team_name": "Randall",
@@ -5763,11 +5763,11 @@
         "team_name": "San Antonio Cole",
         "district": "27",
         "rank": 11,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "wins": 7,
+        "losses": 1,
+        "games": 8,
+        "ppg": 70.4,
+        "opp_ppg": 35.6
       },
       {
         "team_name": "Hitchcock",

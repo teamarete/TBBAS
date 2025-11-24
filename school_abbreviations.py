@@ -83,6 +83,22 @@ SPECIAL_CASES = {
     'Fort Worth Covenant': 'Covenant Classical',  # 4 games
     'Denton Calvary': 'Calvary Academy',  # 3 games
     'Austin San Juan Diego': 'San Juan Diego Catholic',  # 4 games
+    # November 24 TABC rankings - new full names need mapping to database names
+    'Humble Atascocita': 'Atascocita',        # Humble Atascocita -> Atascocita in database
+    'San Antonio Brennan': 'Brennan',         # San Antonio Brennan -> Brennan in database
+    'Cibolo Steele': 'Steele',                # Cibolo Steele -> Steele in database (reverse of earlier mapping)
+    'Humble Summer Creek': 'Summer Creek',    # Humble Summer Creek -> Summer Creek in database
+    'San Antonio Harlan': 'Harlan',           # San Antonio Harlan -> Harlan in database
+    'Beaumont West Brook': 'West Brook',      # Beaumont West Brook -> West Brook in database
+    'San Antonio Wagner': 'Wagner',           # San Antonio Wagner -> Wagner in database
+    'Killeen Ellison': 'Ellison',             # Killeen Ellison -> Ellison in database
+    'Dallas Highland Park': 'Highland Park',  # Dallas Highland Park -> Highland Park in database
+    'Lubbock Estacado': 'Estacado',           # Lubbock Estacado -> Estacado in database
+    'Fort Bend Crawford': 'Crawford',         # Fort Bend Crawford -> Crawford in database
+    'Frisco Panther Creek': 'Panther Creek',  # Frisco Panther Creek -> Panther Creek in database
+    'Canyon West Plains': 'West Plains',      # Canyon West Plains -> West Plains in database
+    'Tyler Chapel Hill': 'Chapel Hill',       # Tyler Chapel Hill -> Chapel Hill in database
+    'San Antonio Cole': 'Cole',               # San Antonio Cole -> Cole in database
 }
 
 def expand_abbreviations(school_name):
