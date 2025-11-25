@@ -1595,23 +1595,6 @@
       },
       {
         "rank": 7,
-        "team_name": "Austin St. Michael\u2019s",
-        "wins": null,
-        "losses": null,
-        "district": "3"
-      },
-      {
-        "team_name": "Dallas St. Mark's",
-        "district": "SPC North",
-        "rank": 8,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
-      },
-      {
-        "rank": 9,
         "team_name": "San Antonio TMI Episcopal",
         "wins": null,
         "losses": null,
@@ -1620,7 +1603,7 @@
       {
         "team_name": "Plano John Paul II",
         "district": "2",
-        "rank": 10,
+        "rank": 8,
         "wins": 7,
         "losses": 6,
         "games": 13,
