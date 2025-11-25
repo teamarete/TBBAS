@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-25T10:38:34.298295",
+  "last_updated": "2025-11-25T10:45:53.250375",
   "uil": {
     "AAAAAA": [
       {
@@ -121,11 +121,11 @@
         "team_name": "Desoto",
         "district": "11",
         "rank": 12,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "wins": 2,
+        "losses": 1,
+        "games": 3,
+        "ppg": 69.0,
+        "opp_ppg": 67.7
       },
       {
         "team_name": "Cypress Falls",
