@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-25T10:51:34.459207",
+  "last_updated": "2025-11-25T12:44:08.722653",
   "uil": {
     "AAAAAA": [
       {
@@ -461,11 +461,11 @@
         "team_name": "Denton Ryan",
         "district": "6",
         "rank": 20,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "wins": 3,
+        "losses": 1,
+        "games": 4,
+        "ppg": 61.5,
+        "opp_ppg": 57.0
       },
       {
         "team_name": "Pieper",
@@ -2071,6 +2071,6 @@
     ]
   },
   "records_from_games": true,
-  "games_analyzed": 1608,
+  "games_analyzed": 1609,
   "districts_from_uil": 0
 }
