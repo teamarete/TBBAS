@@ -1618,6 +1618,26 @@
         "games": 1,
         "ppg": 60.0,
         "opp_ppg": 67.0
+      },
+      {
+        "rank": 9,
+        "team_name": "Fort Worth Nolan Catholic",
+        "wins": null,
+        "losses": null,
+        "district": "1",
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
+      },
+      {
+        "rank": 10,
+        "team_name": "Houston St. Thomas",
+        "wins": null,
+        "losses": null,
+        "district": "4",
+        "games": null,
+        "ppg": null,
+        "opp_ppg": null
       }
     ],
     "TAPPS_5A": [
