@@ -201,7 +201,7 @@
       },
       {
         "team_name": "Desoto",
-        "district": null,
+        "district": "11",
         "rank": 20,
         "wins": null,
         "losses": null,
@@ -211,7 +211,7 @@
       },
       {
         "team_name": "Strake Jesuit",
-        "district": null,
+        "district": "18",
         "rank": 21,
         "wins": null,
         "losses": null,
@@ -221,7 +221,7 @@
       },
       {
         "team_name": "Mans Lake Ridge",
-        "district": null,
+        "district": "8",
         "rank": 22,
         "wins": null,
         "losses": null,
@@ -231,7 +231,7 @@
       },
       {
         "team_name": "South Grand Prairie",
-        "district": null,
+        "district": "6",
         "rank": 23,
         "wins": null,
         "losses": null,
@@ -241,7 +241,7 @@
       },
       {
         "team_name": "Dickinson",
-        "district": null,
+        "district": "24",
         "rank": 24,
         "wins": null,
         "losses": null,
@@ -251,7 +251,7 @@
       },
       {
         "team_name": "Mesquite Horn",
-        "district": null,
+        "district": "11",
         "rank": 25,
         "wins": null,
         "losses": null,
@@ -449,7 +449,7 @@
       },
       {
         "team_name": "Amarillo",
-        "district": null,
+        "district": "3",
         "rank": 19,
         "wins": null,
         "losses": null,
@@ -459,7 +459,7 @@
       },
       {
         "team_name": "Denton",
-        "district": null,
+        "district": "8",
         "rank": 20,
         "wins": null,
         "losses": null,
@@ -469,7 +469,7 @@
       },
       {
         "team_name": "Denton Ryan",
-        "district": null,
+        "district": "8",
         "rank": 21,
         "wins": null,
         "losses": null,
@@ -479,7 +479,7 @@
       },
       {
         "team_name": "Pieper",
-        "district": null,
+        "district": "27",
         "rank": 22,
         "wins": null,
         "losses": null,
@@ -489,7 +489,7 @@
       },
       {
         "team_name": "EP Chapin",
-        "district": null,
+        "district": "1",
         "rank": 23,
         "wins": null,
         "losses": null,
@@ -499,7 +499,7 @@
       },
       {
         "team_name": "CC Veterans Memorial",
-        "district": null,
+        "district": "29",
         "rank": 24,
         "wins": null,
         "losses": null,
@@ -509,7 +509,7 @@
       },
       {
         "team_name": "Palo Duro",
-        "district": null,
+        "district": "3",
         "rank": 25,
         "wins": null,
         "losses": null,
@@ -747,7 +747,7 @@
       },
       {
         "team_name": "FW Southwest",
-        "district": null,
+        "district": "6",
         "rank": 23,
         "wins": null,
         "losses": null,
@@ -757,7 +757,7 @@
       },
       {
         "team_name": "Dallas Roosevelt",
-        "district": null,
+        "district": "11",
         "rank": 24,
         "wins": null,
         "losses": null,
@@ -767,7 +767,7 @@
       },
       {
         "team_name": "Bridge City",
-        "district": null,
+        "district": "19",
         "rank": 25,
         "wins": null,
         "losses": null,
@@ -1020,7 +1020,7 @@
       },
       {
         "team_name": "Goliad",
-        "district": null,
+        "district": "29",
         "rank": 25,
         "wins": null,
         "losses": null,
@@ -1524,7 +1524,7 @@
       },
       {
         "team_name": "Benjamin",
-        "district": null,
+        "district": "16",
         "rank": 25,
         "wins": null,
         "losses": null,
@@ -1616,7 +1616,7 @@
       },
       {
         "team_name": "Plano John Paul II",
-        "district": null,
+        "district": "1",
         "rank": 10,
         "wins": null,
         "losses": null,
@@ -1703,7 +1703,7 @@
       },
       {
         "team_name": "Arlington Oakridge",
-        "district": null,
+        "district": "1",
         "rank": 10,
         "wins": null,
         "losses": null,
@@ -1976,7 +1976,7 @@
       },
       {
         "team_name": "Faith West Academy-Katy",
-        "district": null,
+        "district": "3",
         "rank": 10,
         "wins": null,
         "losses": null,
@@ -2047,7 +2047,7 @@
       },
       {
         "team_name": "Covenant Academy-Cypress",
-        "district": null,
+        "district": "3",
         "rank": 9,
         "wins": null,
         "losses": null,
@@ -2057,7 +2057,7 @@
       },
       {
         "team_name": "Macedonian Christian Academy",
-        "district": null,
+        "district": "4",
         "rank": 10,
         "wins": null,
         "losses": null,
