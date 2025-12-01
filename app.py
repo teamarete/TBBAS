@@ -482,6 +482,47 @@ def update_rankings_now():
         }), 500
 
 
+@app.route('/dump-6a-ranks', methods=['GET'])
+def dump_6a_ranks():
+    """Dump all UIL 6A team ranks for debugging"""
+    try:
+        import json
+        from pathlib import Path
+
+        data_file = Path(__file__).parent / 'data' / 'rankings.json'
+
+        with open(data_file, 'r') as f:
+            data = json.load(f)
+
+        teams = data['uil']['AAAAAA']
+
+        # Return just team names and ranks
+        team_ranks = [
+            {
+                'team_name': team['team_name'],
+                'rank': team.get('rank'),
+                'wins': team.get('wins'),
+                'losses': team.get('losses')
+            }
+            for team in teams
+        ]
+
+        # Sort by rank
+        team_ranks.sort(key=lambda x: x['rank'] if x['rank'] is not None else 999)
+
+        return jsonify({
+            'total_teams': len(team_ranks),
+            'teams': team_ranks
+        })
+    except Exception as e:
+        import traceback
+        return jsonify({
+            'success': False,
+            'error': str(e),
+            'traceback': traceback.format_exc()
+        }), 500
+
+
 @app.route('/fix-missing-ranks', methods=['POST'])
 def fix_missing_ranks_endpoint():
     """Restore UIL 6A rankings with proper sequential ranks 1-25"""
