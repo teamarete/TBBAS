@@ -23,7 +23,7 @@ def check_and_update_rankings():
             with open(data_file, 'r') as f:
                 data = json.load(f)
 
-            # Check if data is empty or very old
+            # Check if data is empty
             if not data.get('uil') and not data.get('private'):
                 print("⚠️  Rankings file is empty - triggering immediate update")
                 needs_update = True
@@ -32,10 +32,8 @@ def check_and_update_rankings():
                 hours_old = (datetime.now() - last_update).total_seconds() / 3600
                 print(f"✓ Rankings file exists (last updated {hours_old:.1f} hours ago)")
 
-                # Force update if more than 2 hours old (catches deployment issues)
-                if hours_old > 2:
-                    print(f"⚠️  Rankings are {hours_old:.1f} hours old - triggering update")
-                    needs_update = True
+                # DON'T auto-update on Railway - use scheduled updates only
+                # The committed rankings.json has correct data, let scheduler handle updates
             else:
                 print("✓ Rankings file exists")
 
