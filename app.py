@@ -35,6 +35,10 @@ DATA_FILE = Path(__file__).parent / 'data' / 'rankings.json'
 from init_rankings import ensure_rankings_file
 ensure_rankings_file()
 
+# Check if rankings data needs to be initialized (Railway deployment)
+from ensure_data_on_startup import check_and_update_rankings
+check_and_update_rankings()
+
 # Start automatic scheduler in web process
 # Note: Railway runs single process, so scheduler must run here
 if os.getenv('FLASK_ENV') != 'development':
