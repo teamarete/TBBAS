@@ -316,6 +316,7 @@ def api_boxscores(classification):
 def debug_info():
     """Debug endpoint to check file system"""
     info = {
+        'version': '2025-12-01-v2',  # Version marker to confirm deployments
         'current_dir': os.getcwd(),
         'data_file_path': str(DATA_FILE),
         'data_file_exists': DATA_FILE.exists(),
@@ -328,8 +329,17 @@ def debug_info():
         with open(DATA_FILE, 'r') as f:
             data = json.load(f)
             info['rankings_has_data'] = 'uil' in data
-            info['uil_6a_count'] = len(data.get('uil', {}).get('AAAAAA', []))
+            uil_6a_teams = data.get('uil', {}).get('AAAAAA', [])
+            info['uil_6a_count'] = len(uil_6a_teams)
             info['last_updated'] = data.get('last_updated', 'N/A')
+
+            # Count teams by rank status
+            ranked_6a = [t for t in uil_6a_teams if t.get('rank') is not None and 1 <= t.get('rank') <= 25]
+            unranked_6a = [t for t in uil_6a_teams if t.get('rank') is None or t.get('rank') < 1 or t.get('rank') > 25]
+            info['uil_6a_ranked_count'] = len(ranked_6a)
+            info['uil_6a_unranked_count'] = len(unranked_6a)
+            if unranked_6a:
+                info['uil_6a_unranked_teams'] = [{'name': t['team_name'], 'rank': t.get('rank')} for t in unranked_6a[:10]]
 
             # Count teams with records
             teams_with_records = sum(
