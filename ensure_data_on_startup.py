@@ -29,11 +29,13 @@ def check_and_update_rankings():
                 needs_update = True
             elif 'last_updated' in data:
                 last_update = datetime.fromisoformat(data['last_updated'])
-                days_old = (datetime.now() - last_update).days
-                print(f"✓ Rankings file exists (last updated {days_old} days ago)")
+                hours_old = (datetime.now() - last_update).total_seconds() / 3600
+                print(f"✓ Rankings file exists (last updated {hours_old:.1f} hours ago)")
 
-                if days_old > 7:
-                    print(f"⚠️  Rankings are {days_old} days old - consider triggering update")
+                # Force update if more than 2 hours old (catches deployment issues)
+                if hours_old > 2:
+                    print(f"⚠️  Rankings are {hours_old:.1f} hours old - triggering update")
+                    needs_update = True
             else:
                 print("✓ Rankings file exists")
 
