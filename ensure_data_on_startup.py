@@ -25,17 +25,26 @@ def check_and_update_rankings():
 
             # Check if data is empty
             if not data.get('uil') and not data.get('private'):
-                print("⚠️  Rankings file is empty - triggering immediate update")
+                print("⚠️  Rankings file is empty - copying from git")
                 needs_update = True
-            elif 'last_updated' in data:
-                last_update = datetime.fromisoformat(data['last_updated'])
-                hours_old = (datetime.now() - last_update).total_seconds() / 3600
-                print(f"✓ Rankings file exists (last updated {hours_old:.1f} hours ago)")
-
-                # DON'T auto-update on Railway - use scheduled updates only
-                # The committed rankings.json has correct data, let scheduler handle updates
             else:
-                print("✓ Rankings file exists")
+                # Verify data integrity - check if UIL 6A has 25 ranked teams
+                uil_6a_teams = data.get('uil', {}).get('AAAAAA', [])
+                ranked_6a = sum(1 for t in uil_6a_teams if t.get('rank') is not None and 1 <= t.get('rank') <= 25)
+
+                if ranked_6a < 25:
+                    print(f"⚠️  Rankings incomplete: UIL 6A has only {ranked_6a}/25 ranked teams")
+                    print("   Deleting corrupted file to force git version reload...")
+                    data_file.unlink()
+                    print("   ✓ File deleted - will use git version on next check")
+                    return False  # Don't update, just let it reload from git
+
+                if 'last_updated' in data:
+                    last_update = datetime.fromisoformat(data['last_updated'])
+                    hours_old = (datetime.now() - last_update).total_seconds() / 3600
+                    print(f"✓ Rankings file exists with {ranked_6a}/25 UIL 6A teams (last updated {hours_old:.1f} hours ago)")
+                else:
+                    print(f"✓ Rankings file exists with {ranked_6a}/25 UIL 6A teams")
 
         except Exception as e:
             print(f"⚠️  Error reading rankings file: {e}")
