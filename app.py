@@ -31,6 +31,12 @@ with app.app_context():
 # Data file path
 DATA_FILE = Path(__file__).parent / 'data' / 'rankings.json'
 
+# ONE-TIME: Force reload of rankings from git (deletes persisted file)
+try:
+    import force_rankings_reload
+except Exception as e:
+    print(f"Note: Force reload script issue: {e}")
+
 # Ensure data directory and rankings file exist
 from init_rankings import ensure_rankings_file
 ensure_rankings_file()
