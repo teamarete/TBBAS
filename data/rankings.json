@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-01T10:59:57.169800",
+  "last_updated": "2025-12-01T11:10:33.706561",
   "uil": {
     "AAAAAA": [
       {
@@ -265,12 +265,12 @@
         "rank": 1,
         "team_name": "Frisco Heritage",
         "wins": 4,
-        "losses": 1,
+        "losses": 2,
         "district": "11",
         "uil_verified": false,
-        "games": 5,
-        "ppg": 79.2,
-        "opp_ppg": 53.2
+        "games": 6,
+        "ppg": 77.7,
+        "opp_ppg": 57.2
       },
       {
         "team_name": "Beaumont West Brook",
@@ -279,18 +279,18 @@
         "wins": 2,
         "losses": 0,
         "games": 2,
-        "ppg": 69.0,
-        "opp_ppg": 62.0
+        "ppg": 72.5,
+        "opp_ppg": 66.0
       },
       {
         "team_name": "Birdville",
         "district": "6",
         "rank": 3,
-        "wins": 4,
-        "losses": 0,
-        "games": 4,
-        "ppg": 68.8,
-        "opp_ppg": 49.5
+        "wins": 5,
+        "losses": 1,
+        "games": 6,
+        "ppg": 66.0,
+        "opp_ppg": 54.7
       },
       {
         "team_name": "Beaumont United",
@@ -370,10 +370,10 @@
         "rank": 11,
         "district": "8",
         "wins": 3,
-        "losses": 1,
-        "games": 4,
-        "ppg": 60.2,
-        "opp_ppg": 55.5
+        "losses": 2,
+        "games": 5,
+        "ppg": 57.8,
+        "opp_ppg": 54.4
       },
       {
         "team_name": "Fort Bend Marshall",
@@ -522,24 +522,24 @@
       {
         "rank": 1,
         "team_name": "Dallas Carter",
-        "wins": 3,
-        "losses": 0,
+        "wins": 2,
+        "losses": 1,
         "district": "11",
         "uil_verified": false,
         "games": 3,
-        "ppg": 69.3,
-        "opp_ppg": 45.0
+        "ppg": 65.0,
+        "opp_ppg": 58.0
       },
       {
         "rank": 2,
         "team_name": "Dallas Kimball",
         "wins": 1,
-        "losses": 1,
+        "losses": 2,
         "district": "11",
         "uil_verified": false,
-        "games": 2,
-        "ppg": 61.0,
-        "opp_ppg": 63.0
+        "games": 3,
+        "ppg": 63.0,
+        "opp_ppg": 68.0
       },
       {
         "team_name": "Lubbock Estacado",
@@ -2083,6 +2083,6 @@
     ]
   },
   "records_from_games": true,
-  "games_analyzed": 1631,
+  "games_analyzed": 1635,
   "districts_from_uil": 0
 }
