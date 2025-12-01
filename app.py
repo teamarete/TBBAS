@@ -39,12 +39,14 @@ ensure_rankings_file()
 from ensure_data_on_startup import check_and_update_rankings
 check_and_update_rankings()
 
-# One-time fix for missing ranks (Strake Jesuit, Mesquite Horn)
-try:
-    import fix_missing_ranks
-    print("✓ Rank fix script completed")
-except Exception as e:
-    print(f"Note: Rank fix script encountered issue: {e}")
+# One-time fix for missing ranks - DISABLED
+# Causes conflicts with ensure_rankings_stats which runs after
+# Use POST /fix-missing-ranks endpoint instead
+# try:
+#     import fix_missing_ranks
+#     print("✓ Rank fix script completed")
+# except Exception as e:
+#     print(f"Note: Rank fix script encountered issue: {e}")
 
 # Start automatic scheduler in web process
 # Note: Railway runs single process, so scheduler must run here
