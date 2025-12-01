@@ -20,6 +20,8 @@ class MaxPrepsBoxScoreScraper:
 
     BASE_URL = "https://www.maxpreps.com"
     TX_BASKETBALL_URL = "https://www.maxpreps.com/tx/basketball/"
+    # Updated to use statewide Texas basketball rankings (all schools)
+    RANKINGS_URL = "https://www.maxpreps.com/tx/basketball/rankings/1/"
     RANKINGS_URL_TEMPLATE = "https://www.maxpreps.com/tx/association/{association}/basketball/rankings/1/"
 
     # MaxPreps association mappings
@@ -61,9 +63,11 @@ class MaxPrepsBoxScoreScraper:
             logger.info("Falling back to requests-only mode")
             return None
 
-    def scrape_maxpreps_rankings(self, association='UIL'):
+    def scrape_maxpreps_rankings(self, association='ALL'):
         """
-        Scrape rankings from MaxPreps for a specific association
+        Scrape rankings from MaxPreps for Texas basketball
+        association='ALL' uses statewide rankings (recommended)
+        association='UIL' or 'TAPPS' uses association-specific rankings
         Returns team rankings with records
         """
         logger.info(f"Scraping MaxPreps {association} rankings...")
@@ -71,12 +75,15 @@ class MaxPrepsBoxScoreScraper:
         rankings = {}
 
         try:
-            assoc_id = self.ASSOCIATIONS.get(association)
-            if not assoc_id:
-                logger.error(f"Unknown association: {association}")
-                return rankings
-
-            url = self.RANKINGS_URL_TEMPLATE.format(association=assoc_id)
+            # Use statewide Texas rankings by default (all schools)
+            if association == 'ALL':
+                url = self.RANKINGS_URL
+            else:
+                assoc_id = self.ASSOCIATIONS.get(association)
+                if not assoc_id:
+                    logger.error(f"Unknown association: {association}")
+                    return rankings
+                url = self.RANKINGS_URL_TEMPLATE.format(association=assoc_id)
 
             # Try with requests first
             response = self.session.get(url, timeout=15)

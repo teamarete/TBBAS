@@ -180,25 +180,17 @@ def update_rankings():
             'private': {}
         }
 
-        # Scrape UIL from MaxPreps
+        # Scrape statewide Texas rankings from MaxPreps (includes all UIL and TAPPS)
         try:
-            uil_rankings = maxpreps_scraper.scrape_maxpreps_rankings('UIL')
-            if uil_rankings:
-                maxpreps_data['uil'] = uil_rankings
-                logger.info(f"   MaxPreps UIL: Retrieved rankings")
+            all_rankings = maxpreps_scraper.scrape_maxpreps_rankings('ALL')
+            if all_rankings:
+                # Distribute rankings to UIL and private based on team data
+                # MaxPreps statewide includes both, we'll sort them during merge
+                maxpreps_data['uil'] = all_rankings
+                maxpreps_data['private'] = all_rankings
+                logger.info(f"   MaxPreps Statewide: Retrieved {len(all_rankings)} ranked teams")
         except Exception as e:
-            error_msg = f"MaxPreps UIL scraping failed: {e}"
-            logger.error(f"   {error_msg}")
-            errors.append(error_msg)
-
-        # Scrape TAPPS from MaxPreps
-        try:
-            tapps_rankings = maxpreps_scraper.scrape_maxpreps_rankings('TAPPS')
-            if tapps_rankings:
-                maxpreps_data['private'] = tapps_rankings
-                logger.info(f"   MaxPreps TAPPS: Retrieved rankings")
-        except Exception as e:
-            error_msg = f"MaxPreps TAPPS scraping failed: {e}"
+            error_msg = f"MaxPreps statewide scraping failed: {e}"
             logger.error(f"   {error_msg}")
             errors.append(error_msg)
 
