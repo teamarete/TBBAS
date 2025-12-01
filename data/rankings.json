@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-01T11:10:33.706561",
+  "last_updated": "2025-12-01T11:14:22.107543",
   "uil": {
     "AAAAAA": [
       {
@@ -27,11 +27,11 @@
         "team_name": "Duncanville",
         "district": "11",
         "rank": 3,
-        "wins": 4,
+        "wins": 5,
         "losses": 0,
-        "games": 4,
-        "ppg": 59.2,
-        "opp_ppg": 53.5
+        "games": 5,
+        "ppg": 60.4,
+        "opp_ppg": 53.6
       },
       {
         "team_name": "Atascocita",
@@ -121,11 +121,11 @@
         "team_name": "Desoto",
         "district": "11",
         "rank": 12,
-        "wins": 2,
-        "losses": 1,
-        "games": 3,
-        "ppg": 69.0,
-        "opp_ppg": 67.7
+        "wins": 3,
+        "losses": 2,
+        "games": 5,
+        "ppg": 74.2,
+        "opp_ppg": 72.2
       },
       {
         "team_name": "Cypress Falls",
@@ -164,8 +164,8 @@
         "wins": 2,
         "losses": 1,
         "games": 3,
-        "ppg": 55.3,
-        "opp_ppg": 57.0
+        "ppg": 64.3,
+        "opp_ppg": 57.3
       },
       {
         "team_name": "Pearland",
@@ -213,11 +213,11 @@
         "team_name": "Grand Prairie",
         "rank": 21,
         "district": "7",
-        "wins": 4,
+        "wins": 6,
         "losses": 0,
-        "games": 4,
-        "ppg": 55.0,
-        "opp_ppg": 45.5
+        "games": 6,
+        "ppg": 59.0,
+        "opp_ppg": 44.7
       },
       {
         "team_name": "Mans Lake Ridge",
@@ -296,11 +296,11 @@
         "team_name": "Beaumont United",
         "district": "19",
         "rank": 4,
-        "wins": 4,
+        "wins": 5,
         "losses": 0,
-        "games": 4,
-        "ppg": 73.5,
-        "opp_ppg": 51.2
+        "games": 5,
+        "ppg": 71.8,
+        "opp_ppg": 52.6
       },
       {
         "rank": 5,
@@ -326,13 +326,13 @@
       {
         "rank": 7,
         "team_name": "SA Wagner",
-        "wins": 1,
+        "wins": 0,
         "losses": 3,
         "district": "26",
         "uil_verified": false,
-        "games": 4,
-        "ppg": 53.2,
-        "opp_ppg": 54.0
+        "games": 3,
+        "ppg": 52.7,
+        "opp_ppg": 62.0
       },
       {
         "team_name": "Mansfield Timberview",
@@ -347,23 +347,23 @@
       {
         "rank": 9,
         "team_name": "Ellison",
-        "wins": 3,
-        "losses": 0,
+        "wins": 4,
+        "losses": 2,
         "district": "16",
-        "games": 3,
-        "ppg": 70.3,
-        "opp_ppg": 36.0,
+        "games": 6,
+        "ppg": 64.0,
+        "opp_ppg": 46.7,
         "uil_verified": false
       },
       {
         "team_name": "Lufkin",
         "district": "10",
         "rank": 10,
-        "wins": 3,
-        "losses": 0,
-        "games": 3,
-        "ppg": 62.3,
-        "opp_ppg": 43.7
+        "wins": 4,
+        "losses": 1,
+        "games": 5,
+        "ppg": 62.2,
+        "opp_ppg": 49.2
       },
       {
         "team_name": "Mans Summit",
@@ -451,11 +451,11 @@
         "team_name": "Amarillo",
         "district": "3",
         "rank": 19,
-        "wins": 5,
+        "wins": 6,
         "losses": 0,
-        "games": 5,
-        "ppg": 66.0,
-        "opp_ppg": 46.0
+        "games": 6,
+        "ppg": 64.7,
+        "opp_ppg": 46.7
       },
       {
         "team_name": "Denton Ryan",
@@ -511,11 +511,11 @@
         "team_name": "Palo Duro",
         "district": "3",
         "rank": 25,
-        "wins": 3,
-        "losses": 0,
-        "games": 3,
-        "ppg": 83.7,
-        "opp_ppg": 49.3
+        "wins": 4,
+        "losses": 2,
+        "games": 6,
+        "ppg": 73.5,
+        "opp_ppg": 57.5
       }
     ],
     "AAAA": [
@@ -555,11 +555,11 @@
         "team_name": "Hou Wheatley",
         "rank": 4,
         "district": "20",
-        "wins": 2,
+        "wins": 1,
         "losses": 0,
-        "games": 2,
-        "ppg": 88.0,
-        "opp_ppg": 70.5
+        "games": 1,
+        "ppg": 61.0,
+        "opp_ppg": 45.0
       },
       {
         "team_name": "Frisco Panther Creek",
@@ -2083,6 +2083,6 @@
     ]
   },
   "records_from_games": true,
-  "games_analyzed": 1635,
+  "games_analyzed": 1642,
   "districts_from_uil": 0
 }
