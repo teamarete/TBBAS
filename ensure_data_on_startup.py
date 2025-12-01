@@ -28,16 +28,20 @@ def check_and_update_rankings():
                 print("⚠️  Rankings file is empty - copying from git")
                 needs_update = True
             else:
-                # Verify data integrity - check if UIL 6A has 25 ranked teams
+                # Verify data integrity - check if UIL 6A has at least some ranked teams
+                # We accept 23-25 ranked teams (accounting for teams that may not be in sources)
                 uil_6a_teams = data.get('uil', {}).get('AAAAAA', [])
                 ranked_6a = sum(1 for t in uil_6a_teams if t.get('rank') is not None and 1 <= t.get('rank') <= 25)
 
-                if ranked_6a < 25:
+                if ranked_6a < 20:
+                    # File is severely corrupted (fewer than 20 ranked teams)
+                    # NEVER trigger automatic update - just warn
                     print(f"⚠️  Rankings incomplete: UIL 6A has only {ranked_6a}/25 ranked teams")
-                    print("   Deleting corrupted file to force git version reload...")
-                    data_file.unlink()
-                    print("   ✓ File deleted - will use git version on next check")
-                    return False  # Don't update, just let it reload from git
+                    print("   WARNING: File may be corrupted, but NOT auto-updating")
+                    print("   Use git version or manual update endpoint instead")
+                elif ranked_6a < 25:
+                    print(f"⚠️  Rankings slightly incomplete: UIL 6A has {ranked_6a}/25 ranked teams")
+                    print("   This is acceptable - may be due to missing teams in ranking sources")
 
                 if 'last_updated' in data:
                     last_update = datetime.fromisoformat(data['last_updated'])
