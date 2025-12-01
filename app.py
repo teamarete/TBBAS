@@ -482,6 +482,48 @@ def update_rankings_now():
         }), 500
 
 
+@app.route('/fix-missing-ranks', methods=['POST'])
+def fix_missing_ranks_endpoint():
+    """Manually trigger fix for missing ranks"""
+    try:
+        import json
+        from pathlib import Path
+
+        data_file = Path(__file__).parent / 'data' / 'rankings.json'
+
+        # Load rankings
+        with open(data_file, 'r') as f:
+            data = json.load(f)
+
+        # Fix Strake Jesuit and Mesquite Horn ranks
+        fixes_applied = 0
+        for team in data['uil']['AAAAAA']:
+            if team['team_name'] == 'Strake Jesuit' and team.get('rank') is None:
+                team['rank'] = 18
+                fixes_applied += 1
+            elif team['team_name'] == 'Mesquite Horn' and team.get('rank') is None:
+                team['rank'] = 25
+                fixes_applied += 1
+
+        if fixes_applied > 0:
+            # Save updated rankings
+            with open(data_file, 'w') as f:
+                json.dump(data, f, indent=2)
+
+        return jsonify({
+            'success': True,
+            'fixes_applied': fixes_applied,
+            'message': f'Applied {fixes_applied} rank fixes'
+        })
+    except Exception as e:
+        import traceback
+        return jsonify({
+            'success': False,
+            'error': str(e),
+            'traceback': traceback.format_exc()
+        }), 500
+
+
 if __name__ == '__main__':
     print("\n" + "="*50)
     print("TBBAS Server Starting...")
