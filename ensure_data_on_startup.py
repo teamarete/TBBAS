@@ -9,15 +9,17 @@ import json
 from datetime import datetime
 
 def check_and_update_rankings():
-    """Check if rankings exist, if not trigger immediate update"""
+    """Check if rankings exist, if not restore from gold master or trigger update"""
     data_file = Path(__file__).parent / 'data' / 'rankings.json'
+    master_file = Path(__file__).parent / 'data' / 'rankings.json.master'
 
     # Check if file exists and has data
+    needs_restore = False
     needs_update = False
 
     if not data_file.exists():
-        print("⚠️  Rankings file does not exist - triggering immediate update")
-        needs_update = True
+        print("⚠️  Rankings file does not exist")
+        needs_restore = True
     else:
         try:
             with open(data_file, 'r') as f:
@@ -25,35 +27,65 @@ def check_and_update_rankings():
 
             # Check if data is empty
             if not data.get('uil') and not data.get('private'):
-                print("⚠️  Rankings file is empty - copying from git")
-                needs_update = True
+                print("⚠️  Rankings file is empty")
+                needs_restore = True
             else:
-                # Verify data integrity - check if UIL 6A has at least some ranked teams
-                # We accept 23-25 ranked teams (accounting for teams that may not be in sources)
+                # Verify data integrity - check UIL and TAPPS rankings
                 uil_6a_teams = data.get('uil', {}).get('AAAAAA', [])
                 ranked_6a = sum(1 for t in uil_6a_teams if t.get('rank') is not None and 1 <= t.get('rank') <= 25)
 
+                tapps_6a_teams = data.get('private', {}).get('TAPPS_6A', [])
+                ranked_tapps_6a = sum(1 for t in tapps_6a_teams if t.get('rank') is not None and 1 <= t.get('rank') <= 10)
+
+                # Check if data is severely incomplete
                 if ranked_6a < 20:
-                    # File is severely corrupted (fewer than 20 ranked teams)
-                    # NEVER trigger automatic update - just warn
                     print(f"⚠️  Rankings incomplete: UIL 6A has only {ranked_6a}/25 ranked teams")
-                    print("   WARNING: File may be corrupted, but NOT auto-updating")
-                    print("   Use git version or manual update endpoint instead")
+                    needs_restore = True
+                elif ranked_tapps_6a < 5:
+                    print(f"⚠️  Rankings incomplete: TAPPS 6A has only {ranked_tapps_6a}/10 ranked teams")
+                    needs_restore = True
                 elif ranked_6a < 25:
                     print(f"⚠️  Rankings slightly incomplete: UIL 6A has {ranked_6a}/25 ranked teams")
                     print("   This is acceptable - may be due to missing teams in ranking sources")
 
-                if 'last_updated' in data:
-                    last_update = datetime.fromisoformat(data['last_updated'])
-                    hours_old = (datetime.now() - last_update).total_seconds() / 3600
-                    print(f"✓ Rankings file exists with {ranked_6a}/25 UIL 6A teams (last updated {hours_old:.1f} hours ago)")
-                else:
-                    print(f"✓ Rankings file exists with {ranked_6a}/25 UIL 6A teams")
+                if not needs_restore:
+                    if 'last_updated' in data:
+                        last_update = datetime.fromisoformat(data['last_updated'])
+                        hours_old = (datetime.now() - last_update).total_seconds() / 3600
+                        print(f"✓ Rankings file OK: UIL 6A {ranked_6a}/25, TAPPS 6A {ranked_tapps_6a}/10 (last updated {hours_old:.1f} hours ago)")
+                    else:
+                        print(f"✓ Rankings file OK: UIL 6A {ranked_6a}/25, TAPPS 6A {ranked_tapps_6a}/10")
 
         except Exception as e:
             print(f"⚠️  Error reading rankings file: {e}")
-            needs_update = True
+            needs_restore = True
 
+    # Try to restore from master file if needed
+    if needs_restore and master_file.exists():
+        print(f"\n🔄 Restoring rankings from gold master file...")
+        try:
+            import shutil
+            shutil.copy(master_file, data_file)
+            print("✓ Rankings restored successfully from gold master!")
+
+            # Verify the restored data
+            with open(data_file, 'r') as f:
+                restored_data = json.load(f)
+            uil_6a = restored_data.get('uil', {}).get('AAAAAA', [])
+            tapps_6a = restored_data.get('private', {}).get('TAPPS_6A', [])
+            ranked_uil = sum(1 for t in uil_6a if t.get('rank') and 1 <= t['rank'] <= 25)
+            ranked_tapps = sum(1 for t in tapps_6a if t.get('rank') and 1 <= t['rank'] <= 10)
+            print(f"   Restored: UIL 6A {ranked_uil}/25 teams, TAPPS 6A {ranked_tapps}/10 teams")
+
+            return True
+        except Exception as e:
+            print(f"❌ Failed to restore from gold master: {e}")
+            needs_update = True
+    elif needs_restore:
+        print("⚠️  Gold master file not found - will trigger update")
+        needs_update = True
+
+    # Only trigger automatic update if restore failed and file doesn't exist
     if needs_update:
         print("\n🔄 Triggering immediate ranking update...")
         try:
@@ -65,7 +97,7 @@ def check_and_update_rankings():
             import traceback
             traceback.print_exc()
 
-    return not needs_update
+    return not needs_update and not needs_restore
 
 if __name__ == "__main__":
     check_and_update_rankings()
