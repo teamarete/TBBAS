@@ -1,16 +1,16 @@
 {
-  "last_updated": "2025-12-01T11:14:22.107543",
+  "last_updated": "2025-12-01T11:40:28.804288",
   "uil": {
     "AAAAAA": [
       {
         "team_name": "San Antonio Brennan",
         "district": "28",
         "rank": 1,
-        "wins": 0,
+        "wins": 7,
         "losses": 1,
-        "games": 1,
-        "ppg": 62.0,
-        "opp_ppg": 70.0
+        "games": 8,
+        "ppg": 65.8,
+        "opp_ppg": 55.2
       },
       {
         "rank": 2,
@@ -2083,6 +2083,6 @@
     ]
   },
   "records_from_games": true,
-  "games_analyzed": 1642,
+  "games_analyzed": 1641,
   "districts_from_uil": 0
 }
