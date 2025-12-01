@@ -35,8 +35,11 @@ DATA_FILE = Path(__file__).parent / 'data' / 'rankings.json'
 from init_rankings import ensure_rankings_file
 ensure_rankings_file()
 
-# Scheduler now runs as separate worker process (see Procfile)
-# No longer starting scheduler from web process to avoid conflicts
+# Start automatic scheduler in web process
+# Note: Railway runs single process, so scheduler must run here
+if os.getenv('FLASK_ENV') != 'development':
+    from scheduler import start_scheduler
+    start_scheduler(app)
 
 # Ensure rankings have game statistics (AFTER scheduler starts)
 # This catches cases where scheduler ran an update on startup
