@@ -331,7 +331,7 @@ def api_boxscores(classification):
 def debug_info():
     """Debug endpoint to check file system"""
     info = {
-        'version': '2025-12-01-v2',  # Version marker to confirm deployments
+        'version': '2025-12-01-v3-auto-restore',  # Version marker to confirm deployments
         'current_dir': os.getcwd(),
         'data_file_path': str(DATA_FILE),
         'data_file_exists': DATA_FILE.exists(),
