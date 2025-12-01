@@ -484,36 +484,87 @@ def update_rankings_now():
 
 @app.route('/fix-missing-ranks', methods=['POST'])
 def fix_missing_ranks_endpoint():
-    """Manually trigger fix for missing ranks"""
+    """Restore UIL 6A rankings with proper sequential ranks 1-25"""
     try:
         import json
         from pathlib import Path
 
         data_file = Path(__file__).parent / 'data' / 'rankings.json'
 
-        # Load rankings
+        # Load current rankings
         with open(data_file, 'r') as f:
             data = json.load(f)
 
-        # Fix Strake Jesuit and Mesquite Horn ranks
-        fixes_applied = 0
-        for team in data['uil']['AAAAAA']:
-            if team['team_name'] == 'Strake Jesuit' and team.get('rank') is None:
-                team['rank'] = 18
-                fixes_applied += 1
-            elif team['team_name'] == 'Mesquite Horn' and team.get('rank') is None:
-                team['rank'] = 25
-                fixes_applied += 1
+        # Get current UIL 6A teams
+        current_teams = data['uil']['AAAAAA']
 
-        if fixes_applied > 0:
-            # Save updated rankings
-            with open(data_file, 'w') as f:
-                json.dump(data, f, indent=2)
+        # Define the correct ranking order from git (teams ranked 1-25)
+        correct_order = [
+            'San Antonio Brennan',      # 1
+            'Katy Seven Lakes',          # 2
+            'Duncanville',              # 3
+            'Atascocita',               # 4
+            'North Crowley',            # 5
+            'Plano',                    # 6
+            'Austin Westlake',          # 7
+            'Cibolo Steele',            # 8
+            'Little Elm',               # 9
+            'Allen',                    # 10
+            'Desoto',                   # 11
+            'Katy Jordan',              # 12
+            'Cypress Falls',            # 13
+            'Humble Summer Creek',      # 14
+            'Lancaster',                # 15
+            'San Antonio Harlan',       # 16
+            'Pearland',                 # 17
+            'Strake Jesuit',            # 18
+            'Converse Judson',          # 19
+            'Conroe Grand Oaks',        # 20
+            'Grand Prairie',            # 21
+            'Mans Lake Ridge',          # 22
+            'South Grand Prairie',      # 23
+            'Dickinson',                # 24
+            'Mesquite Horn'             # 25
+        ]
+
+        # Create a map of team names to their data
+        team_map = {team['team_name']: team for team in current_teams}
+
+        # Reorder teams and assign sequential ranks 1-25
+        reordered_teams = []
+        for rank, team_name in enumerate(correct_order, start=1):
+            if team_name in team_map:
+                team = team_map[team_name]
+                team['rank'] = rank
+                reordered_teams.append(team)
+            else:
+                # Team not found - create placeholder
+                reordered_teams.append({
+                    'team_name': team_name,
+                    'rank': rank,
+                    'wins': None,
+                    'losses': None,
+                    'district': None
+                })
+
+        # Add any remaining teams not in the correct_order list as unranked
+        for team_name, team_data in team_map.items():
+            if team_name not in correct_order:
+                team_data['rank'] = None
+                reordered_teams.append(team_data)
+
+        # Replace UIL 6A data
+        data['uil']['AAAAAA'] = reordered_teams
+
+        # Save updated rankings
+        with open(data_file, 'w') as f:
+            json.dump(data, f, indent=2)
 
         return jsonify({
             'success': True,
-            'fixes_applied': fixes_applied,
-            'message': f'Applied {fixes_applied} rank fixes'
+            'teams_reordered': len(correct_order),
+            'total_teams': len(reordered_teams),
+            'message': f'Restored proper ranking order with {len(correct_order)} ranked teams'
         })
     except Exception as e:
         import traceback
