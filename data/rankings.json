@@ -1,16 +1,16 @@
 {
-  "last_updated": "2025-12-01T10:52:17.559047",
+  "last_updated": "2025-12-01T10:56:12.919624",
   "uil": {
     "AAAAAA": [
       {
         "team_name": "San Antonio Brennan",
         "district": "28",
         "rank": 1,
-        "wins": 7,
-        "losses": 0,
-        "games": 7,
-        "ppg": 66.3,
-        "opp_ppg": 53.1
+        "wins": 0,
+        "losses": 1,
+        "games": 1,
+        "ppg": 62.0,
+        "opp_ppg": 70.0
       },
       {
         "rank": 2,
@@ -20,18 +20,18 @@
         "district": "19",
         "uil_verified": false,
         "games": 4,
-        "ppg": 78.5,
-        "opp_ppg": 69.0
+        "ppg": 76.2,
+        "opp_ppg": 62.2
       },
       {
         "team_name": "Duncanville",
         "district": "11",
         "rank": 3,
-        "wins": 2,
+        "wins": 4,
         "losses": 0,
-        "games": 2,
-        "ppg": 55.5,
-        "opp_ppg": 51.0
+        "games": 4,
+        "ppg": 59.2,
+        "opp_ppg": 53.5
       },
       {
         "team_name": "Atascocita",
@@ -46,13 +46,13 @@
       {
         "rank": 5,
         "team_name": "Austin Westlake",
-        "wins": 4,
-        "losses": 1,
+        "wins": 1,
+        "losses": 2,
         "district": "26",
         "uil_verified": false,
-        "games": 5,
-        "ppg": 62.4,
-        "opp_ppg": 49.6
+        "games": 3,
+        "ppg": 56.3,
+        "opp_ppg": 55.0
       },
       {
         "team_name": "North Crowley",
@@ -111,11 +111,11 @@
         "team_name": "Plano",
         "rank": 11,
         "district": "6",
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
-        "games": 8,
-        "ppg": 62.4,
-        "opp_ppg": 53.0
+        "games": 9,
+        "ppg": 60.0,
+        "opp_ppg": 50.4
       },
       {
         "team_name": "Desoto",
@@ -327,12 +327,12 @@
         "rank": 7,
         "team_name": "SA Wagner",
         "wins": 1,
-        "losses": 2,
+        "losses": 3,
         "district": "26",
         "uil_verified": false,
-        "games": 3,
-        "ppg": 53.0,
-        "opp_ppg": 50.3
+        "games": 4,
+        "ppg": 53.2,
+        "opp_ppg": 54.0
       },
       {
         "team_name": "Mansfield Timberview",
@@ -439,12 +439,12 @@
       {
         "rank": 18,
         "team_name": "Alamo Heights",
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "district": "26",
-        "games": 8,
-        "ppg": 70.4,
-        "opp_ppg": 48.6,
+        "games": 9,
+        "ppg": 69.1,
+        "opp_ppg": 49.3,
         "uil_verified": false
       },
       {
@@ -2083,6 +2083,6 @@
     ]
   },
   "records_from_games": true,
-  "games_analyzed": 1617,
+  "games_analyzed": 1626,
   "districts_from_uil": 0
 }
