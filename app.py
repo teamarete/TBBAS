@@ -531,6 +531,54 @@ def dump_6a_ranks():
         }), 500
 
 
+@app.route('/restore-from-master', methods=['POST'])
+def restore_from_master_endpoint():
+    """Restore rankings from gold master file"""
+    try:
+        import shutil
+        from pathlib import Path
+
+        data_file = Path(__file__).parent / 'data' / 'rankings.json'
+        master_file = Path(__file__).parent / 'data' / 'rankings.json.master'
+
+        if not master_file.exists():
+            return jsonify({
+                'success': False,
+                'error': 'Gold master file not found'
+            }), 404
+
+        # Backup current file
+        backup_file = Path(__file__).parent / 'data' / 'rankings.json.backup'
+        if data_file.exists():
+            shutil.copy(data_file, backup_file)
+
+        # Restore from master
+        shutil.copy(master_file, data_file)
+
+        # Verify restoration
+        with open(data_file, 'r') as f:
+            restored_data = json.load(f)
+
+        uil_6a = restored_data.get('uil', {}).get('AAAAAA', [])
+        tapps_6a = restored_data.get('private', {}).get('TAPPS_6A', [])
+        ranked_uil = sum(1 for t in uil_6a if t.get('rank') and 1 <= t['rank'] <= 25)
+        ranked_tapps = sum(1 for t in tapps_6a if t.get('rank') and 1 <= t['rank'] <= 10)
+
+        return jsonify({
+            'success': True,
+            'message': 'Rankings restored from gold master',
+            'uil_6a_ranked': ranked_uil,
+            'tapps_6a_ranked': ranked_tapps
+        })
+    except Exception as e:
+        import traceback
+        return jsonify({
+            'success': False,
+            'error': str(e),
+            'traceback': traceback.format_exc()
+        }), 500
+
+
 @app.route('/fix-missing-ranks', methods=['POST'])
 def fix_missing_ranks_endpoint():
     """Restore UIL 6A rankings with proper sequential ranks 1-25"""
