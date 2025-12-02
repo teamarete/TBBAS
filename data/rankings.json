@@ -781,11 +781,11 @@
         "team_name": "Westwood",
         "rank": 1,
         "district": "20",
-        "wins": 5,
-        "losses": 2,
-        "games": 7,
-        "ppg": 63.0,
-        "opp_ppg": 54.3
+        "wins": 0,
+        "losses": 0,
+        "games": 0,
+        "ppg": 0.0,
+        "opp_ppg": 0.0
       },
       {
         "team_name": "Paradise",
