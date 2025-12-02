@@ -1408,9 +1408,9 @@
         "team_name": "Groveton Centerville",
         "district": "27",
         "rank": 13,
-        "wins": 0,
-        "losses": 1,
-        "games": 1,
+        "wins": 4,
+        "losses": 3,
+        "games": 7,
         "ppg": 41.0,
         "opp_ppg": 51.0
       },
