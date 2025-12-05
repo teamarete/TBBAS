@@ -1,0 +1,18 @@
+{
+  "date": "2024-12-05",
+  "source": "GASO Rankings",
+  "classification": "3A",
+  "rankings": [
+    {"rank": 1, "team_name": "Palestine Westwood"},
+    {"rank": 2, "team_name": "Paradise"},
+    {"rank": 3, "team_name": "Dallas Madison"},
+    {"rank": 4, "team_name": "San Antonio Cole"},
+    {"rank": 5, "team_name": "Onalaska"},
+    {"rank": 6, "team_name": "Liberty Eylau"},
+    {"rank": 7, "team_name": "Brownfield"},
+    {"rank": 8, "team_name": "Duncanville Village Tech"},
+    {"rank": 9, "team_name": "Slaton"},
+    {"rank": 10, "team_name": "Mexia"}
+  ],
+  "notes": "GASO Rankings for UIL 3A as of December 5, 2024. To be used for Monday December 8th ranking update. Note: GASO only provides Top 10 for 3A."
+}
