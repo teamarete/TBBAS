@@ -1,0 +1,33 @@
+{
+  "date": "2024-12-05",
+  "source": "GASO Rankings",
+  "classification": "5A",
+  "rankings": [
+    {"rank": 1, "team_name": "Frisco Heritage"},
+    {"rank": 2, "team_name": "Beaumont West Brook"},
+    {"rank": 3, "team_name": "Birdville"},
+    {"rank": 4, "team_name": "Beaumont United"},
+    {"rank": 5, "team_name": "Lufkin"},
+    {"rank": 6, "team_name": "Frisco Memorial"},
+    {"rank": 7, "team_name": "Mansfield Timberview"},
+    {"rank": 8, "team_name": "Red Oak"},
+    {"rank": 9, "team_name": "Fort Bend Marshall"},
+    {"rank": 10, "team_name": "Mansfield Summit"},
+    {"rank": 11, "team_name": "San Antonio Alamo Heights"},
+    {"rank": 12, "team_name": "Amarillo"},
+    {"rank": 13, "team_name": "Killeen Ellison"},
+    {"rank": 14, "team_name": "Friendswood"},
+    {"rank": 15, "team_name": "Alvin Iowa Colony"},
+    {"rank": 16, "team_name": "San Antonio Wagner"},
+    {"rank": 17, "team_name": "Dallas Highland Park"},
+    {"rank": 18, "team_name": "Frisco Lone Star"},
+    {"rank": 19, "team_name": "Denton"},
+    {"rank": 20, "team_name": "Comal Pieper"},
+    {"rank": 21, "team_name": "Denton Ryan"},
+    {"rank": 22, "team_name": "Prosper Walnut Grove"},
+    {"rank": 23, "team_name": "Lucas Lovejoy"},
+    {"rank": 24, "team_name": "Amarillo Palo Duro"},
+    {"rank": 25, "team_name": "Corpus Christi Veterans Memorial"}
+  ],
+  "notes": "GASO Rankings for UIL 5A as of December 5, 2024. To be used for Monday December 8th ranking update."
+}

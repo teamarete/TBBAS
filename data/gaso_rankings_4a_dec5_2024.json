@@ -1,0 +1,33 @@
+{
+  "date": "2024-12-05",
+  "source": "GASO Rankings",
+  "classification": "4A",
+  "rankings": [
+    {"rank": 1, "team_name": "Dallas Carter"},
+    {"rank": 2, "team_name": "Dallas Kimball"},
+    {"rank": 3, "team_name": "Kennedale"},
+    {"rank": 4, "team_name": "Lubbock Estacado"},
+    {"rank": 5, "team_name": "Houston Wheatley"},
+    {"rank": 6, "team_name": "Lamarque"},
+    {"rank": 7, "team_name": "Houston Washington"},
+    {"rank": 8, "team_name": "Houston Yates"},
+    {"rank": 9, "team_name": "Lubbock Cooper Liberty"},
+    {"rank": 10, "team_name": "Fort Bend Crawford"},
+    {"rank": 11, "team_name": "Canyon West Plains"},
+    {"rank": 12, "team_name": "Burkburnett"},
+    {"rank": 13, "team_name": "Wimberley"},
+    {"rank": 14, "team_name": "Dallas Lincoln"},
+    {"rank": 15, "team_name": "Frisco Panther Creek"},
+    {"rank": 16, "team_name": "Canyon"},
+    {"rank": 17, "team_name": "Waxahachie Life"},
+    {"rank": 18, "team_name": "Fort Worth Southwest"},
+    {"rank": 19, "team_name": "Brock"},
+    {"rank": 20, "team_name": "Austin LBJ"},
+    {"rank": 21, "team_name": "Dallas Roosevelt"},
+    {"rank": 22, "team_name": "Krum"},
+    {"rank": 23, "team_name": "Paris"},
+    {"rank": 24, "team_name": "Quinlan Ford"},
+    {"rank": 25, "team_name": "Celina"}
+  ],
+  "notes": "GASO Rankings for UIL 4A as of December 5, 2024. To be used for Monday December 8th ranking update."
+}
