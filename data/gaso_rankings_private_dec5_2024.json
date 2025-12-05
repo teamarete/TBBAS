@@ -1,0 +1,33 @@
+{
+  "date": "2024-12-05",
+  "source": "GASO Rankings",
+  "classification": "Private Schools (TAPPS/SPC)",
+  "rankings": [
+    {"rank": 1, "team_name": "Houston Second Baptist"},
+    {"rank": 2, "team_name": "Dallas Parish Episcopal"},
+    {"rank": 3, "team_name": "Austin St. Michael's"},
+    {"rank": 4, "team_name": "Houston Christian"},
+    {"rank": 5, "team_name": "Arlington Grace Prep"},
+    {"rank": 6, "team_name": "San Antonio TMI"},
+    {"rank": 7, "team_name": "San Antonio Antonian"},
+    {"rank": 8, "team_name": "Dallas St. Mark's"},
+    {"rank": 9, "team_name": "Lubbock Trinity Christian"},
+    {"rank": 10, "team_name": "Dallas Greenhill"},
+    {"rank": 11, "team_name": "Plano John Paul II"},
+    {"rank": 12, "team_name": "Houston Episcopal"},
+    {"rank": 13, "team_name": "McKinney Christian"},
+    {"rank": 14, "team_name": "Episcopal School of Dallas"},
+    {"rank": 15, "team_name": "The Woodlands Christian"},
+    {"rank": 16, "team_name": "San Antonio Central Catholic"},
+    {"rank": 17, "team_name": "Fort Bend Christian"},
+    {"rank": 18, "team_name": "Houston Kinkaid"},
+    {"rank": 19, "team_name": "Lubbock Christian"},
+    {"rank": 20, "team_name": "Dallas Bishop Lynch"},
+    {"rank": 21, "team_name": "Houston St. Thomas Episcopal"},
+    {"rank": 22, "team_name": "Plano Prestonwood"},
+    {"rank": 23, "team_name": "Frisco Legacy Christian"},
+    {"rank": 24, "team_name": "Midland Christian"},
+    {"rank": 25, "team_name": "Bullard Brook Hill"}
+  ],
+  "notes": "GASO Rankings for Private Schools (TAPPS/SPC) as of December 5, 2024. To be used for Monday December 8th ranking update. GASO does not split private schools into classifications - this is a combined ranking for all private schools."
+}
