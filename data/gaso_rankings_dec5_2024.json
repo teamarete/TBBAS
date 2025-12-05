@@ -1,0 +1,33 @@
+{
+  "date": "2024-12-05",
+  "source": "GASO Rankings",
+  "classification": "6A",
+  "rankings": [
+    {"rank": 1, "team_name": "San Antonio Brennan"},
+    {"rank": 2, "team_name": "Katy Seven Lakes"},
+    {"rank": 3, "team_name": "Humble Atascocita"},
+    {"rank": 4, "team_name": "Duncanville"},
+    {"rank": 5, "team_name": "Allen"},
+    {"rank": 6, "team_name": "North Crowley"},
+    {"rank": 7, "team_name": "Cibolo Steele"},
+    {"rank": 8, "team_name": "Austin Westlake"},
+    {"rank": 9, "team_name": "Cypress Falls"},
+    {"rank": 10, "team_name": "Grand Prairie"},
+    {"rank": 11, "team_name": "Lancaster"},
+    {"rank": 12, "team_name": "Desoto"},
+    {"rank": 13, "team_name": "Little Elm"},
+    {"rank": 14, "team_name": "Pearland"},
+    {"rank": 15, "team_name": "Converse Judson"},
+    {"rank": 16, "team_name": "Katy Jordan"},
+    {"rank": 17, "team_name": "San Antonio Harlan"},
+    {"rank": 18, "team_name": "Arlington Martin"},
+    {"rank": 19, "team_name": "Plano"},
+    {"rank": 20, "team_name": "Humble Summer Creek"},
+    {"rank": 21, "team_name": "Conroe Grand Oaks"},
+    {"rank": 22, "team_name": "Denton Guyer"},
+    {"rank": 23, "team_name": "Cypress Springs"},
+    {"rank": 24, "team_name": "Waxahachie"},
+    {"rank": 25, "team_name": "Schertz Clemens"}
+  ],
+  "notes": "GASO Rankings for UIL 6A as of December 5, 2024. To be used for Monday December 8th ranking update."
+}
