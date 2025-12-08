@@ -539,7 +539,8 @@ def restore_from_master_endpoint():
         from pathlib import Path
 
         data_file = Path(__file__).parent / 'data' / 'rankings.json'
-        master_file = Path(__file__).parent / 'data' / 'rankings.json.master'
+        # Master file is in root directory, not data/ (to avoid Railway volume mount issues)
+        master_file = Path(__file__).parent / 'rankings.json.master'
 
         if not master_file.exists():
             return jsonify({

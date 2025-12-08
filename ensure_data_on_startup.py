@@ -11,7 +11,8 @@ from datetime import datetime
 def check_and_update_rankings():
     """Check if rankings exist, if not restore from gold master or trigger update"""
     data_file = Path(__file__).parent / 'data' / 'rankings.json'
-    master_file = Path(__file__).parent / 'data' / 'rankings.json.master'
+    # Master file is in root directory, not data/ (to avoid Railway volume mount issues)
+    master_file = Path(__file__).parent / 'rankings.json.master'
 
     # Check if file exists and has data
     needs_restore = False
