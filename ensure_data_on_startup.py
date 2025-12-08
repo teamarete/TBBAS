@@ -37,16 +37,13 @@ def check_and_update_rankings():
                 tapps_6a_teams = data.get('private', {}).get('TAPPS_6A', [])
                 ranked_tapps_6a = sum(1 for t in tapps_6a_teams if t.get('rank') is not None and 1 <= t.get('rank') <= 10)
 
-                # Check if data is severely incomplete
-                if ranked_6a < 20:
-                    print(f"⚠️  Rankings incomplete: UIL 6A has only {ranked_6a}/25 ranked teams")
+                # Check if data is incomplete - require EXACTLY 25 for UIL and 10 for TAPPS
+                if ranked_6a != 25:
+                    print(f"⚠️  Rankings incomplete: UIL 6A has {ranked_6a}/25 ranked teams (need exactly 25)")
                     needs_restore = True
-                elif ranked_tapps_6a < 5:
-                    print(f"⚠️  Rankings incomplete: TAPPS 6A has only {ranked_tapps_6a}/10 ranked teams")
+                elif ranked_tapps_6a != 10:
+                    print(f"⚠️  Rankings incomplete: TAPPS 6A has {ranked_tapps_6a}/10 ranked teams (need exactly 10)")
                     needs_restore = True
-                elif ranked_6a < 25:
-                    print(f"⚠️  Rankings slightly incomplete: UIL 6A has {ranked_6a}/25 ranked teams")
-                    print("   This is acceptable - may be due to missing teams in ranking sources")
 
                 if not needs_restore:
                     if 'last_updated' in data:
