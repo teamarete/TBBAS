@@ -242,7 +242,7 @@
       {
         "team_name": "Strake Jesuit",
         "district": "18",
-        "rank": null,
+        "rank": 24,
         "wins": 3,
         "losses": 2,
         "games": 5,
@@ -252,7 +252,7 @@
       {
         "team_name": "Mesquite Horn",
         "district": "11",
-        "rank": null,
+        "rank": 25,
         "wins": 6,
         "losses": 2,
         "games": 8,
@@ -507,7 +507,7 @@
         "uil_verified": false
       },
       {
-        "rank": null,
+        "rank": 25,
         "team_name": "SA Wagner",
         "wins": 0,
         "losses": 3,
@@ -767,7 +767,7 @@
       },
       {
         "team_name": "Randall",
-        "rank": null,
+        "rank": 25,
         "district": "4",
         "wins": 1,
         "losses": 5,
@@ -1005,7 +1005,7 @@
         "opp_ppg": 62.3
       },
       {
-        "rank": null,
+        "rank": 23,
         "team_name": "Poth",
         "wins": 0,
         "losses": 0,
@@ -1016,7 +1016,7 @@
         "opp_ppg": 0.0
       },
       {
-        "rank": null,
+        "rank": 24,
         "team_name": "Aransas Pass",
         "wins": 0,
         "losses": 3,
@@ -1027,7 +1027,7 @@
         "opp_ppg": 65.0
       },
       {
-        "rank": null,
+        "rank": 25,
         "team_name": "Hooks",
         "wins": 0,
         "losses": 0,
@@ -1263,7 +1263,7 @@
       {
         "team_name": "Plains",
         "district": "5",
-        "rank": null,
+        "rank": 23,
         "wins": 2,
         "losses": 2,
         "games": 4,
@@ -1273,7 +1273,7 @@
       {
         "team_name": "Lindsay",
         "district": "13",
-        "rank": null,
+        "rank": 24,
         "wins": 0,
         "losses": 0,
         "games": 0,
@@ -1282,7 +1282,7 @@
       },
       {
         "team_name": "Poolville",
-        "rank": null,
+        "rank": 25,
         "district": "11",
         "wins": 2,
         "losses": 1,
@@ -1527,7 +1527,7 @@
         "opp_ppg": 0.0
       },
       {
-        "rank": null,
+        "rank": 24,
         "team_name": "Wildorado",
         "wins": 0,
         "losses": 1,
@@ -1540,7 +1540,7 @@
       {
         "team_name": "Benjamin",
         "district": "16",
-        "rank": null,
+        "rank": 25,
         "wins": 0,
         "losses": 0,
         "games": 0,
@@ -1622,7 +1622,7 @@
         "opp_ppg": 67.0
       },
       {
-        "rank": null,
+        "rank": 8,
         "team_name": "Dallas St. Mark's School of Texas",
         "wins": 5,
         "losses": 0,
@@ -1632,7 +1632,7 @@
         "opp_ppg": 46.4
       },
       {
-        "rank": null,
+        "rank": 9,
         "team_name": "Fort Worth Nolan Catholic",
         "wins": 0,
         "losses": 0,
@@ -1642,7 +1642,7 @@
         "opp_ppg": 0.0
       },
       {
-        "rank": null,
+        "rank": 10,
         "team_name": "Houston St. Thomas",
         "wins": 0,
         "losses": 0,
@@ -1736,7 +1736,7 @@
       {
         "team_name": "Fort Worth Southwest Christian",
         "district": "1",
-        "rank": null,
+        "rank": 9,
         "wins": 0,
         "losses": 0,
         "games": 0,
@@ -1746,7 +1746,7 @@
       {
         "team_name": "Arlington Oakridge",
         "district": "1",
-        "rank": null,
+        "rank": 10,
         "wins": 0,
         "losses": 0,
         "games": 0,
@@ -1766,7 +1766,7 @@
         "opp_ppg": 36.0
       },
       {
-        "rank": null,
+        "rank": 2,
         "team_name": "Lubbock Christian",
         "wins": 0,
         "losses": 0,
@@ -1776,7 +1776,7 @@
         "opp_ppg": 0.0
       },
       {
-        "rank": null,
+        "rank": 3,
         "team_name": "Houston St Thomas Episcopal",
         "wins": 9,
         "losses": 4,
@@ -1786,7 +1786,7 @@
         "opp_ppg": 0.0
       },
       {
-        "rank": null,
+        "rank": 4,
         "team_name": "Tyler Bishop Gorman",
         "wins": 2,
         "losses": 2,
@@ -1796,7 +1796,7 @@
         "opp_ppg": 60.2
       },
       {
-        "rank": null,
+        "rank": 5,
         "team_name": "Houston St. Francis",
         "wins": 0,
         "losses": 2,
@@ -1806,7 +1806,7 @@
         "opp_ppg": 72.0
       },
       {
-        "rank": null,
+        "rank": 6,
         "team_name": "Houston Westbury",
         "wins": 3,
         "losses": 0,
@@ -1816,7 +1816,7 @@
         "opp_ppg": 53.0
       },
       {
-        "rank": null,
+        "rank": 7,
         "team_name": "Midland Christian",
         "wins": 5,
         "losses": 1,
@@ -1826,7 +1826,7 @@
         "opp_ppg": 41.0
       },
       {
-        "rank": null,
+        "rank": 8,
         "team_name": "San Antonio Holy Cross",
         "wins": 5,
         "losses": 1,
@@ -1837,7 +1837,7 @@
       },
       {
         "team_name": "Colleyville Covenant Christian",
-        "rank": null,
+        "rank": 9,
         "district": "2",
         "wins": 3,
         "losses": 2,
@@ -1846,7 +1846,7 @@
         "opp_ppg": 0.0
       },
       {
-        "rank": null,
+        "rank": 10,
         "team_name": "Boerne Geneva",
         "wins": 1,
         "losses": 0,
@@ -1858,7 +1858,7 @@
     ],
     "TAPPS_3A": [
       {
-        "rank": null,
+        "rank": 1,
         "team_name": "Dallas Yavneh",
         "wins": 1,
         "losses": 0,
@@ -1868,7 +1868,7 @@
         "opp_ppg": 53.0
       },
       {
-        "rank": null,
+        "rank": 2,
         "team_name": "Waco Live Oak",
         "wins": 2,
         "losses": 1,
@@ -1878,7 +1878,7 @@
         "opp_ppg": 53.7
       },
       {
-        "rank": null,
+        "rank": 3,
         "team_name": "Faith Academy of Marble Falls",
         "wins": 2,
         "losses": 4,
@@ -1888,7 +1888,7 @@
         "opp_ppg": 45.2
       },
       {
-        "rank": null,
+        "rank": 4,
         "team_name": "Huntsville Alpha Omega",
         "wins": 1,
         "losses": 0,
@@ -1898,7 +1898,7 @@
         "opp_ppg": 35.0
       },
       {
-        "rank": null,
+        "rank": 5,
         "team_name": "Abilene Christian",
         "wins": 1,
         "losses": 2,
@@ -1908,7 +1908,7 @@
         "opp_ppg": 48.7
       },
       {
-        "rank": null,
+        "rank": 6,
         "team_name": "Keene Chisholm Trail",
         "wins": 1,
         "losses": 4,
@@ -1918,7 +1918,7 @@
         "opp_ppg": 54.8
       },
       {
-        "rank": null,
+        "rank": 7,
         "team_name": "Fort Worth Covenant",
         "wins": 3,
         "losses": 1,
@@ -1928,7 +1928,7 @@
         "opp_ppg": 41.8
       },
       {
-        "rank": null,
+        "rank": 8,
         "team_name": "Denton Calvary",
         "wins": 1,
         "losses": 3,
@@ -1938,7 +1938,7 @@
         "opp_ppg": 52.8
       },
       {
-        "rank": null,
+        "rank": 9,
         "team_name": "Austin San Juan Diego",
         "wins": 1,
         "losses": 3,
@@ -1948,7 +1948,7 @@
         "opp_ppg": 61.5
       },
       {
-        "rank": null,
+        "rank": 10,
         "team_name": "Rockwall Heritage",
         "wins": 0,
         "losses": 0,
@@ -2020,7 +2020,7 @@
         "opp_ppg": 0.0
       },
       {
-        "rank": null,
+        "rank": 7,
         "team_name": "Ovilla Christian School",
         "wins": 0,
         "losses": 0,
@@ -2030,7 +2030,7 @@
         "opp_ppg": 0.0
       },
       {
-        "rank": null,
+        "rank": 8,
         "team_name": "Holy Cross Catholic Academy-Amarillo",
         "wins": 0,
         "losses": 0,
@@ -2040,7 +2040,7 @@
         "opp_ppg": 0.0
       },
       {
-        "rank": null,
+        "rank": 9,
         "team_name": "Bracken Christian School-Bulverde",
         "wins": 0,
         "losses": 0,
@@ -2052,7 +2052,7 @@
       {
         "team_name": "Faith West Academy-Katy",
         "district": "3",
-        "rank": null,
+        "rank": 10,
         "wins": 0,
         "losses": 0,
         "games": 0,
@@ -2062,7 +2062,7 @@
     ],
     "TAPPS_1A": [
       {
-        "rank": null,
+        "rank": 1,
         "team_name": "Divine Savior Academy-Missouri City",
         "wins": 0,
         "losses": 0,
@@ -2072,7 +2072,7 @@
         "opp_ppg": 0.0
       },
       {
-        "rank": null,
+        "rank": 2,
         "team_name": "Texhoma Christian School-Sherman",
         "wins": 0,
         "losses": 0,
@@ -2082,7 +2082,7 @@
         "opp_ppg": 0.0
       },
       {
-        "rank": null,
+        "rank": 3,
         "team_name": "Heritage School-Fredericksburg",
         "wins": 0,
         "losses": 0,
@@ -2092,7 +2092,7 @@
         "opp_ppg": 0.0
       },
       {
-        "rank": null,
+        "rank": 4,
         "team_name": "Harvest Christian Academy-Edinburgh",
         "wins": 0,
         "losses": 0,
@@ -2102,7 +2102,7 @@
         "opp_ppg": 0.0
       },
       {
-        "rank": null,
+        "rank": 5,
         "team_name": "Founders Christian School-Spring",
         "wins": 0,
         "losses": 0,
@@ -2113,7 +2113,7 @@
       },
       {
         "team_name": "Robert M Beren Academy-Houston",
-        "rank": null,
+        "rank": 6,
         "district": "7",
         "wins": 0,
         "losses": 0,
@@ -2124,7 +2124,7 @@
       {
         "team_name": "Covenant Academy-Cypress",
         "district": "3",
-        "rank": null,
+        "rank": 7,
         "wins": 0,
         "losses": 0,
         "games": 0,
@@ -2134,7 +2134,7 @@
       {
         "team_name": "Macedonian Christian Academy",
         "district": "5",
-        "rank": null,
+        "rank": 8,
         "wins": 0,
         "losses": 0,
         "games": 0,
@@ -2142,7 +2142,7 @@
         "opp_ppg": 0.0
       },
       {
-        "rank": null,
+        "rank": 9,
         "team_name": "Cornerstone Christian School-San Angelo",
         "wins": 0,
         "losses": 0,
@@ -2152,7 +2152,7 @@
         "opp_ppg": 0.0
       },
       {
-        "rank": null,
+        "rank": 10,
         "team_name": "The Covenant Preparatory School-Kingwood",
         "wins": 0,
         "losses": 0,
