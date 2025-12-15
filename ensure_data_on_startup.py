@@ -14,49 +14,16 @@ def check_and_update_rankings():
     # Master file is in root directory, not data/ (to avoid Railway volume mount issues)
     master_file = Path(__file__).parent / 'rankings.json.master'
 
+    # ALWAYS restore from git version on startup to prevent stale volume data
+    # This ensures Railway deployments always use the latest rankings from git
+    print("🔄 Force-restoring rankings from git version of gold master...")
+
     # Check if file exists and has data
-    needs_restore = False
+    needs_restore = True  # Always restore from master on startup
     needs_update = False
 
-    if not data_file.exists():
-        print("⚠️  Rankings file does not exist")
-        needs_restore = True
-    else:
-        try:
-            with open(data_file, 'r') as f:
-                data = json.load(f)
-
-            # Check if data is empty
-            if not data.get('uil') and not data.get('private'):
-                print("⚠️  Rankings file is empty")
-                needs_restore = True
-            else:
-                # Verify data integrity - check UIL and TAPPS rankings
-                uil_6a_teams = data.get('uil', {}).get('AAAAAA', [])
-                ranked_6a = sum(1 for t in uil_6a_teams if t.get('rank') is not None and 1 <= t.get('rank') <= 25)
-
-                tapps_6a_teams = data.get('private', {}).get('TAPPS_6A', [])
-                ranked_tapps_6a = sum(1 for t in tapps_6a_teams if t.get('rank') is not None and 1 <= t.get('rank') <= 10)
-
-                # Check if data is incomplete - require EXACTLY 25 for UIL and 10 for TAPPS
-                if ranked_6a != 25:
-                    print(f"⚠️  Rankings incomplete: UIL 6A has {ranked_6a}/25 ranked teams (need exactly 25)")
-                    needs_restore = True
-                elif ranked_tapps_6a != 10:
-                    print(f"⚠️  Rankings incomplete: TAPPS 6A has {ranked_tapps_6a}/10 ranked teams (need exactly 10)")
-                    needs_restore = True
-
-                if not needs_restore:
-                    if 'last_updated' in data:
-                        last_update = datetime.fromisoformat(data['last_updated'])
-                        hours_old = (datetime.now() - last_update).total_seconds() / 3600
-                        print(f"✓ Rankings file OK: UIL 6A {ranked_6a}/25, TAPPS 6A {ranked_tapps_6a}/10 (last updated {hours_old:.1f} hours ago)")
-                    else:
-                        print(f"✓ Rankings file OK: UIL 6A {ranked_6a}/25, TAPPS 6A {ranked_tapps_6a}/10")
-
-        except Exception as e:
-            print(f"⚠️  Error reading rankings file: {e}")
-            needs_restore = True
+    # Skip the validation checks - we ALWAYS restore from git master on startup
+    # This prevents stale Railway volume data from persisting across deployments
 
     # Try to restore from master file if needed
     if needs_restore and master_file.exists():
