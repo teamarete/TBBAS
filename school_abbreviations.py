@@ -105,6 +105,9 @@ SPECIAL_CASES = {
     'Bmt United': 'Beaumont United',          # Bmt United -> Beaumont United
     'Mans Timberview': 'Mansfield Timberview', # Mans Timberview -> Mansfield Timberview
     'FB Marshall': 'Fort Bend Marshall',      # FB Marshall -> Fort Bend Marshall
+    # December 15 - Additional name variations found in database
+    'Denton Guyer': 'Guyer',                  # Denton Guyer -> Guyer in database (5 games)
+    'Houston Second Baptist': 'Second Baptist', # Houston Second Baptist -> Second Baptist in database
 }
 
 def expand_abbreviations(school_name):
