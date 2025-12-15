@@ -544,26 +544,30 @@ def run_scheduler():
     schedule.every().day.at(DAILY_BOX_SCORE_TIME).do(collect_box_scores)
     logger.info("")
 
-    # Weekly ranking updates
-    update_dates = calculate_update_dates()
-    logger.info(f"Weekly Ranking Updates ({len(update_dates)} total):")
-    logger.info(f"  - Every Monday at {WEEKLY_RANKING_TIME} UTC (1:00 PM CST)")
-    for date in update_dates:
-        logger.info(f"    • {date.strftime('%A, %B %d, %Y')}")
+    # Weekly ranking updates - DISABLED (manual updates only)
+    # update_dates = calculate_update_dates()
+    # logger.info(f"Weekly Ranking Updates ({len(update_dates)} total):")
+    # logger.info(f"  - Every Monday at {WEEKLY_RANKING_TIME} UTC (1:00 PM CST)")
+    # for date in update_dates:
+    #     logger.info(f"    • {date.strftime('%A, %B %d, %Y')}")
 
-    # Schedule the job for every Monday at 1:00 PM CST (19:00 UTC)
-    schedule.every().monday.at(WEEKLY_RANKING_TIME).do(lambda: update_rankings() if is_update_day() else None)
+    # Schedule the job for every Monday at 1:00 PM CST (19:00 UTC) - DISABLED
+    # schedule.every().monday.at(WEEKLY_RANKING_TIME).do(lambda: update_rankings() if is_update_day() else None)
+
+    logger.info("Automatic Ranking Updates: DISABLED")
+    logger.info("  - Rankings will be updated manually only")
+    logger.info("  - Use update_all_rankings.py or API endpoints for manual updates")
 
     logger.info("")
     logger.info("Scheduler is now running...")
     logger.info("="*50)
 
-    # Also check at startup if we need to update
-    if is_update_day():
-        current_time = datetime.now().strftime("%H:%M")
-        if current_time >= WEEKLY_RANKING_TIME:
-            logger.info("Update scheduled for today and time has passed - running now")
-            update_rankings()
+    # Automatic startup updates disabled
+    # if is_update_day():
+    #     current_time = datetime.now().strftime("%H:%M")
+    #     if current_time >= WEEKLY_RANKING_TIME:
+    #         logger.info("Update scheduled for today and time has passed - running now")
+    #         update_rankings()
 
     # Run the schedule loop
     while True:
