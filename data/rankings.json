@@ -584,8 +584,8 @@
         "wins": null,
         "losses": null,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 77.0,
+        "opp_ppg": 61.0
       },
       {
         "team_name": "Mans Timberview",
@@ -594,8 +594,8 @@
         "wins": null,
         "losses": null,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 50.1,
+        "opp_ppg": 43.3
       },
       {
         "team_name": "FB Marshall",
@@ -604,8 +604,8 @@
         "wins": null,
         "losses": null,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 64.0,
+        "opp_ppg": 51.0
       },
       {
         "team_name": "Bmt West Brook",
@@ -614,8 +614,8 @@
         "wins": null,
         "losses": null,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 72.5,
+        "opp_ppg": 66.0
       },
       {
         "team_name": "McAllen",
@@ -624,8 +624,8 @@
         "wins": 17,
         "losses": 0,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 58.4,
+        "opp_ppg": 41.3
       },
       {
         "team_name": "New Braunfels",
@@ -634,8 +634,8 @@
         "wins": 15,
         "losses": 2,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 49.8,
+        "opp_ppg": 52.7
       },
       {
         "team_name": "Belton",
@@ -644,8 +644,8 @@
         "wins": 13,
         "losses": 2,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 85.8,
+        "opp_ppg": 38.8
       }
     ],
     "AAAA": [
@@ -912,8 +912,8 @@
         "wins": null,
         "losses": null,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 70.0,
+        "opp_ppg": 61.0
       },
       {
         "team_name": "Lubbock Liberty",
@@ -932,8 +932,8 @@
         "wins": 4,
         "losses": 6,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 56.0,
+        "opp_ppg": 65.1
       },
       {
         "team_name": "West Plains",
@@ -942,8 +942,8 @@
         "wins": 9,
         "losses": 2,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 69.5,
+        "opp_ppg": 34.5
       },
       {
         "team_name": "Canyon",
@@ -952,8 +952,8 @@
         "wins": 11,
         "losses": 3,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 63.4,
+        "opp_ppg": 49.2
       },
       {
         "team_name": "Farmersville",
@@ -962,8 +962,8 @@
         "wins": 13,
         "losses": 1,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 84.7,
+        "opp_ppg": 38.3
       },
       {
         "team_name": "Davenport",
@@ -972,8 +972,8 @@
         "wins": 11,
         "losses": 4,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 71.0,
+        "opp_ppg": 49.7
       }
     ],
     "AAA": [
@@ -1254,8 +1254,8 @@
         "wins": 7,
         "losses": 3,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 60.0,
+        "opp_ppg": 50.8
       },
       {
         "team_name": "Wall",
@@ -1264,8 +1264,8 @@
         "wins": 13,
         "losses": 3,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 64.0,
+        "opp_ppg": 38.6
       },
       {
         "team_name": "Marion",
@@ -1274,8 +1274,8 @@
         "wins": 11,
         "losses": 2,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 60.0,
+        "opp_ppg": 64.0
       }
     ],
     "AA": [
@@ -1547,8 +1547,8 @@
         "wins": 12,
         "losses": 4,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 62.8,
+        "opp_ppg": 40.2
       },
       {
         "team_name": "Farwell",
@@ -1557,8 +1557,8 @@
         "wins": 7,
         "losses": 1,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 99.0,
+        "opp_ppg": 53.0
       },
       {
         "team_name": "Sabine Pass",
@@ -1567,8 +1567,8 @@
         "wins": 11,
         "losses": 4,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 56.7,
+        "opp_ppg": 46.7
       },
       {
         "team_name": "Agua Dulce",
@@ -1577,8 +1577,8 @@
         "wins": 12,
         "losses": 0,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 60.5,
+        "opp_ppg": 35.5
       },
       {
         "team_name": "LaPoynor",
@@ -1587,8 +1587,8 @@
         "wins": 12,
         "losses": 2,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 69.2,
+        "opp_ppg": 57.2
       },
       {
         "team_name": "D Big Sandy",
@@ -1864,8 +1864,8 @@
         "wins": 9,
         "losses": 5,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 57.0,
+        "opp_ppg": 53.0
       },
       {
         "team_name": "Moulton",
@@ -1874,8 +1874,8 @@
         "wins": 14,
         "losses": 3,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 50.2,
+        "opp_ppg": 39.7
       },
       {
         "team_name": "Saint Jo",
@@ -1884,8 +1884,8 @@
         "wins": 11,
         "losses": 3,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 51.3,
+        "opp_ppg": 51.3
       },
       {
         "team_name": "DHanis",
@@ -1904,8 +1904,8 @@
         "wins": 6,
         "losses": 2,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 34.0,
+        "opp_ppg": 60.0
       }
     ]
   },
@@ -2060,8 +2060,8 @@
         "losses": 1,
         "district": "4",
         "games": 12,
-        "ppg": 0.0,
-        "opp_ppg": 0.0
+        "ppg": 77.5,
+        "opp_ppg": 60.0
       },
       {
         "rank": 2,
@@ -2160,8 +2160,8 @@
         "wins": 10,
         "losses": 2,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 68.0,
+        "opp_ppg": 28.8
       },
       {
         "team_name": "Tyler Grace Community",
