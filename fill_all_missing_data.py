@@ -41,7 +41,7 @@ def get_team_stats_from_db(team_name):
     return None
 
 def load_tabc_records():
-    """Load TABC records from December 15 data"""
+    """Load TABC records from December 15 data with name variations"""
     tabc_uil_file = Path(__file__).parent / 'data' / 'tabc_rankings_dec15_2025.json'
     tabc_private_file = Path(__file__).parent / 'data' / 'tabc_rankings_private_dec15_2025.json'
 
@@ -57,7 +57,13 @@ def load_tabc_records():
             record = team['record']
             if '-' in record:
                 wins, losses = record.split('-')
+                # Store under original name
                 records[name] = {'wins': int(wins), 'losses': int(losses)}
+                # Also store under all variations
+                variations = get_search_variations(name)
+                for var in variations:
+                    if var != name:
+                        records[var] = {'wins': int(wins), 'losses': int(losses)}
 
     # Load TAPPS
     with open(tabc_private_file, 'r') as f:
@@ -69,7 +75,13 @@ def load_tabc_records():
             record = team['record']
             if '-' in record:
                 wins, losses = record.split('-')
+                # Store under original name
                 records[name] = {'wins': int(wins), 'losses': int(losses)}
+                # Also store under all variations
+                variations = get_search_variations(name)
+                for var in variations:
+                    if var != name:
+                        records[var] = {'wins': int(wins), 'losses': int(losses)}
 
     return records
 

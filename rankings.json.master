@@ -578,46 +578,6 @@
         "opp_ppg": 62.0
       },
       {
-        "team_name": "Bmt United",
-        "rank": 1,
-        "district": null,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": 77.0,
-        "opp_ppg": 61.0
-      },
-      {
-        "team_name": "Mans Timberview",
-        "rank": 5,
-        "district": null,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": 50.1,
-        "opp_ppg": 43.3
-      },
-      {
-        "team_name": "FB Marshall",
-        "rank": 10,
-        "district": null,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": 64.0,
-        "opp_ppg": 51.0
-      },
-      {
-        "team_name": "Bmt West Brook",
-        "rank": 11,
-        "district": null,
-        "wins": null,
-        "losses": null,
-        "games": null,
-        "ppg": 72.5,
-        "opp_ppg": 66.0
-      },
-      {
         "team_name": "McAllen",
         "rank": 19,
         "district": null,
@@ -909,8 +869,8 @@
         "team_name": "Estacado",
         "rank": 4,
         "district": null,
-        "wins": null,
-        "losses": null,
+        "wins": 10,
+        "losses": 2,
         "games": null,
         "ppg": 70.0,
         "opp_ppg": 61.0
