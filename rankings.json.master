@@ -335,7 +335,7 @@
       {
         "team_name": "Beaumont West Brook",
         "district": "19",
-        "rank": null,
+        "rank": 11,
         "wins": 9,
         "losses": 3,
         "games": 2,
@@ -355,7 +355,7 @@
       {
         "team_name": "Beaumont United",
         "district": "19",
-        "rank": null,
+        "rank": 1,
         "wins": 16,
         "losses": 0,
         "games": 5,
@@ -416,7 +416,7 @@
       {
         "team_name": "Mansfield Timberview",
         "district": "8",
-        "rank": null,
+        "rank": 5,
         "wins": 13,
         "losses": 2,
         "games": 7,
@@ -447,7 +447,7 @@
       {
         "team_name": "Fort Bend Marshall",
         "district": "22",
-        "rank": null,
+        "rank": 10,
         "wins": 13,
         "losses": 7,
         "games": 7,
