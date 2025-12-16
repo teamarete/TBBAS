@@ -266,8 +266,8 @@
         "wins": 9,
         "losses": 2,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 60.0,
+        "opp_ppg": 52.3
       },
       {
         "team_name": "Cypress Springs",
@@ -276,18 +276,18 @@
         "wins": 14,
         "losses": 2,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 58.0,
+        "opp_ppg": 43.0
       },
       {
         "team_name": "Cy Falls",
         "rank": 16,
         "district": null,
-        "wins": null,
-        "losses": null,
+        "wins": 9,
+        "losses": 5,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 80.0,
+        "opp_ppg": 21.0
       },
       {
         "team_name": "Denton Guyer",
@@ -296,8 +296,8 @@
         "wins": 10,
         "losses": 3,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 47.8,
+        "opp_ppg": 52.8
       },
       {
         "team_name": "North Shore",
@@ -306,8 +306,8 @@
         "wins": 11,
         "losses": 4,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 61.8,
+        "opp_ppg": 52.9
       },
       {
         "team_name": "Klein Oak",
@@ -316,8 +316,8 @@
         "wins": 11,
         "losses": 2,
         "games": null,
-        "ppg": null,
-        "opp_ppg": null
+        "ppg": 63.1,
+        "opp_ppg": 43.9
       }
     ],
     "AAAAA": [
