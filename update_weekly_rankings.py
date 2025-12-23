@@ -163,17 +163,30 @@ def normalize_team_name(name):
 
 def get_base_school_name(name):
     """
-    Extract base school name without city prefix
+    Extract base school name without city/district prefix
     'SA Brennan' -> 'brennan', 'Brennan' -> 'brennan'
+    'Katy Seven Lakes' -> 'seven lakes', 'Seven Lakes' -> 'seven lakes'
     """
     norm = normalize_team_name(name)
 
-    # Remove common city prefixes
-    city_prefixes = ['sa ', 'hou ', 'bmt ', 'fw ', 'mans ', 'ep ', 'fb ', 'cc ', 'dallas ', 'austin ', 'tyler ', 'waco ', 'lubbock ']
+    # Split into words
+    words = norm.split()
 
-    for prefix in city_prefixes:
-        if norm.startswith(prefix):
-            return norm[len(prefix):]
+    if len(words) <= 1:
+        return norm
+
+    # Common city/district prefixes that should be removed
+    # These are typically the first word
+    city_district_prefixes = [
+        'sa', 'hou', 'bmt', 'fw', 'mans', 'ep', 'fb', 'cc',
+        'dallas', 'austin', 'tyler', 'waco', 'lubbock',
+        'katy', 'converse', 'denton', 'allen', 'plano', 'klein',
+        'cypress', 'south', 'north', 'east', 'west', 'desoto'
+    ]
+
+    # If first word is a common prefix, remove it
+    if words[0] in city_district_prefixes:
+        return ' '.join(words[1:])
 
     return norm
 

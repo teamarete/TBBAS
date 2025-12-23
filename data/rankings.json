@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-22T19:32:52.687191",
+  "last_updated": "2025-12-22T19:38:04.173172",
   "uil": {
     "AAAAAA": [
       {
@@ -17,7 +17,7 @@
         "team_name": "Converse Judson",
         "weighted_rank": 8.0,
         "tabc_rank": 8,
-        "maxpreps_rank": null,
+        "maxpreps_rank": 8,
         "calculated_rank": null,
         "wins": 14,
         "losses": 3,
@@ -47,17 +47,6 @@
         "rank": 4
       },
       {
-        "team_name": "Denton Guyer",
-        "weighted_rank": 15.0,
-        "tabc_rank": 15,
-        "maxpreps_rank": null,
-        "calculated_rank": null,
-        "wins": 12,
-        "losses": 3,
-        "record": "12-3",
-        "rank": 5
-      },
-      {
         "team_name": "Katy Jordan",
         "weighted_rank": 17.0,
         "tabc_rank": 17,
@@ -66,6 +55,17 @@
         "wins": 11,
         "losses": 5,
         "record": "11-5",
+        "rank": 5
+      },
+      {
+        "team_name": "Denton Guyer",
+        "weighted_rank": 20.0,
+        "tabc_rank": 15,
+        "maxpreps_rank": 25,
+        "calculated_rank": null,
+        "wins": 12,
+        "losses": 3,
+        "record": "12-3",
         "rank": 6
       },
       {
@@ -122,6 +122,20 @@
         "rank": 10
       },
       {
+        "team_name": "Katy Seven Lakes",
+        "weighted_rank": 110.33333333333333,
+        "tabc_rank": 1,
+        "maxpreps_rank": 2,
+        "calculated_rank": 328,
+        "wins": 17,
+        "losses": 0,
+        "record": "17-0",
+        "ppg": 76.2,
+        "opp_ppg": 62.2,
+        "games": 4,
+        "rank": 11
+      },
+      {
         "team_name": "Klein Oak",
         "weighted_rank": 111.5,
         "tabc_rank": 24,
@@ -133,7 +147,7 @@
         "ppg": 63.1,
         "opp_ppg": 43.9,
         "games": 7,
-        "rank": 11
+        "rank": 12
       },
       {
         "team_name": "Cypress Falls",
@@ -147,7 +161,7 @@
         "ppg": 64.2,
         "opp_ppg": 47.0,
         "games": 6,
-        "rank": 12
+        "rank": 13
       },
       {
         "team_name": "Little Elm",
@@ -161,7 +175,7 @@
         "ppg": 72.0,
         "opp_ppg": 61.6,
         "games": 10,
-        "rank": 13
+        "rank": 14
       },
       {
         "team_name": "Pearland",
@@ -175,7 +189,7 @@
         "ppg": 52.6,
         "opp_ppg": 42.8,
         "games": 8,
-        "rank": 14
+        "rank": 15
       },
       {
         "team_name": "Plano",
@@ -189,32 +203,7 @@
         "ppg": 60.0,
         "opp_ppg": 50.4,
         "games": 9,
-        "rank": 15
-      },
-      {
-        "team_name": "Katy Seven Lakes",
-        "weighted_rank": 164.5,
-        "tabc_rank": 1,
-        "maxpreps_rank": null,
-        "calculated_rank": 328,
-        "wins": 17,
-        "losses": 0,
-        "record": "17-0",
-        "ppg": 76.2,
-        "opp_ppg": 62.2,
-        "games": 4,
         "rank": 16
-      },
-      {
-        "team_name": "Grand Prairie",
-        "weighted_rank": 167.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 18,
-        "calculated_rank": 316,
-        "ppg": 59.0,
-        "opp_ppg": 44.7,
-        "games": 6,
-        "rank": 17
       },
       {
         "team_name": "North Shore",
@@ -228,7 +217,7 @@
         "ppg": 61.8,
         "opp_ppg": 52.9,
         "games": 8,
-        "rank": 18
+        "rank": 17
       },
       {
         "team_name": "McKinney",
@@ -242,7 +231,7 @@
         "ppg": 60.0,
         "opp_ppg": 52.3,
         "games": 7,
-        "rank": 19
+        "rank": 18
       },
       {
         "team_name": "Duncanville",
@@ -256,7 +245,7 @@
         "ppg": 60.4,
         "opp_ppg": 53.6,
         "games": 5,
-        "rank": 20
+        "rank": 19
       },
       {
         "team_name": "Clear Brook",
@@ -267,7 +256,7 @@
         "ppg": 56.0,
         "opp_ppg": 43.5,
         "games": 8,
-        "rank": 21
+        "rank": 20
       },
       {
         "team_name": "Allen",
@@ -281,18 +270,7 @@
         "ppg": 74.2,
         "opp_ppg": 62.5,
         "games": 6,
-        "rank": 22
-      },
-      {
-        "team_name": "Seven Lakes",
-        "weighted_rank": 228.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 2,
-        "calculated_rank": 454,
-        "ppg": 78.5,
-        "opp_ppg": 69.0,
-        "games": 4,
-        "rank": 23
+        "rank": 21
       },
       {
         "team_name": "Round Rock Westwood",
@@ -303,7 +281,7 @@
         "ppg": 63.0,
         "opp_ppg": 54.3,
         "games": 7,
-        "rank": 24
+        "rank": 22
       },
       {
         "team_name": "Dickinson",
@@ -317,6 +295,34 @@
         "ppg": 61.4,
         "opp_ppg": 59.7,
         "games": 7,
+        "rank": 23
+      },
+      {
+        "team_name": "Plano East",
+        "weighted_rank": 261.3333333333333,
+        "tabc_rank": 18,
+        "maxpreps_rank": 11,
+        "calculated_rank": 755,
+        "wins": 14,
+        "losses": 3,
+        "record": "14-3",
+        "ppg": 54.8,
+        "opp_ppg": 53.2,
+        "games": 5,
+        "rank": 24
+      },
+      {
+        "team_name": "Austin Westlake",
+        "weighted_rank": 264.6666666666667,
+        "tabc_rank": 16,
+        "maxpreps_rank": 17,
+        "calculated_rank": 761,
+        "wins": 13,
+        "losses": 4,
+        "record": "13-4",
+        "ppg": 56.3,
+        "opp_ppg": 55.0,
+        "games": 3,
         "rank": 25
       }
     ],
@@ -345,9 +351,9 @@
       },
       {
         "team_name": "Bmt West Brook",
-        "weighted_rank": 16.0,
+        "weighted_rank": 11.0,
         "tabc_rank": 11,
-        "maxpreps_rank": 21,
+        "maxpreps_rank": null,
         "calculated_rank": null,
         "wins": 11,
         "losses": 3,
@@ -1001,17 +1007,6 @@
         "rank": 4
       },
       {
-        "team_name": "Compass Academy",
-        "weighted_rank": 14.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 20,
-        "calculated_rank": 8,
-        "ppg": 79.0,
-        "opp_ppg": 29.7,
-        "games": 3,
-        "rank": 5
-      },
-      {
         "team_name": "Fairfield",
         "weighted_rank": 14.0,
         "tabc_rank": 13,
@@ -1020,6 +1015,17 @@
         "wins": 9,
         "losses": 2,
         "record": "9-2",
+        "rank": 5
+      },
+      {
+        "team_name": "Compass Academy",
+        "weighted_rank": 14.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 20,
+        "calculated_rank": 8,
+        "ppg": 79.0,
+        "opp_ppg": 29.7,
+        "games": 3,
         "rank": 6
       },
       {
@@ -2020,14 +2026,6 @@
         "rank": 2
       },
       {
-        "team_name": "FBCA",
-        "weighted_rank": 2.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 2,
-        "calculated_rank": null,
-        "rank": 3
-      },
-      {
         "team_name": "Arlington Grace Prep",
         "weighted_rank": 2.0,
         "tabc_rank": 2,
@@ -2036,6 +2034,14 @@
         "wins": 14,
         "losses": 1,
         "record": "14-1",
+        "rank": 3
+      },
+      {
+        "team_name": "FBCA",
+        "weighted_rank": 2.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 2,
+        "calculated_rank": null,
         "rank": 4
       },
       {
@@ -2077,14 +2083,6 @@
         "rank": 8
       },
       {
-        "team_name": "SACHS",
-        "weighted_rank": 10.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 10,
-        "calculated_rank": null,
-        "rank": 9
-      },
-      {
         "team_name": "The Woodlands Christian Academy",
         "weighted_rank": 10.0,
         "tabc_rank": 10,
@@ -2093,6 +2091,14 @@
         "wins": 10,
         "losses": 8,
         "record": "10-8",
+        "rank": 9
+      },
+      {
+        "team_name": "SACHS",
+        "weighted_rank": 10.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 10,
+        "calculated_rank": null,
         "rank": 10
       }
     ],
@@ -2310,6 +2316,14 @@
     ],
     "TAPPS_2A": [
       {
+        "team_name": "First Baptist",
+        "weighted_rank": 1.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 1,
+        "calculated_rank": null,
+        "rank": 1
+      },
+      {
         "team_name": "First Baptist Academy-Dallas",
         "weighted_rank": 1.0,
         "tabc_rank": 1,
@@ -2318,15 +2332,15 @@
         "wins": 3,
         "losses": 2,
         "record": "3-2",
-        "rank": 1
+        "rank": 2
       },
       {
-        "team_name": "First Baptist",
-        "weighted_rank": 1.0,
+        "team_name": "VCA",
+        "weighted_rank": 2.0,
         "tabc_rank": null,
-        "maxpreps_rank": 1,
+        "maxpreps_rank": 2,
         "calculated_rank": null,
-        "rank": 2
+        "rank": 3
       },
       {
         "team_name": "O\u2019Connell College Preparatory School-Galveston",
@@ -2337,15 +2351,15 @@
         "wins": 9,
         "losses": 4,
         "record": "9-4",
-        "rank": 3
+        "rank": 4
       },
       {
-        "team_name": "VCA",
-        "weighted_rank": 2.0,
+        "team_name": "HCCA",
+        "weighted_rank": 3.0,
         "tabc_rank": null,
-        "maxpreps_rank": 2,
+        "maxpreps_rank": 3,
         "calculated_rank": null,
-        "rank": 4
+        "rank": 5
       },
       {
         "team_name": "Legacy Christian Academy-Beaumont",
@@ -2356,23 +2370,7 @@
         "wins": 14,
         "losses": 5,
         "record": "14-5",
-        "rank": 5
-      },
-      {
-        "team_name": "HCCA",
-        "weighted_rank": 3.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 3,
-        "calculated_rank": null,
         "rank": 6
-      },
-      {
-        "team_name": "AAscension Academy",
-        "weighted_rank": 4.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 4,
-        "calculated_rank": null,
-        "rank": 7
       },
       {
         "team_name": "Faith Academy-Victoria",
@@ -2383,6 +2381,14 @@
         "wins": 17,
         "losses": 2,
         "record": "17-2",
+        "rank": 7
+      },
+      {
+        "team_name": "AAscension Academy",
+        "weighted_rank": 4.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 4,
+        "calculated_rank": null,
         "rank": 8
       },
       {
