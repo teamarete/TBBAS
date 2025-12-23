@@ -57,59 +57,82 @@ SPC:
 **Script:** `update_weekly_rankings.py` (to be created)
 **Action:**
 1. Load TABC + MaxPreps rankings from 2 PM scrape
-2. Calculate stats from database (PPG, Opp PPG, etc.)
-3. Compute weighted average: **50% TABC + 50% MaxPreps** (no more GASO)
-4. Update `rankings.json` and `rankings.json.master`
-5. Trigger website update
+2. Calculate efficiency rankings from box score database
+3. Calculate stats from database (PPG, Opp PPG, etc.)
+4. Compute weighted average: **33% Calculated + 33% TABC + 33% MaxPreps**
+5. Update `rankings.json` and `rankings.json.master`
+6. Trigger website update
 
-## Ranking Calculation Changes
+## Ranking Calculation Formula
 
-### OLD Formula (4-way):
-- 25% Calculated (from box scores)
-- 25% TABC
-- 25% MaxPreps
-- 25% GASO
+### NEW Formula (3-way weighted average):
+- **33% Calculated Rankings** - Efficiency ratings from game box scores
+- **33% TABC** - Texas Association of Basketball Coaches rankings
+- **33% MaxPreps** - Daily updated rankings from MaxPreps
 
-### NEW Formula (2-way):
-- **50% TABC**
-- **50% MaxPreps**
-- ❌ GASO removed
+### Removed:
+- ❌ GASO - No longer used in calculations
 
-Stats (PPG, Opp PPG, W-L) come from database box scores and TABC records.
+### Data Sources:
+- **Box Scores**: Scraped daily from MaxPreps at 6 AM CST
+- **Calculated Rankings**: Computed from box score efficiency ratings
+- **TABC Rankings**: Scraped weekly (Mondays 2 PM CST) from tabchoops.org
+- **MaxPreps Rankings**: Scraped weekly (Mondays 2 PM CST) from maxpreps.com
+- **Stats** (PPG, Opp PPG, W-L): From database box scores + TABC records
 
 ## Implementation Status
 
 ### ✅ Completed
-- Created `scrape_maxpreps_daily.py` skeleton
-- Created `scrape_weekly_rankings.py` skeleton
+- Created `scrape_maxpreps_daily.py` with full Selenium-based parser
+- Created `scrape_weekly_rankings.py` with complete TABC and MaxPreps parsers
 - Documented all URLs and schedule
 - Updated automation plan
+- **MaxPreps box score scraping fully implemented**
+  - Uses Selenium WebDriver to handle JavaScript-rendered content
+  - Parses team names and scores from daily scores page
+  - Imports games directly to database
+  - Handles duplicate detection
+- **TABC rankings scraping fully implemented**
+  - Parses UIL (6A-1A) and Private (TAPPS 6A-1A) rankings
+  - Extracts team names, ranks, and win-loss records
+  - Handles multiple text patterns
+- **MaxPreps rankings scraping fully implemented**
+  - Uses Selenium for JavaScript-rendered rankings pages
+  - Supports table and list-based ranking formats
+  - Extracts team names, ranks, and records from all 13 divisions
+  - Handles UIL, TAPPS, and SPC classifications
 
 ### ⚠️ TODO - Critical
-1. **Implement MaxPreps box score parser** in `scrape_maxpreps_daily.py`
-   - Analyze MaxPreps HTML structure
-   - Extract game data (teams, scores, stats)
-   - Handle different page layouts
+1. ~~**Implement MaxPreps box score parser** in `scrape_maxpreps_daily.py`~~ ✅ DONE
+   - ~~Analyze MaxPreps HTML structure~~
+   - ~~Extract game data (teams, scores, stats)~~
+   - ~~Handle different page layouts~~
 
-2. **Implement MaxPreps rankings parser** in `scrape_weekly_rankings.py`
-   - Parse ranking tables from MaxPreps
-   - Extract team names, ranks, records
+2. ~~**Implement MaxPreps rankings parser** in `scrape_weekly_rankings.py`~~ ✅ DONE
+   - ~~Parse ranking tables from MaxPreps~~
+   - ~~Extract team names, ranks, records~~
 
-3. **Implement TABC rankings parser** in `scrape_weekly_rankings.py`
-   - Reuse existing TABC scraping logic
-   - Parse UIL and Private rankings
+3. ~~**Implement TABC rankings parser** in `scrape_weekly_rankings.py`~~ ✅ DONE
+   - ~~Reuse existing TABC scraping logic~~
+   - ~~Parse UIL and Private rankings~~
+   - ~~Extracts team names, ranks, and win-loss records from TABC~~
 
-4. **Create `update_weekly_rankings.py`**
-   - Load scraped TABC + MaxPreps data
-   - Calculate 50/50 weighted average
-   - Update stats from database
-   - Save to rankings.json
+4. ~~**Create `update_weekly_rankings.py`**~~ ✅ DONE
+   - ~~Load scraped TABC + MaxPreps data~~
+   - ~~Calculate 33/33/33 weighted average~~
+   - ~~Update stats from database~~
+   - ~~Save to rankings.json~~
+   - Implements efficiency-based calculated rankings from box scores
+   - Merges all three ranking sources with equal weighting
+   - Updates team stats (PPG, Opp PPG, W-L) from database and TABC
 
-5. **Update scheduler.py**
-   - Add daily 6 AM job for box score scraping
-   - Update Monday 2 PM job for rankings scraping
-   - Add Monday 4 PM job for rankings calculation
-   - Remove GASO scraping calls
+5. ~~**Update scheduler.py**~~ ✅ DONE
+   - ~~Add daily 6 AM job for box score scraping~~
+   - ~~Update Monday 2 PM job for rankings scraping~~
+   - ~~Add Monday 4 PM job for rankings calculation~~
+   - ~~Remove GASO scraping calls and old merge_rankings function~~
+   - Uses subprocess to call new automation scripts
+   - Weekly jobs remain disabled (manual updates only)
 
 6. **Remove GASO dependencies**
    - Update `ranking_calculator.py` to remove GASO weight

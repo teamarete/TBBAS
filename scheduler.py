@@ -1,20 +1,19 @@
 """
-TBBAS Automatic Rankings Updater
-- Daily: Scrape box scores from MaxPreps, newspapers, etc.
-- Weekly: Calculate rankings from box score data and update TABC rankings
+TBBAS Automatic Rankings Updater - New Workflow
+- Daily (6 AM CST): Scrape box scores from MaxPreps
+- Monday (2 PM CST): Scrape TABC and MaxPreps rankings
+- Monday (4 PM CST): Calculate and publish rankings using 33/33/33 weighted average
 """
 
 import schedule
 import time
 import threading
 from datetime import datetime, timedelta
-from scraper import TABCScraper
-from box_score_scraper import BoxScoreCollector
-from ranking_calculator import RankingCalculator
 from email_notifier import EmailNotifier
-from gaso_scraper import GASOScraper
 import logging
 import traceback
+import subprocess
+import sys
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -25,8 +24,11 @@ email_notifier = EmailNotifier()
 # Schedule configuration
 START_DATE = datetime(2025, 11, 11)  # November 11, 2025
 END_DATE = datetime(2026, 3, 9)      # March 9, 2026
-DAILY_BOX_SCORE_TIME = "12:00"       # 12:00 PM UTC = 6:00 AM CST (daily scraping)
-WEEKLY_RANKING_TIME = "19:00"        # 19:00 PM UTC = 1:00 PM CST (Monday rankings)
+
+# New schedule times (UTC)
+DAILY_BOX_SCORE_TIME = "12:00"       # 12:00 PM UTC = 6:00 AM CST (daily MaxPreps box scores)
+WEEKLY_SCRAPE_TIME = "20:00"         # 20:00 PM UTC = 2:00 PM CST (Monday TABC + MaxPreps rankings scrape)
+WEEKLY_UPDATE_TIME = "22:00"         # 22:00 PM UTC = 4:00 PM CST (Monday rankings calculation)
 INTERVAL_WEEKS = 1                   # Every week (every Monday)
 
 # MaxPreps scraping configuration
@@ -46,8 +48,11 @@ def set_app(app):
     _app = app
 
 
-def collect_box_scores():
-    """Collect box scores from various sources daily"""
+def collect_daily_box_scores():
+    """
+    Daily task: Scrape box scores from MaxPreps (6 AM CST)
+    Runs scrape_maxpreps_daily.py to collect yesterday's games
+    """
     now = datetime.now()
 
     # Check if we're within the season
@@ -59,91 +64,75 @@ def collect_box_scores():
         logger.info(f"Season ended - no more collection after {END_DATE.strftime('%B %d, %Y')}")
         return
 
-    logger.info(f"Starting daily box score collection at {now.strftime('%Y-%m-%d %H:%M:%S')}")
-
-    errors = []
-    games_collected = 0
-    sources_summary = {}
+    logger.info("=" * 80)
+    logger.info(f"DAILY BOX SCORE COLLECTION - {now.strftime('%Y-%m-%d %H:%M:%S')}")
+    logger.info("=" * 80)
 
     try:
-        collector = BoxScoreCollector(app=_app)
+        # Run scrape_maxpreps_daily.py
+        logger.info("Running MaxPreps daily box score scraper...")
+        result = subprocess.run(
+            [sys.executable, 'scrape_maxpreps_daily.py'],
+            capture_output=True,
+            text=True,
+            timeout=600  # 10 minute timeout
+        )
 
-        # Use configured dates if specified, otherwise collect yesterday's games
-        target_dates = SCRAPE_DATES if SCRAPE_DATES else None
-        if target_dates:
-            logger.info(f"Using configured dates: {', '.join(target_dates)}")
+        # Log output
+        if result.stdout:
+            logger.info(result.stdout)
 
-        games = collector.collect_daily_box_scores(target_dates=target_dates)
-        games_collected = len(games)
+        if result.stderr:
+            logger.error(result.stderr)
 
-        # Build sources summary
-        for game in games:
-            source = game.get('source', 'Unknown')
-            sources_summary[source] = sources_summary.get(source, 0) + 1
+        if result.returncode == 0:
+            logger.info("✓ Daily box score collection completed successfully")
 
-        logger.info(f"Box score collection complete: {games_collected} games processed")
+            # Send success notification
+            email_notifier.notify_daily_collection(
+                games_collected=0,  # Parse from output if needed
+                sources_summary={'MaxPreps': 'Auto-scraped'},
+                errors=None
+            )
+        else:
+            logger.error(f"Daily scraper failed with return code {result.returncode}")
 
-        # Check rankings from all sources daily
-        logger.info("Checking rankings from all sources...")
-        try:
-            from scraper import TABCScraper
-            scraper = TABCScraper()
+            # Send error notification
+            email_notifier.notify_error(
+                error_type="Daily Box Score Collection",
+                error_message=f"Scraper returned code {result.returncode}",
+                traceback_info=result.stderr
+            )
 
-            # Scrape TABC rankings (UIL and Private)
-            logger.info("  - Checking TABC UIL rankings...")
-            tabc_uil = scraper.scrape_uil_rankings()
+    except subprocess.TimeoutExpired:
+        error_msg = "Daily box score scraper timed out after 10 minutes"
+        logger.error(error_msg)
 
-            logger.info("  - Checking TABC Private rankings...")
-            tabc_private = scraper.scrape_private_rankings()
-
-            logger.info("  - Checking GASO rankings...")
-            # GASO is already checked in box_score_scraper as part of collector
-
-            logger.info("  - Checking HoopInsider rankings...")
-            # HoopInsider check can be added if needed
-
-            logger.info("Rankings check complete")
-        except Exception as e:
-            logger.error(f"Error checking rankings: {e}")
-
-        # DO NOT update rankings.json daily - only store games in database
-        # Rankings will be updated weekly on Mondays at 1 PM CST
-        logger.info("Games stored in database. Rankings will be updated on Monday at 1 PM CST.")
-
-        # Send success notification
-        email_notifier.notify_daily_collection(
-            games_collected=games_collected,
-            sources_summary=sources_summary,
-            errors=None
+        email_notifier.notify_error(
+            error_type="Daily Box Score Collection",
+            error_message=error_msg,
+            traceback_info="Timeout after 600 seconds"
         )
 
     except Exception as e:
-        error_msg = f"Error collecting box scores: {e}"
+        error_msg = f"Error running daily box score scraper: {e}"
         logger.error(error_msg)
         tb = traceback.format_exc()
         logger.error(tb)
 
-        # Send error notification
         email_notifier.notify_error(
             error_type="Daily Box Score Collection",
             error_message=str(e),
             traceback_info=tb
         )
 
+    logger.info("=" * 80)
 
-def update_rankings():
+
+def scrape_weekly_rankings():
     """
-    Update rankings on Mondays using weighted average from multiple sources:
-    1. Scrape TABC rankings (25% weight when available)
-    2. Scrape MaxPreps rankings (25% weight when available)
-    3. Scrape GASO rankings (25% weight when available)
-    4. Calculate efficiency rankings from box score data (25% weight)
-    5. Merge all sources via weighted average
-       - Each team gets average rank from all available sources
-       - Top 25 (UIL) or top 10 (TAPPS) teams receive sequential ranks
-       - Weights auto-adjust: 4 sources = 25% each, 3 = 33.3%, 2 = 50%, 1 (TABC) = 100%
-
-    Note: TABC is one of four sources, not a guarantee. Teams can rank without being in TABC.
+    Monday 2 PM CST task: Scrape TABC and MaxPreps rankings
+    Runs scrape_weekly_rankings.py to collect all ranking data
     """
     now = datetime.now()
 
@@ -156,348 +145,145 @@ def update_rankings():
         logger.info(f"Season ended - no more updates after {END_DATE.strftime('%B %d, %Y')}")
         return
 
-    logger.info("="*50)
-    logger.info(f"Starting weekly rankings update at {now.strftime('%Y-%m-%d %H:%M:%S')}")
-    logger.info("="*50)
-
-    errors = []
-    rankings_summary = {'uil': {}, 'private': {}}
+    logger.info("=" * 80)
+    logger.info(f"WEEKLY RANKINGS SCRAPE - {now.strftime('%Y-%m-%d %H:%M:%S')}")
+    logger.info("=" * 80)
 
     try:
-        # 1. Scrape TABC rankings (FALLBACK 1)
-        logger.info("1. Scraping TABC rankings (FALLBACK 1)...")
-        tabc_scraper = TABCScraper()
-        tabc_data = tabc_scraper.scrape_all()
+        # Run scrape_weekly_rankings.py
+        logger.info("Running weekly rankings scraper (TABC + MaxPreps)...")
+        result = subprocess.run(
+            [sys.executable, 'scrape_weekly_rankings.py'],
+            capture_output=True,
+            text=True,
+            timeout=1800  # 30 minute timeout (Selenium takes time)
+        )
 
-        # 2. Scrape MaxPreps rankings (FALLBACK 2)
-        logger.info("2. Scraping MaxPreps rankings (FALLBACK 2)...")
-        from box_score_scraper import MaxPrepsBoxScoreScraper
-        maxpreps_scraper = MaxPrepsBoxScoreScraper()
+        # Log output
+        if result.stdout:
+            logger.info(result.stdout)
 
-        maxpreps_data = {
-            'last_updated': datetime.now().isoformat(),
-            'uil': {},
-            'private': {}
-        }
+        if result.stderr:
+            logger.error(result.stderr)
 
-        # Scrape statewide Texas rankings from MaxPreps (includes all UIL and TAPPS)
-        try:
-            all_rankings = maxpreps_scraper.scrape_maxpreps_rankings('ALL')
-            if all_rankings:
-                # Distribute rankings to UIL and private based on team data
-                # MaxPreps statewide includes both, we'll sort them during merge
-                maxpreps_data['uil'] = all_rankings
-                maxpreps_data['private'] = all_rankings
-                logger.info(f"   MaxPreps Statewide: Retrieved {len(all_rankings)} ranked teams")
-        except Exception as e:
-            error_msg = f"MaxPreps statewide scraping failed: {e}"
-            logger.error(f"   {error_msg}")
-            errors.append(error_msg)
-
-        # 3. Scrape GASO rankings (FALLBACK 3)
-        logger.info("3. Scraping GASO rankings (FALLBACK 3)...")
-        gaso_scraper = GASOScraper()
-        gaso_data = gaso_scraper.scrape_all()
-
-        # 4. Calculate rankings from box score data (PRIMARY)
-        logger.info("4. Calculating rankings from box score data (PRIMARY)...")
-        calculator = RankingCalculator(app=_app)
-        calculated_rankings = calculator.calculate_all_rankings()
-
-        # 5. Merge all sources (priority: calculated > TABC > MaxPreps > GASO)
-        logger.info("5. Merging rankings from all sources...")
-        merged_data = merge_rankings(calculated_rankings, tabc_data, maxpreps_data, gaso_data)
-
-        # Build rankings summary for email
-        for classification, teams in merged_data.get('uil', {}).items():
-            rankings_summary['uil'][classification] = len(teams)
-        for classification, teams in merged_data.get('private', {}).items():
-            rankings_summary['private'][classification] = len(teams)
-
-        # 5. Save merged rankings
-        if merged_data:
-            tabc_scraper.save_to_file(merged_data)
-            logger.info("="*50)
-            logger.info(f"✓ Rankings updated successfully at {now.strftime('%Y-%m-%d %H:%M:%S')}")
-            logger.info("="*50)
-
-            # 6. Update rankings with game records
-            logger.info("Updating rankings with game records...")
-            try:
-                from update_rankings_with_records import update_rankings_with_records
-                update_rankings_with_records()
-                logger.info("Rankings updated with game records")
-            except Exception as e:
-                logger.error(f"Error updating rankings with records: {e}")
-
-            # Send success notification
-            email_notifier.notify_weekly_rankings_update(
-                rankings_summary=rankings_summary,
-                errors=errors if errors else None
-            )
+        if result.returncode == 0:
+            logger.info("✓ Weekly rankings scrape completed successfully")
         else:
-            error_msg = "Failed to generate rankings"
-            logger.error(error_msg)
-            errors.append(error_msg)
+            logger.error(f"Weekly rankings scraper failed with return code {result.returncode}")
 
-            # Send error notification
             email_notifier.notify_error(
-                error_type="Weekly Rankings Update",
-                error_message="Failed to generate merged rankings",
-                traceback_info=None
+                error_type="Weekly Rankings Scrape",
+                error_message=f"Scraper returned code {result.returncode}",
+                traceback_info=result.stderr
             )
+
+    except subprocess.TimeoutExpired:
+        error_msg = "Weekly rankings scraper timed out after 30 minutes"
+        logger.error(error_msg)
+
+        email_notifier.notify_error(
+            error_type="Weekly Rankings Scrape",
+            error_message=error_msg,
+            traceback_info="Timeout after 1800 seconds"
+        )
 
     except Exception as e:
-        error_msg = f"Error updating rankings: {e}"
+        error_msg = f"Error running weekly rankings scraper: {e}"
         logger.error(error_msg)
         tb = traceback.format_exc()
         logger.error(tb)
 
-        # Send error notification
+        email_notifier.notify_error(
+            error_type="Weekly Rankings Scrape",
+            error_message=str(e),
+            traceback_info=tb
+        )
+
+    logger.info("=" * 80)
+
+
+def update_weekly_rankings():
+    """
+    Monday 4 PM CST task: Calculate and publish rankings
+    Runs update_weekly_rankings.py to compute 33/33/33 weighted average
+    """
+    now = datetime.now()
+
+    # Check if we're within the update period
+    if now < START_DATE:
+        logger.info(f"Too early - updates start on {START_DATE.strftime('%B %d, %Y')}")
+        return
+
+    if now > END_DATE:
+        logger.info(f"Season ended - no more updates after {END_DATE.strftime('%B %d, %Y')}")
+        return
+
+    logger.info("=" * 80)
+    logger.info(f"WEEKLY RANKINGS UPDATE - {now.strftime('%Y-%m-%d %H:%M:%S')}")
+    logger.info("=" * 80)
+
+    try:
+        # Run update_weekly_rankings.py
+        logger.info("Running weekly rankings calculator (33/33/33 weighted average)...")
+        result = subprocess.run(
+            [sys.executable, 'update_weekly_rankings.py'],
+            capture_output=True,
+            text=True,
+            timeout=600  # 10 minute timeout
+        )
+
+        # Log output
+        if result.stdout:
+            logger.info(result.stdout)
+
+        if result.stderr:
+            logger.error(result.stderr)
+
+        if result.returncode == 0:
+            logger.info("✓ Weekly rankings update completed successfully")
+
+            # Send success notification
+            email_notifier.notify_weekly_rankings_update(
+                rankings_summary={'status': 'Updated with 33/33/33 formula'},
+                errors=None
+            )
+        else:
+            logger.error(f"Weekly rankings update failed with return code {result.returncode}")
+
+            email_notifier.notify_error(
+                error_type="Weekly Rankings Update",
+                error_message=f"Update script returned code {result.returncode}",
+                traceback_info=result.stderr
+            )
+
+    except subprocess.TimeoutExpired:
+        error_msg = "Weekly rankings update timed out after 10 minutes"
+        logger.error(error_msg)
+
+        email_notifier.notify_error(
+            error_type="Weekly Rankings Update",
+            error_message=error_msg,
+            traceback_info="Timeout after 600 seconds"
+        )
+
+    except Exception as e:
+        error_msg = f"Error running weekly rankings update: {e}"
+        logger.error(error_msg)
+        tb = traceback.format_exc()
+        logger.error(tb)
+
         email_notifier.notify_error(
             error_type="Weekly Rankings Update",
             error_message=str(e),
             traceback_info=tb
         )
 
+    logger.info("=" * 80)
 
-def merge_rankings(calculated_data, tabc_data, maxpreps_data, gaso_data):
-    """
-    Merge rankings from all sources using weighted average:
-    - 25% Calculated from box scores
-    - 25% TABC rankings (when available)
-    - 25% MaxPreps rankings (when available)
-    - 25% GASO rankings (when available)
 
-    How it works:
-    1. Each team gets a weighted average rank from all available sources
-    2. Teams are sorted by this average
-    3. Top 25 (UIL) or top 10 (TAPPS) teams receive sequential ranks 1-25 or 1-10
-    4. TABC is ONE of four sources, not a guarantee - teams can rank without being in TABC
-
-    If sources unavailable, weights auto-adjust (4 sources = 25% each, 3 = 33.3%, etc.)
-    Final fallback: TABC only (100%) if it's the only source available.
-
-    IMPORTANT: Preserves ALL schools and game statistics from previous updates.
-    """
-    import json
-    from pathlib import Path
-
-    # Load existing rankings to preserve game stats
-    existing_stats = {}
-    rankings_file = Path('data/rankings.json')
-    if rankings_file.exists():
-        try:
-            with open(rankings_file, 'r') as f:
-                existing_data = json.load(f)
-
-            # Build a lookup of existing stats by team name and classification
-            for category in ['uil', 'private']:
-                if category in existing_data:
-                    for classification, teams in existing_data[category].items():
-                        for team in teams:
-                            key = (category, classification, team.get('team_name'))
-                            existing_stats[key] = {
-                                'wins': team.get('wins'),
-                                'losses': team.get('losses'),
-                                'games': team.get('games'),
-                                'ppg': team.get('ppg'),
-                                'opp_ppg': team.get('opp_ppg'),
-                                'district': team.get('district'),
-                                'uil_verified': team.get('uil_verified'),
-                                'uil_official_name': team.get('uil_official_name')
-                            }
-            logger.info(f"Loaded {len(existing_stats)} existing team stats to preserve")
-        except Exception as e:
-            logger.warning(f"Could not load existing stats: {e}")
-
-    merged = {
-        'last_updated': datetime.now().isoformat(),
-        'uil': {},
-        'private': {}
-    }
-
-    def preserve_stats(teams, category, classification):
-        """Add existing game stats to teams"""
-        for team in teams:
-            key = (category, classification, team.get('team_name'))
-            if key in existing_stats:
-                stats = existing_stats[key]
-                # Only preserve if not None (don't overwrite with None)
-                for field in ['wins', 'losses', 'games', 'ppg', 'opp_ppg', 'district', 'uil_verified', 'uil_official_name']:
-                    if stats.get(field) is not None:
-                        team[field] = stats[field]
-        return teams
-
-    # Merge UIL
-    for classification in ['AAAAAA', 'AAAAA', 'AAAA', 'AAA', 'AA', 'A']:
-        # Get ALL existing teams (ranked + unranked)
-        existing_teams = existing_data.get('uil', {}).get(classification, [])
-        existing_by_name = {team['team_name']: team for team in existing_teams}
-
-        # Get new ranking sources
-        calculated_teams = calculated_data.get('uil', {}).get(classification, [])
-        tabc_teams = tabc_data.get('uil', {}).get(classification, [])
-        maxpreps_teams = maxpreps_data.get('uil', {}).get(classification, [])
-        gaso_teams = gaso_data.get('uil', {}).get(classification, [])
-
-        # WEIGHTED AVERAGE RANKING SYSTEM
-        # 25% Calculated, 25% TABC, 25% MaxPreps, 25% GASO
-        for team in existing_teams:
-            team_name = team['team_name']
-
-            # Collect ranks from all sources
-            calc_team = next((t for t in calculated_teams if t.get('team_name') == team_name), None)
-            tabc_team = next((t for t in tabc_teams if t.get('team_name') == team_name), None)
-            maxprep_team = next((t for t in maxpreps_teams if t.get('team_name') == team_name), None)
-            gaso_team = next((t for t in gaso_teams if t.get('team_name') == team_name), None)
-
-            ranks = []
-            weights = []
-
-            # Add calculated rank if available (25% weight)
-            if calc_team and calc_team.get('rank'):
-                ranks.append(calc_team.get('rank'))
-                weights.append(0.25)
-
-            # Add TABC rank if available (25% weight)
-            if tabc_team and tabc_team.get('rank'):
-                ranks.append(tabc_team.get('rank'))
-                weights.append(0.25)
-
-            # Add MaxPreps rank if available (25% weight)
-            if maxprep_team and maxprep_team.get('rank'):
-                ranks.append(maxprep_team.get('rank'))
-                weights.append(0.25)
-
-            # Add GASO rank if available (25% weight)
-            if gaso_team and gaso_team.get('rank'):
-                ranks.append(gaso_team.get('rank'))
-                weights.append(0.25)
-
-            # Calculate weighted average rank
-            if ranks:
-                # Normalize weights to sum to 1.0
-                total_weight = sum(weights)
-                normalized_weights = [w / total_weight for w in weights]
-
-                # Calculate weighted average
-                weighted_rank = sum(r * w for r, w in zip(ranks, normalized_weights))
-                team['rank'] = round(weighted_rank)
-            else:
-                # Not ranked in any source - keep as unranked (rank = None)
-                team['rank'] = None
-
-        # RE-RANK: Sort teams by their calculated rank and assign clean 1-25 rankings
-        # This ensures we have sequential 1, 2, 3... rankings after weighted averaging
-        ranked_teams = [t for t in existing_teams if t.get('rank') is not None]
-        unranked_teams = [t for t in existing_teams if t.get('rank') is None]
-
-        # Sort by weighted rank (lower is better)
-        ranked_teams.sort(key=lambda x: x['rank'])
-
-        # Assign clean sequential ranks 1-25 to top teams
-        for i, team in enumerate(ranked_teams[:25], start=1):
-            team['rank'] = i
-
-        # Teams beyond top 25 become unranked
-        for team in ranked_teams[25:]:
-            team['rank'] = None
-
-        # Combine ranked and unranked teams
-        existing_teams = ranked_teams + unranked_teams
-
-        # Preserve stats for all teams
-        merged['uil'][classification] = preserve_stats(existing_teams, 'uil', classification)
-
-        ranked_count = sum(1 for t in existing_teams if t.get('rank') is not None and t.get('rank') <= 25)
-        logger.info(f"{classification}: {ranked_count} ranked (top 25) / {len(existing_teams)} total teams")
-
-    # Merge Private/TAPPS
-    for classification in ['TAPPS_6A', 'TAPPS_5A', 'TAPPS_4A', 'TAPPS_3A', 'TAPPS_2A', 'TAPPS_1A']:
-        # Get ALL existing teams (ranked + unranked)
-        existing_teams = existing_data.get('private', {}).get(classification, [])
-        existing_by_name = {team['team_name']: team for team in existing_teams}
-
-        # Get new ranking sources
-        calculated_teams = calculated_data.get('private', {}).get(classification, [])
-        tabc_teams = tabc_data.get('private', {}).get(classification, [])
-        maxpreps_teams = maxpreps_data.get('private', {}).get(classification, [])
-        gaso_teams = gaso_data.get('private', {}).get(classification, [])
-
-        # WEIGHTED AVERAGE RANKING SYSTEM
-        # 25% Calculated, 25% TABC, 25% MaxPreps, 25% GASO
-        for team in existing_teams:
-            team_name = team['team_name']
-
-            # Collect ranks from all sources
-            calc_team = next((t for t in calculated_teams if t.get('team_name') == team_name), None)
-            tabc_team = next((t for t in tabc_teams if t.get('team_name') == team_name), None)
-            maxprep_team = next((t for t in maxpreps_teams if t.get('team_name') == team_name), None)
-            gaso_team = next((t for t in gaso_teams if t.get('team_name') == team_name), None)
-
-            ranks = []
-            weights = []
-
-            # Add calculated rank if available (25% weight)
-            if calc_team and calc_team.get('rank'):
-                ranks.append(calc_team.get('rank'))
-                weights.append(0.25)
-
-            # Add TABC rank if available (25% weight)
-            if tabc_team and tabc_team.get('rank'):
-                ranks.append(tabc_team.get('rank'))
-                weights.append(0.25)
-
-            # Add MaxPreps rank if available (25% weight)
-            if maxprep_team and maxprep_team.get('rank'):
-                ranks.append(maxprep_team.get('rank'))
-                weights.append(0.25)
-
-            # Add GASO rank if available (25% weight)
-            if gaso_team and gaso_team.get('rank'):
-                ranks.append(gaso_team.get('rank'))
-                weights.append(0.25)
-
-            # Calculate weighted average rank
-            if ranks:
-                # Normalize weights to sum to 1.0
-                total_weight = sum(weights)
-                normalized_weights = [w / total_weight for w in weights]
-
-                # Calculate weighted average
-                weighted_rank = sum(r * w for r, w in zip(ranks, normalized_weights))
-                team['rank'] = round(weighted_rank)
-            else:
-                # Not ranked in any source - keep as unranked (rank = None)
-                team['rank'] = None
-
-        # RE-RANK: Sort teams by their calculated rank and assign clean 1-10 rankings
-        # This ensures we have sequential 1, 2, 3... rankings after weighted averaging
-        ranked_teams = [t for t in existing_teams if t.get('rank') is not None]
-        unranked_teams = [t for t in existing_teams if t.get('rank') is None]
-
-        # Sort by weighted rank (lower is better)
-        ranked_teams.sort(key=lambda x: x['rank'])
-
-        # Assign clean sequential ranks 1-10 to top teams
-        for i, team in enumerate(ranked_teams[:10], start=1):
-            team['rank'] = i
-
-        # Teams beyond top 10 become unranked
-        for team in ranked_teams[10:]:
-            team['rank'] = None
-
-        # Combine ranked and unranked teams
-        existing_teams = ranked_teams + unranked_teams
-
-        # Preserve stats for all teams
-        merged['private'][classification] = preserve_stats(existing_teams, 'private', classification)
-
-        ranked_count = sum(1 for t in existing_teams if t.get('rank') is not None and t.get('rank') <= 10)
-        logger.info(f"{classification}: {ranked_count} ranked (top 10) / {len(existing_teams)} total teams")
-
-    return merged
+# OLD MERGE FUNCTION REMOVED - Now handled by update_weekly_rankings.py
+# The new workflow uses 33/33/33 weighted average (Calculated + TABC + MaxPreps)
+# GASO has been removed from the ranking sources
 
 
 def calculate_update_dates():
@@ -531,43 +317,44 @@ def is_update_day():
 
 def run_scheduler():
     """Run the scheduler in a background thread"""
-    logger.info("="*50)
-    logger.info("TBBAS Scheduler started")
-    logger.info("="*50)
-    logger.info(f"Period: {START_DATE.strftime('%B %d, %Y')} to {END_DATE.strftime('%B %d, %Y')}")
+    logger.info("=" * 80)
+    logger.info("TBBAS SCHEDULER - NEW AUTOMATION WORKFLOW")
+    logger.info("=" * 80)
+    logger.info(f"Season Period: {START_DATE.strftime('%B %d, %Y')} to {END_DATE.strftime('%B %d, %Y')}")
     logger.info("")
 
-    # Daily box score collection
+    # Daily box score collection (6 AM CST)
     logger.info("Daily Box Score Collection:")
     logger.info(f"  - Every day at {DAILY_BOX_SCORE_TIME} UTC (6:00 AM CST)")
-    logger.info(f"  - Sources: MaxPreps, Texas newspapers, coach submissions")
-    schedule.every().day.at(DAILY_BOX_SCORE_TIME).do(collect_box_scores)
+    logger.info(f"  - Script: scrape_maxpreps_daily.py")
+    logger.info(f"  - Action: Scrape previous day's games from MaxPreps")
+    schedule.every().day.at(DAILY_BOX_SCORE_TIME).do(collect_daily_box_scores)
     logger.info("")
 
-    # Weekly ranking updates - DISABLED (manual updates only)
-    # update_dates = calculate_update_dates()
-    # logger.info(f"Weekly Ranking Updates ({len(update_dates)} total):")
-    # logger.info(f"  - Every Monday at {WEEKLY_RANKING_TIME} UTC (1:00 PM CST)")
-    # for date in update_dates:
-    #     logger.info(f"    • {date.strftime('%A, %B %d, %Y')}")
+    # Weekly rankings scrape (Monday 2 PM CST) - DISABLED (manual updates only)
+    # logger.info("Weekly Rankings Scrape:")
+    # logger.info(f"  - Every Monday at {WEEKLY_SCRAPE_TIME} UTC (2:00 PM CST)")
+    # logger.info(f"  - Script: scrape_weekly_rankings.py")
+    # logger.info(f"  - Action: Scrape TABC + MaxPreps rankings")
+    # schedule.every().monday.at(WEEKLY_SCRAPE_TIME).do(lambda: scrape_weekly_rankings() if is_update_day() else None)
+    # logger.info("")
 
-    # Schedule the job for every Monday at 1:00 PM CST (19:00 UTC) - DISABLED
-    # schedule.every().monday.at(WEEKLY_RANKING_TIME).do(lambda: update_rankings() if is_update_day() else None)
+    # Weekly rankings update (Monday 4 PM CST) - DISABLED (manual updates only)
+    # logger.info("Weekly Rankings Update:")
+    # logger.info(f"  - Every Monday at {WEEKLY_UPDATE_TIME} UTC (4:00 PM CST)")
+    # logger.info(f"  - Script: update_weekly_rankings.py")
+    # logger.info(f"  - Action: Calculate 33/33/33 weighted average and publish")
+    # schedule.every().monday.at(WEEKLY_UPDATE_TIME).do(lambda: update_weekly_rankings() if is_update_day() else None)
+    # logger.info("")
 
     logger.info("Automatic Ranking Updates: DISABLED")
     logger.info("  - Rankings will be updated manually only")
-    logger.info("  - Use update_all_rankings.py or API endpoints for manual updates")
+    logger.info("  - To re-enable: uncomment scrape_weekly_rankings and update_weekly_rankings jobs")
+    logger.info("  - Manual scripts: scrape_weekly_rankings.py, update_weekly_rankings.py")
 
     logger.info("")
     logger.info("Scheduler is now running...")
-    logger.info("="*50)
-
-    # Automatic startup updates disabled
-    # if is_update_day():
-    #     current_time = datetime.now().strftime("%H:%M")
-    #     if current_time >= WEEKLY_RANKING_TIME:
-    #         logger.info("Update scheduled for today and time has passed - running now")
-    #         update_rankings()
+    logger.info("=" * 80)
 
     # Run the schedule loop
     while True:
@@ -586,22 +373,27 @@ def start_scheduler(app=None):
 
 if __name__ == '__main__':
     # Test: show all scheduled dates
-    print("TBBAS Schedule")
+    print("TBBAS Schedule - New Automation Workflow")
     print("=" * 50)
     print(f"Season: {START_DATE.strftime('%B %d, %Y')} to {END_DATE.strftime('%B %d, %Y')}")
     print()
     print("Daily Box Score Collection:")
     print(f"  Time: {DAILY_BOX_SCORE_TIME} UTC (6:00 AM CST)")
     print(f"  Frequency: Every day")
+    print(f"  Script: scrape_maxpreps_daily.py")
     print()
-    print("Weekly Ranking Updates:")
-    print(f"  Time: {WEEKLY_RANKING_TIME} UTC (1:00 PM CST)")
+    print("Weekly Ranking Updates (DISABLED - manual only):")
+    print(f"  Scrape Time: {WEEKLY_SCRAPE_TIME} UTC (2:00 PM CST)")
+    print(f"  Update Time: {WEEKLY_UPDATE_TIME} UTC (4:00 PM CST)")
     print(f"  Frequency: Every Monday")
+    print(f"  Scripts: scrape_weekly_rankings.py, update_weekly_rankings.py")
     print("\nScheduled Monday Update Dates:")
     print("-" * 50)
 
     update_dates = calculate_update_dates()
     for i, date in enumerate(update_dates, 1):
-        print(f"{i}. {date.strftime('%A, %B %d, %Y')} at 1:00 PM CST")
+        print(f"{i}. {date.strftime('%A, %B %d, %Y')}")
+        print(f"    2:00 PM CST: Scrape TABC + MaxPreps rankings")
+        print(f"    4:00 PM CST: Calculate and publish rankings (33/33/33)")
 
     print(f"\nTotal Monday updates: {len(update_dates)}")
