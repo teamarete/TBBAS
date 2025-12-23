@@ -147,12 +147,22 @@ def update_rankings_with_records():
                         record = team_records.get(canonical_name)
 
                 if record:
-                    team['wins'] = record['wins']
-                    team['losses'] = record['losses']
+                    # IMPORTANT: Only update wins/losses if they don't exist or are 0-0
+                    # TABC records (from weekly rankings) should take priority
+                    current_wins = team.get('wins', 0)
+                    current_losses = team.get('losses', 0)
+
+                    if current_wins == 0 and current_losses == 0:
+                        # No record exists, use database record
+                        team['wins'] = record['wins']
+                        team['losses'] = record['losses']
+                        updated_count += 1
+                    # Otherwise keep existing TABC record
+
+                    # Always update games, PPG, and Opp PPG from database (these come from box scores)
                     team['games'] = record['games']
                     team['ppg'] = round(record['points_for'] / record['games'], 1) if record['games'] > 0 else 0
                     team['opp_ppg'] = round(record['points_against'] / record['games'], 1) if record['games'] > 0 else 0
-                    updated_count += 1
 
                 # Add district for UIL schools (always try, even if already has one - ensures data integrity)
                 if category == 'uil':
