@@ -62,8 +62,9 @@ if os.getenv('FLASK_ENV') != 'development':
 
 # Ensure rankings have game statistics (AFTER scheduler starts)
 # This catches cases where scheduler ran an update on startup
-from ensure_rankings_stats import ensure_rankings_have_stats
-ensure_rankings_have_stats()
+# TEMPORARILY DISABLED - causing issues with updated rankings
+# from ensure_rankings_stats import ensure_rankings_have_stats
+# ensure_rankings_have_stats()
 
 CLASSIFICATIONS = {
     'AAAAAA': 'Class 6A (UIL)',
