@@ -166,6 +166,10 @@ def get_base_school_name(name):
     Extract base school name without city/district prefix
     'SA Brennan' -> 'brennan', 'Brennan' -> 'brennan'
     'Katy Seven Lakes' -> 'seven lakes', 'Seven Lakes' -> 'seven lakes'
+
+    NOTE: Do NOT strip prefixes that are part of the school's actual name
+    'Plano East' should stay as 'plano east', NOT become 'east'
+    'Allen' should stay as 'allen' (it's the school name, not a city prefix)
     """
     norm = normalize_team_name(name)
 
@@ -175,26 +179,32 @@ def get_base_school_name(name):
     if len(words) <= 1:
         return norm
 
-    # Common city/district prefixes that should be removed
-    # These are typically the first word
-    city_district_prefixes = [
+    # Common city/district prefixes that should ONLY be removed when followed by a school name
+    # Only strip these when there are 2+ words AND the prefix is clearly separate from the school name
+    city_prefixes_to_strip = [
         'sa', 'hou', 'bmt', 'fw', 'mans', 'ep', 'fb', 'cc',
         'dallas', 'austin', 'tyler', 'waco', 'lubbock',
-        'katy', 'converse', 'denton', 'allen', 'plano', 'klein',
-        'cypress', 'south', 'north', 'east', 'west', 'desoto'
+        'katy', 'converse', 'denton'
     ]
 
-    # If first word is a common prefix, remove it
-    if words[0] in city_district_prefixes:
+    # DO NOT strip directional prefixes - they are part of the school name
+    # "South Grand Prairie" and "Grand Prairie" are DIFFERENT schools
+    # "North Shore" and "Shore" are DIFFERENT schools
+    # These should NOT be normalized to the same base name
+
+    # Strip city prefixes only when followed by more words
+    if words[0] in city_prefixes_to_strip:
         return ' '.join(words[1:])
 
+    # For everything else, return the full normalized name (don't strip)
+    # This preserves: Allen, Plano, Plano East, McKinney, Lancaster, etc.
     return norm
 
 def calculate_weighted_rank(calculated_rank, tabc_rank, maxpreps_rank, db_games=0):
     """
     Calculate weighted average rank using 33/33/33 formula
 
-    If a team has fewer than 10 games in the database, we exclude the calculated rank
+    If a team has fewer than 15 games in the database, we exclude the calculated rank
     to avoid penalizing teams for incomplete data. In that case, we use 50/50 TABC/MaxPreps.
 
     Args:
@@ -208,9 +218,10 @@ def calculate_weighted_rank(calculated_rank, tabc_rank, maxpreps_rank, db_games=
     """
     ranks = []
 
-    # Only include calculated rank if team has sufficient database games (10+)
-    # This prevents penalizing teams like Seven Lakes (17-0, only 4 games in DB)
-    if calculated_rank is not None and db_games >= 10:
+    # Only include calculated rank if team has sufficient database games (15+)
+    # This prevents penalizing teams that appear highly ranked but have incomplete game data
+    # Example: McKinney (#20 TABC) has only 11 games with poor efficiency, would rank #513 weighted
+    if calculated_rank is not None and db_games >= 15:
         ranks.append(calculated_rank)
 
     if tabc_rank is not None:
