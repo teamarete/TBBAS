@@ -9,16 +9,17 @@ Format: (team_name, classification) -> district_number
 
 MANUAL_DISTRICTS = {
     # 6A Schools
-    ('SA Brennan', 'AAAAAA'): '27',  # San Antonio Brennan
-    ('San Antonio Brennan', 'AAAAAA'): '27',
-    ('Brennan', 'AAAAAA'): '27',
+    ('SA Brennan', 'AAAAAA'): '28',  # San Antonio Brennan (Northside ISD)
+    ('San Antonio Brennan', 'AAAAAA'): '28',
+    ('Brennan', 'AAAAAA'): '28',
+    ('Northside Brennan', 'AAAAAA'): '28',
 
     ('SA Harlan', 'AAAAAA'): '28',  # San Antonio Harlan
     ('San Antonio Harlan', 'AAAAAA'): '28',
     ('Harlan', 'AAAAAA'): '28',
 
-    ('Steele', 'AAAAAA'): '27',  # Cibolo Steele
-    ('Cibolo Steele', 'AAAAAA'): '27',
+    ('Steele', 'AAAAAA'): '29',  # Cibolo Steele (confirmed with Clemens, Judson)
+    ('Cibolo Steele', 'AAAAAA'): '29',
 
     ('Katy Seven Lakes', 'AAAAAA'): '1',  # Katy Seven Lakes
     ('Seven Lakes', 'AAAAAA'): '1',
@@ -51,18 +52,29 @@ MANUAL_DISTRICTS = {
     ('Alvin Shadow Creek', 'AAAAAA'): '22',
     ('Humble Summer Creek', 'AAAAAA'): '22',
 
-    ('SA Brennan', 'AAAAAA'): '28',  # Northside Brennan (San Antonio)
-    ('San Antonio Brennan', 'AAAAAA'): '28',
-    ('Brennan', 'AAAAAA'): '28',
-    ('Northside Brennan', 'AAAAAA'): '28',
+    ('Cypress Springs', 'AAAAAA'): '16',  # Cypress Springs
+    ('Cy Springs', 'AAAAAA'): '16',
 
-    ('Steele', 'AAAAAA'): '29',  # Cibolo Steele
-    ('Cibolo Steele', 'AAAAAA'): '29',
+    ('Dickinson', 'AAAAAA'): '22',  # Dickinson
+
+    ('Clemens', 'AAAAAA'): '29',  # Samuel Clemens (Schertz)
+    ('Samuel Clemens', 'AAAAAA'): '29',
 
     ('Converse Judson', 'AAAAAA'): '29',  # Converse Judson
     ('Judson', 'AAAAAA'): '29',
 
     ('Vandegrift', 'AAAAAA'): '25',  # Vandegrift (Austin area)
+
+    ('Denton Guyer', 'AAAAAA'): '5',  # Denton Guyer
+    ('Guyer', 'AAAAAA'): '5',
+
+    ('Tompkins', 'AAAAAA'): '19',  # Katy Tompkins
+    ('Katy Tompkins', 'AAAAAA'): '19',
+
+    ('Round Rock Westwood', 'AAAAAA'): '25',  # Round Rock Westwood
+    ('Westwood', 'AAAAAA'): '25',
+
+    ('Desoto', 'AAAAAA'): '7',  # Desoto
 
     # 5A Schools (AAAAA)
     ('Frisco Heritage', 'AAAAA'): '11',  # Frisco Heritage
