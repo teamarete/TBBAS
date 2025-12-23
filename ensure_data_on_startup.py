@@ -47,12 +47,40 @@ def check_and_update_rankings():
                     needs_restore = True
 
                 if not needs_restore:
-                    if 'last_updated' in data:
-                        last_update = datetime.fromisoformat(data['last_updated'])
-                        hours_old = (datetime.now() - last_update).total_seconds() / 3600
-                        print(f"✓ Rankings file OK: UIL 6A {ranked_6a}/25, TAPPS 6A {ranked_tapps_6a}/10 (last updated {hours_old:.1f} hours ago)")
+                    # Check if master file is newer than current data file
+                    if master_file.exists():
+                        try:
+                            with open(master_file, 'r') as f:
+                                master_data = json.load(f)
+
+                            master_updated = master_data.get('last_updated', '')
+                            current_updated = data.get('last_updated', '')
+
+                            if master_updated > current_updated:
+                                print(f"🔄 Master file is newer ({master_updated} > {current_updated})")
+                                needs_restore = True
+                            else:
+                                if 'last_updated' in data:
+                                    last_update = datetime.fromisoformat(data['last_updated'])
+                                    hours_old = (datetime.now() - last_update).total_seconds() / 3600
+                                    print(f"✓ Rankings file OK: UIL 6A {ranked_6a}/25, TAPPS 6A {ranked_tapps_6a}/10 (last updated {hours_old:.1f} hours ago)")
+                                else:
+                                    print(f"✓ Rankings file OK: UIL 6A {ranked_6a}/25, TAPPS 6A {ranked_tapps_6a}/10")
+                        except:
+                            # If can't read master, just keep current data
+                            if 'last_updated' in data:
+                                last_update = datetime.fromisoformat(data['last_updated'])
+                                hours_old = (datetime.now() - last_update).total_seconds() / 3600
+                                print(f"✓ Rankings file OK: UIL 6A {ranked_6a}/25, TAPPS 6A {ranked_tapps_6a}/10 (last updated {hours_old:.1f} hours ago)")
+                            else:
+                                print(f"✓ Rankings file OK: UIL 6A {ranked_6a}/25, TAPPS 6A {ranked_tapps_6a}/10")
                     else:
-                        print(f"✓ Rankings file OK: UIL 6A {ranked_6a}/25, TAPPS 6A {ranked_tapps_6a}/10")
+                        if 'last_updated' in data:
+                            last_update = datetime.fromisoformat(data['last_updated'])
+                            hours_old = (datetime.now() - last_update).total_seconds() / 3600
+                            print(f"✓ Rankings file OK: UIL 6A {ranked_6a}/25, TAPPS 6A {ranked_tapps_6a}/10 (last updated {hours_old:.1f} hours ago)")
+                        else:
+                            print(f"✓ Rankings file OK: UIL 6A {ranked_6a}/25, TAPPS 6A {ranked_tapps_6a}/10")
 
         except Exception as e:
             print(f"⚠️  Error reading rankings file: {e}")
