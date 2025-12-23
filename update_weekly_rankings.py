@@ -134,6 +134,49 @@ def get_team_stats_from_db(team_name):
 
     return None
 
+def normalize_team_name(name):
+    """
+    Normalize team name for matching across sources
+    Handles common variations like 'SA Brennan' vs 'Brennan'
+    """
+    name = name.lower().strip()
+
+    # Common full city names to abbreviations
+    city_replacements = {
+        'san antonio': 'sa',
+        'houston': 'hou',
+        'beaumont': 'bmt',
+        'fort worth': 'fw',
+        'mansfield': 'mans',
+        'el paso': 'ep',
+        'fort bend': 'fb',
+        'corpus christi': 'cc'
+    }
+
+    for full, abbr in city_replacements.items():
+        name = name.replace(full, abbr)
+
+    # Remove extra spaces
+    name = ' '.join(name.split())
+
+    return name
+
+def get_base_school_name(name):
+    """
+    Extract base school name without city prefix
+    'SA Brennan' -> 'brennan', 'Brennan' -> 'brennan'
+    """
+    norm = normalize_team_name(name)
+
+    # Remove common city prefixes
+    city_prefixes = ['sa ', 'hou ', 'bmt ', 'fw ', 'mans ', 'ep ', 'fb ', 'cc ', 'dallas ', 'austin ', 'tyler ', 'waco ', 'lubbock ']
+
+    for prefix in city_prefixes:
+        if norm.startswith(prefix):
+            return norm[len(prefix):]
+
+    return norm
+
 def calculate_weighted_rank(calculated_rank, tabc_rank, maxpreps_rank):
     """
     Calculate weighted average rank using 33/33/33 formula
@@ -184,19 +227,44 @@ def merge_rankings_3way(tabc_rankings, maxpreps_rankings, calculated_rankings):
     }
 
     for short_code, long_code in uil_classifications.items():
-        # Get teams from each source
-        tabc_teams = {t['team_name']: t for t in tabc_rankings.get(short_code, [])}
-        maxpreps_teams = {t['team_name']: t for t in maxpreps_rankings.get(short_code, [])}
+        # Get teams from each source with normalized name lookup
+        tabc_teams_raw = tabc_rankings.get(short_code, [])
+        maxpreps_teams_raw = maxpreps_rankings.get(short_code, [])
 
-        # Collect all unique team names
-        all_teams = set(tabc_teams.keys()) | set(maxpreps_teams.keys())
+        # Create lookup with base school names pointing to original team data
+        # Use base name (without city prefix) to match teams across sources
+        tabc_lookup = {}
+        for t in tabc_teams_raw:
+            base_name = get_base_school_name(t['team_name'])
+            if base_name not in tabc_lookup:
+                tabc_lookup[base_name] = t
+
+        maxpreps_lookup = {}
+        for t in maxpreps_teams_raw:
+            base_name = get_base_school_name(t['team_name'])
+            if base_name not in maxpreps_lookup:
+                maxpreps_lookup[base_name] = t
+
+        # Collect all unique base school names
+        all_teams = set(tabc_lookup.keys()) | set(maxpreps_lookup.keys())
 
         team_scores = []
 
-        for team_name in all_teams:
-            tabc_rank = tabc_teams.get(team_name, {}).get('rank')
-            maxpreps_rank = maxpreps_teams.get(team_name, {}).get('rank')
-            calculated_rank = calculated_rankings.get(team_name, {}).get('rank')
+        for norm_team_name in all_teams:
+            tabc_team = tabc_lookup.get(norm_team_name, {})
+            maxpreps_team = maxpreps_lookup.get(norm_team_name, {})
+
+            tabc_rank = tabc_team.get('rank')
+            maxpreps_rank = maxpreps_team.get('rank')
+
+            # Use TABC name if available (most authoritative), otherwise MaxPreps
+            display_name = tabc_team.get('team_name') or maxpreps_team.get('team_name')
+
+            # Check calculated rankings with both original and normalized names
+            calculated_rank = calculated_rankings.get(display_name, {}).get('rank')
+            if calculated_rank is None:
+                # Try normalized name
+                calculated_rank = calculated_rankings.get(norm_team_name, {}).get('rank')
 
             # Calculate weighted average
             weighted_rank = calculate_weighted_rank(calculated_rank, tabc_rank, maxpreps_rank)
@@ -206,7 +274,7 @@ def merge_rankings_3way(tabc_rankings, maxpreps_rankings, calculated_rankings):
 
             # Build team data
             team_data = {
-                'team_name': team_name,
+                'team_name': display_name,
                 'weighted_rank': weighted_rank,
                 'tabc_rank': tabc_rank,
                 'maxpreps_rank': maxpreps_rank,
@@ -214,13 +282,13 @@ def merge_rankings_3way(tabc_rankings, maxpreps_rankings, calculated_rankings):
             }
 
             # Get record from TABC (most up-to-date)
-            if team_name in tabc_teams:
-                team_data['wins'] = tabc_teams[team_name].get('wins')
-                team_data['losses'] = tabc_teams[team_name].get('losses')
-                team_data['record'] = tabc_teams[team_name].get('record')
+            if tabc_team:
+                team_data['wins'] = tabc_team.get('wins')
+                team_data['losses'] = tabc_team.get('losses')
+                team_data['record'] = tabc_team.get('record')
 
             # Get stats from database
-            stats = get_team_stats_from_db(team_name)
+            stats = get_team_stats_from_db(display_name)
             if stats:
                 team_data['ppg'] = stats['ppg']
                 team_data['opp_ppg'] = stats['opp_ppg']
@@ -241,19 +309,44 @@ def merge_rankings_3way(tabc_rankings, maxpreps_rankings, calculated_rankings):
     tapps_classifications = ['TAPPS_6A', 'TAPPS_5A', 'TAPPS_4A', 'TAPPS_3A', 'TAPPS_2A', 'TAPPS_1A']
 
     for cls_code in tapps_classifications:
-        # Get teams from each source
-        tabc_teams = {t['team_name']: t for t in tabc_rankings.get(cls_code, [])}
-        maxpreps_teams = {t['team_name']: t for t in maxpreps_rankings.get(cls_code, [])}
+        # Get teams from each source with normalized name lookup
+        tabc_teams_raw = tabc_rankings.get(cls_code, [])
+        maxpreps_teams_raw = maxpreps_rankings.get(cls_code, [])
 
-        # Collect all unique team names
-        all_teams = set(tabc_teams.keys()) | set(maxpreps_teams.keys())
+        # Create lookup with base school names pointing to original team data
+        # Use base name (without city prefix) to match teams across sources
+        tabc_lookup = {}
+        for t in tabc_teams_raw:
+            base_name = get_base_school_name(t['team_name'])
+            if base_name not in tabc_lookup:
+                tabc_lookup[base_name] = t
+
+        maxpreps_lookup = {}
+        for t in maxpreps_teams_raw:
+            base_name = get_base_school_name(t['team_name'])
+            if base_name not in maxpreps_lookup:
+                maxpreps_lookup[base_name] = t
+
+        # Collect all unique base school names
+        all_teams = set(tabc_lookup.keys()) | set(maxpreps_lookup.keys())
 
         team_scores = []
 
-        for team_name in all_teams:
-            tabc_rank = tabc_teams.get(team_name, {}).get('rank')
-            maxpreps_rank = maxpreps_teams.get(team_name, {}).get('rank')
-            calculated_rank = calculated_rankings.get(team_name, {}).get('rank')
+        for norm_team_name in all_teams:
+            tabc_team = tabc_lookup.get(norm_team_name, {})
+            maxpreps_team = maxpreps_lookup.get(norm_team_name, {})
+
+            tabc_rank = tabc_team.get('rank')
+            maxpreps_rank = maxpreps_team.get('rank')
+
+            # Use TABC name if available (most authoritative), otherwise MaxPreps
+            display_name = tabc_team.get('team_name') or maxpreps_team.get('team_name')
+
+            # Check calculated rankings with both original and normalized names
+            calculated_rank = calculated_rankings.get(display_name, {}).get('rank')
+            if calculated_rank is None:
+                # Try normalized name
+                calculated_rank = calculated_rankings.get(norm_team_name, {}).get('rank')
 
             # Calculate weighted average
             weighted_rank = calculate_weighted_rank(calculated_rank, tabc_rank, maxpreps_rank)
@@ -263,7 +356,7 @@ def merge_rankings_3way(tabc_rankings, maxpreps_rankings, calculated_rankings):
 
             # Build team data
             team_data = {
-                'team_name': team_name,
+                'team_name': display_name,
                 'weighted_rank': weighted_rank,
                 'tabc_rank': tabc_rank,
                 'maxpreps_rank': maxpreps_rank,
@@ -271,13 +364,13 @@ def merge_rankings_3way(tabc_rankings, maxpreps_rankings, calculated_rankings):
             }
 
             # Get record from TABC (most up-to-date)
-            if team_name in tabc_teams:
-                team_data['wins'] = tabc_teams[team_name].get('wins')
-                team_data['losses'] = tabc_teams[team_name].get('losses')
-                team_data['record'] = tabc_teams[team_name].get('record')
+            if tabc_team:
+                team_data['wins'] = tabc_team.get('wins')
+                team_data['losses'] = tabc_team.get('losses')
+                team_data['record'] = tabc_team.get('record')
 
             # Get stats from database
-            stats = get_team_stats_from_db(team_name)
+            stats = get_team_stats_from_db(display_name)
             if stats:
                 team_data['ppg'] = stats['ppg']
                 team_data['opp_ppg'] = stats['opp_ppg']

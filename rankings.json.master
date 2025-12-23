@@ -1,30 +1,17 @@
 {
-  "last_updated": "2025-12-22T19:15:45.373851",
+  "last_updated": "2025-12-22T19:24:55.812563",
   "uil": {
     "AAAAAA": [
       {
-        "team_name": "Brennan",
-        "weighted_rank": 4.0,
-        "tabc_rank": null,
+        "team_name": "SA Brennan",
+        "weighted_rank": 5.0,
+        "tabc_rank": 6,
         "maxpreps_rank": 4,
         "calculated_rank": null,
-        "rank": 1,
-        "district": "28",
-        "wins": 15,
-        "losses": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
-      },
-      {
-        "team_name": "SA Brennan",
-        "weighted_rank": 6.0,
-        "tabc_rank": 6,
-        "maxpreps_rank": null,
-        "calculated_rank": null,
-        "wins": 13,
-        "losses": 3,
+        "wins": 7,
+        "losses": 1,
         "record": "13-3",
-        "rank": 2,
+        "rank": 1,
         "games": 8,
         "ppg": 65.8,
         "opp_ppg": 55.2,
@@ -36,10 +23,10 @@
         "tabc_rank": 8,
         "maxpreps_rank": null,
         "calculated_rank": null,
-        "wins": 14,
+        "wins": 4,
         "losses": 3,
         "record": "14-3",
-        "rank": 3,
+        "rank": 2,
         "games": 7,
         "ppg": 54.1,
         "opp_ppg": 48.1,
@@ -51,10 +38,10 @@
         "tabc_rank": 7,
         "maxpreps_rank": 12,
         "calculated_rank": null,
-        "wins": 14,
+        "wins": 7,
         "losses": 3,
         "record": "14-3",
-        "rank": 4,
+        "rank": 3,
         "games": 10,
         "ppg": 68.8,
         "opp_ppg": 57.1,
@@ -66,10 +53,10 @@
         "tabc_rank": 10,
         "maxpreps_rank": null,
         "calculated_rank": null,
-        "wins": 13,
-        "losses": 3,
+        "wins": 6,
+        "losses": 2,
         "record": "13-3",
-        "rank": 5,
+        "rank": 4,
         "games": 8,
         "ppg": 71.5,
         "opp_ppg": 53.1,
@@ -81,10 +68,10 @@
         "tabc_rank": 15,
         "maxpreps_rank": null,
         "calculated_rank": null,
-        "wins": 12,
+        "wins": 2,
         "losses": 3,
         "record": "12-3",
-        "rank": 6,
+        "rank": 5,
         "games": 5,
         "ppg": 47.8,
         "opp_ppg": 52.8
@@ -95,10 +82,10 @@
         "tabc_rank": 17,
         "maxpreps_rank": null,
         "calculated_rank": null,
-        "wins": 11,
-        "losses": 5,
+        "wins": 6,
+        "losses": 2,
         "record": "11-5",
-        "rank": 7,
+        "rank": 6,
         "games": 8,
         "ppg": 67.9,
         "opp_ppg": 62.9,
@@ -113,7 +100,7 @@
         "ppg": 73.0,
         "opp_ppg": 42.8,
         "games": 6,
-        "rank": 8,
+        "rank": 7,
         "wins": 6,
         "losses": 0
       },
@@ -123,13 +110,13 @@
         "tabc_rank": 3,
         "maxpreps_rank": 6,
         "calculated_rank": 148,
-        "wins": 10,
+        "wins": 7,
         "losses": 3,
         "record": "10-3",
         "ppg": 70.3,
         "opp_ppg": 47.6,
         "games": 10,
-        "rank": 9,
+        "rank": 8,
         "district": "23"
       },
       {
@@ -138,13 +125,13 @@
         "tabc_rank": 4,
         "maxpreps_rank": 3,
         "calculated_rank": 252,
-        "wins": 15,
-        "losses": 2,
+        "wins": 9,
+        "losses": 1,
         "record": "15-2",
         "ppg": 75.1,
         "opp_ppg": 58.0,
         "games": 10,
-        "rank": 10,
+        "rank": 9,
         "district": "3"
       },
       {
@@ -153,13 +140,13 @@
         "tabc_rank": 13,
         "maxpreps_rank": 7,
         "calculated_rank": 296,
-        "wins": 15,
-        "losses": 2,
+        "wins": 2,
+        "losses": 0,
         "record": "15-2",
         "ppg": 58.0,
         "opp_ppg": 43.0,
         "games": 2,
-        "rank": 11
+        "rank": 10
       },
       {
         "team_name": "Klein Oak",
@@ -167,13 +154,13 @@
         "tabc_rank": 24,
         "maxpreps_rank": null,
         "calculated_rank": 199,
-        "wins": 13,
-        "losses": 2,
+        "wins": 6,
+        "losses": 1,
         "record": "13-2",
         "ppg": 63.1,
         "opp_ppg": 43.9,
         "games": 7,
-        "rank": 12,
+        "rank": 11,
         "district": "15"
       },
       {
@@ -182,13 +169,13 @@
         "tabc_rank": 14,
         "maxpreps_rank": null,
         "calculated_rank": 249,
-        "wins": 11,
-        "losses": 5,
+        "wins": 4,
+        "losses": 2,
         "record": "11-5",
         "ppg": 64.2,
         "opp_ppg": 47.0,
         "games": 6,
-        "rank": 13,
+        "rank": 12,
         "district": "17"
       },
       {
@@ -197,13 +184,13 @@
         "tabc_rank": 5,
         "maxpreps_rank": 1,
         "calculated_rank": 426,
-        "wins": 15,
-        "losses": 2,
+        "wins": 7,
+        "losses": 3,
         "record": "15-2",
         "ppg": 72.0,
         "opp_ppg": 61.6,
         "games": 10,
-        "rank": 14,
+        "rank": 13,
         "district": "5"
       },
       {
@@ -212,13 +199,13 @@
         "tabc_rank": 9,
         "maxpreps_rank": 5,
         "calculated_rank": 443,
-        "wins": 14,
-        "losses": 1,
+        "wins": 6,
+        "losses": 2,
         "record": "14-1",
         "ppg": 52.6,
         "opp_ppg": 42.8,
         "games": 8,
-        "rank": 15,
+        "rank": 14,
         "district": "22"
       },
       {
@@ -227,13 +214,13 @@
         "tabc_rank": 19,
         "maxpreps_rank": 13,
         "calculated_rank": 448,
-        "wins": 14,
-        "losses": 3,
+        "wins": 7,
+        "losses": 2,
         "record": "14-3",
         "ppg": 60.0,
         "opp_ppg": 50.4,
         "games": 9,
-        "rank": 16,
+        "rank": 15,
         "district": "6"
       },
       {
@@ -242,13 +229,13 @@
         "tabc_rank": 1,
         "maxpreps_rank": null,
         "calculated_rank": 328,
-        "wins": 17,
+        "wins": 4,
         "losses": 0,
         "record": "17-0",
         "ppg": 76.2,
         "opp_ppg": 62.2,
         "games": 4,
-        "rank": 17,
+        "rank": 16,
         "district": "19"
       },
       {
@@ -260,7 +247,7 @@
         "ppg": 59.0,
         "opp_ppg": 44.7,
         "games": 6,
-        "rank": 18,
+        "rank": 17,
         "wins": 6,
         "losses": 0
       },
@@ -270,13 +257,13 @@
         "tabc_rank": 23,
         "maxpreps_rank": 19,
         "calculated_rank": 478,
-        "wins": 12,
-        "losses": 4,
+        "wins": 6,
+        "losses": 2,
         "record": "12-4",
         "ppg": 61.8,
         "opp_ppg": 52.9,
         "games": 8,
-        "rank": 19,
+        "rank": 18,
         "district": "23"
       },
       {
@@ -285,28 +272,14 @@
         "tabc_rank": 20,
         "maxpreps_rank": 20,
         "calculated_rank": 517,
-        "wins": 10,
-        "losses": 3,
+        "wins": 6,
+        "losses": 1,
         "record": "10-3",
         "ppg": 60.0,
         "opp_ppg": 52.3,
         "games": 7,
-        "rank": 20,
+        "rank": 19,
         "district": "6"
-      },
-      {
-        "team_name": "Westlake",
-        "weighted_rank": 188.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 17,
-        "calculated_rank": 359,
-        "ppg": 62.4,
-        "opp_ppg": 49.6,
-        "games": 5,
-        "rank": 21,
-        "wins": 4,
-        "losses": 1,
-        "district": "26"
       },
       {
         "team_name": "Duncanville",
@@ -314,13 +287,13 @@
         "tabc_rank": 2,
         "maxpreps_rank": 9,
         "calculated_rank": 553,
-        "wins": 10,
-        "losses": 1,
+        "wins": 5,
+        "losses": 0,
         "record": "10-1",
         "ppg": 60.4,
         "opp_ppg": 53.6,
         "games": 5,
-        "rank": 22,
+        "rank": 20,
         "district": "11"
       },
       {
@@ -332,7 +305,7 @@
         "ppg": 56.0,
         "opp_ppg": 43.5,
         "games": 8,
-        "rank": 23,
+        "rank": 21,
         "wins": 7,
         "losses": 1,
         "district": "24"
@@ -343,13 +316,13 @@
         "tabc_rank": 11,
         "maxpreps_rank": null,
         "calculated_rank": 384,
-        "wins": 8,
-        "losses": 3,
+        "wins": 6,
+        "losses": 0,
         "record": "8-3",
         "ppg": 74.2,
         "opp_ppg": 62.5,
         "games": 6,
-        "rank": 24,
+        "rank": 22,
         "district": "6"
       },
       {
@@ -361,21 +334,48 @@
         "ppg": 78.5,
         "opp_ppg": 69.0,
         "games": 4,
-        "rank": 25,
+        "rank": 23,
         "wins": 4,
         "losses": 0,
         "district": "19"
+      },
+      {
+        "team_name": "Round Rock Westwood",
+        "weighted_rank": 253.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 23,
+        "calculated_rank": 483,
+        "ppg": 63.0,
+        "opp_ppg": 54.3,
+        "games": 7,
+        "rank": 24,
+        "wins": 5,
+        "losses": 2
+      },
+      {
+        "team_name": "Dickinson",
+        "weighted_rank": 257.0,
+        "tabc_rank": 12,
+        "maxpreps_rank": 10,
+        "calculated_rank": 749,
+        "wins": 4,
+        "losses": 3,
+        "record": "13-4",
+        "ppg": 61.4,
+        "opp_ppg": 59.7,
+        "games": 7,
+        "rank": 25
       }
     ],
     "AAAAA": [
       {
         "team_name": "Mans Summit",
-        "weighted_rank": 3.0,
+        "weighted_rank": 3.5,
         "tabc_rank": 3,
-        "maxpreps_rank": null,
+        "maxpreps_rank": 4,
         "calculated_rank": null,
-        "wins": 12,
-        "losses": 4,
+        "wins": 3,
+        "losses": 2,
         "record": "12-4",
         "rank": 1,
         "games": 5,
@@ -385,12 +385,12 @@
       },
       {
         "team_name": "Mans Timberview",
-        "weighted_rank": 5.0,
+        "weighted_rank": 6.5,
         "tabc_rank": 5,
-        "maxpreps_rank": null,
+        "maxpreps_rank": 8,
         "calculated_rank": null,
-        "wins": 14,
-        "losses": 2,
+        "wins": 6,
+        "losses": 1,
         "record": "14-2",
         "rank": 2,
         "games": 7,
@@ -399,42 +399,42 @@
         "district": "8"
       },
       {
-        "team_name": "Bmt West Brook",
-        "weighted_rank": 11.0,
-        "tabc_rank": 11,
-        "maxpreps_rank": null,
-        "calculated_rank": null,
-        "wins": 11,
-        "losses": 3,
-        "record": "11-3",
-        "rank": 3,
-        "games": 2,
-        "ppg": 72.5,
-        "opp_ppg": 66.0,
-        "district": "19"
-      },
-      {
         "team_name": "EP Chapin",
         "weighted_rank": 16.0,
         "tabc_rank": 16,
         "maxpreps_rank": null,
         "calculated_rank": null,
-        "wins": 9,
-        "losses": 6,
+        "wins": 3,
+        "losses": 3,
         "record": "9-6",
-        "rank": 4,
+        "rank": 3,
         "games": 6,
         "ppg": 54.7,
         "opp_ppg": 53.7,
         "district": "1"
       },
       {
-        "team_name": "SA Veterans Memorial",
-        "weighted_rank": 17.0,
-        "tabc_rank": 17,
-        "maxpreps_rank": null,
+        "team_name": "Bmt West Brook",
+        "weighted_rank": 16.0,
+        "tabc_rank": 11,
+        "maxpreps_rank": 21,
         "calculated_rank": null,
-        "wins": 13,
+        "wins": 2,
+        "losses": 0,
+        "record": "11-3",
+        "rank": 4,
+        "games": 2,
+        "ppg": 72.5,
+        "opp_ppg": 66.0,
+        "district": "19"
+      },
+      {
+        "team_name": "SA Veterans Memorial",
+        "weighted_rank": 18.0,
+        "tabc_rank": 17,
+        "maxpreps_rank": 19,
+        "calculated_rank": null,
+        "wins": 2,
         "losses": 4,
         "record": "13-4",
         "rank": 5,
@@ -476,7 +476,7 @@
         "tabc_rank": 9,
         "maxpreps_rank": 10,
         "calculated_rank": 193,
-        "wins": 13,
+        "wins": 7,
         "losses": 2,
         "record": "13-2",
         "ppg": 69.1,
@@ -491,8 +491,8 @@
         "tabc_rank": 22,
         "maxpreps_rank": 15,
         "calculated_rank": 220,
-        "wins": 12,
-        "losses": 3,
+        "wins": 6,
+        "losses": 0,
         "record": "12-3",
         "ppg": 64.7,
         "opp_ppg": 46.7,
@@ -506,8 +506,8 @@
         "tabc_rank": 21,
         "maxpreps_rank": 16,
         "calculated_rank": 235,
-        "wins": 14,
-        "losses": 3,
+        "wins": 6,
+        "losses": 1,
         "record": "14-3",
         "ppg": 72.3,
         "opp_ppg": 54.6,
@@ -515,18 +515,33 @@
         "rank": 10
       },
       {
+        "team_name": "Bmt United",
+        "weighted_rank": 91.33333333333333,
+        "tabc_rank": 1,
+        "maxpreps_rank": 2,
+        "calculated_rank": 271,
+        "wins": 1,
+        "losses": 0,
+        "record": "16-0",
+        "ppg": 77.0,
+        "opp_ppg": 61.0,
+        "games": 1,
+        "rank": 11,
+        "district": "19"
+      },
+      {
         "team_name": "Frisco Heritage",
         "weighted_rank": 91.5,
         "tabc_rank": 2,
         "maxpreps_rank": null,
         "calculated_rank": 181,
-        "wins": 12,
+        "wins": 4,
         "losses": 2,
         "record": "12-2",
         "ppg": 77.7,
         "opp_ppg": 57.2,
         "games": 6,
-        "rank": 11,
+        "rank": 12,
         "district": "11"
       },
       {
@@ -535,13 +550,13 @@
         "tabc_rank": 19,
         "maxpreps_rank": 17,
         "calculated_rank": 251,
-        "wins": 19,
+        "wins": 7,
         "losses": 0,
         "record": "19-0",
         "ppg": 58.4,
         "opp_ppg": 41.3,
         "games": 7,
-        "rank": 12
+        "rank": 13
       },
       {
         "team_name": "West Mesquite",
@@ -549,13 +564,13 @@
         "tabc_rank": 25,
         "maxpreps_rank": 20,
         "calculated_rank": 243,
-        "wins": 14,
-        "losses": 2,
+        "wins": 4,
+        "losses": 0,
         "record": "14-2",
         "ppg": 64.8,
         "opp_ppg": 47.2,
         "games": 4,
-        "rank": 13,
+        "rank": 14,
         "district": "14"
       },
       {
@@ -567,7 +582,7 @@
         "ppg": 62.0,
         "opp_ppg": 40.5,
         "games": 6,
-        "rank": 14,
+        "rank": 15,
         "wins": 5,
         "losses": 1,
         "district": "6"
@@ -578,28 +593,14 @@
         "tabc_rank": 15,
         "maxpreps_rank": 11,
         "calculated_rank": 265,
-        "wins": 14,
-        "losses": 3,
+        "wins": 7,
+        "losses": 1,
         "record": "14-3",
         "ppg": 59.0,
         "opp_ppg": 42.4,
         "games": 8,
-        "rank": 15,
-        "district": "6"
-      },
-      {
-        "team_name": "Beaumont United",
-        "weighted_rank": 101.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 2,
-        "calculated_rank": 200,
-        "ppg": 71.8,
-        "opp_ppg": 52.6,
-        "games": 5,
         "rank": 16,
-        "wins": 5,
-        "losses": 0,
-        "district": "19"
+        "district": "6"
       },
       {
         "team_name": "Lufkin",
@@ -607,8 +608,8 @@
         "tabc_rank": 7,
         "maxpreps_rank": 6,
         "calculated_rank": 353,
-        "wins": 10,
-        "losses": 3,
+        "wins": 4,
+        "losses": 1,
         "record": "10-3",
         "ppg": 62.2,
         "opp_ppg": 49.2,
@@ -617,18 +618,33 @@
         "district": "10"
       },
       {
+        "team_name": "FB Marshall",
+        "weighted_rank": 126.0,
+        "tabc_rank": 10,
+        "maxpreps_rank": 18,
+        "calculated_rank": 350,
+        "wins": 1,
+        "losses": 0,
+        "record": "13-7",
+        "ppg": 64.0,
+        "opp_ppg": 51.0,
+        "games": 1,
+        "rank": 18,
+        "district": "22"
+      },
+      {
         "team_name": "Ellison",
         "weighted_rank": 130.5,
         "tabc_rank": 14,
         "maxpreps_rank": null,
         "calculated_rank": 247,
-        "wins": 13,
-        "losses": 6,
+        "wins": 4,
+        "losses": 2,
         "record": "13-6",
         "ppg": 64.0,
         "opp_ppg": 46.7,
         "games": 6,
-        "rank": 18,
+        "rank": 19,
         "district": "16"
       },
       {
@@ -637,29 +653,14 @@
         "tabc_rank": 6,
         "maxpreps_rank": 5,
         "calculated_rank": 396,
-        "wins": 13,
-        "losses": 2,
+        "wins": 5,
+        "losses": 1,
         "record": "13-2",
         "ppg": 66.0,
         "opp_ppg": 54.7,
         "games": 6,
-        "rank": 19,
-        "district": "6"
-      },
-      {
-        "team_name": "Bmt United",
-        "weighted_rank": 136.0,
-        "tabc_rank": 1,
-        "maxpreps_rank": null,
-        "calculated_rank": 271,
-        "wins": 16,
-        "losses": 0,
-        "record": "16-0",
-        "ppg": 77.0,
-        "opp_ppg": 61.0,
-        "games": 1,
         "rank": 20,
-        "district": "19"
+        "district": "6"
       },
       {
         "team_name": "Palo Duro",
@@ -667,8 +668,8 @@
         "tabc_rank": 24,
         "maxpreps_rank": null,
         "calculated_rank": 276,
-        "wins": 10,
-        "losses": 3,
+        "wins": 4,
+        "losses": 2,
         "record": "10-3",
         "ppg": 73.5,
         "opp_ppg": 57.5,
@@ -677,33 +678,18 @@
         "district": "3"
       },
       {
-        "team_name": "FB Marshall",
-        "weighted_rank": 180.0,
-        "tabc_rank": 10,
-        "maxpreps_rank": null,
-        "calculated_rank": 350,
-        "wins": 13,
-        "losses": 7,
-        "record": "13-7",
-        "ppg": 64.0,
-        "opp_ppg": 51.0,
-        "games": 1,
-        "rank": 22,
-        "district": "22"
-      },
-      {
         "team_name": "Iowa Colony",
         "weighted_rank": 185.66666666666666,
         "tabc_rank": 13,
         "maxpreps_rank": 14,
         "calculated_rank": 530,
-        "wins": 13,
-        "losses": 5,
+        "wins": 7,
+        "losses": 1,
         "record": "13-5",
         "ppg": 64.1,
         "opp_ppg": 56.9,
         "games": 8,
-        "rank": 23,
+        "rank": 22,
         "district": "20"
       },
       {
@@ -712,13 +698,13 @@
         "tabc_rank": 18,
         "maxpreps_rank": 13,
         "calculated_rank": 668,
-        "wins": 13,
-        "losses": 4,
+        "wins": 4,
+        "losses": 1,
         "record": "13-4",
         "ppg": 60.2,
         "opp_ppg": 56.4,
         "games": 5,
-        "rank": 24,
+        "rank": 23,
         "district": "9"
       },
       {
@@ -730,36 +716,45 @@
         "ppg": 60.1,
         "opp_ppg": 51.1,
         "games": 7,
-        "rank": 25,
+        "rank": 24,
         "wins": 5,
         "losses": 2,
         "district": "9"
+      },
+      {
+        "team_name": "Tascosa",
+        "weighted_rank": 250.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 25,
+        "calculated_rank": 475,
+        "ppg": 59.7,
+        "opp_ppg": 50.7,
+        "games": 3,
+        "rank": 25,
+        "wins": 2,
+        "losses": 1
       }
     ],
     "AAAA": [
       {
-        "team_name": "Hou Washington",
-        "weighted_rank": 3.0,
-        "tabc_rank": 3,
-        "maxpreps_rank": null,
+        "team_name": "Lubbock Liberty",
+        "weighted_rank": 7.0,
+        "tabc_rank": 13,
+        "maxpreps_rank": 1,
         "calculated_rank": null,
-        "wins": 12,
-        "losses": 3,
-        "record": "12-3",
-        "rank": 1,
-        "games": 1,
-        "ppg": 111.0,
-        "opp_ppg": 49.0,
-        "district": "20"
+        "wins": 11,
+        "losses": 2,
+        "record": "11-2",
+        "rank": 1
       },
       {
         "team_name": "Hou Yates",
-        "weighted_rank": 6.0,
+        "weighted_rank": 11.5,
         "tabc_rank": 6,
-        "maxpreps_rank": null,
+        "maxpreps_rank": 17,
         "calculated_rank": null,
-        "wins": 10,
-        "losses": 2,
+        "wins": 4,
+        "losses": 1,
         "record": "10-2",
         "rank": 2,
         "games": 5,
@@ -768,43 +763,27 @@
         "district": "20"
       },
       {
-        "team_name": "Lubbock Liberty",
-        "weighted_rank": 13.0,
-        "tabc_rank": 13,
-        "maxpreps_rank": null,
-        "calculated_rank": null,
-        "wins": 11,
-        "losses": 2,
-        "record": "11-2",
-        "rank": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
-      },
-      {
         "team_name": "Chapel Hill",
         "weighted_rank": 13.0,
         "tabc_rank": null,
         "maxpreps_rank": 13,
         "calculated_rank": null,
-        "rank": 4,
-        "district": "16",
-        "wins": 15,
-        "losses": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "rank": 3,
+        "district": "16"
       },
       {
-        "team_name": "Washington",
+        "team_name": "Hou Washington",
         "weighted_rank": 13.5,
-        "tabc_rank": null,
+        "tabc_rank": 3,
         "maxpreps_rank": 24,
-        "calculated_rank": 3,
-        "ppg": 111.0,
-        "opp_ppg": 49.0,
-        "games": 1,
-        "rank": 5,
+        "calculated_rank": null,
         "wins": 1,
         "losses": 0,
+        "record": "12-3",
+        "rank": 4,
+        "games": 1,
+        "ppg": 111.0,
+        "opp_ppg": 49.0,
         "district": "20"
       },
       {
@@ -813,13 +792,13 @@
         "tabc_rank": 4,
         "maxpreps_rank": null,
         "calculated_rank": 29,
-        "wins": 18,
+        "wins": 1,
         "losses": 0,
         "record": "18-0",
         "ppg": 70.0,
         "opp_ppg": 27.0,
         "games": 1,
-        "rank": 6
+        "rank": 5
       },
       {
         "team_name": "Farmersville",
@@ -827,14 +806,29 @@
         "tabc_rank": 22,
         "maxpreps_rank": 11,
         "calculated_rank": 18,
-        "wins": 15,
-        "losses": 1,
+        "wins": 3,
+        "losses": 0,
         "record": "15-1",
         "ppg": 84.7,
         "opp_ppg": 38.3,
         "games": 3,
-        "rank": 7,
+        "rank": 6,
         "district": "13"
+      },
+      {
+        "team_name": "Dallas Lincoln",
+        "weighted_rank": 20.0,
+        "tabc_rank": 20,
+        "maxpreps_rank": null,
+        "calculated_rank": null,
+        "wins": 0,
+        "losses": 6,
+        "record": "6-9",
+        "rank": 7,
+        "games": 6,
+        "ppg": 29.2,
+        "opp_ppg": 67.2,
+        "district": "11"
       },
       {
         "team_name": "Madisonville",
@@ -843,26 +837,7 @@
         "maxpreps_rank": 20,
         "calculated_rank": null,
         "rank": 8,
-        "district": "17",
-        "wins": 13,
-        "losses": 4,
-        "ppg": 68.0,
-        "opp_ppg": 54.0
-      },
-      {
-        "team_name": "Dallas Lincoln",
-        "weighted_rank": 20.0,
-        "tabc_rank": 20,
-        "maxpreps_rank": null,
-        "calculated_rank": null,
-        "wins": 6,
-        "losses": 9,
-        "record": "6-9",
-        "rank": 9,
-        "games": 6,
-        "ppg": 29.2,
-        "opp_ppg": 67.2,
-        "district": "11"
+        "district": "17"
       },
       {
         "team_name": "West Plains",
@@ -870,13 +845,13 @@
         "tabc_rank": 14,
         "maxpreps_rank": 5,
         "calculated_rank": 50,
-        "wins": 10,
-        "losses": 2,
+        "wins": 2,
+        "losses": 0,
         "record": "10-2",
         "ppg": 69.5,
         "opp_ppg": 34.5,
         "games": 2,
-        "rank": 10,
+        "rank": 9,
         "district": "4"
       },
       {
@@ -888,7 +863,7 @@
         "ppg": 73.2,
         "opp_ppg": 32.2,
         "games": 6,
-        "rank": 11,
+        "rank": 10,
         "wins": 6,
         "losses": 0,
         "district": "29"
@@ -899,13 +874,13 @@
         "tabc_rank": 7,
         "maxpreps_rank": 2,
         "calculated_rank": 63,
-        "wins": 17,
+        "wins": 3,
         "losses": 1,
         "record": "17-1",
         "ppg": 73.0,
         "opp_ppg": 41.0,
         "games": 4,
-        "rank": 12,
+        "rank": 11,
         "district": "26"
       },
       {
@@ -917,7 +892,7 @@
         "ppg": 79.6,
         "opp_ppg": 45.0,
         "games": 5,
-        "rank": 13,
+        "rank": 12,
         "wins": 5,
         "losses": 0,
         "district": "9"
@@ -931,23 +906,9 @@
         "ppg": 78.0,
         "opp_ppg": 49.0,
         "games": 4,
-        "rank": 14,
+        "rank": 13,
         "wins": 4,
         "losses": 0
-      },
-      {
-        "team_name": "Yates",
-        "weighted_rank": 47.5,
-        "tabc_rank": null,
-        "maxpreps_rank": 17,
-        "calculated_rank": 78,
-        "ppg": 97.2,
-        "opp_ppg": 67.4,
-        "games": 5,
-        "rank": 15,
-        "wins": 4,
-        "losses": 1,
-        "district": "20"
       },
       {
         "team_name": "Kennedale",
@@ -955,28 +916,14 @@
         "tabc_rank": 9,
         "maxpreps_rank": 12,
         "calculated_rank": 140,
-        "wins": 12,
-        "losses": 4,
+        "wins": 4,
+        "losses": 0,
         "record": "12-4",
         "ppg": 80.5,
         "opp_ppg": 57.2,
         "games": 4,
-        "rank": 16,
+        "rank": 14,
         "district": "12"
-      },
-      {
-        "team_name": "Carter",
-        "weighted_rank": 64.5,
-        "tabc_rank": null,
-        "maxpreps_rank": 7,
-        "calculated_rank": 122,
-        "ppg": 69.3,
-        "opp_ppg": 45.0,
-        "games": 3,
-        "rank": 17,
-        "wins": 3,
-        "losses": 0,
-        "district": "11"
       },
       {
         "team_name": "Glen Rose",
@@ -987,7 +934,7 @@
         "ppg": 71.7,
         "opp_ppg": 46.7,
         "games": 3,
-        "rank": 18,
+        "rank": 15,
         "wins": 3,
         "losses": 0,
         "district": "6"
@@ -998,13 +945,13 @@
         "tabc_rank": 25,
         "maxpreps_rank": 22,
         "calculated_rank": 171,
-        "wins": 12,
-        "losses": 5,
+        "wins": 3,
+        "losses": 0,
         "record": "12-5",
         "ppg": 71.0,
         "opp_ppg": 49.7,
         "games": 3,
-        "rank": 19,
+        "rank": 16,
         "district": "26"
       },
       {
@@ -1013,14 +960,29 @@
         "tabc_rank": 11,
         "maxpreps_rank": 6,
         "calculated_rank": 268,
-        "wins": 12,
-        "losses": 3,
+        "wins": 2,
+        "losses": 1,
         "record": "12-3",
         "ppg": 63.7,
         "opp_ppg": 47.3,
         "games": 3,
-        "rank": 20,
+        "rank": 17,
         "district": "6"
+      },
+      {
+        "team_name": "Hou Wheatley",
+        "weighted_rank": 99.0,
+        "tabc_rank": 5,
+        "maxpreps_rank": 19,
+        "calculated_rank": 273,
+        "wins": 1,
+        "losses": 0,
+        "record": "6-2",
+        "ppg": 61.0,
+        "opp_ppg": 45.0,
+        "games": 1,
+        "rank": 18,
+        "district": "20"
       },
       {
         "team_name": "Seminole",
@@ -1031,7 +993,7 @@
         "ppg": 70.0,
         "opp_ppg": 50.5,
         "games": 2,
-        "rank": 21,
+        "rank": 19,
         "wins": 2,
         "losses": 0
       },
@@ -1041,13 +1003,13 @@
         "tabc_rank": 17,
         "maxpreps_rank": null,
         "calculated_rank": 204,
-        "wins": 10,
-        "losses": 6,
+        "wins": 1,
+        "losses": 0,
         "record": "10-6",
         "ppg": 62.0,
         "opp_ppg": 43.0,
         "games": 1,
-        "rank": 22,
+        "rank": 20,
         "district": "21"
       },
       {
@@ -1056,13 +1018,13 @@
         "tabc_rank": 23,
         "maxpreps_rank": 3,
         "calculated_rank": 321,
-        "wins": 12,
-        "losses": 4,
+        "wins": 6,
+        "losses": 2,
         "record": "12-4",
         "ppg": 63.4,
         "opp_ppg": 49.2,
         "games": 8,
-        "rank": 23,
+        "rank": 21,
         "district": "4"
       },
       {
@@ -1071,61 +1033,61 @@
         "tabc_rank": 8,
         "maxpreps_rank": 9,
         "calculated_rank": 358,
-        "wins": 13,
-        "losses": 5,
+        "wins": 5,
+        "losses": 0,
         "record": "13-5",
         "ppg": 74.2,
         "opp_ppg": 61.4,
         "games": 5,
-        "rank": 24,
+        "rank": 22,
         "district": "7"
       },
       {
-        "team_name": "Wheatley",
-        "weighted_rank": 131.5,
-        "tabc_rank": null,
-        "maxpreps_rank": 19,
-        "calculated_rank": 244,
-        "ppg": 88.0,
-        "opp_ppg": 70.5,
+        "team_name": "Estacado",
+        "weighted_rank": 164.33333333333334,
+        "tabc_rank": 15,
+        "maxpreps_rank": 16,
+        "calculated_rank": 462,
+        "wins": 1,
+        "losses": 1,
+        "record": "11-3",
+        "ppg": 70.0,
+        "opp_ppg": 61.0,
         "games": 2,
-        "rank": 25,
+        "rank": 23,
+        "district": "5"
+      },
+      {
+        "team_name": "Dallas Carter",
+        "weighted_rank": 182.66666666666666,
+        "tabc_rank": 1,
+        "maxpreps_rank": 7,
+        "calculated_rank": 540,
         "wins": 2,
-        "losses": 0,
-        "district": "20"
+        "losses": 1,
+        "record": "7-4",
+        "ppg": 65.0,
+        "opp_ppg": 58.0,
+        "games": 3,
+        "rank": 24,
+        "district": "11"
+      },
+      {
+        "team_name": "FW Southwest",
+        "weighted_rank": 213.5,
+        "tabc_rank": 21,
+        "maxpreps_rank": null,
+        "calculated_rank": 406,
+        "wins": 11,
+        "losses": 3,
+        "record": "10-6",
+        "ppg": 62.9,
+        "opp_ppg": 51.9,
+        "games": 14,
+        "rank": 25
       }
     ],
     "AAA": [
-      {
-        "team_name": "Dallas Madison",
-        "weighted_rank": 1.0,
-        "tabc_rank": 1,
-        "maxpreps_rank": null,
-        "calculated_rank": null,
-        "wins": 5,
-        "losses": 8,
-        "record": "5-8",
-        "rank": 1,
-        "games": 12,
-        "ppg": 65.2,
-        "opp_ppg": 55.7,
-        "district": "9"
-      },
-      {
-        "team_name": "Westwood",
-        "weighted_rank": 4.5,
-        "tabc_rank": 6,
-        "maxpreps_rank": 3,
-        "calculated_rank": null,
-        "wins": 8,
-        "losses": 1,
-        "record": "8-1",
-        "rank": 2,
-        "games": 7,
-        "ppg": 63.0,
-        "opp_ppg": 54.3,
-        "district": "20"
-      },
       {
         "team_name": "Shallowater",
         "weighted_rank": 4.5,
@@ -1135,10 +1097,23 @@
         "wins": 11,
         "losses": 1,
         "record": "11-1",
-        "rank": 3,
-        "district": "2",
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "rank": 1,
+        "district": "2"
+      },
+      {
+        "team_name": "Westwood",
+        "weighted_rank": 4.5,
+        "tabc_rank": 6,
+        "maxpreps_rank": 3,
+        "calculated_rank": null,
+        "wins": 5,
+        "losses": 2,
+        "record": "8-1",
+        "rank": 2,
+        "games": 7,
+        "ppg": 63.0,
+        "opp_ppg": 54.3,
+        "district": "20"
       },
       {
         "team_name": "Liberty Eylau",
@@ -1146,14 +1121,29 @@
         "tabc_rank": 5,
         "maxpreps_rank": null,
         "calculated_rank": null,
-        "wins": 12,
-        "losses": 2,
+        "wins": 2,
+        "losses": 0,
         "record": "12-2",
-        "rank": 4,
+        "rank": 3,
         "games": 2,
         "ppg": 79.5,
         "opp_ppg": 41.0,
         "district": "14"
+      },
+      {
+        "team_name": "Dallas Madison",
+        "weighted_rank": 12.5,
+        "tabc_rank": 1,
+        "maxpreps_rank": 24,
+        "calculated_rank": null,
+        "wins": 8,
+        "losses": 4,
+        "record": "5-8",
+        "rank": 4,
+        "games": 12,
+        "ppg": 65.2,
+        "opp_ppg": 55.7,
+        "district": "9"
       },
       {
         "team_name": "Fairfield",
@@ -1165,9 +1155,7 @@
         "losses": 2,
         "record": "9-2",
         "rank": 5,
-        "district": "20",
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "district": "20"
       },
       {
         "team_name": "Compass Academy",
@@ -1203,11 +1191,7 @@
         "maxpreps_rank": 18,
         "calculated_rank": null,
         "rank": 8,
-        "district": "1",
-        "wins": 13,
-        "losses": 4,
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "district": "1"
       },
       {
         "team_name": "City View",
@@ -1219,9 +1203,7 @@
         "losses": 4,
         "record": "4-4",
         "rank": 9,
-        "district": "7",
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "district": "7"
       },
       {
         "team_name": "Lexington",
@@ -1230,11 +1212,7 @@
         "maxpreps_rank": 22,
         "calculated_rank": null,
         "rank": 10,
-        "district": "19",
-        "wins": 13,
-        "losses": 4,
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "district": "19"
       },
       {
         "team_name": "Cole",
@@ -1242,8 +1220,8 @@
         "tabc_rank": 9,
         "maxpreps_rank": 9,
         "calculated_rank": 51,
-        "wins": 16,
-        "losses": 4,
+        "wins": 7,
+        "losses": 1,
         "record": "16-4",
         "ppg": 70.4,
         "opp_ppg": 35.6,
@@ -1271,7 +1249,7 @@
         "tabc_rank": 3,
         "maxpreps_rank": 4,
         "calculated_rank": 85,
-        "wins": 19,
+        "wins": 3,
         "losses": 0,
         "record": "19-0",
         "ppg": 73.0,
@@ -1300,8 +1278,8 @@
         "tabc_rank": 15,
         "maxpreps_rank": 17,
         "calculated_rank": 74,
-        "wins": 14,
-        "losses": 3,
+        "wins": 1,
+        "losses": 0,
         "record": "14-3",
         "ppg": 77.0,
         "opp_ppg": 47.0,
@@ -1314,8 +1292,8 @@
         "tabc_rank": 20,
         "maxpreps_rank": null,
         "calculated_rank": 107,
-        "wins": 13,
-        "losses": 4,
+        "wins": 5,
+        "losses": 0,
         "record": "13-4",
         "ppg": 64.0,
         "opp_ppg": 38.6,
@@ -1328,8 +1306,8 @@
         "tabc_rank": 2,
         "maxpreps_rank": 1,
         "calculated_rank": 284,
-        "wins": 15,
-        "losses": 1,
+        "wins": 3,
+        "losses": 0,
         "record": "15-1",
         "ppg": 58.3,
         "opp_ppg": 43.0,
@@ -1343,8 +1321,8 @@
         "tabc_rank": 4,
         "maxpreps_rank": 5,
         "calculated_rank": 339,
-        "wins": 14,
-        "losses": 4,
+        "wins": 5,
+        "losses": 1,
         "record": "14-4",
         "ppg": 78.3,
         "opp_ppg": 64.8,
@@ -1358,8 +1336,8 @@
         "tabc_rank": 11,
         "maxpreps_rank": 13,
         "calculated_rank": 335,
-        "wins": 11,
-        "losses": 4,
+        "wins": 3,
+        "losses": 0,
         "record": "11-4",
         "ppg": 78.7,
         "opp_ppg": 65.0,
@@ -1373,8 +1351,8 @@
         "tabc_rank": 17,
         "maxpreps_rank": 8,
         "calculated_rank": 405,
-        "wins": 12,
-        "losses": 3,
+        "wins": 1,
+        "losses": 0,
         "record": "12-3",
         "ppg": 61.0,
         "opp_ppg": 50.0,
@@ -1388,8 +1366,8 @@
         "tabc_rank": 18,
         "maxpreps_rank": 11,
         "calculated_rank": 459,
-        "wins": 7,
-        "losses": 3,
+        "wins": 2,
+        "losses": 2,
         "record": "7-3",
         "ppg": 60.0,
         "opp_ppg": 50.8,
@@ -1403,8 +1381,8 @@
         "tabc_rank": 21,
         "maxpreps_rank": 19,
         "calculated_rank": 644,
-        "wins": 11,
-        "losses": 5,
+        "wins": 2,
+        "losses": 1,
         "record": "11-5",
         "ppg": 55.0,
         "opp_ppg": 50.7,
@@ -1413,32 +1391,18 @@
         "district": "10"
       },
       {
-        "team_name": "Madison",
-        "weighted_rank": 238.5,
-        "tabc_rank": null,
-        "maxpreps_rank": 24,
-        "calculated_rank": 453,
-        "ppg": 65.2,
-        "opp_ppg": 55.7,
-        "games": 12,
-        "rank": 23,
-        "wins": 8,
-        "losses": 4,
-        "district": "9"
-      },
-      {
         "team_name": "Orangefield",
         "weighted_rank": 261.0,
         "tabc_rank": 12,
         "maxpreps_rank": 7,
         "calculated_rank": 764,
-        "wins": 12,
-        "losses": 3,
+        "wins": 1,
+        "losses": 2,
         "record": "12-3",
         "ppg": 59.7,
         "opp_ppg": 58.3,
         "games": 3,
-        "rank": 24,
+        "rank": 23,
         "district": "22"
       },
       {
@@ -1447,32 +1411,31 @@
         "tabc_rank": 22,
         "maxpreps_rank": null,
         "calculated_rank": 509,
-        "wins": 8,
-        "losses": 4,
+        "wins": 1,
+        "losses": 0,
         "record": "8-4",
         "ppg": 58.0,
         "opp_ppg": 50.0,
         "games": 1,
-        "rank": 25,
+        "rank": 24,
         "district": "18"
+      },
+      {
+        "team_name": "Holliday",
+        "weighted_rank": 352.5,
+        "tabc_rank": null,
+        "maxpreps_rank": 10,
+        "calculated_rank": 695,
+        "ppg": 56.0,
+        "opp_ppg": 53.0,
+        "games": 1,
+        "rank": 25,
+        "wins": 1,
+        "losses": 0,
+        "district": "7"
       }
     ],
     "AA": [
-      {
-        "team_name": "Waco Meyer",
-        "weighted_rank": 6.0,
-        "tabc_rank": 6,
-        "maxpreps_rank": null,
-        "calculated_rank": null,
-        "wins": 15,
-        "losses": 5,
-        "record": "15-5",
-        "rank": 1,
-        "games": 2,
-        "ppg": 76.5,
-        "opp_ppg": 61.5,
-        "district": "12"
-      },
       {
         "team_name": "Ropes",
         "weighted_rank": 6.5,
@@ -1482,10 +1445,8 @@
         "wins": 8,
         "losses": 1,
         "record": "8-1",
-        "rank": 2,
-        "district": "5",
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "rank": 1,
+        "district": "5"
       },
       {
         "team_name": "Roscoe",
@@ -1496,10 +1457,8 @@
         "wins": 18,
         "losses": 0,
         "record": "18-0",
-        "rank": 3,
-        "district": "8",
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "rank": 2,
+        "district": "8"
       },
       {
         "team_name": "San Augustine",
@@ -1507,14 +1466,29 @@
         "tabc_rank": 8,
         "maxpreps_rank": 6,
         "calculated_rank": null,
-        "wins": 5,
-        "losses": 0,
+        "wins": 1,
+        "losses": 2,
         "record": "5-0",
-        "rank": 4,
+        "rank": 3,
         "games": 3,
         "ppg": 47.0,
         "opp_ppg": 53.0,
         "district": "24"
+      },
+      {
+        "team_name": "Waco Meyer",
+        "weighted_rank": 11.0,
+        "tabc_rank": 6,
+        "maxpreps_rank": 16,
+        "calculated_rank": null,
+        "wins": 2,
+        "losses": 0,
+        "record": "15-5",
+        "rank": 4,
+        "games": 2,
+        "ppg": 76.5,
+        "opp_ppg": 61.5,
+        "district": "12"
       },
       {
         "team_name": "Windthorst",
@@ -1523,11 +1497,7 @@
         "maxpreps_rank": 13,
         "calculated_rank": null,
         "rank": 5,
-        "district": "9",
-        "wins": 15,
-        "losses": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "district": "9"
       },
       {
         "team_name": "Tom Bean",
@@ -1539,9 +1509,7 @@
         "losses": 4,
         "record": "12-4",
         "rank": 6,
-        "district": "14",
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "district": "14"
       },
       {
         "team_name": "Gruver",
@@ -1553,9 +1521,7 @@
         "losses": 0,
         "record": "2-0",
         "rank": 7,
-        "district": "1",
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "district": "1"
       },
       {
         "team_name": "Farwell",
@@ -1563,8 +1529,8 @@
         "tabc_rank": 20,
         "maxpreps_rank": 14,
         "calculated_rank": 22,
-        "wins": 9,
-        "losses": 3,
+        "wins": 1,
+        "losses": 0,
         "record": "9-3",
         "ppg": 99.0,
         "opp_ppg": 53.0,
@@ -1579,11 +1545,7 @@
         "maxpreps_rank": 19,
         "calculated_rank": null,
         "rank": 9,
-        "district": "14",
-        "wins": 13,
-        "losses": 4,
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "district": "14"
       },
       {
         "team_name": "Graford",
@@ -1591,8 +1553,8 @@
         "tabc_rank": 5,
         "maxpreps_rank": 4,
         "calculated_rank": 59,
-        "wins": 15,
-        "losses": 1,
+        "wins": 5,
+        "losses": 0,
         "record": "15-1",
         "ppg": 75.2,
         "opp_ppg": 43.2,
@@ -1609,9 +1571,7 @@
         "wins": 10,
         "losses": 2,
         "record": "10-2",
-        "rank": 11,
-        "ppg": 65.0,
-        "opp_ppg": 56.0
+        "rank": 11
       },
       {
         "team_name": "Olton",
@@ -1619,8 +1579,8 @@
         "tabc_rank": 19,
         "maxpreps_rank": 5,
         "calculated_rank": 57,
-        "wins": 16,
-        "losses": 1,
+        "wins": 5,
+        "losses": 0,
         "record": "16-1",
         "ppg": 75.2,
         "opp_ppg": 42.8,
@@ -1634,8 +1594,8 @@
         "tabc_rank": 7,
         "maxpreps_rank": 17,
         "calculated_rank": 69,
-        "wins": 10,
-        "losses": 3,
+        "wins": 1,
+        "losses": 0,
         "record": "10-3",
         "ppg": 71.0,
         "opp_ppg": 40.0,
@@ -1649,7 +1609,7 @@
         "tabc_rank": 2,
         "maxpreps_rank": 1,
         "calculated_rank": 120,
-        "wins": 14,
+        "wins": 6,
         "losses": 1,
         "record": "14-1",
         "ppg": 72.0,
@@ -1664,8 +1624,8 @@
         "tabc_rank": 23,
         "maxpreps_rank": 25,
         "calculated_rank": 111,
-        "wins": 13,
-        "losses": 1,
+        "wins": 2,
+        "losses": 0,
         "record": "13-1",
         "ppg": 60.5,
         "opp_ppg": 35.5,
@@ -1678,8 +1638,8 @@
         "tabc_rank": 9,
         "maxpreps_rank": 21,
         "calculated_rank": 131,
-        "wins": 11,
-        "losses": 3,
+        "wins": 1,
+        "losses": 0,
         "record": "11-3",
         "ppg": 61.0,
         "opp_ppg": 37.0,
@@ -1693,8 +1653,8 @@
         "tabc_rank": 1,
         "maxpreps_rank": 2,
         "calculated_rank": 238,
-        "wins": 13,
-        "losses": 3,
+        "wins": 3,
+        "losses": 0,
         "record": "13-3",
         "ppg": 68.0,
         "opp_ppg": 50.3,
@@ -1722,8 +1682,8 @@
         "tabc_rank": 21,
         "maxpreps_rank": null,
         "calculated_rank": 151,
-        "wins": 12,
-        "losses": 6,
+        "wins": 4,
+        "losses": 0,
         "record": "12-6",
         "ppg": 62.8,
         "opp_ppg": 40.2,
@@ -1736,8 +1696,8 @@
         "tabc_rank": 12,
         "maxpreps_rank": 23,
         "calculated_rank": 283,
-        "wins": 7,
-        "losses": 7,
+        "wins": 2,
+        "losses": 1,
         "record": "7-7",
         "ppg": 65.0,
         "opp_ppg": 49.7,
@@ -1751,8 +1711,8 @@
         "tabc_rank": 17,
         "maxpreps_rank": 7,
         "calculated_rank": 295,
-        "wins": 10,
-        "losses": 3,
+        "wins": 4,
+        "losses": 1,
         "record": "10-3",
         "ppg": 55.0,
         "opp_ppg": 40.0,
@@ -1766,8 +1726,8 @@
         "tabc_rank": 13,
         "maxpreps_rank": null,
         "calculated_rank": 208,
-        "wins": 9,
-        "losses": 6,
+        "wins": 2,
+        "losses": 2,
         "record": "9-6",
         "ppg": 57.0,
         "opp_ppg": 38.2,
@@ -1781,7 +1741,7 @@
         "tabc_rank": 24,
         "maxpreps_rank": 8,
         "calculated_rank": 379,
-        "wins": 13,
+        "wins": 4,
         "losses": 2,
         "record": "13-2",
         "ppg": 69.2,
@@ -1795,8 +1755,8 @@
         "tabc_rank": 18,
         "maxpreps_rank": 11,
         "calculated_rank": 400,
-        "wins": 14,
-        "losses": 4,
+        "wins": 3,
+        "losses": 2,
         "record": "14-4",
         "ppg": 47.0,
         "opp_ppg": 35.8,
@@ -1805,18 +1765,19 @@
         "district": "23"
       },
       {
-        "team_name": "Meyer",
-        "weighted_rank": 159.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 16,
-        "calculated_rank": 302,
-        "ppg": 76.5,
-        "opp_ppg": 61.5,
-        "games": 2,
+        "team_name": "Slidell",
+        "weighted_rank": 170.66666666666666,
+        "tabc_rank": 16,
+        "maxpreps_rank": 15,
+        "calculated_rank": 481,
+        "wins": 6,
+        "losses": 2,
+        "record": "13-5",
+        "ppg": 61.2,
+        "opp_ppg": 52.5,
+        "games": 8,
         "rank": 25,
-        "wins": 2,
-        "losses": 0,
-        "district": "12"
+        "district": "13"
       }
     ],
     "A": [
@@ -1830,9 +1791,7 @@
         "losses": 0,
         "record": "1-0",
         "rank": 1,
-        "district": "15",
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "district": "15"
       },
       {
         "team_name": "Gordon",
@@ -1840,13 +1799,11 @@
         "tabc_rank": 2,
         "maxpreps_rank": null,
         "calculated_rank": null,
-        "wins": 15,
-        "losses": 3,
+        "wins": 0,
+        "losses": 0,
         "record": "0-0",
         "rank": 2,
-        "district": "13",
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "district": "13"
       },
       {
         "team_name": "Sands",
@@ -1855,11 +1812,7 @@
         "maxpreps_rank": 4,
         "calculated_rank": null,
         "rank": 3,
-        "district": "6",
-        "wins": 15,
-        "losses": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "district": "6"
       },
       {
         "team_name": "Robert Lee",
@@ -1868,11 +1821,7 @@
         "maxpreps_rank": 12,
         "calculated_rank": null,
         "rank": 4,
-        "district": "11",
-        "wins": 15,
-        "losses": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "district": "11"
       },
       {
         "team_name": "MMunday",
@@ -1880,11 +1829,7 @@
         "tabc_rank": null,
         "maxpreps_rank": 15,
         "calculated_rank": null,
-        "rank": 5,
-        "wins": 15,
-        "losses": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "rank": 5
       },
       {
         "team_name": "Water Valley",
@@ -1896,9 +1841,7 @@
         "losses": 3,
         "record": "2-3",
         "rank": 6,
-        "district": "11",
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "district": "11"
       },
       {
         "team_name": "May",
@@ -1910,9 +1853,7 @@
         "losses": 7,
         "record": "9-7",
         "rank": 7,
-        "district": "21",
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "district": "21"
       },
       {
         "team_name": "Benjamin",
@@ -1921,11 +1862,7 @@
         "maxpreps_rank": 18,
         "calculated_rank": null,
         "rank": 8,
-        "district": "16",
-        "wins": 13,
-        "losses": 4,
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "district": "16"
       },
       {
         "team_name": "DHanis",
@@ -1936,9 +1873,7 @@
         "wins": 10,
         "losses": 3,
         "record": "10-3",
-        "rank": 9,
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "rank": 9
       },
       {
         "team_name": "Veribest",
@@ -1964,8 +1899,8 @@
         "opp_ppg": 33.0,
         "games": 2,
         "rank": 11,
-        "wins": 10,
-        "losses": 3,
+        "wins": 2,
+        "losses": 0,
         "district": "31"
       },
       {
@@ -1974,7 +1909,7 @@
         "tabc_rank": 18,
         "maxpreps_rank": 6,
         "calculated_rank": 109,
-        "wins": 9,
+        "wins": 3,
         "losses": 0,
         "record": "9-0",
         "ppg": 67.0,
@@ -2003,8 +1938,8 @@
         "tabc_rank": 24,
         "maxpreps_rank": null,
         "calculated_rank": 80,
-        "wins": 12,
-        "losses": 4,
+        "wins": 5,
+        "losses": 1,
         "record": "12-4",
         "ppg": 59.7,
         "opp_ppg": 30.3,
@@ -2060,8 +1995,8 @@
         "tabc_rank": 19,
         "maxpreps_rank": 9,
         "calculated_rank": 424,
-        "wins": 16,
-        "losses": 3,
+        "wins": 4,
+        "losses": 2,
         "record": "16-3",
         "ppg": 50.2,
         "opp_ppg": 39.7,
@@ -2131,7 +2066,7 @@
         "tabc_rank": 5,
         "maxpreps_rank": 1,
         "calculated_rank": 580,
-        "wins": 19,
+        "wins": 5,
         "losses": 2,
         "record": "19-2",
         "ppg": 58.1,
@@ -2146,8 +2081,8 @@
         "tabc_rank": 9,
         "maxpreps_rank": null,
         "calculated_rank": 398,
-        "wins": 13,
-        "losses": 6,
+        "wins": 5,
+        "losses": 2,
         "record": "13-6",
         "ppg": 57.7,
         "opp_ppg": 46.4,
@@ -2161,8 +2096,8 @@
         "tabc_rank": 13,
         "maxpreps_rank": null,
         "calculated_rank": 432,
-        "wins": 9,
-        "losses": 9,
+        "wins": 6,
+        "losses": 2,
         "record": "9-9",
         "ppg": 62.8,
         "opp_ppg": 52.6,
@@ -2170,9 +2105,21 @@
         "rank": 25,
         "district": "27"
       }
-    ]
+    ],
+    "TAPPS_6A": [],
+    "TAPPS_5A": [],
+    "TAPPS_4A": [],
+    "TAPPS_3A": [],
+    "TAPPS_2A": [],
+    "TAPPS_1A": []
   },
   "private": {
+    "AAAAAA": [],
+    "AAAAA": [],
+    "AAAA": [],
+    "AAA": [],
+    "AA": [],
+    "A": [],
     "TAPPS_6A": [
       {
         "team_name": "Austin St. Michael\u2019s",
@@ -2184,9 +2131,7 @@
         "losses": 3,
         "record": "18-3",
         "rank": 1,
-        "district": "3",
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "district": "3"
       },
       {
         "team_name": "Dallas Parish Episcopal",
@@ -2194,8 +2139,8 @@
         "tabc_rank": 6,
         "maxpreps_rank": null,
         "calculated_rank": null,
-        "wins": 9,
-        "losses": 4,
+        "wins": 4,
+        "losses": 3,
         "record": "9-4",
         "rank": 2,
         "games": 7,
@@ -2212,9 +2157,7 @@
         "wins": 13,
         "losses": 4,
         "record": "13-4",
-        "rank": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "rank": 3
       },
       {
         "team_name": "Dallas St .Mark\u2019s School of Texas",
@@ -2225,9 +2168,7 @@
         "wins": 12,
         "losses": 5,
         "record": "12-5",
-        "rank": 4,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "rank": 4
       },
       {
         "team_name": "Houston The Kinkaid School",
@@ -2239,9 +2180,7 @@
         "losses": 3,
         "record": "18-3",
         "rank": 5,
-        "district": "SPC South",
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "district": "SPC South"
       },
       {
         "team_name": "San Antonio Antonian Prep",
@@ -2249,8 +2188,8 @@
         "tabc_rank": 4,
         "maxpreps_rank": null,
         "calculated_rank": 77,
-        "wins": 18,
-        "losses": 4,
+        "wins": 6,
+        "losses": 1,
         "record": "18-4",
         "ppg": 75.1,
         "opp_ppg": 45.3,
@@ -2278,8 +2217,8 @@
         "tabc_rank": 9,
         "maxpreps_rank": null,
         "calculated_rank": 183,
-        "wins": 20,
-        "losses": 3,
+        "wins": 9,
+        "losses": 0,
         "record": "20-3",
         "ppg": 62.4,
         "opp_ppg": 42.2,
@@ -2292,8 +2231,8 @@
         "tabc_rank": 1,
         "maxpreps_rank": null,
         "calculated_rank": 246,
-        "wins": 19,
-        "losses": 1,
+        "wins": 8,
+        "losses": 0,
         "record": "19-1",
         "ppg": 75.8,
         "opp_ppg": 58.4,
@@ -2323,8 +2262,8 @@
         "tabc_rank": 1,
         "maxpreps_rank": null,
         "calculated_rank": null,
-        "wins": 14,
-        "losses": 2,
+        "wins": 4,
+        "losses": 0,
         "record": "14-2",
         "rank": 1,
         "games": 4,
@@ -2338,11 +2277,7 @@
         "tabc_rank": null,
         "maxpreps_rank": 2,
         "calculated_rank": null,
-        "rank": 2,
-        "wins": 15,
-        "losses": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "rank": 2
       },
       {
         "team_name": "Arlington Grace Prep",
@@ -2354,23 +2289,19 @@
         "losses": 1,
         "record": "14-1",
         "rank": 3,
-        "district": "1",
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "district": "1"
       },
       {
         "team_name": "Lubbock Trinity Christian",
-        "weighted_rank": 3.0,
+        "weighted_rank": 2.0,
         "tabc_rank": 3,
-        "maxpreps_rank": null,
+        "maxpreps_rank": 1,
         "calculated_rank": null,
         "wins": 14,
         "losses": 5,
         "record": "14-5",
         "rank": 4,
-        "district": "1",
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "district": "1"
       },
       {
         "team_name": "Bullard The Brook Hill School",
@@ -2382,9 +2313,7 @@
         "losses": 4,
         "record": "18-4",
         "rank": 5,
-        "district": "2",
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "district": "2"
       },
       {
         "team_name": "LPCA",
@@ -2392,11 +2321,7 @@
         "tabc_rank": null,
         "maxpreps_rank": 7,
         "calculated_rank": null,
-        "rank": 6,
-        "wins": 13,
-        "losses": 4,
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "rank": 6
       },
       {
         "team_name": "SSt. Augustine",
@@ -2404,11 +2329,7 @@
         "tabc_rank": null,
         "maxpreps_rank": 8,
         "calculated_rank": null,
-        "rank": 7,
-        "wins": 13,
-        "losses": 4,
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "rank": 7
       },
       {
         "team_name": "Tyler Grace Community",
@@ -2420,21 +2341,7 @@
         "losses": 5,
         "record": "15-5",
         "rank": 8,
-        "district": "2",
-        "ppg": 68.0,
-        "opp_ppg": 54.0
-      },
-      {
-        "team_name": "SACHS",
-        "weighted_rank": 10.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 10,
-        "calculated_rank": null,
-        "rank": 9,
-        "wins": 13,
-        "losses": 4,
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "district": "2"
       },
       {
         "team_name": "The Woodlands Christian Academy",
@@ -2445,10 +2352,16 @@
         "wins": 10,
         "losses": 8,
         "record": "10-8",
-        "rank": 10,
-        "district": "5",
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "rank": 9,
+        "district": "5"
+      },
+      {
+        "team_name": "SACHS",
+        "weighted_rank": 10.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 10,
+        "calculated_rank": null,
+        "rank": 10
       }
     ],
     "TAPPS_4A": [
@@ -2458,8 +2371,8 @@
         "tabc_rank": 1,
         "maxpreps_rank": null,
         "calculated_rank": null,
-        "wins": 20,
-        "losses": 1,
+        "wins": 7,
+        "losses": 0,
         "record": "20-1",
         "rank": 1,
         "games": 7,
@@ -2477,20 +2390,30 @@
         "losses": 5,
         "record": "12-5",
         "rank": 2,
-        "district": "6",
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "district": "6"
+      },
+      {
+        "team_name": "Houston Westbury Christian",
+        "weighted_rank": 3.5,
+        "tabc_rank": 5,
+        "maxpreps_rank": 2,
+        "calculated_rank": null,
+        "wins": 14,
+        "losses": 5,
+        "record": "14-5",
+        "rank": 3,
+        "district": "6"
       },
       {
         "team_name": "Tyler Bishop Gorman",
-        "weighted_rank": 3.0,
+        "weighted_rank": 3.5,
         "tabc_rank": 3,
-        "maxpreps_rank": null,
+        "maxpreps_rank": 4,
         "calculated_rank": null,
-        "wins": 11,
-        "losses": 5,
+        "wins": 2,
+        "losses": 2,
         "record": "11-5",
-        "rank": 3,
+        "rank": 4,
         "games": 4,
         "ppg": 57.0,
         "opp_ppg": 60.2,
@@ -2502,27 +2425,11 @@
         "tabc_rank": 4,
         "maxpreps_rank": 5,
         "calculated_rank": null,
-        "wins": 15,
-        "losses": 3,
+        "wins": null,
+        "losses": null,
         "record": null,
-        "rank": 4,
-        "district": "1",
-        "ppg": 72.0,
-        "opp_ppg": 52.0
-      },
-      {
-        "team_name": "Houston Westbury Christian",
-        "weighted_rank": 5.0,
-        "tabc_rank": 5,
-        "maxpreps_rank": null,
-        "calculated_rank": null,
-        "wins": 14,
-        "losses": 5,
-        "record": "14-5",
         "rank": 5,
-        "district": "6",
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "district": "1"
       },
       {
         "team_name": "Houston St. Francis",
@@ -2530,8 +2437,8 @@
         "tabc_rank": 6,
         "maxpreps_rank": null,
         "calculated_rank": null,
-        "wins": 8,
-        "losses": 8,
+        "wins": 0,
+        "losses": 2,
         "record": "8-8",
         "rank": 6,
         "games": 2,
@@ -2545,8 +2452,8 @@
         "tabc_rank": 7,
         "maxpreps_rank": null,
         "calculated_rank": null,
-        "wins": 13,
-        "losses": 6,
+        "wins": 5,
+        "losses": 1,
         "record": "13-6",
         "rank": 7,
         "games": 6,
@@ -2560,11 +2467,7 @@
         "tabc_rank": null,
         "maxpreps_rank": 7,
         "calculated_rank": null,
-        "rank": 8,
-        "wins": 13,
-        "losses": 4,
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "rank": 8
       },
       {
         "team_name": "Colleyville Covenant Christian",
@@ -2576,9 +2479,7 @@
         "losses": 4,
         "record": "10-4",
         "rank": 9,
-        "district": "2",
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "district": "2"
       },
       {
         "team_name": "Austin Hill Country",
@@ -2590,9 +2491,7 @@
         "losses": 2,
         "record": "12-2",
         "rank": 10,
-        "district": "4",
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "district": "4"
       }
     ],
     "TAPPS_3A": [
@@ -2602,11 +2501,7 @@
         "tabc_rank": null,
         "maxpreps_rank": 3,
         "calculated_rank": null,
-        "rank": 1,
-        "wins": 15,
-        "losses": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "rank": 1
       },
       {
         "team_name": "CTCHS",
@@ -2614,11 +2509,7 @@
         "tabc_rank": null,
         "maxpreps_rank": 5,
         "calculated_rank": null,
-        "rank": 2,
-        "wins": 15,
-        "losses": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "rank": 2
       },
       {
         "team_name": "YYavneh Academy",
@@ -2626,11 +2517,7 @@
         "tabc_rank": null,
         "maxpreps_rank": 6,
         "calculated_rank": null,
-        "rank": 3,
-        "wins": 15,
-        "losses": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "rank": 3
       },
       {
         "team_name": "Covenant Classical",
@@ -2731,19 +2618,6 @@
     ],
     "TAPPS_2A": [
       {
-        "team_name": "First Baptist",
-        "weighted_rank": 1.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 1,
-        "calculated_rank": null,
-        "rank": 1,
-        "district": "3",
-        "wins": 15,
-        "losses": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
-      },
-      {
         "team_name": "First Baptist Academy-Dallas",
         "weighted_rank": 1.0,
         "tabc_rank": 1,
@@ -2752,10 +2626,17 @@
         "wins": 3,
         "losses": 2,
         "record": "3-2",
+        "rank": 1,
+        "district": "3"
+      },
+      {
+        "team_name": "First Baptist",
+        "weighted_rank": 1.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 1,
+        "calculated_rank": null,
         "rank": 2,
-        "district": "3",
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "district": "3"
       },
       {
         "team_name": "VCA",
@@ -2763,11 +2644,7 @@
         "tabc_rank": null,
         "maxpreps_rank": 2,
         "calculated_rank": null,
-        "rank": 3,
-        "wins": 15,
-        "losses": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "rank": 3
       },
       {
         "team_name": "O\u2019Connell College Preparatory School-Galveston",
@@ -2779,9 +2656,7 @@
         "losses": 4,
         "record": "9-4",
         "rank": 4,
-        "district": "8",
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "district": "8"
       },
       {
         "team_name": "HCCA",
@@ -2789,11 +2664,7 @@
         "tabc_rank": null,
         "maxpreps_rank": 3,
         "calculated_rank": null,
-        "rank": 5,
-        "wins": 15,
-        "losses": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "rank": 5
       },
       {
         "team_name": "Legacy Christian Academy-Beaumont",
@@ -2805,9 +2676,7 @@
         "losses": 5,
         "record": "14-5",
         "rank": 6,
-        "district": "8",
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "district": "8"
       },
       {
         "team_name": "Faith Academy-Victoria",
@@ -2818,9 +2687,7 @@
         "wins": 17,
         "losses": 2,
         "record": "17-2",
-        "rank": 7,
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "rank": 7
       },
       {
         "team_name": "AAscension Academy",
@@ -2828,11 +2695,7 @@
         "tabc_rank": null,
         "maxpreps_rank": 4,
         "calculated_rank": null,
-        "rank": 8,
-        "wins": 13,
-        "losses": 4,
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "rank": 8
       },
       {
         "team_name": "Holy Cross Catholic Academy-Amarillo",
@@ -2844,9 +2707,7 @@
         "losses": 6,
         "record": "8-6",
         "rank": 9,
-        "district": "1",
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "district": "1"
       },
       {
         "team_name": "GCA",
@@ -2854,11 +2715,7 @@
         "tabc_rank": null,
         "maxpreps_rank": 5,
         "calculated_rank": null,
-        "rank": 10,
-        "wins": 13,
-        "losses": 4,
-        "ppg": 68.0,
-        "opp_ppg": 54.0
+        "rank": 10
       }
     ],
     "TAPPS_1A": [
@@ -2869,11 +2726,7 @@
         "maxpreps_rank": 1,
         "calculated_rank": null,
         "rank": 1,
-        "district": "7",
-        "wins": 15,
-        "losses": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "district": "7"
       },
       {
         "team_name": "RRegents Academy",
@@ -2881,11 +2734,7 @@
         "tabc_rank": null,
         "maxpreps_rank": 9,
         "calculated_rank": null,
-        "rank": 2,
-        "wins": 15,
-        "losses": 3,
-        "ppg": 72.0,
-        "opp_ppg": 52.0
+        "rank": 2
       },
       {
         "team_name": "Divine Savior Academy - Sienna",
@@ -2997,5 +2846,8 @@
         "district": "7"
       }
     ]
-  }
+  },
+  "records_from_games": true,
+  "games_analyzed": 1641,
+  "districts_from_uil": 164
 }
