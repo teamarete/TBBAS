@@ -190,21 +190,27 @@ def get_base_school_name(name):
 
     return norm
 
-def calculate_weighted_rank(calculated_rank, tabc_rank, maxpreps_rank):
+def calculate_weighted_rank(calculated_rank, tabc_rank, maxpreps_rank, db_games=0):
     """
     Calculate weighted average rank using 33/33/33 formula
+
+    If a team has fewer than 10 games in the database, we exclude the calculated rank
+    to avoid penalizing teams for incomplete data. In that case, we use 50/50 TABC/MaxPreps.
 
     Args:
         calculated_rank: Rank from efficiency calculations (or None)
         tabc_rank: Rank from TABC (or None)
         maxpreps_rank: Rank from MaxPreps (or None)
+        db_games: Number of games in database for this team (default 0)
 
     Returns:
         Weighted average rank (lower is better)
     """
     ranks = []
 
-    if calculated_rank is not None:
+    # Only include calculated rank if team has sufficient database games (10+)
+    # This prevents penalizing teams like Seven Lakes (17-0, only 4 games in DB)
+    if calculated_rank is not None and db_games >= 10:
         ranks.append(calculated_rank)
 
     if tabc_rank is not None:
@@ -279,8 +285,12 @@ def merge_rankings_3way(tabc_rankings, maxpreps_rankings, calculated_rankings):
                 # Try normalized name
                 calculated_rank = calculated_rankings.get(norm_team_name, {}).get('rank')
 
-            # Calculate weighted average
-            weighted_rank = calculate_weighted_rank(calculated_rank, tabc_rank, maxpreps_rank)
+            # Get stats from database (need this for db_games count)
+            stats = get_team_stats_from_db(display_name)
+            db_games = stats['games'] if stats else 0
+
+            # Calculate weighted average (passing db_games to avoid penalizing teams with few database games)
+            weighted_rank = calculate_weighted_rank(calculated_rank, tabc_rank, maxpreps_rank, db_games)
 
             if weighted_rank is None:
                 continue
@@ -300,8 +310,7 @@ def merge_rankings_3way(tabc_rankings, maxpreps_rankings, calculated_rankings):
                 team_data['losses'] = tabc_team.get('losses')
                 team_data['record'] = tabc_team.get('record')
 
-            # Get stats from database
-            stats = get_team_stats_from_db(display_name)
+            # Add stats to team data
             if stats:
                 team_data['ppg'] = stats['ppg']
                 team_data['opp_ppg'] = stats['opp_ppg']
@@ -361,8 +370,12 @@ def merge_rankings_3way(tabc_rankings, maxpreps_rankings, calculated_rankings):
                 # Try normalized name
                 calculated_rank = calculated_rankings.get(norm_team_name, {}).get('rank')
 
-            # Calculate weighted average
-            weighted_rank = calculate_weighted_rank(calculated_rank, tabc_rank, maxpreps_rank)
+            # Get stats from database (need this for db_games count)
+            stats = get_team_stats_from_db(display_name)
+            db_games = stats['games'] if stats else 0
+
+            # Calculate weighted average (passing db_games to avoid penalizing teams with few database games)
+            weighted_rank = calculate_weighted_rank(calculated_rank, tabc_rank, maxpreps_rank, db_games)
 
             if weighted_rank is None:
                 continue
@@ -382,8 +395,7 @@ def merge_rankings_3way(tabc_rankings, maxpreps_rankings, calculated_rankings):
                 team_data['losses'] = tabc_team.get('losses')
                 team_data['record'] = tabc_team.get('record')
 
-            # Get stats from database
-            stats = get_team_stats_from_db(display_name)
+            # Add stats to team data
             if stats:
                 team_data['ppg'] = stats['ppg']
                 team_data['opp_ppg'] = stats['opp_ppg']
