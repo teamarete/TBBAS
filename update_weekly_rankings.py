@@ -184,7 +184,7 @@ def get_base_school_name(name):
     city_prefixes_to_strip = [
         'sa', 'hou', 'bmt', 'fw', 'mans', 'ep', 'fb', 'cc',
         'dallas', 'austin', 'tyler', 'waco', 'lubbock',
-        'katy', 'converse', 'denton'
+        'katy', 'converse', 'denton', 'frisco', 'colleyville'
     ]
 
     # DO NOT strip directional prefixes - they are part of the school name
