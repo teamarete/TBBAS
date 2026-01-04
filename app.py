@@ -54,11 +54,13 @@ check_and_update_rankings()
 # except Exception as e:
 #     print(f"Note: Rank fix script encountered issue: {e}")
 
+# AUTOMATIC SCHEDULER DISABLED - Manual launches only
+# All scraping operations (box scores and rankings) now run manually
 # Start automatic scheduler in web process
 # Note: Railway runs single process, so scheduler must run here
-if os.getenv('FLASK_ENV') != 'development':
-    from scheduler import start_scheduler
-    start_scheduler(app)
+# if os.getenv('FLASK_ENV') != 'development':
+#     from scheduler import start_scheduler
+#     start_scheduler(app)
 
 # Ensure rankings have game statistics (AFTER scheduler starts)
 # This catches cases where scheduler ran an update on startup
