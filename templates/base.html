@@ -3,16 +3,19 @@
 <head>
     <title>TBBAS - Texas Basketball Analytics</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; }
+        body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; min-height: 100vh; display: flex; flex-direction: column; }
         .header { background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 20px; text-align: center; }
         .logo { max-width: 300px; height: auto; margin-bottom: 15px; }
         .nav { background: #2c3e50; }
         .nav a { color: white; text-decoration: none; padding: 15px 20px; display: inline-block; }
         .nav a:hover { background: #34495e; }
-        .container { max-width: 1400px; margin: 20px auto; padding: 0 20px; }
+        .container { max-width: 1400px; margin: 20px auto; padding: 0 20px; flex: 1; }
         table { width: 100%; background: white; border-radius: 8px; margin-top: 20px; }
         th { background: #f8f9fa; padding: 12px; text-align: left; }
         td { padding: 10px; border-bottom: 1px solid #e9ecef; }
+        .footer { background: #2c3e50; color: white; padding: 20px; text-align: center; margin-top: 40px; }
+        .footer a { color: #3498db; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -42,5 +45,8 @@
     <div class="container">
         {% block content %}{% endblock %}
     </div>
+    <footer class="footer">
+        <p>TBBAS is provided by <a href="https://teamarete.net/" target="_blank">TeamARETE Basketball</a></p>
+    </footer>
 </body>
 </html>
