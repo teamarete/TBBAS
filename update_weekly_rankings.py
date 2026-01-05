@@ -124,20 +124,49 @@ def get_team_stats_from_db(team_name):
 
     # If no exact match, try fuzzy matching with name variations
     if result[0] == 0:
-        # Extract base school name (last word or last two words)
+        # Try multiple search strategies
         name_parts = team_name.split()
-        base_name = name_parts[-1] if len(name_parts) > 0 else team_name
+        search_terms = []
 
-        # Try matching on base name with LIKE
-        cursor.execute('''
-            SELECT COUNT(*) as game_count,
-                   SUM(CASE WHEN team1_name LIKE ? THEN team1_score ELSE team2_score END) as total_points,
-                   SUM(CASE WHEN team1_name LIKE ? THEN team2_score ELSE team1_score END) as total_opp_points
-            FROM box_score
-            WHERE team1_name LIKE ? OR team2_name LIKE ?
-        ''', (f'%{base_name}%', f'%{base_name}%', f'%{base_name}%', f'%{base_name}%'))
+        # Strategy 1: Last significant word (skip common suffixes)
+        if len(name_parts) > 0:
+            last_word = name_parts[-1].replace('-', ' ').strip()
+            if last_word.lower() not in ['academy', 'school', 'christian', 'catholic', 'prep', 'preparatory']:
+                search_terms.append(last_word)
 
-        result = cursor.fetchone()
+        # Strategy 2: Last two words
+        if len(name_parts) >= 2:
+            last_two = ' '.join(name_parts[-2:])
+            search_terms.append(last_two)
+
+        # Strategy 3: First two words (for "First Baptist", "Holy Cross", etc.)
+        if len(name_parts) >= 2:
+            first_two = ' '.join(name_parts[:2])
+            search_terms.append(first_two)
+
+        # Strategy 4: Remove city suffix (e.g., "Academy-Dallas" → "Academy")
+        for part in name_parts:
+            if '-' in part:
+                base = part.split('-')[0]
+                if base:
+                    search_terms.append(base)
+
+        # Try each search term until we find matches
+        for search_term in search_terms:
+            if not search_term:
+                continue
+
+            cursor.execute('''
+                SELECT COUNT(*) as game_count,
+                       SUM(CASE WHEN team1_name LIKE ? THEN team1_score ELSE team2_score END) as total_points,
+                       SUM(CASE WHEN team1_name LIKE ? THEN team2_score ELSE team1_score END) as total_opp_points
+                FROM box_score
+                WHERE team1_name LIKE ? OR team2_name LIKE ?
+            ''', (f'%{search_term}%', f'%{search_term}%', f'%{search_term}%', f'%{search_term}%'))
+
+            result = cursor.fetchone()
+            if result[0] > 0:  # Found matches
+                break
 
     conn.close()
 
