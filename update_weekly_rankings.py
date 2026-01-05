@@ -106,11 +106,12 @@ def calculate_efficiency_rankings_from_db():
     return calculated_rankings
 
 def get_team_stats_from_db(team_name):
-    """Get PPG, Opp PPG, and game count from database for a specific team"""
+    """Get PPG, Opp PPG, and game count from database for a specific team with fuzzy matching"""
     db_path = Path(__file__).parent / 'instance' / 'tbbas.db'
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
+    # Try exact match first
     cursor.execute('''
         SELECT COUNT(*) as game_count,
                SUM(CASE WHEN team1_name = ? THEN team1_score ELSE team2_score END) as total_points,
@@ -120,6 +121,24 @@ def get_team_stats_from_db(team_name):
     ''', (team_name, team_name, team_name, team_name))
 
     result = cursor.fetchone()
+
+    # If no exact match, try fuzzy matching with name variations
+    if result[0] == 0:
+        # Extract base school name (last word or last two words)
+        name_parts = team_name.split()
+        base_name = name_parts[-1] if len(name_parts) > 0 else team_name
+
+        # Try matching on base name with LIKE
+        cursor.execute('''
+            SELECT COUNT(*) as game_count,
+                   SUM(CASE WHEN team1_name LIKE ? THEN team1_score ELSE team2_score END) as total_points,
+                   SUM(CASE WHEN team1_name LIKE ? THEN team2_score ELSE team1_score END) as total_opp_points
+            FROM box_score
+            WHERE team1_name LIKE ? OR team2_name LIKE ?
+        ''', (f'%{base_name}%', f'%{base_name}%', f'%{base_name}%', f'%{base_name}%'))
+
+        result = cursor.fetchone()
+
     conn.close()
 
     if result[0] > 0:
