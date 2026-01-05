@@ -363,11 +363,16 @@ def merge_rankings_3way(tabc_rankings, maxpreps_rankings, calculated_rankings):
                 'calculated_rank': calculated_rank
             }
 
-            # Get record from TABC (most up-to-date)
+            # Get record from TABC (most up-to-date), fall back to MaxPreps
             if tabc_team:
                 team_data['wins'] = tabc_team.get('wins')
                 team_data['losses'] = tabc_team.get('losses')
                 team_data['record'] = tabc_team.get('record')
+            elif maxpreps_team:
+                # Use MaxPreps record if TABC not available
+                team_data['wins'] = maxpreps_team.get('wins')
+                team_data['losses'] = maxpreps_team.get('losses')
+                team_data['record'] = maxpreps_team.get('record')
 
             # Add stats to team data
             if stats:
@@ -448,11 +453,16 @@ def merge_rankings_3way(tabc_rankings, maxpreps_rankings, calculated_rankings):
                 'calculated_rank': calculated_rank
             }
 
-            # Get record from TABC (most up-to-date)
+            # Get record from TABC (most up-to-date), fall back to MaxPreps
             if tabc_team:
                 team_data['wins'] = tabc_team.get('wins')
                 team_data['losses'] = tabc_team.get('losses')
                 team_data['record'] = tabc_team.get('record')
+            elif maxpreps_team:
+                # Use MaxPreps record if TABC not available
+                team_data['wins'] = maxpreps_team.get('wins')
+                team_data['losses'] = maxpreps_team.get('losses')
+                team_data['record'] = maxpreps_team.get('record')
 
             # Add stats to team data
             if stats:
