@@ -1,101 +1,59 @@
-#!/usr/bin/env python3
 """
-Fix corrupted team names in rankings.json
-- Remove duplicate city names ("Humble Humble" -> "Humble")
-- Fix merged city names ("De Soto Duncanville" -> "Duncanville")
-- Clean up overly long school names
+Fix team name errors in source data before merging rankings
+
+Corrections:
+1. DHanis -> D'Hanis (TABC has wrong apostrophe format)
+2. Bullard The Brook Hill School -> Tyler Brook Hill School (wrong city)
+3. Midland Cristian -> Midland Christian (typo)
 """
 
 import json
-import re
-from datetime import datetime
+from pathlib import Path
 
-def fix_team_name(name):
-    """Fix common team name issues"""
-    original = name
+def fix_team_names():
+    """Apply team name corrections to weekly rankings data"""
 
-    # Fix duplicate words
-    words = name.split()
-    fixed_words = []
-    prev_word = None
-    for word in words:
-        if word.lower() != (prev_word or '').lower():
-            fixed_words.append(word)
-        prev_word = word
-    name = ' '.join(fixed_words)
+    weekly_file = Path('data/weekly_rankings_20260105.json')
 
-    # Known fixes for specific teams
-    fixes = {
-        'De Soto Duncanville': 'Duncanville',
-        'Humble Humble Atascocita': 'Humble Atascocita',
-        'Lipan Poolville Santo': 'Lipan',
-        'Poolville Santo': 'Poolville',
-        # Add more as needed
-    }
+    with open(weekly_file, 'r') as f:
+        data = json.load(f)
 
-    for bad, good in fixes.items():
-        if name == bad:
-            name = good
-            break
+    corrections_made = []
 
-    if name != original:
-        print(f"  Fixed: '{original}' -> '{name}'")
+    # Fix 1: DHanis -> D'Hanis in TABC UIL 1A
+    tabc_1a = data.get('tabc', {}).get('uil', {}).get('1A', [])
+    for team in tabc_1a:
+        if team.get('team_name') == 'DHanis':
+            team['team_name'] = "D'Hanis"
+            corrections_made.append("TABC UIL 1A: DHanis -> D'Hanis")
 
-    return name
+    # Fix 2: Bullard The Brook Hill School -> Tyler Brook Hill School in TABC TAPPS 5A
+    tabc_tapps_5a = data.get('tabc', {}).get('private', {}).get('TAPPS_5A', [])
+    for team in tabc_tapps_5a:
+        if 'Bullard The Brook Hill' in team.get('team_name', ''):
+            team['team_name'] = 'Tyler Brook Hill School'
+            corrections_made.append("TABC TAPPS 5A: Bullard The Brook Hill School -> Tyler Brook Hill School")
 
-def fix_rankings():
-    """Fix all team names in rankings.json"""
+    # Fix 3: Midland Cristian -> Midland Christian in TABC TAPPS 5A
+    for team in tabc_tapps_5a:
+        if team.get('team_name') == 'Midland Cristian':
+            team['team_name'] = 'Midland Christian'
+            corrections_made.append("TABC TAPPS 5A: Midland Cristian -> Midland Christian")
 
+    # Save corrected data
+    with open(weekly_file, 'w') as f:
+        json.dump(data, f, indent=2)
+
+    print("Team Name Corrections Applied:")
     print("=" * 80)
-    print("FIXING TEAM NAMES IN RANKINGS.JSON")
-    print("=" * 80)
+    for correction in corrections_made:
+        print(f"  ✓ {correction}")
 
-    # Load rankings
-    with open('data/rankings.json', 'r') as f:
-        rankings = json.load(f)
+    if not corrections_made:
+        print("  No corrections needed - all team names correct")
 
-    # Backup
-    import shutil
-    backup_file = f'data/rankings_backup_before_name_fix_{datetime.now().strftime("%Y%m%d_%H%M%S")}.json'
-    shutil.copy('data/rankings.json', backup_file)
-    print(f"\n✅ Created backup: {backup_file}")
-
-    # Fix team names
-    print("\n🔧 Fixing team names...")
-    fixed_count = 0
-
-    for category in ['uil', 'private']:
-        for classification, teams in rankings[category].items():
-            for team in teams:
-                old_name = team['team_name']
-                new_name = fix_team_name(old_name)
-                if old_name != new_name:
-                    team['team_name'] = new_name
-                    fixed_count += 1
-
-    # Update timestamp
-    rankings['last_updated'] = datetime.now().isoformat()
-    rankings['name_fix_applied'] = True
-
-    # Save
-    with open('data/rankings.json', 'w') as f:
-        json.dump(rankings, f, indent=2)
-
-    print(f"\n✅ Fixed {fixed_count} team names")
-    print(f"✅ Saved to data/rankings.json")
-
-    # Now run the update to match records
-    print("\n🔄 Running update_rankings_with_records to match games...")
-    from update_rankings_with_records import update_rankings_with_records
-    result = update_rankings_with_records()
-
-    print("\n" + "=" * 80)
-    print("✅ FIX COMPLETE")
-    print("=" * 80)
-    print(f"  Team names fixed: {fixed_count}")
-    print(f"  Teams with records: {result.get('games_analyzed', 0)}")
-    print(f"  Last updated: {result.get('last_updated', 'unknown')}")
-    print("=" * 80)
+    return len(corrections_made)
 
 if __name__ == '__main__':
-    fix_rankings()
+    count = fix_team_names()
+    print(f"\nTotal corrections: {count}")
