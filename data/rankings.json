@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-06T10:08:43.414714",
+  "last_updated": "2026-01-06T11:38:11.153651",
   "uil": {
     "AAAAAA": [
       {
@@ -171,20 +171,6 @@
         "rank": 12
       },
       {
-        "team_name": "Clemens",
-        "weighted_rank": 14.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 14,
-        "calculated_rank": 90,
-        "wins": 18,
-        "losses": 3,
-        "record": "18-3",
-        "ppg": 72.0,
-        "opp_ppg": 47.4,
-        "games": 7,
-        "rank": 13
-      },
-      {
         "team_name": "Duncanville",
         "weighted_rank": 14.0,
         "tabc_rank": 6,
@@ -196,6 +182,20 @@
         "ppg": 59.8,
         "opp_ppg": 59.0,
         "games": 8,
+        "rank": 13
+      },
+      {
+        "team_name": "Clemens",
+        "weighted_rank": 14.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 14,
+        "calculated_rank": 90,
+        "wins": 18,
+        "losses": 3,
+        "record": "18-3",
+        "ppg": 72.0,
+        "opp_ppg": 47.4,
+        "games": 7,
         "rank": 14
       },
       {
@@ -467,20 +467,6 @@
         "rank": 8
       },
       {
-        "team_name": "Lufkin",
-        "weighted_rank": 14.333333333333334,
-        "tabc_rank": 6,
-        "maxpreps_rank": 7,
-        "calculated_rank": 133,
-        "wins": 15,
-        "losses": 4,
-        "record": "15-4",
-        "ppg": 69.1,
-        "opp_ppg": 48.6,
-        "games": 22,
-        "rank": 9
-      },
-      {
         "team_name": "Red Oak",
         "weighted_rank": 14.333333333333334,
         "tabc_rank": 7,
@@ -492,6 +478,20 @@
         "ppg": 60.2,
         "opp_ppg": 49.6,
         "games": 18,
+        "rank": 9
+      },
+      {
+        "team_name": "Lufkin",
+        "weighted_rank": 14.333333333333334,
+        "tabc_rank": 6,
+        "maxpreps_rank": 7,
+        "calculated_rank": 133,
+        "wins": 15,
+        "losses": 4,
+        "record": "15-4",
+        "ppg": 69.1,
+        "opp_ppg": 48.6,
+        "games": 22,
         "rank": 10
       },
       {
@@ -721,20 +721,6 @@
         "rank": 1
       },
       {
-        "team_name": "LaMarque",
-        "weighted_rank": 4.0,
-        "tabc_rank": 4,
-        "maxpreps_rank": null,
-        "calculated_rank": 14,
-        "wins": 23,
-        "losses": 1,
-        "record": "23-1",
-        "ppg": 70.0,
-        "opp_ppg": 27.0,
-        "games": 1,
-        "rank": 2
-      },
-      {
         "team_name": "Lubbock Liberty",
         "weighted_rank": 5.0,
         "tabc_rank": 9,
@@ -746,7 +732,7 @@
         "ppg": 62.3,
         "opp_ppg": 58.4,
         "games": 119,
-        "rank": 3
+        "rank": 2
       },
       {
         "team_name": "Hou Yates",
@@ -760,7 +746,7 @@
         "ppg": 91.4,
         "opp_ppg": 65.8,
         "games": 16,
-        "rank": 4
+        "rank": 3
       },
       {
         "team_name": "Hou Wheatley",
@@ -774,7 +760,7 @@
         "ppg": 61.0,
         "opp_ppg": 45.0,
         "games": 1,
-        "rank": 5
+        "rank": 4
       },
       {
         "team_name": "Dallas Kimball",
@@ -788,7 +774,7 @@
         "ppg": 63.0,
         "opp_ppg": 68.0,
         "games": 3,
-        "rank": 6
+        "rank": 5
       },
       {
         "team_name": "La Vega",
@@ -802,7 +788,7 @@
         "ppg": 62.0,
         "opp_ppg": 41.0,
         "games": 5,
-        "rank": 7
+        "rank": 6
       },
       {
         "team_name": "Hou Washington",
@@ -816,7 +802,7 @@
         "ppg": 75.0,
         "opp_ppg": 55.5,
         "games": 11,
-        "rank": 8
+        "rank": 7
       },
       {
         "team_name": "Burkburnett",
@@ -830,7 +816,7 @@
         "ppg": 76.0,
         "opp_ppg": 59.4,
         "games": 25,
-        "rank": 9
+        "rank": 8
       },
       {
         "team_name": "Estacado",
@@ -844,7 +830,7 @@
         "ppg": 71.9,
         "opp_ppg": 63.1,
         "games": 27,
-        "rank": 10
+        "rank": 9
       },
       {
         "team_name": "FB Crawford",
@@ -858,7 +844,7 @@
         "ppg": 62.0,
         "opp_ppg": 43.0,
         "games": 1,
-        "rank": 11
+        "rank": 10
       },
       {
         "team_name": "Stafford",
@@ -872,6 +858,20 @@
         "ppg": 57.7,
         "opp_ppg": 39.3,
         "games": 12,
+        "rank": 11
+      },
+      {
+        "team_name": "Dallas Roosevelt",
+        "weighted_rank": 21.0,
+        "tabc_rank": 21,
+        "maxpreps_rank": null,
+        "calculated_rank": 1905,
+        "wins": 10,
+        "losses": 10,
+        "record": "10-10",
+        "ppg": 43.0,
+        "opp_ppg": 61.0,
+        "games": 1,
         "rank": 12
       },
       {
@@ -889,20 +889,6 @@
         "rank": 13
       },
       {
-        "team_name": "Dallas Roosevelt",
-        "weighted_rank": 21.0,
-        "tabc_rank": 21,
-        "maxpreps_rank": null,
-        "calculated_rank": 1905,
-        "wins": 10,
-        "losses": 10,
-        "record": "10-10",
-        "ppg": 43.0,
-        "opp_ppg": 61.0,
-        "games": 1,
-        "rank": 14
-      },
-      {
         "team_name": "FW Southwest",
         "weighted_rank": 22.0,
         "tabc_rank": 22,
@@ -914,6 +900,20 @@
         "ppg": 62.9,
         "opp_ppg": 51.9,
         "games": 14,
+        "rank": 14
+      },
+      {
+        "team_name": "La Marque",
+        "weighted_rank": 22.333333333333332,
+        "tabc_rank": 4,
+        "maxpreps_rank": 17,
+        "calculated_rank": 46,
+        "wins": 23,
+        "losses": 1,
+        "record": "23-1",
+        "ppg": 66.8,
+        "opp_ppg": 35.7,
+        "games": 21,
         "rank": 15
       },
       {
@@ -931,20 +931,6 @@
         "rank": 16
       },
       {
-        "team_name": "La Marque",
-        "weighted_rank": 31.5,
-        "tabc_rank": null,
-        "maxpreps_rank": 17,
-        "calculated_rank": 46,
-        "wins": 20,
-        "losses": 1,
-        "record": "20-1",
-        "ppg": 66.8,
-        "opp_ppg": 35.7,
-        "games": 21,
-        "rank": 17
-      },
-      {
         "team_name": "Stephenville",
         "weighted_rank": 35.5,
         "tabc_rank": null,
@@ -956,7 +942,7 @@
         "ppg": 71.2,
         "opp_ppg": 43.7,
         "games": 24,
-        "rank": 18
+        "rank": 17
       },
       {
         "team_name": "Farmersville",
@@ -970,7 +956,7 @@
         "ppg": 75.1,
         "opp_ppg": 50.0,
         "games": 27,
-        "rank": 19
+        "rank": 18
       },
       {
         "team_name": "Wimberley",
@@ -984,7 +970,7 @@
         "ppg": 65.8,
         "opp_ppg": 43.2,
         "games": 17,
-        "rank": 20
+        "rank": 19
       },
       {
         "team_name": "Paris",
@@ -998,7 +984,7 @@
         "ppg": 71.9,
         "opp_ppg": 55.6,
         "games": 23,
-        "rank": 21
+        "rank": 20
       },
       {
         "team_name": "West Plains",
@@ -1012,7 +998,7 @@
         "ppg": 65.9,
         "opp_ppg": 50.3,
         "games": 23,
-        "rank": 22
+        "rank": 21
       },
       {
         "team_name": "Canyon",
@@ -1026,7 +1012,7 @@
         "ppg": 64.6,
         "opp_ppg": 49.4,
         "games": 43,
-        "rank": 23
+        "rank": 22
       },
       {
         "team_name": "Seminole",
@@ -1040,7 +1026,7 @@
         "ppg": 60.7,
         "opp_ppg": 45.9,
         "games": 30,
-        "rank": 24
+        "rank": 23
       },
       {
         "team_name": "Brock",
@@ -1054,6 +1040,20 @@
         "ppg": 64.2,
         "opp_ppg": 51.0,
         "games": 21,
+        "rank": 24
+      },
+      {
+        "team_name": "Almeta Crawford",
+        "weighted_rank": 156.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 19,
+        "calculated_rank": 293,
+        "wins": 12,
+        "losses": 6,
+        "record": "12-6",
+        "ppg": 66.1,
+        "opp_ppg": 51.5,
+        "games": 15,
         "rank": 25
       }
     ],
@@ -1143,20 +1143,6 @@
         "rank": 6
       },
       {
-        "team_name": "Liberty Eylau",
-        "weighted_rank": 12.0,
-        "tabc_rank": 12,
-        "maxpreps_rank": null,
-        "calculated_rank": null,
-        "wins": 15,
-        "losses": 4,
-        "record": "15-4",
-        "ppg": 70.8,
-        "opp_ppg": 53.6,
-        "games": 18,
-        "rank": 7
-      },
-      {
         "team_name": "London",
         "weighted_rank": 12.666666666666666,
         "tabc_rank": 3,
@@ -1168,6 +1154,20 @@
         "ppg": 77.1,
         "opp_ppg": 47.4,
         "games": 15,
+        "rank": 7
+      },
+      {
+        "team_name": "Shallowater",
+        "weighted_rank": 13.333333333333334,
+        "tabc_rank": 7,
+        "maxpreps_rank": 3,
+        "calculated_rank": 111,
+        "wins": 14,
+        "losses": 3,
+        "record": "14-3",
+        "ppg": 67.5,
+        "opp_ppg": 45.2,
+        "games": 23,
         "rank": 8
       },
       {
@@ -1185,20 +1185,6 @@
         "rank": 9
       },
       {
-        "team_name": "Shallowater",
-        "weighted_rank": 13.333333333333334,
-        "tabc_rank": 7,
-        "maxpreps_rank": 3,
-        "calculated_rank": 111,
-        "wins": 14,
-        "losses": 3,
-        "record": "14-3",
-        "ppg": 67.5,
-        "opp_ppg": 45.2,
-        "games": 23,
-        "rank": 10
-      },
-      {
         "team_name": "Crystal City",
         "weighted_rank": 14.0,
         "tabc_rank": 14,
@@ -1210,7 +1196,7 @@
         "ppg": 66.4,
         "opp_ppg": 63.1,
         "games": 7,
-        "rank": 11
+        "rank": 10
       },
       {
         "team_name": "Brownfield",
@@ -1224,7 +1210,7 @@
         "ppg": 58.7,
         "opp_ppg": 56.1,
         "games": 25,
-        "rank": 12
+        "rank": 11
       },
       {
         "team_name": "Goliad",
@@ -1238,7 +1224,7 @@
         "ppg": 61.2,
         "opp_ppg": 52.2,
         "games": 8,
-        "rank": 13
+        "rank": 12
       },
       {
         "team_name": "Lexington",
@@ -1252,7 +1238,7 @@
         "ppg": 55.4,
         "opp_ppg": 48.8,
         "games": 14,
-        "rank": 14
+        "rank": 13
       },
       {
         "team_name": "Marion",
@@ -1266,7 +1252,7 @@
         "ppg": 62.9,
         "opp_ppg": 43.3,
         "games": 13,
-        "rank": 15
+        "rank": 14
       },
       {
         "team_name": "Compass Academy",
@@ -1280,6 +1266,20 @@
         "ppg": 68.4,
         "opp_ppg": 35.0,
         "games": 17,
+        "rank": 15
+      },
+      {
+        "team_name": "Liberty-Eylau",
+        "weighted_rank": 80.33333333333333,
+        "tabc_rank": 12,
+        "maxpreps_rank": 13,
+        "calculated_rank": 216,
+        "wins": 15,
+        "losses": 4,
+        "record": "15-4",
+        "ppg": 70.8,
+        "opp_ppg": 53.6,
+        "games": 18,
         "rank": 16
       },
       {
@@ -1325,20 +1325,6 @@
         "rank": 19
       },
       {
-        "team_name": "Liberty-Eylau",
-        "weighted_rank": 114.5,
-        "tabc_rank": null,
-        "maxpreps_rank": 13,
-        "calculated_rank": 216,
-        "wins": 15,
-        "losses": 4,
-        "record": "15-4",
-        "ppg": 70.8,
-        "opp_ppg": 53.6,
-        "games": 18,
-        "rank": 20
-      },
-      {
         "team_name": "Dalhart",
         "weighted_rank": 115.0,
         "tabc_rank": null,
@@ -1350,7 +1336,7 @@
         "ppg": 56.8,
         "opp_ppg": 39.4,
         "games": 25,
-        "rank": 21
+        "rank": 20
       },
       {
         "team_name": "Keene",
@@ -1364,7 +1350,7 @@
         "ppg": 57.8,
         "opp_ppg": 43.3,
         "games": 23,
-        "rank": 22
+        "rank": 21
       },
       {
         "team_name": "Holliday",
@@ -1378,7 +1364,7 @@
         "ppg": 59.2,
         "opp_ppg": 48.1,
         "games": 19,
-        "rank": 23
+        "rank": 22
       },
       {
         "team_name": "Fairfield",
@@ -1392,7 +1378,7 @@
         "ppg": 56.8,
         "opp_ppg": 49.2,
         "games": 17,
-        "rank": 24
+        "rank": 23
       },
       {
         "team_name": "Ponder",
@@ -1406,6 +1392,20 @@
         "ppg": 52.3,
         "opp_ppg": 46.0,
         "games": 29,
+        "rank": 24
+      },
+      {
+        "team_name": "Village Tech",
+        "weighted_rank": 275.6666666666667,
+        "tabc_rank": 15,
+        "maxpreps_rank": 12,
+        "calculated_rank": 800,
+        "wins": 11,
+        "losses": 3,
+        "record": "11-3",
+        "ppg": 53.9,
+        "opp_ppg": 49.3,
+        "games": 19,
         "rank": 25
       }
     ],
@@ -1833,17 +1833,17 @@
         "rank": 5
       },
       {
-        "team_name": "Huckabay",
+        "team_name": "Texline",
         "weighted_rank": 12.0,
-        "tabc_rank": 5,
-        "maxpreps_rank": 1,
-        "calculated_rank": 93,
-        "wins": 21,
-        "losses": 2,
-        "record": "21-2",
-        "ppg": 65.2,
-        "opp_ppg": 41.2,
-        "games": 26,
+        "tabc_rank": 4,
+        "maxpreps_rank": 2,
+        "calculated_rank": 451,
+        "wins": 14,
+        "losses": 6,
+        "record": "14-6",
+        "ppg": 63.4,
+        "opp_ppg": 52.3,
+        "games": 23,
         "rank": 6
       },
       {
@@ -1861,32 +1861,18 @@
         "rank": 7
       },
       {
-        "team_name": "Texline",
+        "team_name": "Huckabay",
         "weighted_rank": 12.0,
-        "tabc_rank": 4,
-        "maxpreps_rank": 2,
-        "calculated_rank": 451,
-        "wins": 14,
-        "losses": 6,
-        "record": "14-6",
-        "ppg": 63.4,
-        "opp_ppg": 52.3,
-        "games": 23,
+        "tabc_rank": 5,
+        "maxpreps_rank": 1,
+        "calculated_rank": 93,
+        "wins": 21,
+        "losses": 2,
+        "record": "21-2",
+        "ppg": 65.2,
+        "opp_ppg": 41.2,
+        "games": 26,
         "rank": 8
-      },
-      {
-        "team_name": "Brookeland",
-        "weighted_rank": 13.0,
-        "tabc_rank": 3,
-        "maxpreps_rank": 23,
-        "calculated_rank": 1410,
-        "wins": 11,
-        "losses": 10,
-        "record": "11-10",
-        "ppg": 62.1,
-        "opp_ppg": 67.2,
-        "games": 13,
-        "rank": 9
       },
       {
         "team_name": "Moulton",
@@ -1900,6 +1886,20 @@
         "ppg": 54.4,
         "opp_ppg": 35.0,
         "games": 12,
+        "rank": 9
+      },
+      {
+        "team_name": "Brookeland",
+        "weighted_rank": 13.0,
+        "tabc_rank": 3,
+        "maxpreps_rank": 23,
+        "calculated_rank": 1410,
+        "wins": 11,
+        "losses": 10,
+        "record": "11-10",
+        "ppg": 62.1,
+        "opp_ppg": 67.2,
+        "games": 13,
         "rank": 10
       },
       {
@@ -2099,17 +2099,17 @@
         "rank": 24
       },
       {
-        "team_name": "Centerville",
-        "weighted_rank": 215.5,
-        "tabc_rank": null,
-        "maxpreps_rank": 24,
-        "calculated_rank": 407,
-        "wins": 11,
-        "losses": 6,
-        "record": "11-6",
-        "ppg": 57.9,
-        "opp_ppg": 45.8,
-        "games": 28,
+        "team_name": "Munday",
+        "weighted_rank": 275.6666666666667,
+        "tabc_rank": 6,
+        "maxpreps_rank": 13,
+        "calculated_rank": 808,
+        "wins": 13,
+        "losses": 8,
+        "record": "13-8",
+        "ppg": 53.1,
+        "opp_ppg": 48.5,
+        "games": 25,
         "rank": 25
       }
     ],
@@ -2157,20 +2157,6 @@
         "rank": 2
       },
       {
-        "team_name": "Austin St. Michael\u2019s",
-        "weighted_rank": 2.0,
-        "tabc_rank": 2,
-        "maxpreps_rank": null,
-        "calculated_rank": null,
-        "wins": 20,
-        "losses": 5,
-        "record": "20-5",
-        "ppg": 59.0,
-        "opp_ppg": 54.0,
-        "games": 1,
-        "rank": 3
-      },
-      {
         "team_name": "TMI-Episcopal",
         "weighted_rank": 2.0,
         "tabc_rank": null,
@@ -2182,21 +2168,21 @@
         "ppg": 57.4,
         "opp_ppg": 58.5,
         "games": 12,
-        "rank": 4
+        "rank": 3
       },
       {
-        "team_name": "Plano John Paul II",
-        "weighted_rank": 3.0,
-        "tabc_rank": 3,
+        "team_name": "Austin St. Michael\u2019s",
+        "weighted_rank": 2.0,
+        "tabc_rank": 2,
         "maxpreps_rank": null,
-        "calculated_rank": 1508,
+        "calculated_rank": null,
         "wins": 20,
-        "losses": 6,
-        "record": "20-6",
-        "ppg": 60.0,
-        "opp_ppg": 67.0,
+        "losses": 5,
+        "record": "20-5",
+        "ppg": 59.0,
+        "opp_ppg": 54.0,
         "games": 1,
-        "rank": 5
+        "rank": 4
       },
       {
         "team_name": "St. John XXIII",
@@ -2210,6 +2196,20 @@
         "ppg": 59.1,
         "opp_ppg": 45.5,
         "games": 11,
+        "rank": 5
+      },
+      {
+        "team_name": "Plano John Paul II",
+        "weighted_rank": 3.0,
+        "tabc_rank": 3,
+        "maxpreps_rank": null,
+        "calculated_rank": 1508,
+        "wins": 20,
+        "losses": 6,
+        "record": "20-6",
+        "ppg": 60.0,
+        "opp_ppg": 67.0,
+        "games": 1,
         "rank": 6
       },
       {
@@ -2227,20 +2227,6 @@
         "rank": 7
       },
       {
-        "team_name": "Dallas Parish Episcopal",
-        "weighted_rank": 5.0,
-        "tabc_rank": 5,
-        "maxpreps_rank": null,
-        "calculated_rank": null,
-        "wins": 11,
-        "losses": 6,
-        "record": "11-6",
-        "ppg": 55.8,
-        "opp_ppg": 52.2,
-        "games": 118,
-        "rank": 8
-      },
-      {
         "team_name": "Village",
         "weighted_rank": 5.0,
         "tabc_rank": null,
@@ -2252,6 +2238,20 @@
         "ppg": 52.5,
         "opp_ppg": 64.5,
         "games": 13,
+        "rank": 8
+      },
+      {
+        "team_name": "Dallas Parish Episcopal",
+        "weighted_rank": 5.0,
+        "tabc_rank": 5,
+        "maxpreps_rank": null,
+        "calculated_rank": null,
+        "wins": 11,
+        "losses": 6,
+        "record": "11-6",
+        "ppg": 55.8,
+        "opp_ppg": 52.2,
+        "games": 118,
         "rank": 9
       },
       {
@@ -2299,20 +2299,6 @@
         "rank": 2
       },
       {
-        "team_name": "Fort Bend Christian Academy",
-        "weighted_rank": 2.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 2,
-        "calculated_rank": 1483,
-        "wins": 14,
-        "losses": 13,
-        "record": "14-13",
-        "ppg": 57.9,
-        "opp_ppg": 64.7,
-        "games": 12,
-        "rank": 3
-      },
-      {
         "team_name": "Arlington Grace Prep",
         "weighted_rank": 2.0,
         "tabc_rank": 2,
@@ -2324,6 +2310,20 @@
         "ppg": 70.4,
         "opp_ppg": 57.5,
         "games": 13,
+        "rank": 3
+      },
+      {
+        "team_name": "Fort Bend Christian Academy",
+        "weighted_rank": 2.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 2,
+        "calculated_rank": 1483,
+        "wins": 14,
+        "losses": 13,
+        "record": "14-13",
+        "ppg": 57.9,
+        "opp_ppg": 64.7,
+        "games": 12,
         "rank": 4
       },
       {
@@ -2341,17 +2341,6 @@
         "rank": 5
       },
       {
-        "team_name": "Tyler Brook Hill School",
-        "weighted_rank": 4.0,
-        "tabc_rank": 4,
-        "maxpreps_rank": null,
-        "calculated_rank": null,
-        "wins": 21,
-        "losses": 4,
-        "record": "21-4",
-        "rank": 6
-      },
-      {
         "team_name": "Emery/Weiner",
         "weighted_rank": 4.0,
         "tabc_rank": null,
@@ -2363,6 +2352,17 @@
         "ppg": 39.6,
         "opp_ppg": 48.2,
         "games": 5,
+        "rank": 6
+      },
+      {
+        "team_name": "Tyler Brook Hill School",
+        "weighted_rank": 4.0,
+        "tabc_rank": 4,
+        "maxpreps_rank": null,
+        "calculated_rank": null,
+        "wins": 21,
+        "losses": 4,
+        "record": "21-4",
         "rank": 7
       },
       {
@@ -2394,16 +2394,16 @@
         "rank": 9
       },
       {
-        "team_name": "Episcopal School of Dallas",
+        "team_name": "Legacy Prep Christian Academy",
         "weighted_rank": 7.0,
-        "tabc_rank": 7,
-        "maxpreps_rank": null,
-        "calculated_rank": 794,
-        "wins": 12,
-        "losses": 9,
-        "record": "12-9",
-        "ppg": 60.4,
-        "opp_ppg": 55.7,
+        "tabc_rank": null,
+        "maxpreps_rank": 7,
+        "calculated_rank": 1357,
+        "wins": 6,
+        "losses": 10,
+        "record": "6-10",
+        "ppg": 49.6,
+        "opp_ppg": 53.6,
         "games": 12,
         "rank": 10
       }
@@ -2438,20 +2438,6 @@
         "rank": 2
       },
       {
-        "team_name": "Tyler Bishop Gorman",
-        "weighted_rank": 3.0,
-        "tabc_rank": 3,
-        "maxpreps_rank": 3,
-        "calculated_rank": null,
-        "wins": 13,
-        "losses": 6,
-        "record": "13-6",
-        "ppg": 58.5,
-        "opp_ppg": 53.1,
-        "games": 26,
-        "rank": 3
-      },
-      {
         "team_name": "Houston Westbury Christian",
         "weighted_rank": 3.0,
         "tabc_rank": 5,
@@ -2463,6 +2449,20 @@
         "ppg": 57.6,
         "opp_ppg": 40.2,
         "games": 19,
+        "rank": 3
+      },
+      {
+        "team_name": "Tyler Bishop Gorman",
+        "weighted_rank": 3.0,
+        "tabc_rank": 3,
+        "maxpreps_rank": 3,
+        "calculated_rank": null,
+        "wins": 13,
+        "losses": 6,
+        "record": "13-6",
+        "ppg": 58.5,
+        "opp_ppg": 53.1,
+        "games": 26,
         "rank": 4
       },
       {
@@ -2508,20 +2508,6 @@
         "rank": 7
       },
       {
-        "team_name": "The Christian School at Castle Hills",
-        "weighted_rank": 6.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 6,
-        "calculated_rank": null,
-        "wins": 23,
-        "losses": 6,
-        "record": "23-6",
-        "ppg": 42.5,
-        "opp_ppg": 54.5,
-        "games": 112,
-        "rank": 8
-      },
-      {
         "team_name": "Houston St. Francis",
         "weighted_rank": 6.0,
         "tabc_rank": 6,
@@ -2533,6 +2519,20 @@
         "ppg": 47.5,
         "opp_ppg": 57.6,
         "games": 17,
+        "rank": 8
+      },
+      {
+        "team_name": "The Christian School at Castle Hills",
+        "weighted_rank": 6.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 6,
+        "calculated_rank": null,
+        "wins": 23,
+        "losses": 6,
+        "record": "23-6",
+        "ppg": 42.5,
+        "opp_ppg": 54.5,
+        "games": 112,
         "rank": 9
       },
       {
@@ -2820,17 +2820,17 @@
         "rank": 9
       },
       {
-        "team_name": "Sacred Heart",
+        "team_name": "St Paul Catholic School-Shiner",
         "weighted_rank": 8.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 8,
-        "calculated_rank": 594,
-        "wins": 3,
-        "losses": 2,
-        "record": "3-2",
-        "ppg": 50.2,
-        "opp_ppg": 42.0,
-        "games": 6,
+        "tabc_rank": 8,
+        "maxpreps_rank": null,
+        "calculated_rank": null,
+        "wins": 12,
+        "losses": 4,
+        "record": "12-4",
+        "ppg": 49.8,
+        "opp_ppg": 51.9,
+        "games": 452,
         "rank": 10
       }
     ],
