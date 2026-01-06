@@ -348,8 +348,15 @@ def merge_rankings_3way(tabc_rankings, maxpreps_rankings, calculated_rankings):
             stats = get_team_stats_from_db(display_name)
             db_games = stats['games'] if stats else 0
 
+            # Smart consensus: Cap calculated rank penalty when TABC and MaxPreps both rank team in top 10
+            # This prevents extreme outliers in one source from skewing results when other sources agree
+            capped_calc = calculated_rank
+            if tabc_rank and maxpreps_rank and tabc_rank <= 10 and maxpreps_rank <= 10:
+                if calculated_rank:
+                    capped_calc = min(calculated_rank, 30)
+
             # Calculate weighted average (passing db_games to avoid penalizing teams with few database games)
-            weighted_rank = calculate_weighted_rank(calculated_rank, tabc_rank, maxpreps_rank, db_games)
+            weighted_rank = calculate_weighted_rank(capped_calc, tabc_rank, maxpreps_rank, db_games)
 
             if weighted_rank is None:
                 continue
@@ -438,8 +445,15 @@ def merge_rankings_3way(tabc_rankings, maxpreps_rankings, calculated_rankings):
             stats = get_team_stats_from_db(display_name)
             db_games = stats['games'] if stats else 0
 
+            # Smart consensus: Cap calculated rank penalty when TABC and MaxPreps both rank team in top 10
+            # This prevents extreme outliers in one source from skewing results when other sources agree
+            capped_calc = calculated_rank
+            if tabc_rank and maxpreps_rank and tabc_rank <= 10 and maxpreps_rank <= 10:
+                if calculated_rank:
+                    capped_calc = min(calculated_rank, 30)
+
             # Calculate weighted average (passing db_games to avoid penalizing teams with few database games)
-            weighted_rank = calculate_weighted_rank(calculated_rank, tabc_rank, maxpreps_rank, db_games)
+            weighted_rank = calculate_weighted_rank(capped_calc, tabc_rank, maxpreps_rank, db_games)
 
             if weighted_rank is None:
                 continue
