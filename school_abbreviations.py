@@ -24,6 +24,7 @@ CITY_ABBREVIATIONS = {
     'SGP': 'San Grande Plains',
     'LV': 'La Vega',
     'SL': 'South Lake',
+    'RR': 'Round Rock',
 }
 
 # School name abbreviations
@@ -63,6 +64,7 @@ SPECIAL_CASES = {
     'Dallas Lincoln': 'Juarez-Lincoln', # Dallas Lincoln -> Juarez-Lincoln in database
     'Liberty Eylau': 'Liberty-Eylau',  # Liberty Eylau -> Liberty-Eylau in database
     'Westwood': 'Round Rock Westwood', # Westwood (3A) -> Round Rock Westwood in database
+    'RR Westwood': 'Round Rock Westwood', # RR Westwood (6A) -> Round Rock Westwood in database
     'Dallas Madison': 'Madison',       # Dallas Madison -> Madison in database
     'San Augustine': 'St. Augustine',  # San Augustine -> St. Augustine in database
     'Waco Meyer': 'Meyer',             # Waco Meyer -> Meyer in database
