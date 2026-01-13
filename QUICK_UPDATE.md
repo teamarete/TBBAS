@@ -18,10 +18,13 @@ python3 clean_duplicate_teams.py
 # 4. Remove location suffixes (1 min)
 python3 clean_location_suffixes.py
 
-# 5. Add game statistics (1 min)
+# 5. Fix TABC record discrepancies (1 min)
+python3 fix_tabc_records_complete.py
+
+# 6. Add game statistics (1 min)
 python3 update_rankings_complete.py
 
-# 6. Verify data (1 min)
+# 7. Verify data (1 min)
 python3 << 'EOF'
 import json
 with open('data/rankings.json') as f:
@@ -33,7 +36,7 @@ with open('data/rankings.json') as f:
             print(f"{status} {c} {cl}: {len(t)}/{exp}")
 EOF
 
-# 7. Test locally (1 min)
+# 8. Test locally (1 min)
 python3 << 'EOF'
 from app_refactored import create_app
 app = create_app()
@@ -49,12 +52,12 @@ with app.test_client() as client:
         print(f"{'✓' if r.status_code == 200 else '✗'} {name}: {r.status_code}")
 EOF
 
-# 8. Commit and push (2 min)
+# 9. Commit and push (2 min)
 git add data/rankings.json update_rankings_complete.py clean_location_suffixes.py app/blueprints/rankings.py
 git commit -m "Update rankings: TABC + MaxPreps + game stats ($(date +%Y-%m-%d))"
 git push origin main
 
-# 9. Deploy to server
+# 10. Deploy to server
 # SSH to server and run:
 # cd /path/to/tbbas && git pull origin main && sudo systemctl restart tbbas
 ```
@@ -106,6 +109,7 @@ sudo systemctl restart tbbas
 | `merge_all_rankings.py` | Merge sources with consensus | 1 min |
 | `clean_duplicate_teams.py` | Remove duplicates | 30 sec |
 | `clean_location_suffixes.py` | Strip (City, TX) | 30 sec |
+| `fix_tabc_records_complete.py` | Ensure TABC accuracy | 1 min |
 | `update_rankings_complete.py` | Add game stats from DB | 1 min |
 
 ## Common Issues
@@ -152,5 +156,5 @@ git push origin main
 ---
 
 **Last Updated:** January 12, 2026
-**Total Time:** ~10 minutes
-**Success Rate:** 98.6% team coverage
+**Total Time:** ~11 minutes (added TABC verification step)
+**Success Rate:** 97.1% team coverage (204/210 teams)
