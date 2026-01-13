@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-13T10:54:43.714338",
+  "last_updated": "2026-01-13T11:02:43.515245",
   "source": "merged_tabc_maxpreps_calculated_cleaned",
   "uil": {
     "AAAAAA": [
@@ -727,21 +727,21 @@
       },
       {
         "rank": 16,
-        "team_name": "West Brook",
-        "wins": 8,
-        "losses": 1,
-        "record": "8-1",
+        "team_name": "CC Veterans Memorial",
+        "wins": 15,
+        "losses": 7,
+        "record": "15-7",
         "classification": "AAAAA",
-        "tabc_rank": null,
-        "maxpreps_rank": 9,
+        "tabc_rank": 17,
+        "maxpreps_rank": null,
         "calc_rank": null,
-        "consensus_rank": 19,
-        "net_rating": 22.0,
-        "adj_offensive_eff": 99.7,
-        "adj_defensive_eff": 68.3,
-        "games": 9,
-        "ppg": 69.8,
-        "opp_ppg": 47.8
+        "consensus_rank": 17.0,
+        "games": 2,
+        "ppg": 63.0,
+        "opp_ppg": 72.0,
+        "net_rating": -9.0,
+        "adj_offensive_eff": 90.0,
+        "adj_defensive_eff": 102.9
       },
       {
         "rank": 17,
