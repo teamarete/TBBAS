@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-12T16:48:16.387566",
+  "last_updated": "2026-01-13T10:16:50.770618",
   "source": "merged_tabc_maxpreps_calculated_cleaned",
   "uil": {
     "AAAAAA": [
@@ -2346,12 +2346,12 @@
         "maxpreps_rank": 1,
         "calc_rank": null,
         "consensus_rank": 5.0,
-        "games": 18,
-        "ppg": 65.3,
-        "opp_ppg": 43.1,
-        "net_rating": 22.2,
-        "adj_offensive_eff": 93.3,
-        "adj_defensive_eff": 61.5
+        "games": 25,
+        "ppg": 69.2,
+        "opp_ppg": 41.3,
+        "net_rating": 27.9,
+        "adj_offensive_eff": 141.8,
+        "adj_defensive_eff": 58.2
       },
       {
         "rank": 6,
