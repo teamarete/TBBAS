@@ -19,7 +19,8 @@ python3 clean_duplicate_teams.py
 python3 clean_location_suffixes.py
 
 # 5. Fix TABC record discrepancies (1 min)
-python3 fix_tabc_records_complete.py
+# IMPORTANT: Use fix_tabc_records_only.py to preserve consensus rankings
+python3 fix_tabc_records_only.py
 
 # 6. Add game statistics (1 min)
 python3 update_rankings_complete.py
@@ -109,7 +110,7 @@ sudo systemctl restart tbbas
 | `merge_all_rankings.py` | Merge sources with consensus | 1 min |
 | `clean_duplicate_teams.py` | Remove duplicates | 30 sec |
 | `clean_location_suffixes.py` | Strip (City, TX) | 30 sec |
-| `fix_tabc_records_complete.py` | Ensure TABC accuracy | 1 min |
+| `fix_tabc_records_only.py` | Fix TABC records only | 1 min |
 | `update_rankings_complete.py` | Add game stats from DB | 1 min |
 
 ## Common Issues
