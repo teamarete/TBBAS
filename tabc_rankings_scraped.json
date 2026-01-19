@@ -1,0 +1,1712 @@
+{
+  "last_updated": "2026-01-19T13:49:10.210387",
+  "source": "TABC",
+  "uil": {
+    "AAAAAA": [
+      {
+        "rank": 1,
+        "team_name": "Katy Seven Lakes",
+        "wins": 25,
+        "losses": 0,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 2,
+        "team_name": "North Crowley",
+        "wins": 21,
+        "losses": 3,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 3,
+        "team_name": "Little Elm",
+        "wins": 22,
+        "losses": 2,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 4,
+        "team_name": "SA Brennan",
+        "wins": 20,
+        "losses": 3,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 5,
+        "team_name": "Atascocita",
+        "wins": 17,
+        "losses": 6,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 6,
+        "team_name": "Lancaster",
+        "wins": 14,
+        "losses": 8,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 7,
+        "team_name": "Duncanville",
+        "wins": 13,
+        "losses": 6,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 8,
+        "team_name": "Converse Judson",
+        "wins": 21,
+        "losses": 5,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 9,
+        "team_name": "Steele",
+        "wins": 21,
+        "losses": 4,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 10,
+        "team_name": "Dickinson",
+        "wins": 19,
+        "losses": 5,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 11,
+        "team_name": "Pearland",
+        "wins": 22,
+        "losses": 2,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 12,
+        "team_name": "Allen",
+        "wins": 15,
+        "losses": 4,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 13,
+        "team_name": "North Shore",
+        "wins": 20,
+        "losses": 5,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 14,
+        "team_name": "Cypress Falls",
+        "wins": 17,
+        "losses": 5,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 15,
+        "team_name": "Klein Oak",
+        "wins": 20,
+        "losses": 3,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 16,
+        "team_name": "Grand Prairie",
+        "wins": 18,
+        "losses": 3,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 17,
+        "team_name": "Mansfield",
+        "wins": 19,
+        "losses": 4,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 18,
+        "team_name": "Mans Lake Ridge",
+        "wins": 16,
+        "losses": 7,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 19,
+        "team_name": "South Grand Prairie",
+        "wins": 13,
+        "losses": 10,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 20,
+        "team_name": "Shadow Creek",
+        "wins": 15,
+        "losses": 6,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 21,
+        "team_name": "Cypress Springs",
+        "wins": 21,
+        "losses": 4,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 22,
+        "team_name": "RR Westwood",
+        "wins": 21,
+        "losses": 2,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 23,
+        "team_name": "Hou Heights",
+        "wins": 20,
+        "losses": 5,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 24,
+        "team_name": "Lake Travis",
+        "wins": 19,
+        "losses": 7,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 25,
+        "team_name": "FW Eaton",
+        "wins": 20,
+        "losses": 5,
+        "classification": "AAAAAA",
+        "source": "TABC"
+      }
+    ],
+    "AAAAA": [
+      {
+        "rank": 1,
+        "team_name": "Frisco Heritage",
+        "wins": 19,
+        "losses": 2,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 2,
+        "team_name": "Birdville",
+        "wins": 21,
+        "losses": 3,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 3,
+        "team_name": "Bmt United",
+        "wins": 24,
+        "losses": 1,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 4,
+        "team_name": "Mans Summit",
+        "wins": 20,
+        "losses": 5,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 5,
+        "team_name": "Lufkin",
+        "wins": 18,
+        "losses": 4,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 6,
+        "team_name": "Red Oak",
+        "wins": 18,
+        "losses": 5,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 7,
+        "team_name": "Frisco Memorial",
+        "wins": 18,
+        "losses": 6,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 8,
+        "team_name": "Mans Timberview",
+        "wins": 19,
+        "losses": 4,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 9,
+        "team_name": "FB Marshall",
+        "wins": 18,
+        "losses": 7,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 10,
+        "team_name": "Bmt West Brook",
+        "wins": 20,
+        "losses": 3,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 11,
+        "team_name": "Denton",
+        "wins": 19,
+        "losses": 3,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 12,
+        "team_name": "McAllen",
+        "wins": 28,
+        "losses": 0,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 13,
+        "team_name": "EP Chapin",
+        "wins": 16,
+        "losses": 6,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 14,
+        "team_name": "SA Veterans Memorial",
+        "wins": 18,
+        "losses": 6,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 15,
+        "team_name": "Anna",
+        "wins": 17,
+        "losses": 6,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 16,
+        "team_name": "Friendswood",
+        "wins": 21,
+        "losses": 7,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 17,
+        "team_name": "Hou Madison",
+        "wins": 17,
+        "losses": 5,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 18,
+        "team_name": "Iowa Colony",
+        "wins": 19,
+        "losses": 7,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 19,
+        "team_name": "New Braunfels",
+        "wins": 22,
+        "losses": 5,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 20,
+        "team_name": "Burleson Centennial",
+        "wins": 17,
+        "losses": 7,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 21,
+        "team_name": "Midlothian",
+        "wins": 18,
+        "losses": 8,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 22,
+        "team_name": "Frisco Liberty",
+        "wins": 12,
+        "losses": 10,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 23,
+        "team_name": "CC Ray",
+        "wins": 20,
+        "losses": 7,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 24,
+        "team_name": "CC Veterans Memorial",
+        "wins": 16,
+        "losses": 8,
+        "classification": "AAAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 25,
+        "team_name": "Tascosa",
+        "wins": 18,
+        "losses": 5,
+        "classification": "AAAAA",
+        "source": "TABC"
+      }
+    ],
+    "AAAA": [
+      {
+        "rank": 1,
+        "team_name": "Dallas Carter",
+        "wins": 16,
+        "losses": 6,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 2,
+        "team_name": "Hou Washington",
+        "wins": 17,
+        "losses": 6,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 3,
+        "team_name": "LaMarque",
+        "wins": 27,
+        "losses": 1,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 4,
+        "team_name": "Hou Wheatley",
+        "wins": 10,
+        "losses": 3,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 5,
+        "team_name": "Dallas Kimball",
+        "wins": 10,
+        "losses": 9,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 6,
+        "team_name": "Hou Yates",
+        "wins": 13,
+        "losses": 3,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 7,
+        "team_name": "Krum",
+        "wins": 19,
+        "losses": 5,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 8,
+        "team_name": "Burkburnett",
+        "wins": 20,
+        "losses": 4,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 9,
+        "team_name": "Estacado",
+        "wins": 20,
+        "losses": 4,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 10,
+        "team_name": "Lubbock Liberty",
+        "wins": 19,
+        "losses": 4,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 11,
+        "team_name": "Kennedale",
+        "wins": 19,
+        "losses": 5,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 12,
+        "team_name": "Paris",
+        "wins": 17,
+        "losses": 4,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 13,
+        "team_name": "Seminole",
+        "wins": 21,
+        "losses": 3,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 14,
+        "team_name": "La Vega",
+        "wins": 10,
+        "losses": 2,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 15,
+        "team_name": "Wimberley",
+        "wins": 23,
+        "losses": 2,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 16,
+        "team_name": "Brock",
+        "wins": 16,
+        "losses": 8,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 17,
+        "team_name": "West Plains",
+        "wins": 17,
+        "losses": 4,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 18,
+        "team_name": "Panther Creek",
+        "wins": 13,
+        "losses": 6,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 19,
+        "team_name": "FB Crawford",
+        "wins": 17,
+        "losses": 6,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 20,
+        "team_name": "FW Southwest",
+        "wins": 17,
+        "losses": 7,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 21,
+        "team_name": "Stafford",
+        "wins": 16,
+        "losses": 6,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 22,
+        "team_name": "Lincoln",
+        "wins": 9,
+        "losses": 15,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 23,
+        "team_name": "Pinkston",
+        "wins": 14,
+        "losses": 11,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 24,
+        "team_name": "Farmersville",
+        "wins": 21,
+        "losses": 1,
+        "classification": "AAAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 25,
+        "team_name": "Austin LBJ",
+        "wins": 13,
+        "losses": 12,
+        "classification": "AAAA",
+        "source": "TABC"
+      }
+    ],
+    "AAA": [
+      {
+        "rank": 1,
+        "team_name": "Dallas Madison",
+        "wins": 11,
+        "losses": 12,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 2,
+        "team_name": "Paradise",
+        "wins": 23,
+        "losses": 2,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 3,
+        "team_name": "London",
+        "wins": 27,
+        "losses": 1,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 4,
+        "team_name": "Onalaska",
+        "wins": 21,
+        "losses": 4,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 5,
+        "team_name": "Westwood",
+        "wins": 15,
+        "losses": 2,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 6,
+        "team_name": "Slaton",
+        "wins": 19,
+        "losses": 5,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 7,
+        "team_name": "Shallowater",
+        "wins": 18,
+        "losses": 3,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 8,
+        "team_name": "Brownfield",
+        "wins": 18,
+        "losses": 6,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 9,
+        "team_name": "Orangefield",
+        "wins": 20,
+        "losses": 3,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 10,
+        "team_name": "Cole",
+        "wins": 20,
+        "losses": 5,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 11,
+        "team_name": "Jefferson",
+        "wins": 19,
+        "losses": 3,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 12,
+        "team_name": "Liberty Eylau",
+        "wins": 19,
+        "losses": 4,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 13,
+        "team_name": "Crystal City",
+        "wins": 15,
+        "losses": 5,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 14,
+        "team_name": "Wall",
+        "wins": 20,
+        "losses": 5,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 15,
+        "team_name": "Mexia",
+        "wins": 15,
+        "losses": 12,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 16,
+        "team_name": "Goliad",
+        "wins": 19,
+        "losses": 4,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 17,
+        "team_name": "Fairfield",
+        "wins": 13,
+        "losses": 5,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 18,
+        "team_name": "East Chambers",
+        "wins": 19,
+        "losses": 5,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 19,
+        "team_name": "City View",
+        "wins": 12,
+        "losses": 5,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 20,
+        "team_name": "Peaster",
+        "wins": 14,
+        "losses": 11,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 21,
+        "team_name": "Ponder",
+        "wins": 15,
+        "losses": 8,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 22,
+        "team_name": "Marion",
+        "wins": 17,
+        "losses": 6,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 23,
+        "team_name": "Holliday",
+        "wins": 21,
+        "losses": 3,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 24,
+        "team_name": "Leonard",
+        "wins": 16,
+        "losses": 6,
+        "classification": "AAA",
+        "source": "TABC"
+      },
+      {
+        "rank": 25,
+        "team_name": "Village Tech",
+        "wins": 14,
+        "losses": 4,
+        "classification": "AAA",
+        "source": "TABC"
+      }
+    ],
+    "AA": [
+      {
+        "rank": 1,
+        "team_name": "Lipan",
+        "wins": 24,
+        "losses": 1,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 2,
+        "team_name": "Martins Mill",
+        "wins": 20,
+        "losses": 4,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 3,
+        "team_name": "Gruver",
+        "wins": 9,
+        "losses": 0,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 4,
+        "team_name": "Hearne",
+        "wins": 19,
+        "losses": 6,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 5,
+        "team_name": "Graford",
+        "wins": 21,
+        "losses": 3,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 6,
+        "team_name": "Waco Meyer",
+        "wins": 20,
+        "losses": 5,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 7,
+        "team_name": "Ropes",
+        "wins": 16,
+        "losses": 3,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 8,
+        "team_name": "Abernathy",
+        "wins": 20,
+        "losses": 5,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 9,
+        "team_name": "Thorndale",
+        "wins": 19,
+        "losses": 4,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 10,
+        "team_name": "Port Aransas",
+        "wins": 18,
+        "losses": 5,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 11,
+        "team_name": "Farwell",
+        "wins": 16,
+        "losses": 4,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 12,
+        "team_name": "Olton",
+        "wins": 22,
+        "losses": 3,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 13,
+        "team_name": "New Home",
+        "wins": 13,
+        "losses": 9,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 14,
+        "team_name": "Tom Bean",
+        "wins": 21,
+        "losses": 5,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 15,
+        "team_name": "Mumford",
+        "wins": 13,
+        "losses": 9,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 16,
+        "team_name": "Slidell",
+        "wins": 18,
+        "losses": 6,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 17,
+        "team_name": "Chireno",
+        "wins": 18,
+        "losses": 4,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 18,
+        "team_name": "Roscoe",
+        "wins": 25,
+        "losses": 1,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 19,
+        "team_name": "Bosqueville",
+        "wins": 16,
+        "losses": 7,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 20,
+        "team_name": "Sabine Pass",
+        "wins": 16,
+        "losses": 5,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 21,
+        "team_name": "Agua Dulce",
+        "wins": 18,
+        "losses": 3,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 22,
+        "team_name": "Hawkins",
+        "wins": 19,
+        "losses": 6,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 23,
+        "team_name": "D Big Sandy",
+        "wins": 12,
+        "losses": 3,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 24,
+        "team_name": "Plains",
+        "wins": 21,
+        "losses": 5,
+        "classification": "AA",
+        "source": "TABC"
+      },
+      {
+        "rank": 25,
+        "team_name": "Albany",
+        "wins": 15,
+        "losses": 1,
+        "classification": "AA",
+        "source": "TABC"
+      }
+    ],
+    "A": [
+      {
+        "rank": 1,
+        "team_name": "Jayton",
+        "wins": 9,
+        "losses": 2,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 2,
+        "team_name": "Gordon",
+        "wins": 10,
+        "losses": 2,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 3,
+        "team_name": "Brookeland",
+        "wins": 15,
+        "losses": 10,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 4,
+        "team_name": "Texline",
+        "wins": 18,
+        "losses": 7,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 5,
+        "team_name": "Huckabay",
+        "wins": 24,
+        "losses": 2,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 6,
+        "team_name": "Munday",
+        "wins": 16,
+        "losses": 8,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 7,
+        "team_name": "Richards",
+        "wins": 16,
+        "losses": 2,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 8,
+        "team_name": "Fayetteville",
+        "wins": 18,
+        "losses": 6,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 9,
+        "team_name": "Whitharral",
+        "wins": 13,
+        "losses": 9,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 10,
+        "team_name": "Slocum",
+        "wins": 18,
+        "losses": 6,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 11,
+        "team_name": "Perrin Whitt",
+        "wins": 16,
+        "losses": 6,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 12,
+        "team_name": "Valley",
+        "wins": 15,
+        "losses": 3,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 13,
+        "team_name": "Wells",
+        "wins": 14,
+        "losses": 10,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 14,
+        "team_name": "Kennard",
+        "wins": 13,
+        "losses": 10,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 15,
+        "team_name": "Groveton Centerville",
+        "wins": 15,
+        "losses": 7,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 16,
+        "team_name": "Water Valley",
+        "wins": 10,
+        "losses": 2,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 17,
+        "team_name": "May",
+        "wins": 14,
+        "losses": 8,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 18,
+        "team_name": "McLean",
+        "wins": 13,
+        "losses": 1,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 19,
+        "team_name": "Moulton",
+        "wins": 20,
+        "losses": 4,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 20,
+        "team_name": "Coolidge",
+        "wins": 11,
+        "losses": 15,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 21,
+        "team_name": "Saint Jo",
+        "wins": 17,
+        "losses": 8,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 22,
+        "team_name": "DHanis",
+        "wins": 17,
+        "losses": 3,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 23,
+        "team_name": "McMullen County",
+        "wins": 18,
+        "losses": 5,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 24,
+        "team_name": "Nazareth",
+        "wins": 12,
+        "losses": 8,
+        "classification": "A",
+        "source": "TABC"
+      },
+      {
+        "rank": 25,
+        "team_name": "Zephyr",
+        "wins": 17,
+        "losses": 6,
+        "classification": "A",
+        "source": "TABC"
+      }
+    ]
+  },
+  "private": {
+    "TAPPS_6A": [
+      {
+        "rank": 1,
+        "team_name": "Houston Christian",
+        "wins": 27,
+        "losses": 1,
+        "classification": "TAPPS_6A",
+        "source": "TABC"
+      },
+      {
+        "rank": 2,
+        "team_name": "Plano John Paul II",
+        "wins": 22,
+        "losses": 6,
+        "classification": "TAPPS_6A",
+        "source": "TABC"
+      },
+      {
+        "rank": 3,
+        "team_name": "Dallas Parish Episcopal",
+        "wins": 14,
+        "losses": 6,
+        "classification": "TAPPS_6A",
+        "source": "TABC"
+      },
+      {
+        "rank": 4,
+        "team_name": "San Antonio TMI Episcopal",
+        "wins": 14,
+        "losses": 7,
+        "classification": "TAPPS_6A",
+        "source": "TABC"
+      },
+      {
+        "rank": 5,
+        "team_name": "Austin St. Michael\u2019s",
+        "wins": 22,
+        "losses": 6,
+        "classification": "TAPPS_6A",
+        "source": "TABC"
+      },
+      {
+        "rank": 6,
+        "team_name": "San Antonio Antonian Prep",
+        "wins": 23,
+        "losses": 6,
+        "classification": "TAPPS_6A",
+        "source": "TABC"
+      },
+      {
+        "rank": 7,
+        "team_name": "San Antonio Central Catholic",
+        "wins": 23,
+        "losses": 5,
+        "classification": "TAPPS_6A",
+        "source": "TABC"
+      },
+      {
+        "rank": 8,
+        "team_name": "Bellaire Episcopal",
+        "wins": 18,
+        "losses": 7,
+        "classification": "TAPPS_6A",
+        "source": "TABC"
+      },
+      {
+        "rank": 9,
+        "team_name": "Houston The Kinkaid School",
+        "wins": 24,
+        "losses": 5,
+        "classification": "TAPPS_6A",
+        "source": "TABC"
+      },
+      {
+        "rank": 10,
+        "team_name": "Dallas St. Mark\u2019s",
+        "wins": 15,
+        "losses": 8,
+        "classification": "TAPPS_6A",
+        "source": "TABC"
+      }
+    ],
+    "TAPPS_5A": [
+      {
+        "rank": 1,
+        "team_name": "Houston Second Baptist",
+        "wins": 22,
+        "losses": 2,
+        "classification": "TAPPS_5A",
+        "source": "TABC"
+      },
+      {
+        "rank": 2,
+        "team_name": "Arlington Grace Prep",
+        "wins": 19,
+        "losses": 1,
+        "classification": "TAPPS_5A",
+        "source": "TABC"
+      },
+      {
+        "rank": 3,
+        "team_name": "Midland Cristian",
+        "wins": 22,
+        "losses": 8,
+        "classification": "TAPPS_5A",
+        "source": "TABC"
+      },
+      {
+        "rank": 4,
+        "team_name": "Lubbock Trinity Christian",
+        "wins": 21,
+        "losses": 6,
+        "classification": "TAPPS_5A",
+        "source": "TABC"
+      },
+      {
+        "rank": 5,
+        "team_name": "Bullard The Brook Hill School",
+        "wins": 25,
+        "losses": 4,
+        "classification": "TAPPS_5A",
+        "source": "TABC"
+      },
+      {
+        "rank": 6,
+        "team_name": "Episcopal School of Dallas",
+        "wins": 15,
+        "losses": 10,
+        "classification": "TAPPS_5A",
+        "source": "TABC"
+      },
+      {
+        "rank": 7,
+        "team_name": "Fort Worth Country Day",
+        "wins": 19,
+        "losses": 4,
+        "classification": "TAPPS_5A",
+        "source": "TABC"
+      },
+      {
+        "rank": 8,
+        "team_name": "The Woodlands Christian Academy",
+        "wins": 13,
+        "losses": 11,
+        "classification": "TAPPS_5A",
+        "source": "TABC"
+      },
+      {
+        "rank": 9,
+        "team_name": "Grapevine Faith Christian",
+        "wins": 17,
+        "losses": 11,
+        "classification": "TAPPS_5A",
+        "source": "TABC"
+      },
+      {
+        "rank": 10,
+        "team_name": "Arlington Oakridge",
+        "wins": 18,
+        "losses": 6,
+        "classification": "TAPPS_5A",
+        "source": "TABC"
+      }
+    ],
+    "TAPPS_4A": [
+      {
+        "rank": 1,
+        "team_name": "Mckinney Christian",
+        "wins": 30,
+        "losses": 1,
+        "classification": "TAPPS_4A",
+        "source": "TABC"
+      },
+      {
+        "rank": 2,
+        "team_name": "Houston St Thomas Episcopal",
+        "wins": 18,
+        "losses": 7,
+        "classification": "TAPPS_4A",
+        "source": "TABC"
+      },
+      {
+        "rank": 3,
+        "team_name": "Houston Westbury",
+        "wins": 22,
+        "losses": 6,
+        "classification": "TAPPS_4A",
+        "source": "TABC"
+      },
+      {
+        "rank": 4,
+        "team_name": "Tyler Bishop Gorman",
+        "wins": 15,
+        "losses": 7,
+        "classification": "TAPPS_4A",
+        "source": "TABC"
+      },
+      {
+        "rank": 5,
+        "team_name": "Lubbock Christian",
+        "wins": 12,
+        "losses": 7,
+        "classification": "TAPPS_4A",
+        "source": "TABC"
+      },
+      {
+        "rank": 6,
+        "team_name": "Colleyville Covenant",
+        "wins": 14,
+        "losses": 4,
+        "classification": "TAPPS_4A",
+        "source": "TABC"
+      },
+      {
+        "rank": 7,
+        "team_name": "Houston St. Francis",
+        "wins": 10,
+        "losses": 15,
+        "classification": "TAPPS_4A",
+        "source": "TABC"
+      },
+      {
+        "rank": 8,
+        "team_name": "San Antonio Holy Cross",
+        "wins": 17,
+        "losses": 8,
+        "classification": "TAPPS_4A",
+        "source": "TABC"
+      },
+      {
+        "rank": 9,
+        "team_name": "Waco Vanguard",
+        "wins": 17,
+        "losses": 3,
+        "classification": "TAPPS_4A",
+        "source": "TABC"
+      },
+      {
+        "rank": 10,
+        "team_name": "Dallas Covenant",
+        "wins": 26,
+        "losses": 3,
+        "classification": "TAPPS_4A",
+        "source": "TABC"
+      }
+    ],
+    "TAPPS_3A": [
+      {
+        "rank": 1,
+        "team_name": "Waco Live Oak",
+        "wins": 22,
+        "losses": 4,
+        "classification": "TAPPS_3A",
+        "source": "TABC"
+      },
+      {
+        "rank": 2,
+        "team_name": "Faith Academy of Marble Falls",
+        "wins": 15,
+        "losses": 7,
+        "classification": "TAPPS_3A",
+        "source": "TABC"
+      },
+      {
+        "rank": 3,
+        "team_name": "Keene Chisholm Trail",
+        "wins": 13,
+        "losses": 3,
+        "classification": "TAPPS_3A",
+        "source": "TABC"
+      },
+      {
+        "rank": 4,
+        "team_name": "Huntsville Alpha Omega",
+        "wins": 10,
+        "losses": 1,
+        "classification": "TAPPS_3A",
+        "source": "TABC"
+      },
+      {
+        "rank": 5,
+        "team_name": "Lakehill Prep",
+        "wins": 15,
+        "losses": 5,
+        "classification": "TAPPS_3A",
+        "source": "TABC"
+      },
+      {
+        "rank": 6,
+        "team_name": "Yavneh",
+        "wins": 7,
+        "losses": 7,
+        "classification": "TAPPS_3A",
+        "source": "TABC"
+      },
+      {
+        "rank": 7,
+        "team_name": "Rockwall Heritage",
+        "wins": 12,
+        "losses": 4,
+        "classification": "TAPPS_3A",
+        "source": "TABC"
+      },
+      {
+        "rank": 8,
+        "team_name": "Dallas Lutheran",
+        "wins": 10,
+        "losses": 3,
+        "classification": "TAPPS_3A",
+        "source": "TABC"
+      },
+      {
+        "rank": 9,
+        "team_name": "Abilene Christian",
+        "wins": 10,
+        "losses": 11,
+        "classification": "TAPPS_3A",
+        "source": "TABC"
+      },
+      {
+        "rank": 10,
+        "team_name": "Lucas Christian",
+        "wins": 16,
+        "losses": 14,
+        "classification": "TAPPS_3A",
+        "source": "TABC"
+      }
+    ],
+    "TAPPS_2A": [
+      {
+        "rank": 1,
+        "team_name": "First Baptist Academy-Dallas",
+        "wins": 11,
+        "losses": 4,
+        "classification": "TAPPS_2A",
+        "source": "TABC"
+      },
+      {
+        "rank": 2,
+        "team_name": "Holy Cross Catholic Academy-Amarillo",
+        "wins": 16,
+        "losses": 8,
+        "classification": "TAPPS_2A",
+        "source": "TABC"
+      },
+      {
+        "rank": 3,
+        "team_name": "Legacy Christian Academy-Beaumont",
+        "wins": 21,
+        "losses": 6,
+        "classification": "TAPPS_2A",
+        "source": "TABC"
+      },
+      {
+        "rank": 4,
+        "team_name": "O\u2019Connell College Preparatory School-Galveston",
+        "wins": 14,
+        "losses": 11,
+        "classification": "TAPPS_2A",
+        "source": "TABC"
+      },
+      {
+        "rank": 5,
+        "team_name": "Valor Preparatory Academy-Waco",
+        "wins": 8,
+        "losses": 6,
+        "classification": "TAPPS_2A",
+        "source": "TABC"
+      },
+      {
+        "rank": 6,
+        "team_name": "St Paul Catholic School-Shiner",
+        "wins": 16,
+        "losses": 4,
+        "classification": "TAPPS_2A",
+        "source": "TABC"
+      },
+      {
+        "rank": 7,
+        "team_name": "Ascension Academy-Amarillo",
+        "wins": 18,
+        "losses": 4,
+        "classification": "TAPPS_2A",
+        "source": "TABC"
+      },
+      {
+        "rank": 8,
+        "team_name": "Victory Christian School-Decatur",
+        "wins": 16,
+        "losses": 6,
+        "classification": "TAPPS_2A",
+        "source": "TABC"
+      },
+      {
+        "rank": 9,
+        "team_name": "Faith Academy-Victoria",
+        "wins": 20,
+        "losses": 7,
+        "classification": "TAPPS_2A",
+        "source": "TABC"
+      },
+      {
+        "rank": 10,
+        "team_name": "Bracken Christian School-Bulverde",
+        "wins": 16,
+        "losses": 8,
+        "classification": "TAPPS_2A",
+        "source": "TABC"
+      }
+    ],
+    "TAPPS_1A": [
+      {
+        "rank": 1,
+        "team_name": "The Covenant Preparatory School-Kingwood",
+        "wins": 17,
+        "losses": 2,
+        "classification": "TAPPS_1A",
+        "source": "TABC"
+      },
+      {
+        "rank": 2,
+        "team_name": "Divine Savior Academy-Missouri City",
+        "wins": 14,
+        "losses": 1,
+        "classification": "TAPPS_1A",
+        "source": "TABC"
+      },
+      {
+        "rank": 3,
+        "team_name": "Founders Christian School-Spring",
+        "wins": 19,
+        "losses": 5,
+        "classification": "TAPPS_1A",
+        "source": "TABC"
+      },
+      {
+        "rank": 4,
+        "team_name": "Harvest Christian Academy-Edinburgh",
+        "wins": 24,
+        "losses": 9,
+        "classification": "TAPPS_1A",
+        "source": "TABC"
+      },
+      {
+        "rank": 5,
+        "team_name": "Cornerstone Christian Academy-Granbury",
+        "wins": 12,
+        "losses": 5,
+        "classification": "TAPPS_1A",
+        "source": "TABC"
+      },
+      {
+        "rank": 6,
+        "team_name": "Robert M Beren Academy-Houston",
+        "wins": 6,
+        "losses": 1,
+        "classification": "TAPPS_1A",
+        "source": "TABC"
+      },
+      {
+        "rank": 7,
+        "team_name": "Texhoma Christian School-Sherman",
+        "wins": 11,
+        "losses": 11,
+        "classification": "TAPPS_1A",
+        "source": "TABC"
+      },
+      {
+        "rank": 8,
+        "team_name": "Christ Academy-Wichita Falls",
+        "wins": 7,
+        "losses": 4,
+        "classification": "TAPPS_1A",
+        "source": "TABC"
+      },
+      {
+        "rank": 9,
+        "team_name": "Heritage School-Fredericksburg",
+        "wins": 5,
+        "losses": 3,
+        "classification": "TAPPS_1A",
+        "source": "TABC"
+      },
+      {
+        "rank": 10,
+        "team_name": "Austin Classical School",
+        "wins": 9,
+        "losses": 6,
+        "classification": "TAPPS_1A",
+        "source": "TABC"
+      }
+    ]
+  }
+}

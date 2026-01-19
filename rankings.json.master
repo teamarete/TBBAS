@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-01-19T13:42:15.562461",
-  "source": "weighted_tabc_maxpreps_gaso_cleaned",
+  "last_updated": "2026-01-19T13:50:29.119580",
+  "source": "weighted_tabc_maxpreps_gaso",
   "uil": {
     "AAAAAA": [
       {
@@ -9,7 +9,11 @@
         "wins": 25,
         "losses": 0,
         "record": "25-0",
-        "consensus_rank": 1.4
+        "classification": "AAAAAA",
+        "consensus_rank": 1.4,
+        "tabc_rank": 1,
+        "maxpreps_rank": 2,
+        "gaso_rank": 1
       },
       {
         "rank": 2,
@@ -17,7 +21,11 @@
         "wins": 22,
         "losses": 2,
         "record": "22-2",
-        "consensus_rank": 2.2
+        "classification": "AAAAAA",
+        "consensus_rank": 2.2,
+        "tabc_rank": 3,
+        "maxpreps_rank": 1,
+        "gaso_rank": 3
       },
       {
         "rank": 3,
@@ -25,7 +33,11 @@
         "wins": 21,
         "losses": 3,
         "record": "21-3",
-        "consensus_rank": 2.8
+        "classification": "AAAAAA",
+        "consensus_rank": 2.8,
+        "tabc_rank": 2,
+        "maxpreps_rank": 4,
+        "gaso_rank": 2
       },
       {
         "rank": 4,
@@ -33,7 +45,11 @@
         "wins": 20,
         "losses": 3,
         "record": "20-3",
-        "consensus_rank": 3.6
+        "classification": "AAAAAA",
+        "consensus_rank": 3.6,
+        "tabc_rank": 4,
+        "maxpreps_rank": 3,
+        "gaso_rank": 4
       },
       {
         "rank": 5,
@@ -41,7 +57,11 @@
         "wins": 17,
         "losses": 6,
         "record": "17-6",
-        "consensus_rank": 5.8
+        "classification": "AAAAAA",
+        "consensus_rank": 5.8,
+        "tabc_rank": 5,
+        "maxpreps_rank": 7,
+        "gaso_rank": 5
       },
       {
         "rank": 6,
@@ -49,7 +69,11 @@
         "wins": 21,
         "losses": 4,
         "record": "21-4",
-        "consensus_rank": 7.3
+        "classification": "AAAAAA",
+        "consensus_rank": 7.3,
+        "tabc_rank": 9,
+        "maxpreps_rank": 5,
+        "gaso_rank": 8
       },
       {
         "rank": 7,
@@ -57,7 +81,11 @@
         "wins": 14,
         "losses": 8,
         "record": "14-8",
-        "consensus_rank": 8.5
+        "classification": "AAAAAA",
+        "consensus_rank": 8.5,
+        "tabc_rank": 6,
+        "maxpreps_rank": null,
+        "gaso_rank": 21
       },
       {
         "rank": 8,
@@ -65,7 +93,11 @@
         "wins": 22,
         "losses": 2,
         "record": "22-2",
-        "consensus_rank": 8.6
+        "classification": "AAAAAA",
+        "consensus_rank": 8.6,
+        "tabc_rank": 11,
+        "maxpreps_rank": 6,
+        "gaso_rank": 7
       },
       {
         "rank": 9,
@@ -73,7 +105,11 @@
         "wins": 19,
         "losses": 5,
         "record": "19-5",
-        "consensus_rank": 9.3
+        "classification": "AAAAAA",
+        "consensus_rank": 9.3,
+        "tabc_rank": 10,
+        "maxpreps_rank": 8,
+        "gaso_rank": 11
       },
       {
         "rank": 10,
@@ -81,7 +117,11 @@
         "wins": 21,
         "losses": 5,
         "record": "21-5",
-        "consensus_rank": 10.2
+        "classification": "AAAAAA",
+        "consensus_rank": 10.2,
+        "tabc_rank": 8,
+        "maxpreps_rank": 13,
+        "gaso_rank": 10
       },
       {
         "rank": 11,
@@ -89,7 +129,11 @@
         "wins": 13,
         "losses": 6,
         "record": "13-6",
-        "consensus_rank": 10.5
+        "classification": "AAAAAA",
+        "consensus_rank": 10.5,
+        "tabc_rank": 7,
+        "maxpreps_rank": 16,
+        "gaso_rank": 6
       },
       {
         "rank": 12,
@@ -97,7 +141,11 @@
         "wins": 15,
         "losses": 4,
         "record": "15-4",
-        "consensus_rank": 10.9
+        "classification": "AAAAAA",
+        "consensus_rank": 10.9,
+        "tabc_rank": 12,
+        "maxpreps_rank": 10,
+        "gaso_rank": 9
       },
       {
         "rank": 13,
@@ -105,15 +153,23 @@
         "wins": 20,
         "losses": 5,
         "record": "20-5",
-        "consensus_rank": 11.22
+        "classification": "AAAAAA",
+        "consensus_rank": 11.22,
+        "tabc_rank": 13,
+        "maxpreps_rank": 9,
+        "gaso_rank": null
       },
       {
         "rank": 14,
-        "team_name": "Grand Prairie",
-        "wins": 18,
-        "losses": 3,
-        "record": "18-3",
-        "consensus_rank": 13.78
+        "team_name": "Plano East (Plano, TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAAAA",
+        "consensus_rank": 13.4,
+        "tabc_rank": null,
+        "maxpreps_rank": 12,
+        "gaso_rank": 19
       },
       {
         "rank": 15,
@@ -121,87 +177,131 @@
         "wins": 17,
         "losses": 5,
         "record": "17-5",
-        "consensus_rank": 14.33
+        "classification": "AAAAAA",
+        "consensus_rank": 14.33,
+        "tabc_rank": 14,
+        "maxpreps_rank": null,
+        "gaso_rank": 16
       },
       {
         "rank": 16,
+        "team_name": "Denton Guyer",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAAAA",
+        "consensus_rank": 15.0,
+        "tabc_rank": null,
+        "maxpreps_rank": null,
+        "gaso_rank": 15
+      },
+      {
+        "rank": 17,
+        "team_name": "Grand Prairie",
+        "wins": 13,
+        "losses": 10,
+        "record": "13-10",
+        "classification": "AAAAAA",
+        "consensus_rank": 16.4,
+        "tabc_rank": 19,
+        "maxpreps_rank": 11,
+        "gaso_rank": 25
+      },
+      {
+        "rank": 18,
         "team_name": "Mansfield",
         "wins": 19,
         "losses": 4,
         "record": "19-4",
-        "consensus_rank": 17.0
+        "classification": "AAAAAA",
+        "consensus_rank": 17.0,
+        "tabc_rank": 17,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
-        "rank": 17,
+        "rank": 19,
         "team_name": "Mans Lake Ridge",
         "wins": 16,
         "losses": 7,
         "record": "16-7",
-        "consensus_rank": 17.0
+        "classification": "AAAAAA",
+        "consensus_rank": 17.0,
+        "tabc_rank": 18,
+        "maxpreps_rank": null,
+        "gaso_rank": 12
       },
       {
-        "rank": 18,
+        "rank": 20,
+        "team_name": "Clear Brook (Friendswood, TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAAAA",
+        "consensus_rank": 17.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 17,
+        "gaso_rank": null
+      },
+      {
+        "rank": 21,
+        "team_name": "Westlake (Austin, TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAAAA",
+        "consensus_rank": 17.2,
+        "tabc_rank": null,
+        "maxpreps_rank": 18,
+        "gaso_rank": 14
+      },
+      {
+        "rank": 22,
         "team_name": "Klein Oak",
         "wins": 20,
         "losses": 3,
         "record": "20-3",
-        "consensus_rank": 17.6
+        "classification": "AAAAAA",
+        "consensus_rank": 17.6,
+        "tabc_rank": 15,
+        "maxpreps_rank": 21,
+        "gaso_rank": 17
       },
       {
-        "rank": 19,
+        "rank": 23,
         "team_name": "Cypress Springs",
         "wins": 21,
         "losses": 4,
         "record": "21-4",
-        "consensus_rank": 17.8
+        "classification": "AAAAAA",
+        "consensus_rank": 17.8,
+        "tabc_rank": 21,
+        "maxpreps_rank": 15,
+        "gaso_rank": 13
       },
       {
-        "rank": 20,
+        "rank": 24,
+        "team_name": "Katy Jordan",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAAAA",
+        "consensus_rank": 18.0,
+        "tabc_rank": null,
+        "maxpreps_rank": null,
+        "gaso_rank": 18
+      },
+      {
+        "rank": 25,
         "team_name": "RR Westwood",
         "wins": 21,
         "losses": 2,
         "record": "21-2",
-        "consensus_rank": 18.44
-      },
-      {
-        "rank": 21,
-        "team_name": "South Grand Prairie",
-        "wins": 13,
-        "losses": 10,
-        "record": "13-10",
-        "consensus_rank": 20.0
-      },
-      {
-        "rank": 22,
-        "team_name": "Shadow Creek",
-        "wins": 15,
-        "losses": 6,
-        "record": "15-6",
-        "consensus_rank": 20.0
-      },
-      {
-        "rank": 23,
-        "team_name": "Hou Heights",
-        "wins": 20,
-        "losses": 5,
-        "record": "20-5",
-        "consensus_rank": 23.44
-      },
-      {
-        "rank": 24,
-        "team_name": "Lake Travis",
-        "wins": 19,
-        "losses": 7,
-        "record": "19-7",
-        "consensus_rank": 24.0
-      },
-      {
-        "rank": 25,
-        "team_name": "FW Eaton",
-        "wins": 20,
-        "losses": 5,
-        "record": "20-5",
-        "consensus_rank": 25.0
+        "classification": "AAAAAA",
+        "consensus_rank": 18.44,
+        "tabc_rank": 22,
+        "maxpreps_rank": 14,
+        "gaso_rank": null
       }
     ],
     "AAAAA": [
@@ -211,7 +311,11 @@
         "wins": 19,
         "losses": 2,
         "record": "19-2",
-        "consensus_rank": 1.0
+        "classification": "AAAAA",
+        "consensus_rank": 1.0,
+        "tabc_rank": 1,
+        "maxpreps_rank": 1,
+        "gaso_rank": 1
       },
       {
         "rank": 2,
@@ -219,7 +323,11 @@
         "wins": 21,
         "losses": 3,
         "record": "21-3",
-        "consensus_rank": 2.1
+        "classification": "AAAAA",
+        "consensus_rank": 2.1,
+        "tabc_rank": 2,
+        "maxpreps_rank": 2,
+        "gaso_rank": 3
       },
       {
         "rank": 3,
@@ -227,7 +335,11 @@
         "wins": 24,
         "losses": 1,
         "record": "24-1",
-        "consensus_rank": 3.3
+        "classification": "AAAAA",
+        "consensus_rank": 3.3,
+        "tabc_rank": 3,
+        "maxpreps_rank": 4,
+        "gaso_rank": 2
       },
       {
         "rank": 4,
@@ -235,7 +347,11 @@
         "wins": 20,
         "losses": 5,
         "record": "20-5",
-        "consensus_rank": 3.7
+        "classification": "AAAAA",
+        "consensus_rank": 3.7,
+        "tabc_rank": 4,
+        "maxpreps_rank": 3,
+        "gaso_rank": 5
       },
       {
         "rank": 5,
@@ -243,7 +359,11 @@
         "wins": 18,
         "losses": 4,
         "record": "18-4",
-        "consensus_rank": 5.7
+        "classification": "AAAAA",
+        "consensus_rank": 5.7,
+        "tabc_rank": 5,
+        "maxpreps_rank": 7,
+        "gaso_rank": 4
       },
       {
         "rank": 6,
@@ -251,7 +371,11 @@
         "wins": 18,
         "losses": 5,
         "record": "18-5",
-        "consensus_rank": 5.8
+        "classification": "AAAAA",
+        "consensus_rank": 5.8,
+        "tabc_rank": 6,
+        "maxpreps_rank": 5,
+        "gaso_rank": 8
       },
       {
         "rank": 7,
@@ -259,7 +383,11 @@
         "wins": 18,
         "losses": 6,
         "record": "18-6",
-        "consensus_rank": 6.5
+        "classification": "AAAAA",
+        "consensus_rank": 6.5,
+        "tabc_rank": 7,
+        "maxpreps_rank": 6,
+        "gaso_rank": 6
       },
       {
         "rank": 8,
@@ -267,135 +395,215 @@
         "wins": 19,
         "losses": 4,
         "record": "19-4",
-        "consensus_rank": 8.7
+        "classification": "AAAAA",
+        "consensus_rank": 8.7,
+        "tabc_rank": 8,
+        "maxpreps_rank": 10,
+        "gaso_rank": 7
       },
       {
         "rank": 9,
-        "team_name": "Bmt West Brook",
-        "wins": 20,
-        "losses": 3,
-        "record": "20-3",
-        "consensus_rank": 9.6
-      },
-      {
-        "rank": 10,
-        "team_name": "Denton",
-        "wins": 19,
-        "losses": 3,
-        "record": "19-3",
-        "consensus_rank": 10.1
-      },
-      {
-        "rank": 11,
         "team_name": "FB Marshall",
         "wins": 18,
         "losses": 7,
         "record": "18-7",
-        "consensus_rank": 10.6
+        "classification": "AAAAA",
+        "consensus_rank": 9.0,
+        "tabc_rank": 9,
+        "maxpreps_rank": null,
+        "gaso_rank": null
+      },
+      {
+        "rank": 10,
+        "team_name": "West Brook (Beaumont, TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAAA",
+        "consensus_rank": 9.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 9,
+        "gaso_rank": null
+      },
+      {
+        "rank": 11,
+        "team_name": "Bmt West Brook",
+        "wins": 20,
+        "losses": 3,
+        "record": "20-3",
+        "classification": "AAAAA",
+        "consensus_rank": 10.0,
+        "tabc_rank": 10,
+        "maxpreps_rank": null,
+        "gaso_rank": 10
       },
       {
         "rank": 12,
+        "team_name": "Denton",
+        "wins": 19,
+        "losses": 3,
+        "record": "19-3",
+        "classification": "AAAAA",
+        "consensus_rank": 10.1,
+        "tabc_rank": 11,
+        "maxpreps_rank": 8,
+        "gaso_rank": 14
+      },
+      {
+        "rank": 13,
+        "team_name": "Killeen Ellison",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAAA",
+        "consensus_rank": 12.0,
+        "tabc_rank": null,
+        "maxpreps_rank": null,
+        "gaso_rank": 12
+      },
+      {
+        "rank": 14,
+        "team_name": "Fort Bend Marshall (Missouri City, TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAAA",
+        "consensus_rank": 12.2,
+        "tabc_rank": null,
+        "maxpreps_rank": 13,
+        "gaso_rank": 9
+      },
+      {
+        "rank": 15,
         "team_name": "EP Chapin",
         "wins": 16,
         "losses": 6,
         "record": "16-6",
-        "consensus_rank": 13.0
+        "classification": "AAAAA",
+        "consensus_rank": 13.0,
+        "tabc_rank": 13,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
-        "rank": 13,
+        "rank": 16,
         "team_name": "McAllen",
         "wins": 28,
         "losses": 0,
         "record": "28-0",
-        "consensus_rank": 13.33
+        "classification": "AAAAA",
+        "consensus_rank": 13.33,
+        "tabc_rank": 12,
+        "maxpreps_rank": 15,
+        "gaso_rank": null
       },
       {
-        "rank": 14,
+        "rank": 17,
         "team_name": "Friendswood",
         "wins": 21,
         "losses": 7,
         "record": "21-7",
-        "consensus_rank": 13.5
+        "classification": "AAAAA",
+        "consensus_rank": 13.5,
+        "tabc_rank": 16,
+        "maxpreps_rank": 11,
+        "gaso_rank": 11
       },
       {
-        "rank": 15,
+        "rank": 18,
+        "team_name": "Amarillo (TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAAA",
+        "consensus_rank": 14.8,
+        "tabc_rank": null,
+        "maxpreps_rank": 14,
+        "gaso_rank": 18
+      },
+      {
+        "rank": 19,
+        "team_name": "Comal Pieper",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAAA",
+        "consensus_rank": 15.0,
+        "tabc_rank": null,
+        "maxpreps_rank": null,
+        "gaso_rank": 15
+      },
+      {
+        "rank": 20,
         "team_name": "Iowa Colony",
         "wins": 19,
         "losses": 7,
         "record": "19-7",
-        "consensus_rank": 15.1
+        "classification": "AAAAA",
+        "consensus_rank": 15.1,
+        "tabc_rank": 18,
+        "maxpreps_rank": 12,
+        "gaso_rank": 13
       },
       {
-        "rank": 16,
+        "rank": 21,
+        "team_name": "Lucas Lovejoy",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAAA",
+        "consensus_rank": 16.0,
+        "tabc_rank": null,
+        "maxpreps_rank": null,
+        "gaso_rank": 16
+      },
+      {
+        "rank": 22,
         "team_name": "Anna",
         "wins": 17,
         "losses": 6,
         "record": "17-6",
-        "consensus_rank": 16.78
+        "classification": "AAAAA",
+        "consensus_rank": 16.78,
+        "tabc_rank": 15,
+        "maxpreps_rank": 19,
+        "gaso_rank": null
       },
       {
-        "rank": 17,
+        "rank": 23,
         "team_name": "Hou Madison",
         "wins": 17,
         "losses": 5,
         "record": "17-5",
-        "consensus_rank": 17.0
+        "classification": "AAAAA",
+        "consensus_rank": 17.0,
+        "tabc_rank": 17,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
-        "rank": 18,
+        "rank": 24,
+        "team_name": "Centennial (Burleson, TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAAA",
+        "consensus_rank": 17.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 17,
+        "gaso_rank": null
+      },
+      {
+        "rank": 25,
         "team_name": "New Braunfels",
         "wins": 22,
         "losses": 5,
         "record": "22-5",
-        "consensus_rank": 17.67
-      },
-      {
-        "rank": 19,
-        "team_name": "Burleson Centennial",
-        "wins": 17,
-        "losses": 7,
-        "record": "17-7",
-        "consensus_rank": 20.0
-      },
-      {
-        "rank": 20,
-        "team_name": "Midlothian",
-        "wins": 18,
-        "losses": 8,
-        "record": "18-8",
-        "consensus_rank": 21.0
-      },
-      {
-        "rank": 21,
-        "team_name": "CC Veterans Memorial",
-        "wins": 16,
-        "losses": 8,
-        "record": "16-8",
-        "consensus_rank": 22.3
-      },
-      {
-        "rank": 22,
-        "team_name": "Frisco Liberty",
-        "wins": 12,
-        "losses": 10,
-        "record": "12-10",
-        "consensus_rank": 22.89
-      },
-      {
-        "rank": 23,
-        "team_name": "CC Ray",
-        "wins": 20,
-        "losses": 7,
-        "record": "20-7",
-        "consensus_rank": 23.0
-      },
-      {
-        "rank": 24,
-        "team_name": "Tascosa",
-        "wins": 18,
-        "losses": 5,
-        "record": "18-5",
-        "consensus_rank": 25.0
+        "classification": "AAAAA",
+        "consensus_rank": 17.67,
+        "tabc_rank": 19,
+        "maxpreps_rank": 16,
+        "gaso_rank": null
       }
     ],
     "AAAA": [
@@ -405,7 +613,11 @@
         "wins": 16,
         "losses": 6,
         "record": "16-6",
-        "consensus_rank": 1.4
+        "classification": "AAAA",
+        "consensus_rank": 1.4,
+        "tabc_rank": 1,
+        "maxpreps_rank": 2,
+        "gaso_rank": 1
       },
       {
         "rank": 2,
@@ -413,7 +625,11 @@
         "wins": 27,
         "losses": 1,
         "record": "27-1",
-        "consensus_rank": 3.0
+        "classification": "AAAA",
+        "consensus_rank": 3.0,
+        "tabc_rank": 3,
+        "maxpreps_rank": null,
+        "gaso_rank": 3
       },
       {
         "rank": 3,
@@ -421,7 +637,11 @@
         "wins": 10,
         "losses": 9,
         "record": "10-9",
-        "consensus_rank": 4.5
+        "classification": "AAAA",
+        "consensus_rank": 4.5,
+        "tabc_rank": 5,
+        "maxpreps_rank": null,
+        "gaso_rank": 2
       },
       {
         "rank": 4,
@@ -429,7 +649,11 @@
         "wins": 19,
         "losses": 4,
         "record": "19-4",
-        "consensus_rank": 6.0
+        "classification": "AAAA",
+        "consensus_rank": 6.0,
+        "tabc_rank": 10,
+        "maxpreps_rank": 1,
+        "gaso_rank": null
       },
       {
         "rank": 5,
@@ -437,7 +661,11 @@
         "wins": 20,
         "losses": 4,
         "record": "20-4",
-        "consensus_rank": 6.6
+        "classification": "AAAA",
+        "consensus_rank": 6.6,
+        "tabc_rank": 9,
+        "maxpreps_rank": 4,
+        "gaso_rank": 5
       },
       {
         "rank": 6,
@@ -445,7 +673,11 @@
         "wins": 19,
         "losses": 5,
         "record": "19-5",
-        "consensus_rank": 6.8
+        "classification": "AAAA",
+        "consensus_rank": 6.8,
+        "tabc_rank": 7,
+        "maxpreps_rank": 6,
+        "gaso_rank": 9
       },
       {
         "rank": 7,
@@ -453,7 +685,11 @@
         "wins": 20,
         "losses": 4,
         "record": "20-4",
-        "consensus_rank": 8.0
+        "classification": "AAAA",
+        "consensus_rank": 8.0,
+        "tabc_rank": 8,
+        "maxpreps_rank": 8,
+        "gaso_rank": 8
       },
       {
         "rank": 8,
@@ -461,7 +697,11 @@
         "wins": 10,
         "losses": 3,
         "record": "10-3",
-        "consensus_rank": 9.0
+        "classification": "AAAA",
+        "consensus_rank": 9.0,
+        "tabc_rank": 4,
+        "maxpreps_rank": 16,
+        "gaso_rank": 6
       },
       {
         "rank": 9,
@@ -469,7 +709,11 @@
         "wins": 19,
         "losses": 5,
         "record": "19-5",
-        "consensus_rank": 9.3
+        "classification": "AAAA",
+        "consensus_rank": 9.3,
+        "tabc_rank": 11,
+        "maxpreps_rank": 7,
+        "gaso_rank": 10
       },
       {
         "rank": 10,
@@ -477,7 +721,11 @@
         "wins": 21,
         "losses": 3,
         "record": "21-3",
-        "consensus_rank": 9.44
+        "classification": "AAAA",
+        "consensus_rank": 9.44,
+        "tabc_rank": 13,
+        "maxpreps_rank": 5,
+        "gaso_rank": null
       },
       {
         "rank": 11,
@@ -485,7 +733,11 @@
         "wins": 17,
         "losses": 6,
         "record": "17-6",
-        "consensus_rank": 9.8
+        "classification": "AAAA",
+        "consensus_rank": 9.8,
+        "tabc_rank": 2,
+        "maxpreps_rank": 21,
+        "gaso_rank": 4
       },
       {
         "rank": 12,
@@ -493,111 +745,167 @@
         "wins": 17,
         "losses": 4,
         "record": "17-4",
-        "consensus_rank": 11.2
+        "classification": "AAAA",
+        "consensus_rank": 10.78,
+        "tabc_rank": 17,
+        "maxpreps_rank": 3,
+        "gaso_rank": null
       },
       {
         "rank": 13,
+        "team_name": "Stephenville (TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAA",
+        "consensus_rank": 11.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 11,
+        "gaso_rank": null
+      },
+      {
+        "rank": 14,
+        "team_name": "Lubbock Cooper Liberty",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAA",
+        "consensus_rank": 12.0,
+        "tabc_rank": null,
+        "maxpreps_rank": null,
+        "gaso_rank": 12
+      },
+      {
+        "rank": 15,
         "team_name": "Wimberley",
         "wins": 23,
         "losses": 2,
         "record": "23-2",
-        "consensus_rank": 12.2
+        "classification": "AAAA",
+        "consensus_rank": 12.2,
+        "tabc_rank": 15,
+        "maxpreps_rank": 9,
+        "gaso_rank": 11
       },
       {
-        "rank": 14,
+        "rank": 16,
         "team_name": "Paris",
         "wins": 17,
         "losses": 4,
         "record": "17-4",
-        "consensus_rank": 13.0
+        "classification": "AAAA",
+        "consensus_rank": 13.0,
+        "tabc_rank": 12,
+        "maxpreps_rank": 14,
+        "gaso_rank": 14
       },
       {
-        "rank": 15,
+        "rank": 17,
+        "team_name": "Fort Bend Crawford",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAA",
+        "consensus_rank": 13.0,
+        "tabc_rank": null,
+        "maxpreps_rank": null,
+        "gaso_rank": 13
+      },
+      {
+        "rank": 18,
         "team_name": "Hou Yates",
         "wins": 13,
         "losses": 3,
         "record": "13-3",
-        "consensus_rank": 13.7
+        "classification": "AAAA",
+        "consensus_rank": 13.7,
+        "tabc_rank": 6,
+        "maxpreps_rank": 25,
+        "gaso_rank": 7
       },
       {
-        "rank": 16,
+        "rank": 19,
         "team_name": "La Vega",
         "wins": 10,
         "losses": 2,
         "record": "10-2",
-        "consensus_rank": 14.0
+        "classification": "AAAA",
+        "consensus_rank": 14.0,
+        "tabc_rank": 14,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
-        "rank": 17,
+        "rank": 20,
+        "team_name": "Canyon (TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAA",
+        "consensus_rank": 14.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 12,
+        "gaso_rank": 22
+      },
+      {
+        "rank": 21,
+        "team_name": "Almeta Crawford (Rosharon, TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAA",
+        "consensus_rank": 15.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 15,
+        "gaso_rank": null
+      },
+      {
+        "rank": 22,
+        "team_name": "Canyon West Plains",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAA",
+        "consensus_rank": 15.0,
+        "tabc_rank": null,
+        "maxpreps_rank": null,
+        "gaso_rank": 15
+      },
+      {
+        "rank": 23,
         "team_name": "Panther Creek",
         "wins": 13,
         "losses": 6,
         "record": "13-6",
-        "consensus_rank": 16.1
+        "classification": "AAAA",
+        "consensus_rank": 16.1,
+        "tabc_rank": 18,
+        "maxpreps_rank": 13,
+        "gaso_rank": 19
       },
       {
-        "rank": 18,
+        "rank": 24,
+        "team_name": "La Marque (TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAAA",
+        "consensus_rank": 17.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 17,
+        "gaso_rank": null
+      },
+      {
+        "rank": 25,
         "team_name": "Brock",
         "wins": 16,
         "losses": 8,
         "record": "16-8",
-        "consensus_rank": 17.2
-      },
-      {
-        "rank": 19,
-        "team_name": "FB Crawford",
-        "wins": 17,
-        "losses": 6,
-        "record": "17-6",
-        "consensus_rank": 18.0
-      },
-      {
-        "rank": 20,
-        "team_name": "Farmersville",
-        "wins": 21,
-        "losses": 1,
-        "record": "21-1",
-        "consensus_rank": 18.5
-      },
-      {
-        "rank": 21,
-        "team_name": "FW Southwest",
-        "wins": 17,
-        "losses": 7,
-        "record": "17-7",
-        "consensus_rank": 19.67
-      },
-      {
-        "rank": 22,
-        "team_name": "Stafford",
-        "wins": 16,
-        "losses": 6,
-        "record": "16-6",
-        "consensus_rank": 21.0
-      },
-      {
-        "rank": 23,
-        "team_name": "Lincoln",
-        "wins": 9,
-        "losses": 15,
-        "record": "9-15",
-        "consensus_rank": 21.17
-      },
-      {
-        "rank": 24,
-        "team_name": "Pinkston",
-        "wins": 14,
-        "losses": 11,
-        "record": "14-11",
-        "consensus_rank": 23.0
-      },
-      {
-        "rank": 25,
-        "team_name": "Austin LBJ",
-        "wins": 13,
-        "losses": 12,
-        "record": "13-12",
-        "consensus_rank": 25.0
+        "classification": "AAAA",
+        "consensus_rank": 17.2,
+        "tabc_rank": 16,
+        "maxpreps_rank": 19,
+        "gaso_rank": 16
       }
     ],
     "AAA": [
@@ -607,7 +915,11 @@
         "wins": 23,
         "losses": 2,
         "record": "23-2",
-        "consensus_rank": 1.6
+        "classification": "AAA",
+        "consensus_rank": 1.6,
+        "tabc_rank": 2,
+        "maxpreps_rank": 1,
+        "gaso_rank": 2
       },
       {
         "rank": 2,
@@ -615,7 +927,11 @@
         "wins": 15,
         "losses": 2,
         "record": "15-2",
-        "consensus_rank": 3.7
+        "classification": "AAA",
+        "consensus_rank": 3.7,
+        "tabc_rank": 5,
+        "maxpreps_rank": 2,
+        "gaso_rank": 4
       },
       {
         "rank": 3,
@@ -623,7 +939,11 @@
         "wins": 21,
         "losses": 4,
         "record": "21-4",
-        "consensus_rank": 4.7
+        "classification": "AAA",
+        "consensus_rank": 4.7,
+        "tabc_rank": 4,
+        "maxpreps_rank": 6,
+        "gaso_rank": 3
       },
       {
         "rank": 4,
@@ -631,7 +951,11 @@
         "wins": 18,
         "losses": 3,
         "record": "18-3",
-        "consensus_rank": 5.4
+        "classification": "AAA",
+        "consensus_rank": 5.4,
+        "tabc_rank": 7,
+        "maxpreps_rank": 3,
+        "gaso_rank": 7
       },
       {
         "rank": 5,
@@ -639,7 +963,11 @@
         "wins": 27,
         "losses": 1,
         "record": "27-1",
-        "consensus_rank": 5.6
+        "classification": "AAA",
+        "consensus_rank": 5.6,
+        "tabc_rank": 3,
+        "maxpreps_rank": 9,
+        "gaso_rank": 5
       },
       {
         "rank": 6,
@@ -647,7 +975,11 @@
         "wins": 19,
         "losses": 5,
         "record": "19-5",
-        "consensus_rank": 5.6
+        "classification": "AAA",
+        "consensus_rank": 5.6,
+        "tabc_rank": 6,
+        "maxpreps_rank": 4,
+        "gaso_rank": 10
       },
       {
         "rank": 7,
@@ -655,7 +987,11 @@
         "wins": 18,
         "losses": 6,
         "record": "18-6",
-        "consensus_rank": 6.8
+        "classification": "AAA",
+        "consensus_rank": 6.8,
+        "tabc_rank": 8,
+        "maxpreps_rank": 5,
+        "gaso_rank": 8
       },
       {
         "rank": 8,
@@ -663,7 +999,11 @@
         "wins": 20,
         "losses": 3,
         "record": "20-3",
-        "consensus_rank": 8.56
+        "classification": "AAA",
+        "consensus_rank": 8.56,
+        "tabc_rank": 9,
+        "maxpreps_rank": 8,
+        "gaso_rank": null
       },
       {
         "rank": 9,
@@ -671,7 +1011,11 @@
         "wins": 11,
         "losses": 12,
         "record": "11-12",
-        "consensus_rank": 9.0
+        "classification": "AAA",
+        "consensus_rank": 9.0,
+        "tabc_rank": 1,
+        "maxpreps_rank": 21,
+        "gaso_rank": 1
       },
       {
         "rank": 10,
@@ -679,7 +1023,11 @@
         "wins": 19,
         "losses": 3,
         "record": "19-3",
-        "consensus_rank": 10.56
+        "classification": "AAA",
+        "consensus_rank": 10.56,
+        "tabc_rank": 11,
+        "maxpreps_rank": 10,
+        "gaso_rank": null
       },
       {
         "rank": 11,
@@ -687,119 +1035,179 @@
         "wins": 19,
         "losses": 4,
         "record": "19-4",
-        "consensus_rank": 11.0
+        "classification": "AAA",
+        "consensus_rank": 11.0,
+        "tabc_rank": 12,
+        "maxpreps_rank": null,
+        "gaso_rank": 6
       },
       {
         "rank": 12,
+        "team_name": "Liberty-Eylau (Texarkana, TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAA",
+        "consensus_rank": 11.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 11,
+        "gaso_rank": null
+      },
+      {
+        "rank": 13,
+        "team_name": "Dalhart (TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAA",
+        "consensus_rank": 12.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 12,
+        "gaso_rank": null
+      },
+      {
+        "rank": 14,
         "team_name": "Cole",
         "wins": 20,
         "losses": 5,
         "record": "20-5",
-        "consensus_rank": 12.22
+        "classification": "AAA",
+        "consensus_rank": 12.22,
+        "tabc_rank": 10,
+        "maxpreps_rank": 15,
+        "gaso_rank": null
       },
       {
-        "rank": 13,
+        "rank": 15,
         "team_name": "Crystal City",
         "wins": 15,
         "losses": 5,
         "record": "15-5",
-        "consensus_rank": 13.0
+        "classification": "AAA",
+        "consensus_rank": 13.0,
+        "tabc_rank": 13,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
-        "rank": 14,
+        "rank": 16,
         "team_name": "Wall",
         "wins": 20,
         "losses": 5,
         "record": "20-5",
-        "consensus_rank": 13.56
+        "classification": "AAA",
+        "consensus_rank": 13.56,
+        "tabc_rank": 14,
+        "maxpreps_rank": 13,
+        "gaso_rank": null
       },
       {
-        "rank": 15,
+        "rank": 17,
         "team_name": "Goliad",
         "wins": 19,
         "losses": 4,
         "record": "19-4",
-        "consensus_rank": 14.83
+        "classification": "AAA",
+        "consensus_rank": 14.83,
+        "tabc_rank": 16,
+        "maxpreps_rank": null,
+        "gaso_rank": 9
       },
       {
-        "rank": 16,
+        "rank": 18,
         "team_name": "Mexia",
         "wins": 15,
         "losses": 12,
         "record": "15-12",
-        "consensus_rank": 15.0
+        "classification": "AAA",
+        "consensus_rank": 15.0,
+        "tabc_rank": 15,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
-        "rank": 17,
+        "rank": 19,
         "team_name": "Holliday",
         "wins": 21,
         "losses": 3,
         "record": "21-3",
-        "consensus_rank": 15.89
+        "classification": "AAA",
+        "consensus_rank": 15.89,
+        "tabc_rank": 23,
+        "maxpreps_rank": 7,
+        "gaso_rank": null
       },
       {
-        "rank": 18,
+        "rank": 20,
         "team_name": "City View",
         "wins": 12,
         "losses": 5,
         "record": "12-5",
-        "consensus_rank": 16.78
+        "classification": "AAA",
+        "consensus_rank": 16.78,
+        "tabc_rank": 19,
+        "maxpreps_rank": 14,
+        "gaso_rank": null
       },
       {
-        "rank": 19,
+        "rank": 21,
+        "team_name": "Jim Ned (Tuscola, TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAA",
+        "consensus_rank": 17.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 17,
+        "gaso_rank": null
+      },
+      {
+        "rank": 22,
         "team_name": "East Chambers",
         "wins": 19,
         "losses": 5,
         "record": "19-5",
-        "consensus_rank": 17.11
+        "classification": "AAA",
+        "consensus_rank": 17.11,
+        "tabc_rank": 18,
+        "maxpreps_rank": 16,
+        "gaso_rank": null
       },
       {
-        "rank": 20,
+        "rank": 23,
+        "team_name": "Keene (TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AAA",
+        "consensus_rank": 19.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 19,
+        "gaso_rank": null
+      },
+      {
+        "rank": 24,
         "team_name": "Fairfield",
         "wins": 13,
         "losses": 5,
         "record": "13-5",
-        "consensus_rank": 19.22
+        "classification": "AAA",
+        "consensus_rank": 19.22,
+        "tabc_rank": 17,
+        "maxpreps_rank": 22,
+        "gaso_rank": null
       },
       {
-        "rank": 21,
+        "rank": 25,
         "team_name": "Ponder",
         "wins": 15,
         "losses": 8,
         "record": "15-8",
-        "consensus_rank": 19.67
-      },
-      {
-        "rank": 22,
-        "team_name": "Peaster",
-        "wins": 14,
-        "losses": 11,
-        "record": "14-11",
-        "consensus_rank": 20.0
-      },
-      {
-        "rank": 23,
-        "team_name": "Marion",
-        "wins": 17,
-        "losses": 6,
-        "record": "17-6",
-        "consensus_rank": 22.0
-      },
-      {
-        "rank": 24,
-        "team_name": "Village Tech",
-        "wins": 14,
-        "losses": 4,
-        "record": "14-4",
-        "consensus_rank": 22.78
-      },
-      {
-        "rank": 25,
-        "team_name": "Leonard",
-        "wins": 16,
-        "losses": 6,
-        "record": "16-6",
-        "consensus_rank": 24.0
+        "classification": "AAA",
+        "consensus_rank": 19.67,
+        "tabc_rank": 21,
+        "maxpreps_rank": 18,
+        "gaso_rank": null
       }
     ],
     "AA": [
@@ -809,7 +1217,11 @@
         "wins": 24,
         "losses": 1,
         "record": "24-1",
-        "consensus_rank": 1.1
+        "classification": "AA",
+        "consensus_rank": 1.1,
+        "tabc_rank": 1,
+        "maxpreps_rank": 1,
+        "gaso_rank": 2
       },
       {
         "rank": 2,
@@ -817,7 +1229,11 @@
         "wins": 20,
         "losses": 4,
         "record": "20-4",
-        "consensus_rank": 1.9
+        "classification": "AA",
+        "consensus_rank": 1.9,
+        "tabc_rank": 2,
+        "maxpreps_rank": 2,
+        "gaso_rank": 1
       },
       {
         "rank": 3,
@@ -825,7 +1241,11 @@
         "wins": 9,
         "losses": 0,
         "record": "9-0",
-        "consensus_rank": 3.0
+        "classification": "AA",
+        "consensus_rank": 3.0,
+        "tabc_rank": 3,
+        "maxpreps_rank": 3,
+        "gaso_rank": null
       },
       {
         "rank": 4,
@@ -833,7 +1253,11 @@
         "wins": 21,
         "losses": 3,
         "record": "21-3",
-        "consensus_rank": 4.8
+        "classification": "AA",
+        "consensus_rank": 4.8,
+        "tabc_rank": 5,
+        "maxpreps_rank": 5,
+        "gaso_rank": 3
       },
       {
         "rank": 5,
@@ -841,7 +1265,11 @@
         "wins": 16,
         "losses": 3,
         "record": "16-3",
-        "consensus_rank": 6.8
+        "classification": "AA",
+        "consensus_rank": 6.8,
+        "tabc_rank": 7,
+        "maxpreps_rank": 7,
+        "gaso_rank": 5
       },
       {
         "rank": 6,
@@ -849,7 +1277,11 @@
         "wins": 22,
         "losses": 3,
         "record": "22-3",
-        "consensus_rank": 8.44
+        "classification": "AA",
+        "consensus_rank": 8.44,
+        "tabc_rank": 12,
+        "maxpreps_rank": 4,
+        "gaso_rank": null
       },
       {
         "rank": 7,
@@ -857,7 +1289,11 @@
         "wins": 20,
         "losses": 5,
         "record": "20-5",
-        "consensus_rank": 9.4
+        "classification": "AA",
+        "consensus_rank": 9.4,
+        "tabc_rank": 6,
+        "maxpreps_rank": 14,
+        "gaso_rank": 8
       },
       {
         "rank": 8,
@@ -865,7 +1301,11 @@
         "wins": 16,
         "losses": 4,
         "record": "16-4",
-        "consensus_rank": 10.11
+        "classification": "AA",
+        "consensus_rank": 10.11,
+        "tabc_rank": 11,
+        "maxpreps_rank": 9,
+        "gaso_rank": null
       },
       {
         "rank": 9,
@@ -873,135 +1313,203 @@
         "wins": 19,
         "losses": 6,
         "record": "19-6",
-        "consensus_rank": 10.8
+        "classification": "AA",
+        "consensus_rank": 10.8,
+        "tabc_rank": 4,
+        "maxpreps_rank": 21,
+        "gaso_rank": 4
       },
       {
         "rank": 10,
+        "team_name": "Hale Center (TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AA",
+        "consensus_rank": 11.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 11,
+        "gaso_rank": null
+      },
+      {
+        "rank": 11,
+        "team_name": "LaPoynor (LaRue, TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AA",
+        "consensus_rank": 12.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 12,
+        "gaso_rank": null
+      },
+      {
+        "rank": 12,
         "team_name": "Roscoe",
         "wins": 25,
         "losses": 1,
         "record": "25-1",
-        "consensus_rank": 12.1
+        "classification": "AA",
+        "consensus_rank": 12.1,
+        "tabc_rank": 18,
+        "maxpreps_rank": 6,
+        "gaso_rank": 7
       },
       {
-        "rank": 11,
+        "rank": 13,
         "team_name": "Slidell",
         "wins": 18,
         "losses": 6,
         "record": "18-6",
-        "consensus_rank": 12.44
+        "classification": "AA",
+        "consensus_rank": 12.44,
+        "tabc_rank": 16,
+        "maxpreps_rank": 8,
+        "gaso_rank": null
       },
       {
-        "rank": 12,
+        "rank": 14,
         "team_name": "Port Aransas",
         "wins": 18,
         "losses": 5,
         "record": "18-5",
-        "consensus_rank": 12.67
+        "classification": "AA",
+        "consensus_rank": 12.67,
+        "tabc_rank": 10,
+        "maxpreps_rank": 16,
+        "gaso_rank": null
       },
       {
-        "rank": 13,
+        "rank": 15,
         "team_name": "Thorndale",
         "wins": 19,
         "losses": 4,
         "record": "19-4",
-        "consensus_rank": 13.0
+        "classification": "AA",
+        "consensus_rank": 13.0,
+        "tabc_rank": 9,
+        "maxpreps_rank": 18,
+        "gaso_rank": null
       },
       {
-        "rank": 14,
+        "rank": 16,
+        "team_name": "West Texas (Stinnett, TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AA",
+        "consensus_rank": 13.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 13,
+        "gaso_rank": null
+      },
+      {
+        "rank": 17,
         "team_name": "Abernathy",
         "wins": 20,
         "losses": 5,
         "record": "20-5",
-        "consensus_rank": 13.7
+        "classification": "AA",
+        "consensus_rank": 13.7,
+        "tabc_rank": 8,
+        "maxpreps_rank": 22,
+        "gaso_rank": 9
       },
       {
-        "rank": 15,
+        "rank": 18,
         "team_name": "Chireno",
         "wins": 18,
         "losses": 4,
         "record": "18-4",
-        "consensus_rank": 13.89
+        "classification": "AA",
+        "consensus_rank": 13.89,
+        "tabc_rank": 17,
+        "maxpreps_rank": 10,
+        "gaso_rank": null
       },
       {
-        "rank": 16,
+        "rank": 19,
         "team_name": "Mumford",
         "wins": 13,
         "losses": 9,
         "record": "13-9",
-        "consensus_rank": 15.0
+        "classification": "AA",
+        "consensus_rank": 15.0,
+        "tabc_rank": 15,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
-        "rank": 17,
+        "rank": 20,
         "team_name": "New Home",
         "wins": 13,
         "losses": 9,
         "record": "13-9",
-        "consensus_rank": 16.11
+        "classification": "AA",
+        "consensus_rank": 16.11,
+        "tabc_rank": 13,
+        "maxpreps_rank": 20,
+        "gaso_rank": null
       },
       {
-        "rank": 18,
+        "rank": 21,
         "team_name": "Bosqueville",
         "wins": 16,
         "losses": 7,
         "record": "16-7",
-        "consensus_rank": 16.83
+        "classification": "AA",
+        "consensus_rank": 16.83,
+        "tabc_rank": 19,
+        "maxpreps_rank": null,
+        "gaso_rank": 6
       },
       {
-        "rank": 19,
+        "rank": 22,
+        "team_name": "Windthorst (TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AA",
+        "consensus_rank": 17.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 17,
+        "gaso_rank": null
+      },
+      {
+        "rank": 23,
         "team_name": "Tom Bean",
         "wins": 21,
         "losses": 5,
         "record": "21-5",
-        "consensus_rank": 17.2
+        "classification": "AA",
+        "consensus_rank": 17.2,
+        "tabc_rank": 14,
+        "maxpreps_rank": 23,
+        "gaso_rank": 10
       },
       {
-        "rank": 20,
+        "rank": 24,
+        "team_name": "Nocona (TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "AA",
+        "consensus_rank": 19.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 19,
+        "gaso_rank": null
+      },
+      {
+        "rank": 25,
         "team_name": "Sabine Pass",
         "wins": 16,
         "losses": 5,
         "record": "16-5",
-        "consensus_rank": 20.0
-      },
-      {
-        "rank": 21,
-        "team_name": "Albany",
-        "wins": 15,
-        "losses": 1,
-        "record": "15-1",
-        "consensus_rank": 20.56
-      },
-      {
-        "rank": 22,
-        "team_name": "Agua Dulce",
-        "wins": 18,
-        "losses": 3,
-        "record": "18-3",
-        "consensus_rank": 21.0
-      },
-      {
-        "rank": 23,
-        "team_name": "Hawkins",
-        "wins": 19,
-        "losses": 6,
-        "record": "19-6",
-        "consensus_rank": 22.0
-      },
-      {
-        "rank": 24,
-        "team_name": "D Big Sandy",
-        "wins": 12,
-        "losses": 3,
-        "record": "12-3",
-        "consensus_rank": 23.0
-      },
-      {
-        "rank": 25,
-        "team_name": "Plains",
-        "wins": 21,
-        "losses": 5,
-        "record": "21-5",
-        "consensus_rank": 24.0
+        "classification": "AA",
+        "consensus_rank": 20.0,
+        "tabc_rank": 20,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       }
     ],
     "A": [
@@ -1011,7 +1519,11 @@
         "wins": 10,
         "losses": 2,
         "record": "10-2",
-        "consensus_rank": 2.0
+        "classification": "A",
+        "consensus_rank": 2.0,
+        "tabc_rank": 2,
+        "maxpreps_rank": 2,
+        "gaso_rank": 2
       },
       {
         "rank": 2,
@@ -1019,7 +1531,11 @@
         "wins": 24,
         "losses": 2,
         "record": "24-2",
-        "consensus_rank": 3.3
+        "classification": "A",
+        "consensus_rank": 3.3,
+        "tabc_rank": 5,
+        "maxpreps_rank": 1,
+        "gaso_rank": 4
       },
       {
         "rank": 3,
@@ -1027,7 +1543,11 @@
         "wins": 9,
         "losses": 2,
         "record": "9-2",
-        "consensus_rank": 3.4
+        "classification": "A",
+        "consensus_rank": 3.4,
+        "tabc_rank": 1,
+        "maxpreps_rank": 7,
+        "gaso_rank": 1
       },
       {
         "rank": 4,
@@ -1035,7 +1555,11 @@
         "wins": 18,
         "losses": 7,
         "record": "18-7",
-        "consensus_rank": 3.7
+        "classification": "A",
+        "consensus_rank": 3.7,
+        "tabc_rank": 4,
+        "maxpreps_rank": 3,
+        "gaso_rank": 5
       },
       {
         "rank": 5,
@@ -1043,7 +1567,11 @@
         "wins": 16,
         "losses": 2,
         "record": "16-2",
-        "consensus_rank": 6.5
+        "classification": "A",
+        "consensus_rank": 6.5,
+        "tabc_rank": 7,
+        "maxpreps_rank": 5,
+        "gaso_rank": 10
       },
       {
         "rank": 6,
@@ -1051,159 +1579,239 @@
         "wins": 18,
         "losses": 6,
         "record": "18-6",
-        "consensus_rank": 7.0
+        "classification": "A",
+        "consensus_rank": 7.0,
+        "tabc_rank": 8,
+        "maxpreps_rank": 6,
+        "gaso_rank": 6
       },
       {
         "rank": 7,
+        "team_name": "Sands (Ackerly, TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "A",
+        "consensus_rank": 8.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 8,
+        "gaso_rank": null
+      },
+      {
+        "rank": 8,
         "team_name": "Munday",
         "wins": 16,
         "losses": 8,
         "record": "16-8",
-        "consensus_rank": 8.1
+        "classification": "A",
+        "consensus_rank": 8.1,
+        "tabc_rank": 6,
+        "maxpreps_rank": 11,
+        "gaso_rank": 7
       },
       {
-        "rank": 8,
+        "rank": 9,
         "team_name": "Valley",
         "wins": 15,
         "losses": 3,
         "record": "15-3",
-        "consensus_rank": 8.44
+        "classification": "A",
+        "consensus_rank": 8.44,
+        "tabc_rank": 12,
+        "maxpreps_rank": 4,
+        "gaso_rank": null
       },
       {
-        "rank": 9,
+        "rank": 10,
         "team_name": "Slocum",
         "wins": 18,
         "losses": 6,
         "record": "18-6",
-        "consensus_rank": 9.67
+        "classification": "A",
+        "consensus_rank": 9.67,
+        "tabc_rank": 10,
+        "maxpreps_rank": null,
+        "gaso_rank": 8
       },
       {
-        "rank": 10,
+        "rank": 11,
         "team_name": "Whitharral",
         "wins": 13,
         "losses": 9,
         "record": "13-9",
-        "consensus_rank": 10.33
+        "classification": "A",
+        "consensus_rank": 10.33,
+        "tabc_rank": 9,
+        "maxpreps_rank": 12,
+        "gaso_rank": null
       },
       {
-        "rank": 11,
+        "rank": 12,
         "team_name": "Perrin Whitt",
         "wins": 16,
         "losses": 6,
         "record": "16-6",
-        "consensus_rank": 10.67
+        "classification": "A",
+        "consensus_rank": 10.67,
+        "tabc_rank": 11,
+        "maxpreps_rank": null,
+        "gaso_rank": 9
       },
       {
-        "rank": 12,
+        "rank": 13,
         "team_name": "Brookeland",
         "wins": 15,
         "losses": 10,
         "record": "15-10",
-        "consensus_rank": 11.0
+        "classification": "A",
+        "consensus_rank": 11.0,
+        "tabc_rank": 3,
+        "maxpreps_rank": 23,
+        "gaso_rank": 3
       },
       {
-        "rank": 13,
+        "rank": 14,
         "team_name": "Water Valley",
         "wins": 10,
         "losses": 2,
         "record": "10-2",
-        "consensus_rank": 12.89
+        "classification": "A",
+        "consensus_rank": 12.89,
+        "tabc_rank": 16,
+        "maxpreps_rank": 9,
+        "gaso_rank": null
       },
       {
-        "rank": 14,
+        "rank": 15,
         "team_name": "Wells",
         "wins": 14,
         "losses": 10,
         "record": "14-10",
-        "consensus_rank": 13.0
+        "classification": "A",
+        "consensus_rank": 13.0,
+        "tabc_rank": 13,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
-        "rank": 15,
+        "rank": 16,
+        "team_name": "Crosbyton (TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "A",
+        "consensus_rank": 13.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 13,
+        "gaso_rank": null
+      },
+      {
+        "rank": 17,
         "team_name": "Kennard",
         "wins": 13,
         "losses": 10,
         "record": "13-10",
-        "consensus_rank": 14.0
+        "classification": "A",
+        "consensus_rank": 14.0,
+        "tabc_rank": 14,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
-        "rank": 16,
+        "rank": 18,
+        "team_name": "Irion County (Mertzon, TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "A",
+        "consensus_rank": 14.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 14,
+        "gaso_rank": null
+      },
+      {
+        "rank": 19,
         "team_name": "Groveton Centerville",
         "wins": 15,
         "losses": 7,
         "record": "15-7",
-        "consensus_rank": 15.0
+        "classification": "A",
+        "consensus_rank": 15.0,
+        "tabc_rank": 15,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
-        "rank": 17,
+        "rank": 20,
         "team_name": "Moulton",
         "wins": 20,
         "losses": 4,
         "record": "20-4",
-        "consensus_rank": 15.0
+        "classification": "A",
+        "consensus_rank": 15.0,
+        "tabc_rank": 19,
+        "maxpreps_rank": 10,
+        "gaso_rank": null
       },
       {
-        "rank": 18,
+        "rank": 21,
+        "team_name": "Benjamin (TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "A",
+        "consensus_rank": 16.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 16,
+        "gaso_rank": null
+      },
+      {
+        "rank": 22,
         "team_name": "May",
         "wins": 14,
         "losses": 8,
         "record": "14-8",
-        "consensus_rank": 16.11
-      },
-      {
-        "rank": 19,
-        "team_name": "McLean",
-        "wins": 13,
-        "losses": 1,
-        "record": "13-1",
-        "consensus_rank": 19.33
-      },
-      {
-        "rank": 20,
-        "team_name": "Coolidge",
-        "wins": 11,
-        "losses": 15,
-        "record": "11-15",
-        "consensus_rank": 20.0
-      },
-      {
-        "rank": 21,
-        "team_name": "Saint Jo",
-        "wins": 17,
-        "losses": 8,
-        "record": "17-8",
-        "consensus_rank": 21.0
-      },
-      {
-        "rank": 22,
-        "team_name": "DHanis",
-        "wins": 17,
-        "losses": 3,
-        "record": "17-3",
-        "consensus_rank": 22.0
+        "classification": "A",
+        "consensus_rank": 16.11,
+        "tabc_rank": 17,
+        "maxpreps_rank": 15,
+        "gaso_rank": null
       },
       {
         "rank": 23,
-        "team_name": "McMullen County",
-        "wins": 18,
-        "losses": 5,
-        "record": "18-5",
-        "consensus_rank": 23.0
+        "team_name": "Buena Vista (Imperial, TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "A",
+        "consensus_rank": 17.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 17,
+        "gaso_rank": null
       },
       {
         "rank": 24,
-        "team_name": "Nazareth",
-        "wins": 12,
-        "losses": 8,
-        "record": "12-8",
-        "consensus_rank": 24.0
+        "team_name": "O'Donnell (TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "A",
+        "consensus_rank": 18.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 18,
+        "gaso_rank": null
       },
       {
         "rank": 25,
-        "team_name": "Zephyr",
-        "wins": 17,
-        "losses": 6,
-        "record": "17-6",
-        "consensus_rank": 25.0
+        "team_name": "Veribest (TX)",
+        "wins": 0,
+        "losses": 0,
+        "record": "",
+        "classification": "A",
+        "consensus_rank": 19.0,
+        "tabc_rank": null,
+        "maxpreps_rank": 19,
+        "gaso_rank": null
       }
     ]
   },
@@ -1211,493 +1819,733 @@
     "TAPPS_6A": [
       {
         "rank": 1,
-        "team_name": "Houston Second Baptist",
-        "wins": 22,
-        "losses": 2,
-        "record": "22-2",
-        "consensus_rank": 1.0
-      },
-      {
-        "rank": 2,
-        "team_name": "St. Michael's (Austin, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 1.8
-      },
-      {
-        "rank": 3,
-        "team_name": "TMI-Episcopal (San Antonio, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 2.0
-      },
-      {
-        "rank": 4,
-        "team_name": "Arlington Grace Prep",
-        "wins": 19,
-        "losses": 1,
-        "record": "19-1",
-        "consensus_rank": 2.33
-      },
-      {
-        "rank": 5,
-        "team_name": "Dallas Parish Episcopal",
-        "wins": 14,
-        "losses": 6,
-        "record": "14-6",
-        "consensus_rank": 2.83
-      },
-      {
-        "rank": 6,
-        "team_name": "Plano John Paul II",
-        "wins": 22,
-        "losses": 6,
-        "record": "22-6",
-        "consensus_rank": 4.0
-      },
-      {
-        "rank": 7,
-        "team_name": "San Antonio TMI Episcopal",
-        "wins": 14,
-        "losses": 7,
-        "record": "14-7",
-        "consensus_rank": 4.0
-      },
-      {
-        "rank": 8,
-        "team_name": "St. John XXIII (Katy, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 4.0
-      },
-      {
-        "rank": 9,
         "team_name": "Houston Christian",
         "wins": 27,
         "losses": 1,
         "record": "27-1",
-        "consensus_rank": 4.17
+        "classification": "TAPPS_6A",
+        "consensus_rank": 1.33,
+        "tabc_rank": 1,
+        "maxpreps_rank": null,
+        "gaso_rank": 3
+      },
+      {
+        "rank": 2,
+        "team_name": "Dallas Parish Episcopal",
+        "wins": 14,
+        "losses": 6,
+        "record": "14-6",
+        "classification": "TAPPS_6A",
+        "consensus_rank": 2.83,
+        "tabc_rank": 3,
+        "maxpreps_rank": null,
+        "gaso_rank": 2
+      },
+      {
+        "rank": 3,
+        "team_name": "Plano John Paul II",
+        "wins": 22,
+        "losses": 6,
+        "record": "22-6",
+        "classification": "TAPPS_6A",
+        "consensus_rank": 4.0,
+        "tabc_rank": 2,
+        "maxpreps_rank": null,
+        "gaso_rank": 14
+      },
+      {
+        "rank": 4,
+        "team_name": "San Antonio TMI Episcopal",
+        "wins": 14,
+        "losses": 7,
+        "record": "14-7",
+        "classification": "TAPPS_6A",
+        "consensus_rank": 4.0,
+        "tabc_rank": 4,
+        "maxpreps_rank": null,
+        "gaso_rank": null
+      },
+      {
+        "rank": 5,
+        "team_name": "Austin St. Michael\u2019s",
+        "wins": 22,
+        "losses": 6,
+        "record": "22-6",
+        "classification": "TAPPS_6A",
+        "consensus_rank": 5.0,
+        "tabc_rank": 5,
+        "maxpreps_rank": null,
+        "gaso_rank": null
+      },
+      {
+        "rank": 6,
+        "team_name": "San Antonio Antonian Prep",
+        "wins": 23,
+        "losses": 6,
+        "record": "23-6",
+        "classification": "TAPPS_6A",
+        "consensus_rank": 6.0,
+        "tabc_rank": 6,
+        "maxpreps_rank": null,
+        "gaso_rank": null
+      },
+      {
+        "rank": 7,
+        "team_name": "San Antonio Central Catholic",
+        "wins": 23,
+        "losses": 5,
+        "record": "23-5",
+        "classification": "TAPPS_6A",
+        "consensus_rank": 8.0,
+        "tabc_rank": 7,
+        "maxpreps_rank": null,
+        "gaso_rank": 13
+      },
+      {
+        "rank": 8,
+        "team_name": "Bellaire Episcopal",
+        "wins": 18,
+        "losses": 7,
+        "record": "18-7",
+        "classification": "TAPPS_6A",
+        "consensus_rank": 8.0,
+        "tabc_rank": 8,
+        "maxpreps_rank": null,
+        "gaso_rank": null
+      },
+      {
+        "rank": 9,
+        "team_name": "Houston The Kinkaid School",
+        "wins": 24,
+        "losses": 5,
+        "record": "24-5",
+        "classification": "TAPPS_6A",
+        "consensus_rank": 9.0,
+        "tabc_rank": 9,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 10,
-        "team_name": "Trinity Christian (Addison, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 4.2
+        "team_name": "Dallas St. Mark\u2019s",
+        "wins": 15,
+        "losses": 8,
+        "record": "15-8",
+        "classification": "TAPPS_6A",
+        "consensus_rank": 10.0,
+        "tabc_rank": 10,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       }
     ],
     "TAPPS_5A": [
       {
         "rank": 1,
-        "team_name": "Trinity Christian (Lubbock, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 1.0
+        "team_name": "Houston Second Baptist",
+        "wins": 22,
+        "losses": 2,
+        "record": "22-2",
+        "classification": "TAPPS_5A",
+        "consensus_rank": 1.0,
+        "tabc_rank": 1,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 2,
-        "team_name": "Fort Bend Christian Academy (Sugar Land, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 2.0
+        "team_name": "Arlington Grace Prep",
+        "wins": 19,
+        "losses": 1,
+        "record": "19-1",
+        "classification": "TAPPS_5A",
+        "consensus_rank": 2.0,
+        "tabc_rank": 2,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 3,
-        "team_name": "Bishop Dunne (Dallas, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 3.0
+        "team_name": "Midland Cristian",
+        "wins": 22,
+        "losses": 8,
+        "record": "22-8",
+        "classification": "TAPPS_5A",
+        "consensus_rank": 3.0,
+        "tabc_rank": 3,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 4,
-        "team_name": "Kelly Catholic (Beaumont, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 4.0
+        "team_name": "Lubbock Trinity Christian",
+        "wins": 21,
+        "losses": 6,
+        "record": "21-6",
+        "classification": "TAPPS_5A",
+        "consensus_rank": 4.0,
+        "tabc_rank": 4,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 5,
-        "team_name": "St. Augustine (Laredo, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 5.0
+        "team_name": "Bullard The Brook Hill School",
+        "wins": 25,
+        "losses": 4,
+        "record": "25-4",
+        "classification": "TAPPS_5A",
+        "consensus_rank": 5.0,
+        "tabc_rank": 5,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 6,
-        "team_name": "Hyde Park (Austin, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 6.0
+        "team_name": "Episcopal School of Dallas",
+        "wins": 15,
+        "losses": 10,
+        "record": "15-10",
+        "classification": "TAPPS_5A",
+        "consensus_rank": 6.0,
+        "tabc_rank": 6,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 7,
-        "team_name": "Emery/Weiner (Houston, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 7.0
+        "team_name": "Fort Worth Country Day",
+        "wins": 19,
+        "losses": 4,
+        "record": "19-4",
+        "classification": "TAPPS_5A",
+        "consensus_rank": 7.0,
+        "tabc_rank": 7,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 8,
-        "team_name": "Legacy Prep Christian Academy (Magnolia, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 8.0
+        "team_name": "The Woodlands Christian Academy",
+        "wins": 13,
+        "losses": 11,
+        "record": "13-11",
+        "classification": "TAPPS_5A",
+        "consensus_rank": 8.0,
+        "tabc_rank": 8,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 9,
-        "team_name": "Brighter Horizons Academy (Garland, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 9.0
+        "team_name": "Grapevine Faith Christian",
+        "wins": 17,
+        "losses": 11,
+        "record": "17-11",
+        "classification": "TAPPS_5A",
+        "consensus_rank": 9.0,
+        "tabc_rank": 9,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 10,
-        "team_name": "Saint Mary's Hall (San Antonio, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 10.0
+        "team_name": "Arlington Oakridge",
+        "wins": 18,
+        "losses": 6,
+        "record": "18-6",
+        "classification": "TAPPS_5A",
+        "consensus_rank": 10.0,
+        "tabc_rank": 10,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       }
     ],
     "TAPPS_4A": [
       {
         "rank": 1,
-        "team_name": "Westbury Christian (Houston, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 1.0
+        "team_name": "Mckinney Christian",
+        "wins": 30,
+        "losses": 1,
+        "record": "30-1",
+        "classification": "TAPPS_4A",
+        "consensus_rank": 1.0,
+        "tabc_rank": 1,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 2,
-        "team_name": "Covenant Christian (Colleyville, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 2.0
+        "team_name": "Houston St Thomas Episcopal",
+        "wins": 18,
+        "losses": 7,
+        "record": "18-7",
+        "classification": "TAPPS_4A",
+        "consensus_rank": 2.0,
+        "tabc_rank": 2,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 3,
-        "team_name": "St. Thomas Episcopal (Houston, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 3.0
+        "team_name": "Houston Westbury",
+        "wins": 22,
+        "losses": 6,
+        "record": "22-6",
+        "classification": "TAPPS_4A",
+        "consensus_rank": 3.0,
+        "tabc_rank": 3,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 4,
-        "team_name": "Bishop Gorman (Tyler, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 4.0
+        "team_name": "Tyler Bishop Gorman",
+        "wins": 15,
+        "losses": 7,
+        "record": "15-7",
+        "classification": "TAPPS_4A",
+        "consensus_rank": 4.0,
+        "tabc_rank": 4,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 5,
-        "team_name": "The Christian School at Castle Hills (San Antonio, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 6.0
+        "team_name": "Lubbock Christian",
+        "wins": 12,
+        "losses": 7,
+        "record": "12-7",
+        "classification": "TAPPS_4A",
+        "consensus_rank": 5.0,
+        "tabc_rank": 5,
+        "maxpreps_rank": 5,
+        "gaso_rank": null
       },
       {
         "rank": 6,
-        "team_name": "Veritas Academy (Austin, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 7.0
+        "team_name": "Colleyville Covenant",
+        "wins": 14,
+        "losses": 4,
+        "record": "14-4",
+        "classification": "TAPPS_4A",
+        "consensus_rank": 6.0,
+        "tabc_rank": 6,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 7,
-        "team_name": "Prince of Peace (Carrollton, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 8.0
+        "team_name": "Houston St. Francis",
+        "wins": 10,
+        "losses": 15,
+        "record": "10-15",
+        "classification": "TAPPS_4A",
+        "consensus_rank": 7.0,
+        "tabc_rank": 7,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 8,
-        "team_name": "Lubbock Christian (Lubbock, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 9.0
+        "team_name": "San Antonio Holy Cross",
+        "wins": 17,
+        "losses": 8,
+        "record": "17-8",
+        "classification": "TAPPS_4A",
+        "consensus_rank": 8.0,
+        "tabc_rank": 8,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 9,
-        "team_name": "Trinity Christian (Willow Park, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 10.0
+        "team_name": "Waco Vanguard",
+        "wins": 17,
+        "losses": 3,
+        "record": "17-3",
+        "classification": "TAPPS_4A",
+        "consensus_rank": 9.0,
+        "tabc_rank": 9,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 10,
-        "team_name": "Northland Christian (Houston, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 11.0
+        "team_name": "Dallas Covenant",
+        "wins": 26,
+        "losses": 3,
+        "record": "26-3",
+        "classification": "TAPPS_4A",
+        "consensus_rank": 10.0,
+        "tabc_rank": 10,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       }
     ],
     "TAPPS_3A": [
       {
         "rank": 1,
-        "team_name": "Live Oak Classical (Waco, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 1.0
+        "team_name": "Waco Live Oak",
+        "wins": 22,
+        "losses": 4,
+        "record": "22-4",
+        "classification": "TAPPS_3A",
+        "consensus_rank": 1.0,
+        "tabc_rank": 1,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 2,
-        "team_name": "Alpha Omega Academy (Huntsville, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 2.0
+        "team_name": "Faith Academy of Marble Falls",
+        "wins": 15,
+        "losses": 7,
+        "record": "15-7",
+        "classification": "TAPPS_3A",
+        "consensus_rank": 2.0,
+        "tabc_rank": 2,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 3,
-        "team_name": "Lakehill Prep (Dallas, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 3.0
+        "team_name": "Keene Chisholm Trail",
+        "wins": 13,
+        "losses": 3,
+        "record": "13-3",
+        "classification": "TAPPS_3A",
+        "consensus_rank": 3.0,
+        "tabc_rank": 3,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 4,
-        "team_name": "Yavneh Academy (Dallas, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 4.0
+        "team_name": "Huntsville Alpha Omega",
+        "wins": 10,
+        "losses": 1,
+        "record": "10-1",
+        "classification": "TAPPS_3A",
+        "consensus_rank": 4.0,
+        "tabc_rank": 4,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 5,
-        "team_name": "Heritage Christian (Rockwall, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 5.0
+        "team_name": "Lakehill Prep",
+        "wins": 15,
+        "losses": 5,
+        "record": "15-5",
+        "classification": "TAPPS_3A",
+        "consensus_rank": 4.11,
+        "tabc_rank": 5,
+        "maxpreps_rank": 3,
+        "gaso_rank": null
       },
       {
         "rank": 6,
-        "team_name": "Covenant Classical (Fort Worth, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 6.0
+        "team_name": "Yavneh",
+        "wins": 7,
+        "losses": 7,
+        "record": "7-7",
+        "classification": "TAPPS_3A",
+        "consensus_rank": 6.0,
+        "tabc_rank": 6,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 7,
-        "team_name": "Central Texas Christian (Temple, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 7.0
+        "team_name": "Rockwall Heritage",
+        "wins": 12,
+        "losses": 4,
+        "record": "12-4",
+        "classification": "TAPPS_3A",
+        "consensus_rank": 7.0,
+        "tabc_rank": 7,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 8,
-        "team_name": "Abilene Christian (Abilene, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 8.0
+        "team_name": "Dallas Lutheran",
+        "wins": 10,
+        "losses": 3,
+        "record": "10-3",
+        "classification": "TAPPS_3A",
+        "consensus_rank": 8.0,
+        "tabc_rank": 8,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 9,
-        "team_name": "Keystone (San Antonio, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 9.0
+        "team_name": "Abilene Christian",
+        "wins": 10,
+        "losses": 11,
+        "record": "10-11",
+        "classification": "TAPPS_3A",
+        "consensus_rank": 8.56,
+        "tabc_rank": 9,
+        "maxpreps_rank": 8,
+        "gaso_rank": null
       },
       {
         "rank": 10,
-        "team_name": "Christian Life Preparatory (Fort Worth, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 10.0
+        "team_name": "Lucas Christian",
+        "wins": 16,
+        "losses": 14,
+        "record": "16-14",
+        "classification": "TAPPS_3A",
+        "consensus_rank": 10.0,
+        "tabc_rank": 10,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       }
     ],
     "TAPPS_2A": [
       {
         "rank": 1,
-        "team_name": "First Baptist (Dallas, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 1.0
+        "team_name": "First Baptist Academy-Dallas",
+        "wins": 11,
+        "losses": 4,
+        "record": "11-4",
+        "classification": "TAPPS_2A",
+        "consensus_rank": 1.0,
+        "tabc_rank": 1,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 2,
-        "team_name": "Holy Cross Catholic Academy (Amarillo, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 2.0
+        "team_name": "Holy Cross Catholic Academy-Amarillo",
+        "wins": 16,
+        "losses": 8,
+        "record": "16-8",
+        "classification": "TAPPS_2A",
+        "consensus_rank": 2.0,
+        "tabc_rank": 2,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 3,
-        "team_name": "Victory Christian Academy (Decatur, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 3.0
+        "team_name": "Legacy Christian Academy-Beaumont",
+        "wins": 21,
+        "losses": 6,
+        "record": "21-6",
+        "classification": "TAPPS_2A",
+        "consensus_rank": 3.0,
+        "tabc_rank": 3,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 4,
-        "team_name": "Ascension Academy (Amarillo, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 4.0
+        "team_name": "O\u2019Connell College Preparatory School-Galveston",
+        "wins": 14,
+        "losses": 11,
+        "record": "14-11",
+        "classification": "TAPPS_2A",
+        "consensus_rank": 4.0,
+        "tabc_rank": 4,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 5,
-        "team_name": "Bracken Christian (Bulverde, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 5.0
+        "team_name": "Valor Preparatory Academy-Waco",
+        "wins": 8,
+        "losses": 6,
+        "record": "8-6",
+        "classification": "TAPPS_2A",
+        "consensus_rank": 5.0,
+        "tabc_rank": 5,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 6,
-        "team_name": "O'Connell (Galveston, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 6.0
+        "team_name": "St Paul Catholic School-Shiner",
+        "wins": 16,
+        "losses": 4,
+        "record": "16-4",
+        "classification": "TAPPS_2A",
+        "consensus_rank": 6.0,
+        "tabc_rank": 6,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 7,
-        "team_name": "Garland Christian Academy (Garland, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 7.0
+        "team_name": "Ascension Academy-Amarillo",
+        "wins": 18,
+        "losses": 4,
+        "record": "18-4",
+        "classification": "TAPPS_2A",
+        "consensus_rank": 7.0,
+        "tabc_rank": 7,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 8,
-        "team_name": "Nazarene Christian Academy (Crowley, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 8.0
+        "team_name": "Victory Christian School-Decatur",
+        "wins": 16,
+        "losses": 6,
+        "record": "16-6",
+        "classification": "TAPPS_2A",
+        "consensus_rank": 8.0,
+        "tabc_rank": 8,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 9,
-        "team_name": "Faith Academy (Victoria, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 10.0
+        "team_name": "Faith Academy-Victoria",
+        "wins": 20,
+        "losses": 7,
+        "record": "20-7",
+        "classification": "TAPPS_2A",
+        "consensus_rank": 9.0,
+        "tabc_rank": 9,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 10,
-        "team_name": "Valor Preparatory Academy (Waco, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 11.0
+        "team_name": "Bracken Christian School-Bulverde",
+        "wins": 16,
+        "losses": 8,
+        "record": "16-8",
+        "classification": "TAPPS_2A",
+        "consensus_rank": 10.0,
+        "tabc_rank": 10,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       }
     ],
     "TAPPS_1A": [
       {
         "rank": 1,
-        "team_name": "The Covenant Preparatory School (Kingwood, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 1.0
+        "team_name": "The Covenant Preparatory School-Kingwood",
+        "wins": 17,
+        "losses": 2,
+        "record": "17-2",
+        "classification": "TAPPS_1A",
+        "consensus_rank": 1.0,
+        "tabc_rank": 1,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 2,
-        "team_name": "Divine Savior Academy - Sienna (Missouri City, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 2.0
+        "team_name": "Divine Savior Academy-Missouri City",
+        "wins": 14,
+        "losses": 1,
+        "record": "14-1",
+        "classification": "TAPPS_1A",
+        "consensus_rank": 2.0,
+        "tabc_rank": 2,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 3,
-        "team_name": "Harvest Christian (Edinburg, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 3.0
+        "team_name": "Founders Christian School-Spring",
+        "wins": 19,
+        "losses": 5,
+        "record": "19-5",
+        "classification": "TAPPS_1A",
+        "consensus_rank": 3.0,
+        "tabc_rank": 3,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 4,
-        "team_name": "Heritage Christian (Fredericksburg, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 4.0
+        "team_name": "Harvest Christian Academy-Edinburgh",
+        "wins": 24,
+        "losses": 9,
+        "record": "24-9",
+        "classification": "TAPPS_1A",
+        "consensus_rank": 4.0,
+        "tabc_rank": 4,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 5,
-        "team_name": "Founders Christian (Spring, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 5.0
+        "team_name": "Cornerstone Christian Academy-Granbury",
+        "wins": 12,
+        "losses": 5,
+        "record": "12-5",
+        "classification": "TAPPS_1A",
+        "consensus_rank": 5.0,
+        "tabc_rank": 5,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 6,
-        "team_name": "Cornerstone Christian Academy (Granbury, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 6.0
+        "team_name": "Robert M Beren Academy-Houston",
+        "wins": 6,
+        "losses": 1,
+        "record": "6-1",
+        "classification": "TAPPS_1A",
+        "consensus_rank": 6.0,
+        "tabc_rank": 6,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 7,
-        "team_name": "Lifestyle Christian (Conroe, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 7.0
+        "team_name": "Texhoma Christian School-Sherman",
+        "wins": 11,
+        "losses": 11,
+        "record": "11-11",
+        "classification": "TAPPS_1A",
+        "consensus_rank": 7.0,
+        "tabc_rank": 7,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 8,
-        "team_name": "Beren Academy (Houston, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 8.0
+        "team_name": "Christ Academy-Wichita Falls",
+        "wins": 7,
+        "losses": 4,
+        "record": "7-4",
+        "classification": "TAPPS_1A",
+        "consensus_rank": 8.0,
+        "tabc_rank": 8,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 9,
-        "team_name": "Second Baptist University-Model (Houston, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 9.0
+        "team_name": "Heritage School-Fredericksburg",
+        "wins": 5,
+        "losses": 3,
+        "record": "5-3",
+        "classification": "TAPPS_1A",
+        "consensus_rank": 9.0,
+        "tabc_rank": 9,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       },
       {
         "rank": 10,
-        "team_name": "Christ Academy (Wichita Falls, TX)",
-        "wins": 0,
-        "losses": 0,
-        "record": "",
-        "consensus_rank": 10.0
+        "team_name": "Austin Classical School",
+        "wins": 9,
+        "losses": 6,
+        "record": "9-6",
+        "classification": "TAPPS_1A",
+        "consensus_rank": 10.0,
+        "tabc_rank": 10,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       }
     ]
   }

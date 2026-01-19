@@ -19,18 +19,18 @@ def load_rankings_file(filename):
         return {}
 
 
-def normalize_team_name(name):
+def normalize_team_name(name, is_private=False):
     """
     Enhanced normalization for matching team names across sources.
-    Handles patterns like:
+
+    For UIL (public schools):
     - "Seven Lakes (Katy, TX)" -> "seven lakes"
     - "Katy Seven Lakes" -> "seven lakes"
-    - "Heritage (Frisco, TX)" -> "heritage"
-    - "Frisco Heritage" -> "heritage"
     - "SA Brennan" -> "brennan"
-    - "San Antonio Brennan" -> "brennan"
-    - "Bmt United" -> "united"
-    - "Beaumont United" -> "united"
+
+    For Private schools (TAPPS):
+    - Keep city prefixes (Houston Christian != Lubbock Christian)
+    - Only remove parenthetical info and suffixes
     """
     import re
 
@@ -61,26 +61,28 @@ def normalize_team_name(name):
         if name.startswith(abbr):
             name = full + name[len(abbr):]
 
-    # Common city prefixes to remove for matching
-    city_prefixes = [
-        'katy', 'frisco', 'dallas', 'houston', 'austin', 'san antonio',
-        'fort worth', 'arlington', 'plano', 'beaumont', 'lubbock',
-        'corpus christi', 'el paso', 'mckinney', 'denton', 'converse',
-        'humble', 'cibolo', 'mansfield', 'fort bend', 'klein', 'cypress',
-        'alvin', 'comal', 'lucas', 'prosper', 'amarillo', 'killeen',
-        'west', 'tyler', 'canyon', 'waxahachie', 'palestine', 'liberty',
-        'ropesville', 'waco', 'bullard', 'midland', 'round rock',
-        'northwest', 'north', 'south', 'east'
-    ]
+    # For UIL only: Remove city prefixes
+    # For TAPPS: Keep city prefixes (they distinguish schools like Houston Christian vs Lubbock Christian)
+    if not is_private:
+        city_prefixes = [
+            'katy', 'frisco', 'dallas', 'houston', 'austin', 'san antonio',
+            'fort worth', 'arlington', 'plano', 'beaumont', 'lubbock',
+            'corpus christi', 'el paso', 'mckinney', 'denton', 'converse',
+            'humble', 'cibolo', 'mansfield', 'fort bend', 'klein', 'cypress',
+            'alvin', 'comal', 'lucas', 'prosper', 'amarillo', 'killeen',
+            'west', 'tyler', 'canyon', 'waxahachie', 'palestine', 'liberty',
+            'ropesville', 'waco', 'bullard', 'midland', 'round rock',
+            'northwest', 'north', 'south', 'east'
+        ]
 
-    # Sort by length (longest first) to match "san antonio" before "san"
-    city_prefixes.sort(key=len, reverse=True)
+        # Sort by length (longest first) to match "san antonio" before "san"
+        city_prefixes.sort(key=len, reverse=True)
 
-    # Remove city prefix if present
-    for city in city_prefixes:
-        if name.startswith(city + ' '):
-            name = name[len(city)+1:].strip()
-            break
+        # Remove city prefix if present
+        for city in city_prefixes:
+            if name.startswith(city + ' '):
+                name = name[len(city)+1:].strip()
+                break
 
     # Remove common suffixes
     suffixes = ['high school', 'hs', 'h.s.', 'isd']
@@ -112,10 +114,11 @@ def merge_classification_rankings(tabc_teams, maxpreps_teams, gaso_teams, classi
         List of merged team rankings
     """
     team_data = {}
+    is_tapps = classification.startswith('TAPPS')
 
     # Process TABC rankings (50% weight) - TABC names are authoritative
     for team in tabc_teams:
-        normalized = normalize_team_name(team['team_name'])
+        normalized = normalize_team_name(team['team_name'], is_private=is_tapps)
         if normalized not in team_data:
             team_data[normalized] = {
                 'team_name': team['team_name'],  # Use TABC name as canonical
@@ -127,31 +130,33 @@ def merge_classification_rankings(tabc_teams, maxpreps_teams, gaso_teams, classi
 
     # Process MaxPreps rankings (40% weight)
     for team in maxpreps_teams:
-        normalized = normalize_team_name(team['team_name'])
+        normalized = normalize_team_name(team['team_name'], is_private=is_tapps)
         if normalized in team_data:
             # Match found - add MaxPreps rank
             team_data[normalized]['maxpreps_rank'] = team['rank']
-        else:
-            # No match - add as new team (but won't have TABC data)
+        elif not is_tapps:
+            # For UIL only: add as new team if no TABC match
             team_data[normalized] = {
                 'team_name': team['team_name'],
                 'classification': classification,
                 'maxpreps_rank': team['rank']
             }
+        # For TAPPS: skip MaxPreps-only teams (they don't have records)
 
     # Process GASO rankings (10% weight)
     for team in gaso_teams:
-        normalized = normalize_team_name(team['team_name'])
+        normalized = normalize_team_name(team['team_name'], is_private=is_tapps)
         if normalized in team_data:
             # Match found - add GASO rank
             team_data[normalized]['gaso_rank'] = team['rank']
-        else:
-            # No match - add as new team
+        elif not is_tapps:
+            # For UIL only: add as new team if no TABC match
             team_data[normalized] = {
                 'team_name': team['team_name'],
                 'classification': classification,
                 'gaso_rank': team['rank']
             }
+        # For TAPPS: skip GASO-only teams (they don't have records)
 
     # Calculate weighted average rankings
     # Weights: TABC 50%, MaxPreps 40%, GASO 10%
