@@ -3,65 +3,33 @@
 <h2>TBBAS Methodology</h2>
 
 <h3>Overview</h3>
-<p>Texas Boys Basketball Analytics System (TBBAS) provides KenPom-style efficiency ratings for Texas high school basketball teams across UIL, TAPPS, and SPC classifications.</p>
+<p>Texas Boys Basketball Analytics System (TBBAS) provides consensus rankings for Texas high school basketball teams across UIL, TAPPS, and SPC classifications.</p>
 
-<h3>Data Sources & Weighted Average System</h3>
-<p>TBBAS rankings use a <strong>weighted average</strong> combining multiple data sources. The final top 25 (UIL) or top 10 (TAPPS) teams are determined by this consensus approach:</p>
+<h3>Ranking Sources</h3>
+<p>TBBAS rankings are calculated using a weighted average of three trusted sources:</p>
 <ul>
-    <li><strong>33.3% Calculated Rankings:</strong> Efficiency ratings computed from game box scores (15+ games required)</li>
-    <li><strong>33.3% TABC:</strong> Texas Association of Basketball Coaches weekly rankings</li>
-    <li><strong>33.3% MaxPreps:</strong> Daily updated rankings from MaxPreps</li>
+    <li><strong>TABC:</strong> Texas Association of Basketball Coaches weekly rankings</li>
+    <li><strong>MaxPreps:</strong> Daily updated rankings from MaxPreps</li>
+    <li><strong>GASO:</strong> Great American Shootout rankings</li>
 </ul>
 
-<p><strong>Important:</strong> TABC rankings serve as ONE of three data sources (33.3% weight), not a guarantee. A team ranked in TABC's top 25/10 may not appear in TBBAS top 25/10 if other sources rank them lower. Conversely, teams not ranked by TABC can still make TBBAS top 25/10 based on strong performance in other sources.</p>
+<p>By combining multiple ranking sources, TBBAS provides a more balanced consensus view than any single source alone.</p>
 
-<p><strong>How the weighted average works:</strong></p>
+<h3>How Rankings Work</h3>
 <ul>
-    <li>Each team receives a weighted average rank from all available sources</li>
-    <li>Teams are sorted by this average, and the top 25 (UIL) or top 10 (TAPPS) receive sequential ranks 1-25 or 1-10</li>
-    <li>Teams need at least 15 games in our database for calculated rankings to be included (prevents incomplete data penalty)</li>
-    <li>When sources are unavailable, weights auto-adjust: 3 sources = 33.3% each, 2 sources = 50% each</li>
-    <li>If only TABC is available, it receives 100% weight as a fallback</li>
+    <li>Each team's position is determined by a weighted average of their rank in each available source</li>
+    <li>UIL Classifications: Top 25 teams displayed</li>
+    <li>TAPPS/SPC Classifications: Top 10 teams displayed</li>
+    <li>Win-loss records are sourced from TABC (the official record keeper)</li>
 </ul>
-
-<p><strong>Coach Submissions:</strong> Box scores submitted directly by coaches via our online form contribute to the calculated efficiency ratings (33.3% weight in the overall system).</p>
-<p style="background: #fff3cd; padding: 15px; border-radius: 5px; margin: 20px 0;">
-    <strong>Note for Coaches:</strong> Your submitted box scores are automatically included in rankings calculations!
-    The more detailed stats you provide (FG%, 3PT%, rebounds, etc.), the more accurate the efficiency ratings will be.
-</p>
-
-<h3>Core Metrics</h3>
-<ul>
-    <li><strong>Net Rating:</strong> Offensive Efficiency - Defensive Efficiency (higher is better)</li>
-    <li><strong>Offensive Efficiency:</strong> Points scored per 100 possessions</li>
-    <li><strong>Defensive Efficiency:</strong> Points allowed per 100 possessions (lower is better)</li>
-    <li><strong>Adjusted Tempo:</strong> Possessions per game (estimated from available stats)</li>
-</ul>
-
-<h3>Calculation Method</h3>
-<p>Rankings are calculated using efficiency-based metrics similar to KenPom college basketball ratings:</p>
-<ol>
-    <li>Possessions are estimated using: <code>FGA + 0.44 × FTA + TO</code></li>
-    <li>Offensive efficiency = (Points Scored / Possessions) × 100</li>
-    <li>Defensive efficiency = (Points Allowed / Possessions) × 100</li>
-    <li>Net Rating = Offensive Efficiency - Defensive Efficiency</li>
-    <li>Teams are ranked by Net Rating within their classification</li>
-</ol>
 
 <h3>Update Schedule</h3>
 <ul>
-    <li><strong>Daily:</strong> Box scores collected from MaxPreps and coach submissions</li>
-    <li><strong>Weekly:</strong> Rankings recalculated every Monday combining all data sources</li>
+    <li><strong>Weekly:</strong> Rankings updated every Monday combining all data sources</li>
     <li><strong>Season:</strong> November 11, 2025 - March 9, 2026</li>
 </ul>
 
 <h3>About TBBAS</h3>
-<p>TBBAS was created to provide data-driven analytics for Texas high school basketball, helping coaches, players, and fans better understand team performance beyond traditional win-loss records.</p>
-
-<p style="margin-top: 30px;">
-    <a href="/submit-boxscore" style="background: #27ae60; color: white; padding: 12px 24px; border-radius: 5px; text-decoration: none; display: inline-block;">
-        Submit Your Game Box Score
-    </a>
-</p>
+<p>TBBAS was created to provide comprehensive rankings for Texas high school basketball, helping coaches, players, and fans track team performance throughout the season.</p>
 
 {% endblock %}

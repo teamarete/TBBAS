@@ -2,18 +2,14 @@
 {% block content %}
 <h2>{{ classification_name }} - TBBAS Rankings</h2>
 <p style="color: #666; margin-bottom: 20px;">
-    Consensus rankings using weighted average from multiple sources.
-    <em>Sources: Calculated efficiency ratings, TABC, MaxPreps. Weights auto-adjust when sources unavailable.</em>
+    Consensus rankings based on TABC, MaxPreps, and GASO.
 </p>
 <table>
     <thead>
         <tr>
-            <th>Rank</th>
+            <th style="width: 60px;">Rank</th>
             <th>Team</th>
-            <th>Record</th>
-            <th>PPG</th>
-            <th>Opp PPG</th>
-            <th>Margin</th>
+            <th style="width: 100px;">Record</th>
         </tr>
     </thead>
     <tbody>
@@ -22,9 +18,6 @@
             <td>{% if team.rank and team.rank > 0 %}{{ team.rank }}{% else %}—{% endif %}</td>
             <td><strong>{{ team.team_name }}</strong></td>
             <td>{% if team.wins is not none and team.losses is not none %}{{ team.wins }}-{{ team.losses }}{% elif team.record %}{{ team.record }}{% else %}—{% endif %}</td>
-            <td>{% if team.ppg %}{{ "%.1f"|format(team.ppg) }}{% else %}—{% endif %}</td>
-            <td>{% if team.opp_ppg %}{{ "%.1f"|format(team.opp_ppg) }}{% else %}—{% endif %}</td>
-            <td>{% if team.ppg and team.opp_ppg %}{{ "%+.1f"|format(team.ppg - team.opp_ppg) }}{% else %}—{% endif %}</td>
         </tr>
         {% endfor %}
     </tbody>

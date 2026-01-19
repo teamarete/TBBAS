@@ -18,160 +18,160 @@ class GASOScraper:
     """Scraper for GASO rankings"""
 
     def __init__(self):
-        # GASO Pre-Season Rankings (manually provided)
+        # GASO Midseason Rankings (Updated January 2026)
         self.gaso_preseason_rankings = {
-            # Class 6A (Top 25)
+            # Class 6A (Top 25) - Midseason Update
             'AAAAAA': [
-                'Humble Atascocita',
-                'San Antonio Brennan',
                 'Katy Seven Lakes',
                 'North Crowley',
                 'Little Elm',
-                'Austin Westlake',
-                'Cibolo Steele',
+                'San Antonio Brennan',
+                'Humble Atascocita',
                 'Duncanville',
-                'Katy Jordan',
-                'Allen',
-                'Conroe Grand Oaks',
-                'Cypress Falls',
-                'Humble Summer Creek',
-                'San Antonio Harlan',
-                'Trophy Club Byron Nelson',
                 'Pearland',
-                'Lancaster',
-                'Denton Guyer',
-                'Richmond George Ranch',
-                'Odessa Permian',
+                'Cibolo Steele',
+                'Allen',
                 'Converse Judson',
-                'Arlington Martin',
-                'Clear Springs',
+                'Dickinson',
+                'Mansfield Lake Ridge',
+                'Cypress Springs',
+                'Austin Westlake',
+                'Denton Guyer',
+                'Cypress Falls',
+                'Klein Oak',
+                'Katy Jordan',
+                'Plano East',
+                'Katy Tompkins',
+                'Lancaster',
+                'Austin Bowie',
                 'DeSoto',
-                'Willis'
+                'Northwest Eaton',
+                'South Grand Prairie'
             ],
-            # Class 5A (Top 25)
+            # Class 5A (Top 25) - Midseason Update
             'AAAAA': [
                 'Frisco Heritage',
-                'Beaumont West Brook',
-                'Bridville',
                 'Beaumont United',
+                'Birdville',
                 'Lufkin',
-                'Red Oak',
-                'Melissa',
+                'Mansfield Summit',
                 'Frisco Memorial',
                 'Mansfield Timberview',
-                'Friendswood',
-                'San Antonio Wagner',
+                'Red Oak',
                 'Fort Bend Marshall',
-                'Dallas South Oak Cliff',
-                'Anna',
+                'Beaumont West Brook',
+                'Friendswood',
                 'Killeen Ellison',
-                'Dallas Highland Park',
-                'Mansfield Summit',
-                'Frisco Lone Star',
-                'Corpus Christi Veterans Memorial',
-                'Leander Glenn',
-                'San Antonio Alamo Heights',
+                'Alvin Iowa Colony',
+                'Denton',
+                'Comal Pieper',
+                'Lucas Lovejoy',
+                'San Antonio Veterans Memorial',
                 'Amarillo',
+                'San Antonio Alamo Heights',
                 'Prosper Walnut Grove',
+                'Dallas Highland Park',
                 'Amarillo Palo Duro',
-                'Denton'
+                'Corpus Christi Veterans Memorial',
+                'West Mesquite',
+                'Frisco Lone Star'
             ],
-            # Class 4A (Top 25)
+            # Class 4A (Top 25) - Midseason Update
             'AAAA': [
                 'Dallas Carter',
                 'Dallas Kimball',
-                'Lubbock Estacado',
-                'Fort Bend Crawford',
-                'Frisco Panther Creek',
-                'Kennedale',
-                'Lamarque',
-                'Houston Yates',
-                'Lubbock Cooper Liberty',
+                'LaMarque',
                 'Houston Washington',
+                'Lubbock Estacado',
+                'Houston Wheatley',
+                'Houston Yates',
                 'Burkburnett',
                 'Krum',
-                'Celina',
-                'Dallas Lincoln',
-                'Carrollton Ranchview',
+                'Kennedale',
                 'Wimberley',
-                'Brock',
+                'Lubbock Cooper Liberty',
+                'Fort Bend Crawford',
+                'Paris',
                 'Canyon West Plains',
-                'Tyler Chapel Hill',
+                'Brock',
+                'Dallas Lincoln',
                 'Fort Worth Southwest',
+                'Frisco Panther Creek',
+                'Tyler Chapel Hill',
                 'Waxahachie Life',
-                'Austin LBJ',
-                'Canyon Randall',
+                'Canyon',
                 'Comal Davenport',
-                'Waco La Vega'
+                'Gainesville',
+                'Farmersville'
             ],
-            # Class 3A
+            # Class 3A (Top 10) - Midseason Update
             'AAA': [
-                'Palestine Westwood',
-                'Paradise',
                 'Dallas Madison',
-                'Mexia',
+                'Paradise',
                 'Onalaska',
-                'Slaton',
-                'Brownfield',
-                'Duncanville Village Tech',
+                'Palestine Westwood',
+                'Corpus Christi London',
                 'Liberty Eylau',
-                'San Antonio Cole'
+                'Shallowater',
+                'Brownfield',
+                'Goliad',
+                'Slaton'
             ],
-            # Class 2A
+            # Class 2A (Top 10) - Midseason Update
             'AA': [
                 'Martins Mill',
                 'Lipan',
-                'Waco Meyer',
-                'New Home',
-                'Tom Bean',
                 'Graford',
                 'Hearne',
                 'Ropesville Ropes',
-                'Marlin',
-                'Bosqueville'
+                'Bosqueville',
+                'Roscoe',
+                'Waco Meyer',
+                'Abernathy',
+                'Tom Bean'
             ],
-            # Class 1A
+            # Class 1A (Top 10) - Midseason Update
             'A': [
                 'Jayton',
                 'Gordon',
                 'Brookeland',
                 'Huckabay',
                 'Texline',
-                'Wells',
-                'Perrin-Whitt',
                 'Fayetteville',
-                'Coolidge',
-                'Munday'
+                'Munday',
+                'Slocum',
+                'Perrin Whitt',
+                'Richards'
             ]
         }
 
-        # TAPPS/SPC Pre-Season Rankings (Top 25 combined)
+        # TAPPS/SPC Midseason Rankings (Top 25 combined) - January 2026
         self.gaso_tapps_rankings = [
             'Houston Second Baptist',
             'Dallas Parish Episcopal',
-            "Austin St. Michael's",
-            'San Antonio Antonian',
+            'Houston Christian',
             'Arlington Grace Prep',
+            "Austin St. Michael's",
             'San Antonio TMI',
+            'San Antonio Antonian',
             "Dallas St. Mark's",
             'Lubbock Trinity Christian',
             'Dallas Greenhill',
-            'Houston Christian',
-            'The Woodlands Christian',
             'McKinney Christian',
+            'Houston Episcopal',
+            'San Antonio Central Catholic',
             'Plano John Paul II',
             'Episcopal School of Dallas',
-            'Houston St. Francis',
-            'Fort Bend Christian Academy',
-            'Midland Christian',
+            'The Woodlands Christian',
             'Houston Kinkaid',
+            'Midland Christian',
+            'Houston St. Thomas Episcopal',
             'Lubbock Christian',
-            'Plano Prestonwood',
+            'Houston Westbury Christian',
+            'Dallas Bishop Lynch',
             'Bullard Brook Hill',
             'Tyler Bishop Gorman',
-            'Houston Westbury Christian',
-            'Amarillo Holy Cross',
-            'Dallas First Baptist'
+            'Plano Prestonwood'
         ]
 
     def scrape_uil_rankings(self):
