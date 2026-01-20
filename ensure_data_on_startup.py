@@ -14,7 +14,31 @@ def check_and_update_rankings():
     # Master file is in root directory, not data/ (to avoid Railway volume mount issues)
     master_file = Path(__file__).parent / 'rankings.json.master'
 
-    # Check if file exists and has data
+    # ALWAYS restore from master file on startup to ensure latest rankings
+    # This fixes Railway volume mount issues where old data persists
+    if master_file.exists():
+        print("🔄 Restoring rankings from gold master file (forced on startup)...")
+        try:
+            import shutil
+            # Ensure data directory exists
+            data_file.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy(master_file, data_file)
+            print("✓ Rankings restored successfully from gold master!")
+
+            # Verify the restored data
+            with open(data_file, 'r') as f:
+                restored_data = json.load(f)
+            uil_6a = restored_data.get('uil', {}).get('AAAAAA', [])
+            tapps_6a = restored_data.get('private', {}).get('TAPPS_6A', [])
+            ranked_uil = sum(1 for t in uil_6a if t.get('rank') and 1 <= t['rank'] <= 25)
+            ranked_tapps = sum(1 for t in tapps_6a if t.get('rank') and 1 <= t['rank'] <= 10)
+            print(f"   Restored: UIL 6A {ranked_uil}/25 teams, TAPPS 6A {ranked_tapps}/10 teams")
+            print(f"   Last updated: {restored_data.get('last_updated', 'unknown')}")
+            return True
+        except Exception as e:
+            print(f"❌ Failed to restore from gold master: {e}")
+
+    # Fallback: check existing data
     needs_restore = False
     needs_update = False
 
