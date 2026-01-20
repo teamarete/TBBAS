@@ -56,10 +56,20 @@ def normalize_team_name(name, is_private=False):
         'cc ': 'corpus christi ',
         'rr ': 'round rock ',
         'mans ': 'mansfield ',
+        'fb ': 'fort bend ',
     }
     for abbr, full in abbreviations.items():
         if name.startswith(abbr):
             name = full + name[len(abbr):]
+
+    # Handle "Lubbock Cooper Liberty" -> "Lubbock Liberty" (Cooper is middle school name)
+    name = name.replace('lubbock cooper liberty', 'lubbock liberty')
+
+    # Handle spacing variations
+    name = name.replace('lamarque', 'la marque')
+
+    # Compound school names that should be preserved (not split by prefix removal)
+    protected_school_names = ['west brook', 'west plains', 'north shore', 'south grand prairie']
 
     # For UIL only: Remove city prefixes
     # For TAPPS: Keep city prefixes (they distinguish schools like Houston Christian vs Lubbock Christian)
@@ -70,19 +80,26 @@ def normalize_team_name(name, is_private=False):
             'corpus christi', 'el paso', 'mckinney', 'denton', 'converse',
             'humble', 'cibolo', 'mansfield', 'fort bend', 'klein', 'cypress',
             'alvin', 'comal', 'lucas', 'prosper', 'amarillo', 'killeen',
-            'west', 'tyler', 'canyon', 'waxahachie', 'palestine', 'liberty',
+            'tyler', 'canyon', 'waxahachie', 'palestine', 'liberty',
             'ropesville', 'waco', 'bullard', 'midland', 'round rock',
-            'northwest', 'north', 'south', 'east'
+            'northwest', 'burleson', 'friendswood'
         ]
 
         # Sort by length (longest first) to match "san antonio" before "san"
         city_prefixes.sort(key=len, reverse=True)
 
-        # Remove city prefix if present
-        for city in city_prefixes:
-            if name.startswith(city + ' '):
-                name = name[len(city)+1:].strip()
+        # First check if name contains a protected compound school name
+        # If so, normalize to just that compound name
+        for protected in protected_school_names:
+            if protected in name:
+                name = protected
                 break
+        else:
+            # No protected name found, remove city prefix if present
+            for city in city_prefixes:
+                if name.startswith(city + ' '):
+                    name = name[len(city)+1:].strip()
+                    break
 
     # Remove common suffixes
     suffixes = ['high school', 'hs', 'h.s.', 'isd']
