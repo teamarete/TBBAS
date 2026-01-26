@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-26T10:20:44.088709",
+  "last_updated": "2026-01-26T14:06:28.179339",
   "source": "weighted_tabc_maxpreps_gaso",
   "uil": {
     "AAAAAA": [
@@ -592,6 +592,18 @@
         "tabc_rank": null,
         "maxpreps_rank": 19,
         "gaso_rank": null
+      },
+      {
+        "rank": 25,
+        "team_name": "Frisco Liberty",
+        "wins": 14,
+        "losses": 10,
+        "record": "14-10",
+        "classification": "AAAAA",
+        "consensus_rank": 20.89,
+        "tabc_rank": 20,
+        "maxpreps_rank": 22,
+        "gaso_rank": null
       }
     ],
     "AAAA": [
@@ -777,18 +789,6 @@
       },
       {
         "rank": 16,
-        "team_name": "Almeta Crawford",
-        "wins": 18,
-        "losses": 6,
-        "record": "18-6",
-        "classification": "AAAA",
-        "consensus_rank": 13.0,
-        "tabc_rank": null,
-        "maxpreps_rank": 13,
-        "gaso_rank": null
-      },
-      {
-        "rank": 17,
         "team_name": "Hou Wheatley",
         "wins": 11,
         "losses": 4,
@@ -800,7 +800,7 @@
         "gaso_rank": 6
       },
       {
-        "rank": 18,
+        "rank": 17,
         "team_name": "Stephenville",
         "wins": 24,
         "losses": 2,
@@ -812,7 +812,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 19,
+        "rank": 18,
         "team_name": "Panther Creek",
         "wins": 15,
         "losses": 6,
@@ -822,6 +822,18 @@
         "tabc_rank": 18,
         "maxpreps_rank": 9,
         "gaso_rank": 19
+      },
+      {
+        "rank": 19,
+        "team_name": "FB Crawford",
+        "wins": 19,
+        "losses": 6,
+        "record": "19-6",
+        "classification": "AAAA",
+        "consensus_rank": 16.0,
+        "tabc_rank": 19,
+        "maxpreps_rank": 13,
+        "gaso_rank": 13
       },
       {
         "rank": 20,
@@ -849,18 +861,6 @@
       },
       {
         "rank": 22,
-        "team_name": "FB Crawford",
-        "wins": 19,
-        "losses": 6,
-        "record": "19-6",
-        "classification": "AAAA",
-        "consensus_rank": 18.0,
-        "tabc_rank": 19,
-        "maxpreps_rank": null,
-        "gaso_rank": 13
-      },
-      {
-        "rank": 23,
         "team_name": "Brock",
         "wins": 17,
         "losses": 9,
@@ -872,7 +872,7 @@
         "gaso_rank": 16
       },
       {
-        "rank": 24,
+        "rank": 23,
         "team_name": "La Vega",
         "wins": 12,
         "losses": 2,
@@ -884,7 +884,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 25,
+        "rank": 24,
         "team_name": "Gainesville",
         "wins": 22,
         "losses": 5,
@@ -894,6 +894,18 @@
         "tabc_rank": null,
         "maxpreps_rank": 18,
         "gaso_rank": 24
+      },
+      {
+        "rank": 25,
+        "team_name": "Stafford",
+        "wins": 18,
+        "losses": 6,
+        "record": "18-6",
+        "classification": "AAAA",
+        "consensus_rank": 20.0,
+        "tabc_rank": 20,
+        "maxpreps_rank": null,
+        "gaso_rank": null
       }
     ],
     "AAA": [
