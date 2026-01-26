@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-26T10:18:19.609699",
+  "last_updated": "2026-01-26T10:20:44.088709",
   "source": "weighted_tabc_maxpreps_gaso",
   "uil": {
     "AAAAAA": [
@@ -439,18 +439,6 @@
       },
       {
         "rank": 12,
-        "team_name": "Killeen Ellison",
-        "wins": 14,
-        "losses": 12,
-        "record": "14-12",
-        "classification": "AAAAA",
-        "consensus_rank": 12.0,
-        "tabc_rank": null,
-        "maxpreps_rank": null,
-        "gaso_rank": 12
-      },
-      {
-        "rank": 13,
         "team_name": "EP Chapin",
         "wins": 18,
         "losses": 6,
@@ -462,7 +450,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 14,
+        "rank": 13,
         "team_name": "Friendswood",
         "wins": 22,
         "losses": 7,
@@ -474,7 +462,7 @@
         "gaso_rank": 11
       },
       {
-        "rank": 15,
+        "rank": 14,
         "team_name": "Comal Pieper",
         "wins": 18,
         "losses": 9,
@@ -486,7 +474,7 @@
         "gaso_rank": 15
       },
       {
-        "rank": 16,
+        "rank": 15,
         "team_name": "Iowa Colony",
         "wins": 21,
         "losses": 7,
@@ -498,7 +486,7 @@
         "gaso_rank": 13
       },
       {
-        "rank": 17,
+        "rank": 16,
         "team_name": "Anna",
         "wins": 19,
         "losses": 6,
@@ -510,7 +498,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 18,
+        "rank": 17,
         "team_name": "McAllen",
         "wins": 30,
         "losses": 0,
@@ -522,7 +510,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 19,
+        "rank": 18,
         "team_name": "Amarillo",
         "wins": 21,
         "losses": 6,
@@ -534,7 +522,7 @@
         "gaso_rank": 18
       },
       {
-        "rank": 20,
+        "rank": 19,
         "team_name": "Lucas Lovejoy",
         "wins": 18,
         "losses": 8,
@@ -546,7 +534,7 @@
         "gaso_rank": 16
       },
       {
-        "rank": 21,
+        "rank": 20,
         "team_name": "SA Veterans Memorial",
         "wins": 20,
         "losses": 6,
@@ -558,7 +546,7 @@
         "gaso_rank": 23
       },
       {
-        "rank": 22,
+        "rank": 21,
         "team_name": "New Braunfels",
         "wins": 24,
         "losses": 5,
@@ -570,7 +558,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 23,
+        "rank": 22,
         "team_name": "Hou Madison",
         "wins": 18,
         "losses": 5,
@@ -582,7 +570,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 24,
+        "rank": 23,
         "team_name": "Reedy",
         "wins": 17,
         "losses": 8,
@@ -594,7 +582,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 25,
+        "rank": 24,
         "team_name": "The Colony",
         "wins": 17,
         "losses": 9,
