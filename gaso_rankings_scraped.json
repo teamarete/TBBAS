@@ -1,0 +1,542 @@
+{
+  "last_updated": "2026-01-26T09:57:51.097569",
+  "source": "gaso_manual_input",
+  "uil": {
+    "AAAAAA": [
+      {
+        "rank": 1,
+        "team_name": "Katy Seven Lakes"
+      },
+      {
+        "rank": 2,
+        "team_name": "North Crowley"
+      },
+      {
+        "rank": 3,
+        "team_name": "Little Elm"
+      },
+      {
+        "rank": 4,
+        "team_name": "San Antonio Brennan"
+      },
+      {
+        "rank": 5,
+        "team_name": "Humble Atascocita"
+      },
+      {
+        "rank": 6,
+        "team_name": "Pearland"
+      },
+      {
+        "rank": 7,
+        "team_name": "Duncanville"
+      },
+      {
+        "rank": 8,
+        "team_name": "Converse Judson"
+      },
+      {
+        "rank": 9,
+        "team_name": "Cibolo Steele"
+      },
+      {
+        "rank": 10,
+        "team_name": "Lancaster"
+      },
+      {
+        "rank": 11,
+        "team_name": "Dickinson"
+      },
+      {
+        "rank": 12,
+        "team_name": "Galena Park North Shore"
+      },
+      {
+        "rank": 13,
+        "team_name": "Klein Oak"
+      },
+      {
+        "rank": 14,
+        "team_name": "Grand Prairie"
+      },
+      {
+        "rank": 15,
+        "team_name": "Allen"
+      },
+      {
+        "rank": 16,
+        "team_name": "Cypress Falls"
+      },
+      {
+        "rank": 17,
+        "team_name": "Mansfield"
+      },
+      {
+        "rank": 18,
+        "team_name": "Mansfield Lake Ridge"
+      },
+      {
+        "rank": 19,
+        "team_name": "Cypress Springs"
+      },
+      {
+        "rank": 20,
+        "team_name": "Houston Heights"
+      },
+      {
+        "rank": 21,
+        "team_name": "South Grand Prairie"
+      },
+      {
+        "rank": 22,
+        "team_name": "Conroe Grand Oaks"
+      },
+      {
+        "rank": 23,
+        "team_name": "Lake Travis"
+      },
+      {
+        "rank": 24,
+        "team_name": "Katy Jordan"
+      },
+      {
+        "rank": 25,
+        "team_name": "Mesquite Horn"
+      }
+    ],
+    "AAAAA": [
+      {
+        "rank": 1,
+        "team_name": "Frisco Heritage"
+      },
+      {
+        "rank": 2,
+        "team_name": "Beaumont United"
+      },
+      {
+        "rank": 3,
+        "team_name": "Beaumont West Brook"
+      },
+      {
+        "rank": 4,
+        "team_name": "Mansfield Summit"
+      },
+      {
+        "rank": 5,
+        "team_name": "Red Oak"
+      },
+      {
+        "rank": 6,
+        "team_name": "Lufkin"
+      },
+      {
+        "rank": 7,
+        "team_name": "Denton"
+      },
+      {
+        "rank": 8,
+        "team_name": "Birdville"
+      },
+      {
+        "rank": 9,
+        "team_name": "Frisco Memorial"
+      },
+      {
+        "rank": 10,
+        "team_name": "Mansfield Timberview"
+      },
+      {
+        "rank": 11,
+        "team_name": "Fort Bend Marshall"
+      },
+      {
+        "rank": 12,
+        "team_name": "San Antonio Veterans Memorial"
+      },
+      {
+        "rank": 13,
+        "team_name": "Anna"
+      },
+      {
+        "rank": 14,
+        "team_name": "Friendswood"
+      },
+      {
+        "rank": 15,
+        "team_name": "New Braunfels"
+      },
+      {
+        "rank": 16,
+        "team_name": "Alvin Iowa Colony"
+      },
+      {
+        "rank": 17,
+        "team_name": "McAllen"
+      },
+      {
+        "rank": 18,
+        "team_name": "San Antonio Alamo Heights"
+      },
+      {
+        "rank": 19,
+        "team_name": "El Paso Chapin"
+      },
+      {
+        "rank": 20,
+        "team_name": "Comal Pieper"
+      },
+      {
+        "rank": 21,
+        "team_name": "Dallas Highland Park"
+      },
+      {
+        "rank": 22,
+        "team_name": "Houston Madison"
+      },
+      {
+        "rank": 23,
+        "team_name": "Corpus Christi Ray"
+      },
+      {
+        "rank": 24,
+        "team_name": "Burleson Centennial"
+      },
+      {
+        "rank": 25,
+        "team_name": "Amarillo Tascosa"
+      }
+    ],
+    "AAAA": [
+      {
+        "rank": 1,
+        "team_name": "Dallas Carter"
+      },
+      {
+        "rank": 2,
+        "team_name": "Houston Washington"
+      },
+      {
+        "rank": 3,
+        "team_name": "La Marque"
+      },
+      {
+        "rank": 4,
+        "team_name": "Dallas Kimball"
+      },
+      {
+        "rank": 5,
+        "team_name": "Lubbock Estacado"
+      },
+      {
+        "rank": 6,
+        "team_name": "Houston Yates"
+      },
+      {
+        "rank": 7,
+        "team_name": "Krum"
+      },
+      {
+        "rank": 8,
+        "team_name": "Houston Wheatley"
+      },
+      {
+        "rank": 9,
+        "team_name": "Burkburnett"
+      },
+      {
+        "rank": 10,
+        "team_name": "Lubbock Cooper Liberty"
+      },
+      {
+        "rank": 11,
+        "team_name": "Kennedale"
+      },
+      {
+        "rank": 12,
+        "team_name": "Fort Bend Crawford"
+      },
+      {
+        "rank": 13,
+        "team_name": "Wimberley"
+      },
+      {
+        "rank": 14,
+        "team_name": "Fort Worth Southwest"
+      },
+      {
+        "rank": 15,
+        "team_name": "Seminole"
+      },
+      {
+        "rank": 16,
+        "team_name": "Waco La Vega"
+      },
+      {
+        "rank": 17,
+        "team_name": "Frisco Panther Creek"
+      },
+      {
+        "rank": 18,
+        "team_name": "Farmersville"
+      },
+      {
+        "rank": 19,
+        "team_name": "Canyon West Plains"
+      },
+      {
+        "rank": 20,
+        "team_name": "Tyler Chapel Hill"
+      },
+      {
+        "rank": 21,
+        "team_name": "Waxahachie Life"
+      },
+      {
+        "rank": 22,
+        "team_name": "Paris"
+      },
+      {
+        "rank": 23,
+        "team_name": "Dallas Lincoln"
+      },
+      {
+        "rank": 24,
+        "team_name": "Dallas Pinkston"
+      },
+      {
+        "rank": 25,
+        "team_name": "Glen Rose"
+      }
+    ],
+    "AAA": [
+      {
+        "rank": 1,
+        "team_name": "Dallas Madison"
+      },
+      {
+        "rank": 2,
+        "team_name": "Paradise"
+      },
+      {
+        "rank": 3,
+        "team_name": "Onalaska"
+      },
+      {
+        "rank": 4,
+        "team_name": "Palestine Westwood"
+      },
+      {
+        "rank": 5,
+        "team_name": "Corpus Christi London"
+      },
+      {
+        "rank": 6,
+        "team_name": "Slaton"
+      },
+      {
+        "rank": 7,
+        "team_name": "Shallowater"
+      },
+      {
+        "rank": 8,
+        "team_name": "Brownfield"
+      },
+      {
+        "rank": 9,
+        "team_name": "Goliad"
+      },
+      {
+        "rank": 10,
+        "team_name": "Wall"
+      }
+    ],
+    "AA": [
+      {
+        "rank": 1,
+        "team_name": "Martins Mill"
+      },
+      {
+        "rank": 2,
+        "team_name": "Lipan"
+      },
+      {
+        "rank": 3,
+        "team_name": "Hearne"
+      },
+      {
+        "rank": 4,
+        "team_name": "Ropesville Ropes"
+      },
+      {
+        "rank": 5,
+        "team_name": "Waco Meyer"
+      },
+      {
+        "rank": 6,
+        "team_name": "Graford"
+      },
+      {
+        "rank": 7,
+        "team_name": "Bosqueville"
+      },
+      {
+        "rank": 8,
+        "team_name": "Farwell"
+      },
+      {
+        "rank": 9,
+        "team_name": "Thorndale"
+      },
+      {
+        "rank": 10,
+        "team_name": "Olton"
+      }
+    ],
+    "A": [
+      {
+        "rank": 1,
+        "team_name": "Jayton"
+      },
+      {
+        "rank": 2,
+        "team_name": "Gordon"
+      },
+      {
+        "rank": 3,
+        "team_name": "Brookeland"
+      },
+      {
+        "rank": 4,
+        "team_name": "Huckabay"
+      },
+      {
+        "rank": 5,
+        "team_name": "Texline"
+      },
+      {
+        "rank": 6,
+        "team_name": "Munday"
+      },
+      {
+        "rank": 7,
+        "team_name": "Richards"
+      },
+      {
+        "rank": 8,
+        "team_name": "Fayetteville"
+      },
+      {
+        "rank": 9,
+        "team_name": "Whitharral"
+      },
+      {
+        "rank": 10,
+        "team_name": "Slocum"
+      }
+    ]
+  },
+  "private": {
+    "ALL": [
+      {
+        "rank": 1,
+        "team_name": "Houston Second Baptist"
+      },
+      {
+        "rank": 2,
+        "team_name": "Dallas Parish Episcopal"
+      },
+      {
+        "rank": 3,
+        "team_name": "Houston Christian"
+      },
+      {
+        "rank": 4,
+        "team_name": "Arlington Grace Prep"
+      },
+      {
+        "rank": 5,
+        "team_name": "San Antonio TMI"
+      },
+      {
+        "rank": 6,
+        "team_name": "Austin St. Michael's"
+      },
+      {
+        "rank": 7,
+        "team_name": "San Antonio Antonian"
+      },
+      {
+        "rank": 8,
+        "team_name": "Dallas St. Mark's"
+      },
+      {
+        "rank": 9,
+        "team_name": "Midland Christian"
+      },
+      {
+        "rank": 10,
+        "team_name": "McKinney Christian"
+      },
+      {
+        "rank": 11,
+        "team_name": "Lubbock Trinity Christian"
+      },
+      {
+        "rank": 12,
+        "team_name": "San Antonio Central Catholic"
+      },
+      {
+        "rank": 13,
+        "team_name": "Houston Episcopal"
+      },
+      {
+        "rank": 14,
+        "team_name": "Plano John Paul II"
+      },
+      {
+        "rank": 15,
+        "team_name": "Dallas Greenhill"
+      },
+      {
+        "rank": 16,
+        "team_name": "Episcopal School of Dallas"
+      },
+      {
+        "rank": 17,
+        "team_name": "Houston Kinkaid"
+      },
+      {
+        "rank": 18,
+        "team_name": "The Woodlands Christian"
+      },
+      {
+        "rank": 19,
+        "team_name": "Houston St. Thomas Episcopal"
+      },
+      {
+        "rank": 20,
+        "team_name": "Lubbock Christian"
+      },
+      {
+        "rank": 21,
+        "team_name": "Bullard Brook Hill"
+      },
+      {
+        "rank": 22,
+        "team_name": "Dallas Bishop Lynch"
+      },
+      {
+        "rank": 23,
+        "team_name": "Houston Westbury Christian"
+      },
+      {
+        "rank": 24,
+        "team_name": "Tyler Bishop Gorman"
+      },
+      {
+        "rank": 25,
+        "team_name": "Trinity Christian Addison"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1069 @@
+{
+  "last_updated": "2026-01-26T09:52:25.765395",
+  "source": "maxpreps_manual_input",
+  "uil": {
+    "AAAAAA": [
+      {
+        "rank": 1,
+        "team_name": "Little Elm",
+        "wins": 24,
+        "losses": 2,
+        "record": "24-2"
+      },
+      {
+        "rank": 2,
+        "team_name": "Seven Lakes",
+        "wins": 27,
+        "losses": 0,
+        "record": "27-0"
+      },
+      {
+        "rank": 3,
+        "team_name": "Brennan",
+        "wins": 22,
+        "losses": 3,
+        "record": "22-3"
+      },
+      {
+        "rank": 4,
+        "team_name": "North Crowley",
+        "wins": 23,
+        "losses": 3,
+        "record": "23-3"
+      },
+      {
+        "rank": 5,
+        "team_name": "Steele",
+        "wins": 23,
+        "losses": 4,
+        "record": "23-4"
+      },
+      {
+        "rank": 6,
+        "team_name": "Atascocita",
+        "wins": 19,
+        "losses": 6,
+        "record": "19-6"
+      },
+      {
+        "rank": 7,
+        "team_name": "Allen",
+        "wins": 16,
+        "losses": 4,
+        "record": "16-4"
+      },
+      {
+        "rank": 8,
+        "team_name": "Dickinson",
+        "wins": 21,
+        "losses": 5,
+        "record": "21-5"
+      },
+      {
+        "rank": 9,
+        "team_name": "Pearland",
+        "wins": 24,
+        "losses": 2,
+        "record": "24-2"
+      },
+      {
+        "rank": 10,
+        "team_name": "Judson",
+        "wins": 23,
+        "losses": 5,
+        "record": "23-5"
+      },
+      {
+        "rank": 11,
+        "team_name": "North Shore",
+        "wins": 22,
+        "losses": 5,
+        "record": "22-5"
+      },
+      {
+        "rank": 12,
+        "team_name": "Plano East",
+        "wins": 22,
+        "losses": 6,
+        "record": "22-6"
+      },
+      {
+        "rank": 13,
+        "team_name": "Duncanville",
+        "wins": 15,
+        "losses": 6,
+        "record": "15-6"
+      },
+      {
+        "rank": 14,
+        "team_name": "Cypress Springs",
+        "wins": 23,
+        "losses": 4,
+        "record": "23-4"
+      },
+      {
+        "rank": 15,
+        "team_name": "Round Rock Westwood",
+        "wins": 23,
+        "losses": 2,
+        "record": "23-2"
+      },
+      {
+        "rank": 16,
+        "team_name": "Westlake",
+        "wins": 21,
+        "losses": 6,
+        "record": "21-6"
+      },
+      {
+        "rank": 17,
+        "team_name": "Grand Prairie",
+        "wins": 20,
+        "losses": 3,
+        "record": "20-3"
+      },
+      {
+        "rank": 18,
+        "team_name": "Fort Bend Hightower",
+        "wins": 22,
+        "losses": 5,
+        "record": "22-5"
+      },
+      {
+        "rank": 19,
+        "team_name": "Clemens",
+        "wins": 22,
+        "losses": 5,
+        "record": "22-5"
+      },
+      {
+        "rank": 20,
+        "team_name": "Klein Oak",
+        "wins": 22,
+        "losses": 3,
+        "record": "22-3"
+      },
+      {
+        "rank": 21,
+        "team_name": "Tompkins",
+        "wins": 19,
+        "losses": 6,
+        "record": "19-6"
+      },
+      {
+        "rank": 22,
+        "team_name": "McKinney",
+        "wins": 15,
+        "losses": 7,
+        "record": "15-7"
+      },
+      {
+        "rank": 23,
+        "team_name": "Clear Brook",
+        "wins": 20,
+        "losses": 7,
+        "record": "20-7"
+      },
+      {
+        "rank": 24,
+        "team_name": "Cypress Falls",
+        "wins": 19,
+        "losses": 5,
+        "record": "19-5"
+      },
+      {
+        "rank": 25,
+        "team_name": "Jordan",
+        "wins": 19,
+        "losses": 8,
+        "record": "19-8"
+      }
+    ],
+    "AAAAA": [
+      {
+        "rank": 1,
+        "team_name": "Heritage",
+        "wins": 21,
+        "losses": 2,
+        "record": "21-2"
+      },
+      {
+        "rank": 2,
+        "team_name": "Mansfield Summit",
+        "wins": 20,
+        "losses": 5,
+        "record": "20-5"
+      },
+      {
+        "rank": 3,
+        "team_name": "Birdville",
+        "wins": 22,
+        "losses": 4,
+        "record": "22-4"
+      },
+      {
+        "rank": 4,
+        "team_name": "Beaumont United",
+        "wins": 25,
+        "losses": 2,
+        "record": "25-2"
+      },
+      {
+        "rank": 5,
+        "team_name": "West Brook",
+        "wins": 22,
+        "losses": 3,
+        "record": "22-3"
+      },
+      {
+        "rank": 6,
+        "team_name": "Red Oak",
+        "wins": 20,
+        "losses": 5,
+        "record": "20-5"
+      },
+      {
+        "rank": 7,
+        "team_name": "Denton",
+        "wins": 21,
+        "losses": 3,
+        "record": "21-3"
+      },
+      {
+        "rank": 8,
+        "team_name": "Memorial",
+        "wins": 20,
+        "losses": 6,
+        "record": "20-6"
+      },
+      {
+        "rank": 9,
+        "team_name": "Lufkin",
+        "wins": 20,
+        "losses": 4,
+        "record": "20-4"
+      },
+      {
+        "rank": 10,
+        "team_name": "Mansfield Timberview",
+        "wins": 21,
+        "losses": 4,
+        "record": "21-4"
+      },
+      {
+        "rank": 11,
+        "team_name": "Friendswood",
+        "wins": 22,
+        "losses": 7,
+        "record": "22-7"
+      },
+      {
+        "rank": 12,
+        "team_name": "Iowa Colony",
+        "wins": 21,
+        "losses": 7,
+        "record": "21-7"
+      },
+      {
+        "rank": 13,
+        "team_name": "Fort Bend Marshall",
+        "wins": 20,
+        "losses": 7,
+        "record": "20-7"
+      },
+      {
+        "rank": 14,
+        "team_name": "New Braunfels",
+        "wins": 24,
+        "losses": 5,
+        "record": "24-5"
+      },
+      {
+        "rank": 15,
+        "team_name": "Amarillo",
+        "wins": 21,
+        "losses": 6,
+        "record": "21-6"
+      },
+      {
+        "rank": 16,
+        "team_name": "Anna",
+        "wins": 19,
+        "losses": 6,
+        "record": "19-6"
+      },
+      {
+        "rank": 17,
+        "team_name": "Veterans Memorial",
+        "wins": 21,
+        "losses": 7,
+        "record": "21-7"
+      },
+      {
+        "rank": 18,
+        "team_name": "Reedy",
+        "wins": 17,
+        "losses": 8,
+        "record": "17-8"
+      },
+      {
+        "rank": 19,
+        "team_name": "The Colony",
+        "wins": 17,
+        "losses": 9,
+        "record": "17-9"
+      },
+      {
+        "rank": 20,
+        "team_name": "McAllen",
+        "wins": 30,
+        "losses": 0,
+        "record": "30-0"
+      },
+      {
+        "rank": 21,
+        "team_name": "Centennial",
+        "wins": 18,
+        "losses": 8,
+        "record": "18-8"
+      },
+      {
+        "rank": 22,
+        "team_name": "Liberty",
+        "wins": 14,
+        "losses": 10,
+        "record": "14-10"
+      },
+      {
+        "rank": 23,
+        "team_name": "Walnut Grove",
+        "wins": 18,
+        "losses": 7,
+        "record": "18-7"
+      },
+      {
+        "rank": 24,
+        "team_name": "Colleyville Heritage",
+        "wins": 19,
+        "losses": 7,
+        "record": "19-7"
+      },
+      {
+        "rank": 25,
+        "team_name": "Belton",
+        "wins": 22,
+        "losses": 5,
+        "record": "22-5"
+      }
+    ],
+    "AAAA": [
+      {
+        "rank": 1,
+        "team_name": "Liberty",
+        "wins": 21,
+        "losses": 4,
+        "record": "21-4"
+      },
+      {
+        "rank": 2,
+        "team_name": "Carter",
+        "wins": 18,
+        "losses": 6,
+        "record": "18-6"
+      },
+      {
+        "rank": 3,
+        "team_name": "West Plains",
+        "wins": 19,
+        "losses": 4,
+        "record": "19-4"
+      },
+      {
+        "rank": 4,
+        "team_name": "Estacado",
+        "wins": 21,
+        "losses": 5,
+        "record": "21-5"
+      },
+      {
+        "rank": 5,
+        "team_name": "Wimberley",
+        "wins": 26,
+        "losses": 2,
+        "record": "26-2"
+      },
+      {
+        "rank": 6,
+        "team_name": "Burkburnett",
+        "wins": 22,
+        "losses": 4,
+        "record": "22-4"
+      },
+      {
+        "rank": 7,
+        "team_name": "Seminole",
+        "wins": 23,
+        "losses": 3,
+        "record": "23-3"
+      },
+      {
+        "rank": 8,
+        "team_name": "Kennedale",
+        "wins": 21,
+        "losses": 5,
+        "record": "21-5"
+      },
+      {
+        "rank": 9,
+        "team_name": "Panther Creek",
+        "wins": 15,
+        "losses": 6,
+        "record": "15-6"
+      },
+      {
+        "rank": 10,
+        "team_name": "Canyon",
+        "wins": 20,
+        "losses": 6,
+        "record": "20-6"
+      },
+      {
+        "rank": 11,
+        "team_name": "Krum",
+        "wins": 21,
+        "losses": 5,
+        "record": "21-5"
+      },
+      {
+        "rank": 12,
+        "team_name": "Paris",
+        "wins": 19,
+        "losses": 4,
+        "record": "19-4"
+      },
+      {
+        "rank": 13,
+        "team_name": "Almeta Crawford",
+        "wins": 18,
+        "losses": 6,
+        "record": "18-6"
+      },
+      {
+        "rank": 14,
+        "team_name": "Stephenville",
+        "wins": 24,
+        "losses": 2,
+        "record": "24-2"
+      },
+      {
+        "rank": 15,
+        "team_name": "Farmersville",
+        "wins": 22,
+        "losses": 2,
+        "record": "22-2"
+      },
+      {
+        "rank": 16,
+        "team_name": "La Marque",
+        "wins": 29,
+        "losses": 1,
+        "record": "29-1"
+      },
+      {
+        "rank": 17,
+        "team_name": "Livingston",
+        "wins": 22,
+        "losses": 4,
+        "record": "22-4"
+      },
+      {
+        "rank": 18,
+        "team_name": "Gainesville",
+        "wins": 22,
+        "losses": 5,
+        "record": "22-5"
+      },
+      {
+        "rank": 19,
+        "team_name": "Brock",
+        "wins": 17,
+        "losses": 9,
+        "record": "17-9"
+      },
+      {
+        "rank": 20,
+        "team_name": "Chapel Hill",
+        "wins": 23,
+        "losses": 2,
+        "record": "23-2"
+      },
+      {
+        "rank": 21,
+        "team_name": "Athens",
+        "wins": 15,
+        "losses": 2,
+        "record": "15-2"
+      },
+      {
+        "rank": 22,
+        "team_name": "Washington",
+        "wins": 21,
+        "losses": 6,
+        "record": "21-6"
+      },
+      {
+        "rank": 23,
+        "team_name": "Yates",
+        "wins": 16,
+        "losses": 3,
+        "record": "16-3"
+      },
+      {
+        "rank": 24,
+        "team_name": "La Vega",
+        "wins": 12,
+        "losses": 2,
+        "record": "12-2"
+      },
+      {
+        "rank": 25,
+        "team_name": "Wheatley",
+        "wins": 12,
+        "losses": 4,
+        "record": "12-4"
+      }
+    ],
+    "AAA": [
+      {
+        "rank": 1,
+        "team_name": "Paradise",
+        "wins": 25,
+        "losses": 2,
+        "record": "25-2"
+      },
+      {
+        "rank": 2,
+        "team_name": "Westwood",
+        "wins": 17,
+        "losses": 2,
+        "record": "17-2"
+      },
+      {
+        "rank": 3,
+        "team_name": "Shallowater",
+        "wins": 19,
+        "losses": 3,
+        "record": "19-3"
+      },
+      {
+        "rank": 4,
+        "team_name": "Slaton",
+        "wins": 21,
+        "losses": 5,
+        "record": "21-5"
+      },
+      {
+        "rank": 5,
+        "team_name": "Onalaska",
+        "wins": 23,
+        "losses": 4,
+        "record": "23-4"
+      },
+      {
+        "rank": 6,
+        "team_name": "Brownfield",
+        "wins": 19,
+        "losses": 6,
+        "record": "19-6"
+      },
+      {
+        "rank": 7,
+        "team_name": "Holliday",
+        "wins": 22,
+        "losses": 3,
+        "record": "22-3"
+      },
+      {
+        "rank": 8,
+        "team_name": "Jefferson",
+        "wins": 21,
+        "losses": 3,
+        "record": "21-3"
+      },
+      {
+        "rank": 9,
+        "team_name": "London",
+        "wins": 28,
+        "losses": 1,
+        "record": "28-1"
+      },
+      {
+        "rank": 10,
+        "team_name": "Orangefield",
+        "wins": 23,
+        "losses": 3,
+        "record": "23-3"
+      },
+      {
+        "rank": 11,
+        "team_name": "Liberty-Eylau",
+        "wins": 21,
+        "losses": 4,
+        "record": "21-4"
+      },
+      {
+        "rank": 12,
+        "team_name": "Wall",
+        "wins": 22,
+        "losses": 5,
+        "record": "22-5"
+      },
+      {
+        "rank": 13,
+        "team_name": "Cole",
+        "wins": 22,
+        "losses": 5,
+        "record": "22-5"
+      },
+      {
+        "rank": 14,
+        "team_name": "Dalhart",
+        "wins": 19,
+        "losses": 3,
+        "record": "19-3"
+      },
+      {
+        "rank": 15,
+        "team_name": "Village Tech",
+        "wins": 18,
+        "losses": 4,
+        "record": "18-4"
+      },
+      {
+        "rank": 16,
+        "team_name": "City View",
+        "wins": 13,
+        "losses": 6,
+        "record": "13-6"
+      },
+      {
+        "rank": 17,
+        "team_name": "Ponder",
+        "wins": 18,
+        "losses": 8,
+        "record": "18-8"
+      },
+      {
+        "rank": 18,
+        "team_name": "East Chambers",
+        "wins": 22,
+        "losses": 4,
+        "record": "22-4"
+      },
+      {
+        "rank": 19,
+        "team_name": "Keene",
+        "wins": 23,
+        "losses": 3,
+        "record": "23-3"
+      },
+      {
+        "rank": 20,
+        "team_name": "Jim Ned",
+        "wins": 17,
+        "losses": 7,
+        "record": "17-7"
+      },
+      {
+        "rank": 21,
+        "team_name": "Madison",
+        "wins": 13,
+        "losses": 12,
+        "record": "13-12"
+      },
+      {
+        "rank": 22,
+        "team_name": "Lamesa",
+        "wins": 15,
+        "losses": 5,
+        "record": "15-5"
+      },
+      {
+        "rank": 23,
+        "team_name": "Clyde",
+        "wins": 20,
+        "losses": 6,
+        "record": "20-6"
+      },
+      {
+        "rank": 24,
+        "team_name": "Fairfield",
+        "wins": 14,
+        "losses": 6,
+        "record": "14-6"
+      },
+      {
+        "rank": 25,
+        "team_name": "Lexington",
+        "wins": 16,
+        "losses": 5,
+        "record": "16-5"
+      }
+    ],
+    "AA": [
+      {
+        "rank": 1,
+        "team_name": "Lipan",
+        "wins": 24,
+        "losses": 1,
+        "record": "24-1"
+      },
+      {
+        "rank": 2,
+        "team_name": "Martins Mill",
+        "wins": 22,
+        "losses": 4,
+        "record": "22-4"
+      },
+      {
+        "rank": 3,
+        "team_name": "Gruver",
+        "wins": 10,
+        "losses": 0,
+        "record": "10-0"
+      },
+      {
+        "rank": 4,
+        "team_name": "Graford",
+        "wins": 22,
+        "losses": 3,
+        "record": "22-3"
+      },
+      {
+        "rank": 5,
+        "team_name": "Olton",
+        "wins": 23,
+        "losses": 4,
+        "record": "23-4"
+      },
+      {
+        "rank": 6,
+        "team_name": "Roscoe",
+        "wins": 26,
+        "losses": 1,
+        "record": "26-1"
+      },
+      {
+        "rank": 7,
+        "team_name": "Ropes",
+        "wins": 18,
+        "losses": 3,
+        "record": "18-3"
+      },
+      {
+        "rank": 8,
+        "team_name": "Slidell",
+        "wins": 20,
+        "losses": 6,
+        "record": "20-6"
+      },
+      {
+        "rank": 9,
+        "team_name": "Farwell",
+        "wins": 18,
+        "losses": 5,
+        "record": "18-5"
+      },
+      {
+        "rank": 10,
+        "team_name": "Tom Bean",
+        "wins": 8,
+        "losses": 1,
+        "record": "8-1"
+      },
+      {
+        "rank": 11,
+        "team_name": "Hale Center",
+        "wins": 20,
+        "losses": 5,
+        "record": "20-5"
+      },
+      {
+        "rank": 12,
+        "team_name": "Chireno",
+        "wins": 20,
+        "losses": 4,
+        "record": "20-4"
+      },
+      {
+        "rank": 13,
+        "team_name": "LaPoynor",
+        "wins": 21,
+        "losses": 4,
+        "record": "21-4"
+      },
+      {
+        "rank": 14,
+        "team_name": "Albany",
+        "wins": 16,
+        "losses": 1,
+        "record": "16-1"
+      },
+      {
+        "rank": 15,
+        "team_name": "Meyer",
+        "wins": 20,
+        "losses": 5,
+        "record": "20-5"
+      },
+      {
+        "rank": 16,
+        "team_name": "Windthorst",
+        "wins": 18,
+        "losses": 6,
+        "record": "18-6"
+      },
+      {
+        "rank": 17,
+        "team_name": "New Home",
+        "wins": 15,
+        "losses": 9,
+        "record": "15-9"
+      },
+      {
+        "rank": 18,
+        "team_name": "Thorndale",
+        "wins": 21,
+        "losses": 4,
+        "record": "21-4"
+      },
+      {
+        "rank": 19,
+        "team_name": "Port Aransas",
+        "wins": 20,
+        "losses": 5,
+        "record": "20-5"
+      },
+      {
+        "rank": 20,
+        "team_name": "Nocona",
+        "wins": 21,
+        "losses": 3,
+        "record": "21-3"
+      },
+      {
+        "rank": 21,
+        "team_name": "West Texas",
+        "wins": 7,
+        "losses": 1,
+        "record": "7-1"
+      },
+      {
+        "rank": 22,
+        "team_name": "Hearne",
+        "wins": 21,
+        "losses": 6,
+        "record": "21-6"
+      },
+      {
+        "rank": 23,
+        "team_name": "Gary",
+        "wins": 19,
+        "losses": 7,
+        "record": "19-7"
+      },
+      {
+        "rank": 24,
+        "team_name": "Goldthwaite",
+        "wins": 19,
+        "losses": 3,
+        "record": "19-3"
+      },
+      {
+        "rank": 25,
+        "team_name": "Hamilton",
+        "wins": 8,
+        "losses": 4,
+        "record": "8-4"
+      }
+    ],
+    "A": [
+      {
+        "rank": 1,
+        "team_name": "Huckabay",
+        "wins": 26,
+        "losses": 2,
+        "record": "26-2"
+      },
+      {
+        "rank": 2,
+        "team_name": "Texline",
+        "wins": 18,
+        "losses": 7,
+        "record": "18-7"
+      },
+      {
+        "rank": 3,
+        "team_name": "Gordon",
+        "wins": 13,
+        "losses": 3,
+        "record": "13-3"
+      },
+      {
+        "rank": 4,
+        "team_name": "Valley",
+        "wins": 19,
+        "losses": 3,
+        "record": "19-3"
+      },
+      {
+        "rank": 5,
+        "team_name": "Jayton",
+        "wins": 10,
+        "losses": 2,
+        "record": "10-2"
+      },
+      {
+        "rank": 6,
+        "team_name": "Richards",
+        "wins": 19,
+        "losses": 2,
+        "record": "19-2"
+      },
+      {
+        "rank": 7,
+        "team_name": "Fayetteville",
+        "wins": 20,
+        "losses": 6,
+        "record": "20-6"
+      },
+      {
+        "rank": 8,
+        "team_name": "Sands",
+        "wins": 20,
+        "losses": 4,
+        "record": "20-4"
+      },
+      {
+        "rank": 9,
+        "team_name": "Water Valley",
+        "wins": 11,
+        "losses": 3,
+        "record": "11-3"
+      },
+      {
+        "rank": 10,
+        "team_name": "Munday",
+        "wins": 18,
+        "losses": 8,
+        "record": "18-8"
+      },
+      {
+        "rank": 11,
+        "team_name": "Moulton",
+        "wins": 21,
+        "losses": 4,
+        "record": "21-4"
+      },
+      {
+        "rank": 12,
+        "team_name": "Whitharral",
+        "wins": 15,
+        "losses": 9,
+        "record": "15-9"
+      },
+      {
+        "rank": 13,
+        "team_name": "May",
+        "wins": 16,
+        "losses": 8,
+        "record": "16-8"
+      },
+      {
+        "rank": 14,
+        "team_name": "Buena Vista",
+        "wins": 16,
+        "losses": 4,
+        "record": "16-4"
+      },
+      {
+        "rank": 15,
+        "team_name": "Veribest",
+        "wins": 20,
+        "losses": 6,
+        "record": "20-6"
+      },
+      {
+        "rank": 16,
+        "team_name": "Crosbyton",
+        "wins": 15,
+        "losses": 3,
+        "record": "15-3"
+      },
+      {
+        "rank": 17,
+        "team_name": "Benjamin",
+        "wins": 14,
+        "losses": 4,
+        "record": "14-4"
+      },
+      {
+        "rank": 18,
+        "team_name": "McLean",
+        "wins": 15,
+        "losses": 1,
+        "record": "15-1"
+      },
+      {
+        "rank": 19,
+        "team_name": "O'Donnell",
+        "wins": 17,
+        "losses": 6,
+        "record": "17-6"
+      },
+      {
+        "rank": 20,
+        "team_name": "Perrin-Whitt",
+        "wins": 18,
+        "losses": 6,
+        "record": "18-6"
+      },
+      {
+        "rank": 21,
+        "team_name": "Irion County",
+        "wins": 15,
+        "losses": 5,
+        "record": "15-5"
+      },
+      {
+        "rank": 22,
+        "team_name": "Brookeland",
+        "wins": 17,
+        "losses": 9,
+        "record": "17-9"
+      },
+      {
+        "rank": 23,
+        "team_name": "Wells",
+        "wins": 14,
+        "losses": 8,
+        "record": "14-8"
+      },
+      {
+        "rank": 24,
+        "team_name": "Saint Jo",
+        "wins": 18,
+        "losses": 7,
+        "record": "18-7"
+      },
+      {
+        "rank": 25,
+        "team_name": "Slocum",
+        "wins": 20,
+        "losses": 6,
+        "record": "20-6"
+      }
+    ]
+  },
+  "private": {}
+}
