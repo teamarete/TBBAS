@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-26T14:06:28.179339",
+  "last_updated": "2026-01-26T20:17:37.500631",
   "source": "weighted_tabc_maxpreps_gaso",
   "uil": {
     "AAAAAA": [
@@ -1031,30 +1031,18 @@
       },
       {
         "rank": 11,
-        "team_name": "Liberty Eylau",
-        "wins": 21,
-        "losses": 4,
-        "record": "21-4",
-        "classification": "AAA",
-        "consensus_rank": 11.0,
-        "tabc_rank": 12,
-        "maxpreps_rank": null,
-        "gaso_rank": 6
-      },
-      {
-        "rank": 12,
         "team_name": "Liberty-Eylau",
         "wins": 21,
         "losses": 4,
         "record": "21-4",
         "classification": "AAA",
         "consensus_rank": 11.0,
-        "tabc_rank": null,
+        "tabc_rank": 12,
         "maxpreps_rank": 11,
-        "gaso_rank": null
+        "gaso_rank": 6
       },
       {
-        "rank": 13,
+        "rank": 12,
         "team_name": "Cole",
         "wins": 22,
         "losses": 5,
@@ -1066,7 +1054,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 14,
+        "rank": 13,
         "team_name": "Crystal City",
         "wins": 17,
         "losses": 5,
@@ -1078,7 +1066,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 15,
+        "rank": 14,
         "team_name": "Wall",
         "wins": 22,
         "losses": 5,
@@ -1090,7 +1078,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 16,
+        "rank": 15,
         "team_name": "Dalhart",
         "wins": 19,
         "losses": 3,
@@ -1102,7 +1090,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 17,
+        "rank": 16,
         "team_name": "Holliday",
         "wins": 22,
         "losses": 3,
@@ -1114,7 +1102,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 18,
+        "rank": 17,
         "team_name": "Goliad",
         "wins": 21,
         "losses": 4,
@@ -1126,7 +1114,7 @@
         "gaso_rank": 9
       },
       {
-        "rank": 19,
+        "rank": 18,
         "team_name": "Mexia",
         "wins": 16,
         "losses": 12,
@@ -1138,7 +1126,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 20,
+        "rank": 19,
         "team_name": "East Chambers",
         "wins": 21,
         "losses": 5,
@@ -1150,7 +1138,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 21,
+        "rank": 20,
         "team_name": "Peaster",
         "wins": 16,
         "losses": 11,
@@ -1162,7 +1150,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 22,
+        "rank": 21,
         "team_name": "Ponder",
         "wins": 17,
         "losses": 8,
@@ -1174,7 +1162,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 23,
+        "rank": 22,
         "team_name": "City View",
         "wins": 13,
         "losses": 6,
@@ -1186,7 +1174,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 24,
+        "rank": 23,
         "team_name": "Marion",
         "wins": 19,
         "losses": 6,
@@ -1198,7 +1186,7 @@
         "gaso_rank": null
       },
       {
-        "rank": 25,
+        "rank": 24,
         "team_name": "Village Tech",
         "wins": 16,
         "losses": 4,
@@ -1207,6 +1195,18 @@
         "consensus_rank": 20.0,
         "tabc_rank": 24,
         "maxpreps_rank": 15,
+        "gaso_rank": null
+      },
+      {
+        "rank": 25,
+        "team_name": "Leonard",
+        "wins": 18,
+        "losses": 6,
+        "record": "18-6",
+        "classification": "AAA",
+        "consensus_rank": 22.0,
+        "tabc_rank": 22,
+        "maxpreps_rank": null,
         "gaso_rank": null
       }
     ],
