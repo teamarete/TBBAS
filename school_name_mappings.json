@@ -2,53 +2,92 @@
   "description": "Maps alternate school names to canonical names to prevent duplicates when merging TABC, MaxPreps, and GASO rankings",
   "last_updated": "2026-02-02",
   "mappings": {
-    "4A": {
-      "Almeta Crawford": "FB Crawford",
-      "Fort Bend Crawford": "FB Crawford",
-      "Crawford (Fort Bend)": "FB Crawford"
-    },
-    "3A": {
-      "Liberty Eylau": "Liberty-Eylau",
-      "Liberty-Eylau (Texarkana)": "Liberty-Eylau"
+    "6A": {
+      "Seven Lakes": "Katy Seven Lakes",
+      "Brennan": "SA Brennan",
+      "Judson": "Converse Judson",
+      "Lake Ridge": "Mans Lake Ridge",
+      "Round Rock Westwood": "RR Westwood"
     },
     "5A": {
-      "Guyer": "Denton Guyer",
-      "Ellison": "Killeen Ellison",
-      "Pieper": "Comal Pieper",
-      "Lovejoy": "Lucas Lovejoy"
+      "Heritage": "Frisco Heritage",
+      "Mansfield Summit": "Mans Summit",
+      "West Brook": "Bmt West Brook",
+      "Beaumont United": "Bmt United",
+      "Mansfield Timberview": "Mans Timberview",
+      "Fort Bend Marshall": "FB Marshall",
+      "Memorial": "Frisco Memorial",
+      "Veterans Memorial": "SA Veterans Memorial",
+      "Centennial": "Burleson Centennial",
+      "Liberty": "Frisco Liberty"
     },
-    "6A": {},
-    "2A": {},
-    "1A": {}
+    "4A": {
+      "Carter": "Dallas Carter",
+      "Washington": "Hou Washington",
+      "Kimball": "Dallas Kimball",
+      "Yates": "Hou Yates",
+      "La Marque": "LaMarque",
+      "Liberty": "Lubbock Liberty",
+      "Almeta Crawford": "FB Crawford",
+      "Fort Bend Crawford": "FB Crawford"
+    },
+    "3A": {
+      "Madison": "Dallas Madison",
+      "Liberty Eylau": "Liberty-Eylau"
+    },
+    "2A": {
+      "Meyer": "Waco Meyer"
+    },
+    "1A": {
+      "Perrin-Whitt": "Perrin Whitt"
+    }
+  },
+  "tapps_mappings": {
+    "6A": {
+      "St. Michael's": "Austin St. Michael's"
+    },
+    "5A": {
+      "Fort Bend Christian Academy": "Sugar Land Fort Bend Christian Academy"
+    },
+    "4A": {
+      "Covenant Christian": "Colleyville Covenant Christian",
+      "Westbury Christian": "Houston Westbury Christian",
+      "St. Thomas Episcopal": "Houston St Thomas Episcopal",
+      "Bishop Gorman": "Tyler Bishop Gorman"
+    },
+    "3A": {
+      "Live Oak Classical": "Waco Live Oak",
+      "Alpha Omega Academy": "Huntsville Alpha Omega",
+      "Yavneh Academy": "Yavneh",
+      "Heritage Christian": "Rockwall Heritage",
+      "Covenant Classical": "Fort Worth Covenant",
+      "Lucas Christian Academy": "Lucas Christian"
+    },
+    "2A": {
+      "First Baptist": "First Baptist Academy-Dallas",
+      "Holy Cross Catholic Academy": "Holy Cross Catholic Academy-Amarillo",
+      "Victory Christian Academy": "Victory Christian School-Decatur",
+      "Bracken Christian": "Bracken Christian School-Bulverde",
+      "O'Connell": "O'Connell College Preparatory School-Galveston",
+      "Valor Preparatory Academy": "Valor Preparatory Academy-Waco",
+      "Sacred Heart": "Sacred Heart Catholic School-Muenster"
+    },
+    "1A": {
+      "The Covenant Preparatory School": "The Covenant Preparatory School-Kingwood",
+      "Divine Savior Academy - Sienna": "Divine Savior Academy-Missouri City",
+      "Heritage Christian": "Heritage School-Fredericksburg",
+      "Harvest Christian": "Harvest Christian Academy-Edinburgh",
+      "Founders Christian": "Founders Christian School-Spring",
+      "Cornerstone Christian Academy": "Cornerstone Christian Academy-Granbury",
+      "Beren Academy": "Robert M Beren Academy-Houston",
+      "Austin Classical": "Austin Classical School"
+    }
   },
   "notes": [
-    "TABC often uses abbreviated city prefixes: FB=Fort Bend, Hou=Houston, SA=San Antonio, FW=Fort Worth",
-    "MaxPreps sometimes uses full city names or different abbreviations",
-    "GASO may use shortened school names without city prefix",
-    "Always check for hyphenation differences (Liberty-Eylau vs Liberty Eylau)",
-    "Watch for schools that moved classifications between years"
-  ],
-  "known_duplicates_fixed": [
-    {
-      "date": "2026-02-02",
-      "classification": "4A",
-      "duplicate": "Almeta Crawford",
-      "canonical": "FB Crawford",
-      "sources_merged": ["TABC #19", "MaxPreps #13", "GASO #13"]
-    },
-    {
-      "date": "2026-02-02",
-      "classification": "3A",
-      "duplicate": "Liberty Eylau",
-      "canonical": "Liberty-Eylau",
-      "sources_merged": ["TABC #12", "MaxPreps #11", "GASO #6"]
-    },
-    {
-      "date": "2026-02-02",
-      "classification": "5A",
-      "action": "removed",
-      "team": "Killeen Ellison",
-      "reason": "Only appeared in GASO rankings, not validated by TABC or MaxPreps"
-    }
+    "TABC uses abbreviated city prefixes: FB=Fort Bend, Hou=Houston, SA=San Antonio, FW=Fort Worth, Bmt=Beaumont, Mans=Mansfield, RR=Round Rock",
+    "MaxPreps often uses short names without city prefixes",
+    "4A 'Liberty' = Lubbock Liberty, 5A 'Liberty' = Frisco Liberty",
+    "Watch for hyphenation differences (Liberty-Eylau vs Liberty Eylau)",
+    "TAPPS schools often have location suffixes that MaxPreps omits"
   ]
 }
