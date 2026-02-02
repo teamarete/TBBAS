@@ -1,0 +1,54 @@
+{
+  "description": "Maps alternate school names to canonical names to prevent duplicates when merging TABC, MaxPreps, and GASO rankings",
+  "last_updated": "2026-02-02",
+  "mappings": {
+    "4A": {
+      "Almeta Crawford": "FB Crawford",
+      "Fort Bend Crawford": "FB Crawford",
+      "Crawford (Fort Bend)": "FB Crawford"
+    },
+    "3A": {
+      "Liberty Eylau": "Liberty-Eylau",
+      "Liberty-Eylau (Texarkana)": "Liberty-Eylau"
+    },
+    "5A": {
+      "Guyer": "Denton Guyer",
+      "Ellison": "Killeen Ellison",
+      "Pieper": "Comal Pieper",
+      "Lovejoy": "Lucas Lovejoy"
+    },
+    "6A": {},
+    "2A": {},
+    "1A": {}
+  },
+  "notes": [
+    "TABC often uses abbreviated city prefixes: FB=Fort Bend, Hou=Houston, SA=San Antonio, FW=Fort Worth",
+    "MaxPreps sometimes uses full city names or different abbreviations",
+    "GASO may use shortened school names without city prefix",
+    "Always check for hyphenation differences (Liberty-Eylau vs Liberty Eylau)",
+    "Watch for schools that moved classifications between years"
+  ],
+  "known_duplicates_fixed": [
+    {
+      "date": "2026-02-02",
+      "classification": "4A",
+      "duplicate": "Almeta Crawford",
+      "canonical": "FB Crawford",
+      "sources_merged": ["TABC #19", "MaxPreps #13", "GASO #13"]
+    },
+    {
+      "date": "2026-02-02",
+      "classification": "3A",
+      "duplicate": "Liberty Eylau",
+      "canonical": "Liberty-Eylau",
+      "sources_merged": ["TABC #12", "MaxPreps #11", "GASO #6"]
+    },
+    {
+      "date": "2026-02-02",
+      "classification": "5A",
+      "action": "removed",
+      "team": "Killeen Ellison",
+      "reason": "Only appeared in GASO rankings, not validated by TABC or MaxPreps"
+    }
+  ]
+}
